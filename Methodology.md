@@ -1,4 +1,123 @@
 # Top Attack Technique Methodology
+<h1>Prevalence</h1>
+<b>Prevalence: the frequency of which an attacker uses a specific MITRE ATT&CK technique over a period of time. </b>
+
+<h2>Why do we want to include Prevalence</h2>
+This methodology allows us to see which techniques are actually being observed during cyber intrusions. With this knowledge, defenders can tailor their detection tools to look for those techniques that have the highest frequency and are the most current.
+
+The prevalence methodology is populated with data from the Sightings Ecosystem. Each Sighting represents one or more ATT&CK techniques used by an adversary on (or to target) victim infrastructure. For more information on Sightings, click here. 
+
+There are a few limitations with our data that are important to understand. First, our data is limited to the data that was shared with us by our contributors. This data is not all-inclusive and is not representative of all attacks around the world. Second, our data is scoped from 1 April, 2019 to 31 July, 2021. Finally, our data is limited to how our contributors map data to ATT&CK. It is unclear if an increase in a certain technique means that it occurred more often or if it was detections simply improved.
+
+When looking at our data, it is important to remember that defending against our most observed techniques will not protect you from all adversary activity. It will only protect you from the adversary activity most observed by Sightings contributors. Despite these barriers, the Sightings data has given great insights into techniques that are frequently used by adversaries and its inclusion in our Top ATT&CK Techniques methodologies is helps insert real-world data into our analysis.
+
+<h2>Framing the Analysis</h2> 
+<b>Proposal for the prevalence metric:</b>
+
+For a technique that has attack times {t0, t1, … , tn}, we calculate the technique’s un-normalized prevalence score as: ![Prev1](https://user-images.githubusercontent.com/86126040/166496655-165e31c0-2831-41d1-babb-6349935a6ffb.png) Where 𝑤 is the time weighting function which assigns a weight (between zero and one) to an attack based on its proximity to the present time (𝑡𝑛𝑜𝑤). It is defined by
+
+![Prev2](https://user-images.githubusercontent.com/86126040/166496797-6db935f9-f33a-40a2-bc14-c8606389dd56.png)
+Here, Δ𝑡 is the time between the attack and the present time. We have three parameters in the weighting function that can be adjusted:
+
+- 𝑓𝑢𝑙𝑙 is the number of days into the past (relative to the present) for which we want attacks to be given full weighting. The weighting of attacks will start to decline if they occur more than 𝑓𝑢𝑙𝑙 days into the past
+- 𝑑𝑒𝑐𝑙𝑖𝑛𝑒 is the number of days after 𝑓𝑢𝑙𝑙 has been reached over which the weighting decreases to its minimum value. This controls the "steepness" of the falloff
+- 𝑤𝑚𝑖𝑛 is the minimum weight an attack can have. Attacks that occurred more than 𝑓𝑢𝑙𝑙+𝑑𝑒𝑙𝑐𝑖𝑛𝑒 days into the past will have a weighting of 𝑤𝑚𝑖𝑛. This controls the "strength" of the weighting
+The combination of these three parameters control the strength and rate of weighting. For example, if we want weighting to gradually decrease to zero over a long period of time, then we may set 𝑤𝑚𝑖𝑛:=0 and 𝑑𝑒𝑐𝑙𝑖𝑛𝑒 to be large.
+
+The weighting function and its parameters may sound complicated in text, but it is best understood visually:
+![Prev3](https://user-images.githubusercontent.com/86126040/166497066-3b9f2d32-5956-45fe-9a84-6fe483b53200.png)
+Some examples of the weighting function using various parameters are given below:
+![Prev4](https://user-images.githubusercontent.com/86126040/166497152-c40d64c0-4ec6-40d7-b261-f4ce612f7710.png)
+
+<b>Normalizing prevalence scores</b>
+
+Since only a few techniques make up a large majority of all sightings, we need to be careful about accounting for these outliers when we put the prevalence scores on a zero-to-one scale.
+
+![Prev5](https://user-images.githubusercontent.com/86126040/166499610-e09418f5-6eab-48f5-9d9e-c6fbf1da1b1a.png)
+This is a histogram of the distribution of prevalence scores across all techniques for which we have attack times. Note that there are a few techniques that have a prevalence score that is FAR greater than the scores for every other technique. If we normalize the scores using the min-max normalization described above, those few techniques would get a score somewhere around 0.8-1.0, while the vast majority of techniques would get a score close to zero.
+
+For now, we can take care of this by scaling according to a specified “percentile cutoff.” For example, if we set the cutoff equal to 0.9, then techniques that have a score in the 90th percentile and above (i.e. in the top 10% of techniques) will receive a score equal to 1, while techniques that are below the 90th percentile will be scaled using the score of the 90th percentile as the “max.“
+
+<b>Limitations</b>
+
+There are several important considerations when reading the Sightings results. First and foremost, there was a limited number of contributors. This means our data does not provide a comprehensive view of the threat landscape. There are techniques not present in our dataset which may be relevant to organizations depending on their environment and relative risk.
+
+The data received was limited to the visibility of the companies who graciously contributed their data to the Sightings Ecosystem. Each contributor has different visibility because of demographics of their customer base, the location of their sensor technology (e.g., external to the network or on an email server), and their relative ability to detect specific activity. We hoped to overcome these limitations by recruiting a large number of contributors, but our limited number means there remains a visibility bias in our results.
+
+Our results are further limited by how our contributors map techniques to ATT&CK. Depending on when techniques are mapped in an incident investigation and how formalized the mapping process is, it is not unrealistic to think that several Sightings may have been mis-mapped.
+
+Aggregating data from multiple contributors also impacted our results. When we aggregated the data, we lost context on the adversaries and detections. We did not have deep insight into how the techniques are detected, which meant that we struggled to determine whether an increase in activity was caused
+by increased adversary activity or by improved detections.
+
+<h1>Choke Point</h1>
+<b>Choke Point: a specific technique where many other techniques converge or diverge, and eliminating that specific technique would cause disruption to an adversary</b>
+
+<h2>Why do we want to include Chokepoints</h2>
+Analyzing chokepoints can assist defenders to pinpoint critical techniques needed to be successful in an attack. These techniques serve as the common denominator amongst in otherwise disparate attacks. For instance, T1047 (WMI) can serve as a choke point because there are a many other techniques that can be executed after an adversary executes WMI. Defending against malicious WMI usage can limit the potential attack path that an adversary might have used.
+
+<h2>Executive Summary</h2>
+The MITRE team subjectively analyzed open-source threat reports and cyber incidents to identify techniques that had many techniques achieve multiple objectives, and common techniques that had many other techniques leading up to it and happening after it. We created one-to-many, many-to-one, and many-to-many mappings to help us find out choke points. MITRE ATT&CK Tactics were first used to narrow scope and help determine likelihood of chokepoint techniques. The team defined preceding and subsequent techniques for each chokepoint. Total count of preceding and subsequent techniques are assigned an attribute. The attribute is the confidence level, confidence level is the technique’s probability to offer more avenues for a successful attack.
+
+<b>Future Recommendations</b>: In depth chokepoint analysis may require ML/AI components to visualize and predict all viable paths an attacker could take. An attack graph would display a representation of paths an adversary has successfully achieved a goal. At a high level, a type of representation would resemble a web where techniques branch out and co-occurrences can be identified. The attack graph can implement user’s implemented controls to better define what pathways are more likely to be explored by an attacker
+
+<b>Limitations</b>: The method we used to find choke points is highly subjective. Our analysis was done by manually examining each technique, searching for references in CTI, and identifying before and after techniques. For some techniques,
+
+<h2>Framing the Analysis</h2> 
+To help limit the scope of techniques to review, the team first looked at MITRE ATT&CK Tactics that could potentially produce low Choke Point confidence levels. Tactics at the beginning and end of a cyber kill chain would not have many before and after techniques to produce high probability of an effective attack flow. Techniques under the Reconnaissance and Resource Development Tactics received a baseline of 0:1 to indicate at least one technique would take place after them. Techniques under the Impact Tactic received a baseline of 1:0 indicating at least one technique had taken place prior to them. Impact techniques are scoped as the adversaries cumulative objective so follow-on techniques were not considered. All other Tactics received a 1:1 baseline as at least one technique would occur before and after their facilitation.
+
+The MITRE team considered choke point to be the middle technique where many other techniques could go into and come out of in an attack flow proceeding. 
+![CP1](https://user-images.githubusercontent.com/86126040/166457990-f0629a02-0929-4872-acd4-bfe0a8ce84b6.png)
+MITRE Technique T1055: Process Injection is a great example of many techniques calling Process Injection as the next technique in succession for the cyber attack then proceeding to any number of other techniques afterwards.
+![CP2](https://user-images.githubusercontent.com/86126040/166458032-4f0ffff5-1ca1-4d26-b36a-e3cc54855942.png)
+MITRE Technique T1491: Defacement is a great example of how only one technique could funnel into another and there wouldn’t be a following technique after Defacement.
+
+By utilizing the same equation as Actionability, this allows us to understand and interpret the confidence level of choke point and to set parameters. This method is much clearer to see what the inputs are and how changing them will change the output. This method also does not make any assumptions about the structure of the connections between techniques beyond the data that was initially used.
+
+<h3>Proposal for the choke point metric:</h3>
+The chokepoint formula for a technique is written as ![CP3](https://user-images.githubusercontent.com/86126040/166458124-ecd002b2-4904-4d97-8fc6-8b304b7d9b31.png)
+Here 𝑥𝑏 and 𝑥𝑎 are the number of before and after techniques for the technique in question, while 𝑢𝑏 and 𝑢𝑎 are their “utility“ functions. Finally, 𝑤𝑏 and 𝑤𝑎 are the weights for before and after techniques, which are define further below using relative weighting ratios.
+
+<h3>Utility functions</h3>
+
+For each potential chokepoint, we have two attributes: the number of before techniques it has, and the number of after techniques it has. In order to combine them, we define “utility“ functions 𝑢𝑏 and 𝑢𝑎 for # before and # after, respectively. These functions define the "value" of different values have the form
+![CP4](https://user-images.githubusercontent.com/86126040/166491936-8c850ff3-cf42-4f5c-bbfa-80d7f6394089.png)
+Where 𝑥 is the value of some attribute (ex: # of before techniques), and 𝑢𝑝𝑝𝑒𝑟 and 𝑙𝑜𝑤𝑒𝑟 are the upper and lower "cutoffs" for that attribute. Values below the lower cutoff have zero utility, values above the upper cutoff have maximum utility. We set these to the smallest "useful" number of before or after techniques
+
+[note: the upper cutoff should be no larger than the largest value for its attribute, and the lower cutoff should be no lower than the smallest value for its attribute.]
+
+Examples of potential utility functions are illustrated below:
+![CP5](https://user-images.githubusercontent.com/86126040/166492115-9ce7da0c-5da2-4515-bfe7-f6f42e8034d2.png)
+
+<h3>Attribute weighting</h3>
+
+We define the weights 𝑤𝑏 and 𝑤𝑎 by a "weighting ratio" which is set by asking how many after techniques is "worth" one before technique:
+![CP6](https://user-images.githubusercontent.com/86126040/166492276-6c988b84-2942-4df4-83f7-b741dfbaab31.png)
+If you want them to be weighted equally, set this equal to 1. If you want before techniques to be worth 1.2 after techniques, set this equal to 1.2. Below is how to go from this ratio to the actual weights 𝑤𝑏 and 𝑤𝑎.
+
+First, we find the un-normalized weights 𝑤′𝑏 and 𝑤′𝑎. Set
+![CP7](https://user-images.githubusercontent.com/86126040/166492781-160192ce-7581-4954-9e65-7f30cf610e0b.png)
+Then normalize so that they add up to 1 to get the actual weights: 
+![CP8](https://user-images.githubusercontent.com/86126040/166492859-552330fc-b246-42b5-9094-aee64c3d81d2.png)
+ Here is how the expression for 𝑤′𝑏 and 𝑤′𝑎 was derived:
+ The chokepoint formula is ![CP9](https://user-images.githubusercontent.com/86126040/166492908-f2c7f3f3-b882-4e41-9ddf-18b2ff49bbd4.png)
+if 𝑙𝑜𝑤𝑒𝑟𝑏 ≤ 𝑥𝑏 ≤ 𝑢𝑝𝑝𝑒𝑟𝑏 and 𝑙𝑜𝑤𝑒𝑟𝑎 ≤ 𝑥𝑎 ≤ 𝑢𝑝𝑝𝑒𝑟𝑎 (i.e. they are both in the main "linear domain") then we can write this as ![CP10](https://user-images.githubusercontent.com/86126040/166492963-222ef713-8e1f-41a4-b650-eb381f7f1567.png)
+In order to be weighted according to the ratio we specified, the weights 𝑤𝑏 and 𝑤𝑎 should be set so that the following relation is satisfied: 
+![CP11](https://user-images.githubusercontent.com/86126040/166493013-73844486-792b-4f39-bc0a-13d0967ee377.png)
+the derivatives of 𝐶 are:
+![CP12](https://user-images.githubusercontent.com/86126040/166493050-e72c298e-4273-4ac7-8540-340f9e779c89.png)
+When we plug these into the above relation, we see that the relation to be satisfied becomes
+![CP13](https://user-images.githubusercontent.com/86126040/166493079-33fb8d79-5d5a-42b7-a927-464b837b0b32.png)
+ So we can set 𝑤𝑏:=1 and use the above relations to find a value for 𝑤𝑎.
+
+<h3>Plotting Chokepoint</h3>
+
+We can make a scatter plot of the number of before and after techniques among the potential chokepoints:
+![CP14](https://user-images.githubusercontent.com/86126040/166493139-d278b9b7-f4d3-4386-91a6-43e7aab8681f.png)
+And we can overlay this with a contour plot of the actual chokepoint function (patches of the same color have roughly the same chokepoint score)
+![CP15](https://user-images.githubusercontent.com/86126040/166493191-62203dce-faab-4fef-bc07-cd006be6f77c.png)
+ and we can compare this with a plot of what the chokepoint function would look like had we not used utility functions to scale the number of before and after techniques
+ ![CP16](https://user-images.githubusercontent.com/86126040/166493218-213ab408-c63e-457f-aa95-5026dec08bd3.png)
+
 <h1> Actionability </h1>
 <b>Actionability: The opportunity for a defender to detect or mitigate against each ATT&CK technique based on publicly available analytics and security controls.</b>
 
@@ -96,72 +215,3 @@ This is a contour plot of actionability scores -- patches of the same color have
 ![Actionability16](https://user-images.githubusercontent.com/86126040/166452592-07ca9b02-0aab-4f4d-b466-ff85209f67f7.png)
 Here's what actionability would look like if we didn't use utility functions to scale detections and mitigations. We can see that actionability is now unbounded, which will make things difficult to combine later on. Also, even if a technique has zero mitigations, it could still recieve a high actionability score if its detections is high enough.
 ![Actionability18](https://user-images.githubusercontent.com/86126040/166452611-7f60e40a-f29d-403a-878d-6c4872c7f546.png)
-
-<h1>Choke Point</h1>
-<b>Choke Point: a specific technique where many other techniques converge or diverge, and eliminating that specific technique would cause disruption to an adversary</b>
-
-<h2>Why do we want to include Chokepoints</h2>
-Analyzing chokepoints can assist defenders to pinpoint critical techniques needed to be successful in an attack. These techniques serve as the common denominator amongst in otherwise disparate attacks. For instance, T1047 (WMI) can serve as a choke point because there are a many other techniques that can be executed after an adversary executes WMI. Defending against malicious WMI usage can limit the potential attack path that an adversary might have used.
-
-<h2>Executive Summary</h2>
-The MITRE team subjectively analyzed open-source threat reports and cyber incidents to identify techniques that had many techniques achieve multiple objectives, and common techniques that had many other techniques leading up to it and happening after it. We created one-to-many, many-to-one, and many-to-many mappings to help us find out choke points. MITRE ATT&CK Tactics were first used to narrow scope and help determine likelihood of chokepoint techniques. The team defined preceding and subsequent techniques for each chokepoint. Total count of preceding and subsequent techniques are assigned an attribute. The attribute is the confidence level, confidence level is the technique’s probability to offer more avenues for a successful attack.
-
-<b>Future Recommendations</b>: In depth chokepoint analysis may require ML/AI components to visualize and predict all viable paths an attacker could take. An attack graph would display a representation of paths an adversary has successfully achieved a goal. At a high level, a type of representation would resemble a web where techniques branch out and co-occurrences can be identified. The attack graph can implement user’s implemented controls to better define what pathways are more likely to be explored by an attacker
-
-<b>Limitations</b>: The method we used to find choke points is highly subjective. Our analysis was done by manually examining each technique, searching for references in CTI, and identifying before and after techniques. For some techniques,
-
-<h2>Framing the Analysis</h2> 
-To help limit the scope of techniques to review, the team first looked at MITRE ATT&CK Tactics that could potentially produce low Choke Point confidence levels. Tactics at the beginning and end of a cyber kill chain would not have many before and after techniques to produce high probability of an effective attack flow. Techniques under the Reconnaissance and Resource Development Tactics received a baseline of 0:1 to indicate at least one technique would take place after them. Techniques under the Impact Tactic received a baseline of 1:0 indicating at least one technique had taken place prior to them. Impact techniques are scoped as the adversaries cumulative objective so follow-on techniques were not considered. All other Tactics received a 1:1 baseline as at least one technique would occur before and after their facilitation.
-
-The MITRE team considered choke point to be the middle technique where many other techniques could go into and come out of in an attack flow proceeding. 
-![CP1](https://user-images.githubusercontent.com/86126040/166457990-f0629a02-0929-4872-acd4-bfe0a8ce84b6.png)
-MITRE Technique T1055: Process Injection is a great example of many techniques calling Process Injection as the next technique in succession for the cyber attack then proceeding to any number of other techniques afterwards.
-![CP2](https://user-images.githubusercontent.com/86126040/166458032-4f0ffff5-1ca1-4d26-b36a-e3cc54855942.png)
-MITRE Technique T1491: Defacement is a great example of how only one technique could funnel into another and there wouldn’t be a following technique after Defacement.
-
-By utilizing the same equation as Actionability, this allows us to understand and interpret the confidence level of choke point and to set parameters. This method is much clearer to see what the inputs are and how changing them will change the output. This method also does not make any assumptions about the structure of the connections between techniques beyond the data that was initially used.
-
-<h3>Proposal for the choke point metric:</h3>
-The chokepoint formula for a technique is written as ![CP3](https://user-images.githubusercontent.com/86126040/166458124-ecd002b2-4904-4d97-8fc6-8b304b7d9b31.png)
-Here 𝑥𝑏 and 𝑥𝑎 are the number of before and after techniques for the technique in question, while 𝑢𝑏 and 𝑢𝑎 are their “utility“ functions. Finally, 𝑤𝑏 and 𝑤𝑎 are the weights for before and after techniques, which are define further below using relative weighting ratios.
-
-<h3>Utility functions</h3>
-
-For each potential chokepoint, we have two attributes: the number of before techniques it has, and the number of after techniques it has. In order to combine them, we define “utility“ functions 𝑢𝑏 and 𝑢𝑎 for # before and # after, respectively. These functions define the "value" of different values have the form
-![CP4](https://user-images.githubusercontent.com/86126040/166491936-8c850ff3-cf42-4f5c-bbfa-80d7f6394089.png)
-Where 𝑥 is the value of some attribute (ex: # of before techniques), and 𝑢𝑝𝑝𝑒𝑟 and 𝑙𝑜𝑤𝑒𝑟 are the upper and lower "cutoffs" for that attribute. Values below the lower cutoff have zero utility, values above the upper cutoff have maximum utility. We set these to the smallest "useful" number of before or after techniques
-
-[note: the upper cutoff should be no larger than the largest value for its attribute, and the lower cutoff should be no lower than the smallest value for its attribute.]
-
-Examples of potential utility functions are illustrated below:
-![CP5](https://user-images.githubusercontent.com/86126040/166492115-9ce7da0c-5da2-4515-bfe7-f6f42e8034d2.png)
-
-<h3>Attribute weighting</h3>
-
-We define the weights 𝑤𝑏 and 𝑤𝑎 by a "weighting ratio" which is set by asking how many after techniques is "worth" one before technique:
-![CP6](https://user-images.githubusercontent.com/86126040/166492276-6c988b84-2942-4df4-83f7-b741dfbaab31.png)
-If you want them to be weighted equally, set this equal to 1. If you want before techniques to be worth 1.2 after techniques, set this equal to 1.2. Below is how to go from this ratio to the actual weights 𝑤𝑏 and 𝑤𝑎.
-
-First, we find the un-normalized weights 𝑤′𝑏 and 𝑤′𝑎. Set
-![CP7](https://user-images.githubusercontent.com/86126040/166492781-160192ce-7581-4954-9e65-7f30cf610e0b.png)
-Then normalize so that they add up to 1 to get the actual weights: 
-![CP8](https://user-images.githubusercontent.com/86126040/166492859-552330fc-b246-42b5-9094-aee64c3d81d2.png)
- Here is how the expression for 𝑤′𝑏 and 𝑤′𝑎 was derived:
- The chokepoint formula is ![CP9](https://user-images.githubusercontent.com/86126040/166492908-f2c7f3f3-b882-4e41-9ddf-18b2ff49bbd4.png)
-if 𝑙𝑜𝑤𝑒𝑟𝑏 ≤ 𝑥𝑏 ≤ 𝑢𝑝𝑝𝑒𝑟𝑏 and 𝑙𝑜𝑤𝑒𝑟𝑎 ≤ 𝑥𝑎 ≤ 𝑢𝑝𝑝𝑒𝑟𝑎 (i.e. they are both in the main "linear domain") then we can write this as ![CP10](https://user-images.githubusercontent.com/86126040/166492963-222ef713-8e1f-41a4-b650-eb381f7f1567.png)
-In order to be weighted according to the ratio we specified, the weights 𝑤𝑏 and 𝑤𝑎 should be set so that the following relation is satisfied: 
-![CP11](https://user-images.githubusercontent.com/86126040/166493013-73844486-792b-4f39-bc0a-13d0967ee377.png)
-the derivatives of 𝐶 are:
-![CP12](https://user-images.githubusercontent.com/86126040/166493050-e72c298e-4273-4ac7-8540-340f9e779c89.png)
-When we plug these into the above relation, we see that the relation to be satisfied becomes
-![CP13](https://user-images.githubusercontent.com/86126040/166493079-33fb8d79-5d5a-42b7-a927-464b837b0b32.png)
- So we can set 𝑤𝑏:=1 and use the above relations to find a value for 𝑤𝑎.
-
-<h3>Plotting Chokepoint</h3>
-
-We can make a scatter plot of the number of before and after techniques among the potential chokepoints:
-![CP14](https://user-images.githubusercontent.com/86126040/166493139-d278b9b7-f4d3-4386-91a6-43e7aab8681f.png)
-And we can overlay this with a contour plot of the actual chokepoint function (patches of the same color have roughly the same chokepoint score)
-![CP15](https://user-images.githubusercontent.com/86126040/166493191-62203dce-faab-4fef-bc07-cd006be6f77c.png)
- and we can compare this with a plot of what the chokepoint function would look like had we not used utility functions to scale the number of before and after techniques
- ![CP16](https://user-images.githubusercontent.com/86126040/166493218-213ab408-c63e-457f-aa95-5026dec08bd3.png)
