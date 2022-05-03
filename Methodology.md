@@ -97,10 +97,71 @@ This is a contour plot of actionability scores -- patches of the same color have
 Here's what actionability would look like if we didn't use utility functions to scale detections and mitigations. We can see that actionability is now unbounded, which will make things difficult to combine later on. Also, even if a technique has zero mitigations, it could still recieve a high actionability score if its detections is high enough.
 ![Actionability18](https://user-images.githubusercontent.com/86126040/166452611-7f60e40a-f29d-403a-878d-6c4872c7f546.png)
 
+<h1>Choke Point</h1>
+<b>Choke Point: a specific technique where many other techniques converge or diverge, and eliminating that specific technique would cause disruption to an adversary</b>
 
+<h2>Why do we want to include Chokepoints</h2>
+Analyzing chokepoints can assist defenders to pinpoint critical techniques needed to be successful in an attack. These techniques serve as the common denominator amongst in otherwise disparate attacks. For instance, T1047 (WMI) can serve as a choke point because there are a many other techniques that can be executed after an adversary executes WMI. Defending against malicious WMI usage can limit the potential attack path that an adversary might have used.
 
+<h2>Executive Summary</h2>
+The MITRE team subjectively analyzed open-source threat reports and cyber incidents to identify techniques that had many techniques achieve multiple objectives, and common techniques that had many other techniques leading up to it and happening after it. We created one-to-many, many-to-one, and many-to-many mappings to help us find out choke points. MITRE ATT&CK Tactics were first used to narrow scope and help determine likelihood of chokepoint techniques. The team defined preceding and subsequent techniques for each chokepoint. Total count of preceding and subsequent techniques are assigned an attribute. The attribute is the confidence level, confidence level is the technique’s probability to offer more avenues for a successful attack.
 
+<b>Future Recommendations</b>: In depth chokepoint analysis may require ML/AI components to visualize and predict all viable paths an attacker could take. An attack graph would display a representation of paths an adversary has successfully achieved a goal. At a high level, a type of representation would resemble a web where techniques branch out and co-occurrences can be identified. The attack graph can implement user’s implemented controls to better define what pathways are more likely to be explored by an attacker
 
+<b>Limitations</b>: The method we used to find choke points is highly subjective. Our analysis was done by manually examining each technique, searching for references in CTI, and identifying before and after techniques. For some techniques,
 
+<h2>Framing the Analysis</h2> 
+To help limit the scope of techniques to review, the team first looked at MITRE ATT&CK Tactics that could potentially produce low Choke Point confidence levels. Tactics at the beginning and end of a cyber kill chain would not have many before and after techniques to produce high probability of an effective attack flow. Techniques under the Reconnaissance and Resource Development Tactics received a baseline of 0:1 to indicate at least one technique would take place after them. Techniques under the Impact Tactic received a baseline of 1:0 indicating at least one technique had taken place prior to them. Impact techniques are scoped as the adversaries cumulative objective so follow-on techniques were not considered. All other Tactics received a 1:1 baseline as at least one technique would occur before and after their facilitation.
 
+The MITRE team considered choke point to be the middle technique where many other techniques could go into and come out of in an attack flow proceeding. 
+![CP1](https://user-images.githubusercontent.com/86126040/166457990-f0629a02-0929-4872-acd4-bfe0a8ce84b6.png)
+MITRE Technique T1055: Process Injection is a great example of many techniques calling Process Injection as the next technique in succession for the cyber attack then proceeding to any number of other techniques afterwards.
+![CP2](https://user-images.githubusercontent.com/86126040/166458032-4f0ffff5-1ca1-4d26-b36a-e3cc54855942.png)
+MITRE Technique T1491: Defacement is a great example of how only one technique could funnel into another and there wouldn’t be a following technique after Defacement.
 
+By utilizing the same equation as Actionability, this allows us to understand and interpret the confidence level of choke point and to set parameters. This method is much clearer to see what the inputs are and how changing them will change the output. This method also does not make any assumptions about the structure of the connections between techniques beyond the data that was initially used.
+
+<h3>Proposal for the choke point metric:</h3>
+The chokepoint formula for a technique is written as ![CP3](https://user-images.githubusercontent.com/86126040/166458124-ecd002b2-4904-4d97-8fc6-8b304b7d9b31.png)
+Here 𝑥𝑏 and 𝑥𝑎 are the number of before and after techniques for the technique in question, while 𝑢𝑏 and 𝑢𝑎 are their “utility“ functions. Finally, 𝑤𝑏 and 𝑤𝑎 are the weights for before and after techniques, which are define further below using relative weighting ratios.
+
+<h3>Utility functions</h3>
+
+For each potential chokepoint, we have two attributes: the number of before techniques it has, and the number of after techniques it has. In order to combine them, we define “utility“ functions 𝑢𝑏 and 𝑢𝑎 for # before and # after, respectively. These functions define the "value" of different values have the form
+![CP4](https://user-images.githubusercontent.com/86126040/166491936-8c850ff3-cf42-4f5c-bbfa-80d7f6394089.png)
+Where 𝑥 is the value of some attribute (ex: # of before techniques), and 𝑢𝑝𝑝𝑒𝑟 and 𝑙𝑜𝑤𝑒𝑟 are the upper and lower "cutoffs" for that attribute. Values below the lower cutoff have zero utility, values above the upper cutoff have maximum utility. We set these to the smallest "useful" number of before or after techniques
+
+[note: the upper cutoff should be no larger than the largest value for its attribute, and the lower cutoff should be no lower than the smallest value for its attribute.]
+
+Examples of potential utility functions are illustrated below:
+![CP5](https://user-images.githubusercontent.com/86126040/166492115-9ce7da0c-5da2-4515-bfe7-f6f42e8034d2.png)
+
+<h3>Attribute weighting</h3>
+
+We define the weights 𝑤𝑏 and 𝑤𝑎 by a "weighting ratio" which is set by asking how many after techniques is "worth" one before technique:
+![CP6](https://user-images.githubusercontent.com/86126040/166492276-6c988b84-2942-4df4-83f7-b741dfbaab31.png)
+If you want them to be weighted equally, set this equal to 1. If you want before techniques to be worth 1.2 after techniques, set this equal to 1.2. Below is how to go from this ratio to the actual weights 𝑤𝑏 and 𝑤𝑎.
+
+First, we find the un-normalized weights 𝑤′𝑏 and 𝑤′𝑎. Set
+![CP7](https://user-images.githubusercontent.com/86126040/166492781-160192ce-7581-4954-9e65-7f30cf610e0b.png)
+Then normalize so that they add up to 1 to get the actual weights: 
+![CP8](https://user-images.githubusercontent.com/86126040/166492859-552330fc-b246-42b5-9094-aee64c3d81d2.png)
+ Here is how the expression for 𝑤′𝑏 and 𝑤′𝑎 was derived:
+ The chokepoint formula is ![CP9](https://user-images.githubusercontent.com/86126040/166492908-f2c7f3f3-b882-4e41-9ddf-18b2ff49bbd4.png)
+if 𝑙𝑜𝑤𝑒𝑟𝑏 ≤ 𝑥𝑏 ≤ 𝑢𝑝𝑝𝑒𝑟𝑏 and 𝑙𝑜𝑤𝑒𝑟𝑎 ≤ 𝑥𝑎 ≤ 𝑢𝑝𝑝𝑒𝑟𝑎 (i.e. they are both in the main "linear domain") then we can write this as ![CP10](https://user-images.githubusercontent.com/86126040/166492963-222ef713-8e1f-41a4-b650-eb381f7f1567.png)
+In order to be weighted according to the ratio we specified, the weights 𝑤𝑏 and 𝑤𝑎 should be set so that the following relation is satisfied: 
+![CP11](https://user-images.githubusercontent.com/86126040/166493013-73844486-792b-4f39-bc0a-13d0967ee377.png)
+the derivatives of 𝐶 are:
+![CP12](https://user-images.githubusercontent.com/86126040/166493050-e72c298e-4273-4ac7-8540-340f9e779c89.png)
+When we plug these into the above relation, we see that the relation to be satisfied becomes
+![CP13](https://user-images.githubusercontent.com/86126040/166493079-33fb8d79-5d5a-42b7-a927-464b837b0b32.png)
+ So we can set 𝑤𝑏:=1 and use the above relations to find a value for 𝑤𝑎.
+
+<h3>Plotting Chokepoint</h3>
+
+We can make a scatter plot of the number of before and after techniques among the potential chokepoints:
+![CP14](https://user-images.githubusercontent.com/86126040/166493139-d278b9b7-f4d3-4386-91a6-43e7aab8681f.png)
+And we can overlay this with a contour plot of the actual chokepoint function (patches of the same color have roughly the same chokepoint score)
+![CP15](https://user-images.githubusercontent.com/86126040/166493191-62203dce-faab-4fef-bc07-cd006be6f77c.png)
+ and we can compare this with a plot of what the chokepoint function would look like had we not used utility functions to scale the number of before and after techniques
+ ![CP16](https://user-images.githubusercontent.com/86126040/166493218-213ab408-c63e-457f-aa95-5026dec08bd3.png)
