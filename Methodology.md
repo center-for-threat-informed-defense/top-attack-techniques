@@ -67,7 +67,21 @@ Bottom line: to make sure the weights have a "physical" meaning, we will define 
 If we want 1 mitigation to be worth 2 detections, then we'd set  ![Actionability7](https://user-images.githubusercontent.com/86126040/166447525-6ca66218-df6a-446e-bcf6-143ccfa2ccf1.png) =2. This method can be extended to problems with more than two attributes.
 
 <h3>How to Get Weights from Weighting Ratios (Optional Reading)</h3>
-The actionability formula is: ![Actionability8](https://user-images.githubusercontent.com/86126040/166456729-94cc416b-1982-4d8d-befd-684aff2cebc1.png) (i.e. they are both in the main "linear domain") then we can write this as ![Actionability10](https://user-images.githubusercontent.com/86126040/166456940-a17e7965-e676-40ce-a981-953acc038bca.png) If we want each mitigation to be worth two detections, then we should set the 𝑤𝑚 and 𝑤𝑑 so that the following relation is satisfied (if the ratio is changed, then you would change the 2 here to whatever the new ratio is): ![Actionability11](https://user-images.githubusercontent.com/86126040/166457059-bee04736-206b-4d7d-91fc-8c5758df7d14.png) the derivatives of A are: ![Actionability12](https://user-images.githubusercontent.com/86126040/166457130-940ffd8d-480c-4a28-b59b-5ebf6faffbce.png)  When we plug these into the above relation, we see that the relation to be satisfied becomes  ![Actionability13](https://user-images.githubusercontent.com/86126040/166457195-2d0b22fb-f2bc-4abb-be25-2a3fb8e42d0c.png) So we can set 𝑤𝑚:=1 and use the above relations to find a value for 𝑤𝑑. ![Actionability14](https://user-images.githubusercontent.com/86126040/166457258-7cb9e50e-bf1e-4ffd-a5d5-7d1af2bba3f0.png) Then, to ensure actionability ranges from zero to one, we just need to normalize the weights so that they add up to one (i.e. we want 𝑤𝑑 + 𝑤𝑚 = 1.) We can do this by dividing each un-normalized weight by the sum of all weights: ![Actionability15](https://user-images.githubusercontent.com/86126040/166457353-9cc9459b-d28d-403d-92fe-1b79ce2f61ec.png) where 𝑤′𝑚 and 𝑤′𝑑 are the values of 𝑤𝑚 and 𝑤𝑑 before normalizing.
+The actionability formula is: 
+![Actionability8](https://user-images.githubusercontent.com/86126040/166456729-94cc416b-1982-4d8d-befd-684aff2cebc1.png) 
+(i.e. they are both in the main "linear domain") then we can write this as 
+![Actionability10](https://user-images.githubusercontent.com/86126040/166456940-a17e7965-e676-40ce-a981-953acc038bca.png) 
+If we want each mitigation to be worth two detections, then we should set the 𝑤𝑚 and 𝑤𝑑 so that the following relation is satisfied (if the ratio is changed, then you would change the 2 here to whatever the new ratio is): 
+![Actionability11](https://user-images.githubusercontent.com/86126040/166457059-bee04736-206b-4d7d-91fc-8c5758df7d14.png) 
+the derivatives of A are: 
+![Actionability12](https://user-images.githubusercontent.com/86126040/166457130-940ffd8d-480c-4a28-b59b-5ebf6faffbce.png)  
+When we plug these into the above relation, we see that the relation to be satisfied becomes  
+![Actionability13](https://user-images.githubusercontent.com/86126040/166457195-2d0b22fb-f2bc-4abb-be25-2a3fb8e42d0c.png) 
+So we can set 𝑤𝑚:=1 and use the above relations to find a value for 𝑤𝑑. 
+![Actionability14](https://user-images.githubusercontent.com/86126040/166457258-7cb9e50e-bf1e-4ffd-a5d5-7d1af2bba3f0.png) 
+Then, to ensure actionability ranges from zero to one, we just need to normalize the weights so that they add up to one (i.e. we want 𝑤𝑑 + 𝑤𝑚 = 1.) We can do this by dividing each un-normalized weight by the sum of all weights: 
+![Actionability15](https://user-images.githubusercontent.com/86126040/166457353-9cc9459b-d28d-403d-92fe-1b79ce2f61ec.png) 
+where 𝑤′𝑚 and 𝑤′𝑑 are the values of 𝑤𝑚 and 𝑤𝑑 before normalizing.
 
 <h3>What if we have more than two attributes? (Optional Reading)</h3>
 
