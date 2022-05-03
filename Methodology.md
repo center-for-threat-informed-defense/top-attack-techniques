@@ -84,6 +84,6 @@ This is a contour plot of actionability scores -- patches of the same color have
 - Actionability ranges from zero to one. This will make things much easier when it comes time to combine the scores from actionability, chokepoint and so on.
 - You can see that the highest score that a technique with no mitigations can have is about 0.45
 ![Actionability16](https://user-images.githubusercontent.com/86126040/166452592-07ca9b02-0aab-4f4d-b466-ff85209f67f7.png)
-Here's what actionability would look like if we didn't use utility functions to scale detections and mitigations. We can see that actionability is now unbounded, which will make things difficult to combine later on. Also, even if a technique has zero mitigations, it could still recieve a high actionability score if its detect
+Here's what actionability would look like if we didn't use utility functions to scale detections and mitigations. We can see that actionability is now unbounded, which will make things difficult to combine later on. Also, even if a technique has zero mitigations, it could still recieve a high actionability score if its detections is high enough.
 ![Actionability18](https://user-images.githubusercontent.com/86126040/166452611-7f60e40a-f29d-403a-878d-6c4872c7f546.png)
-ions is high enough.
+
