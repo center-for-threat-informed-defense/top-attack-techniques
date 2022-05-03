@@ -17,7 +17,7 @@ The prioritized list of techniques is the visual representation of a lot of back
 <b>Prevalence</b> is defined as the frequency of which an attacker usesuse for a specific ATT&CK technique over a period of time. This component makes use of real-world data that was gathered for the Sightings Ecosystem project. Frequency analysis was used and adjusted based on recency of the technique’s usage, so a technique seen last week will be weighted higher than a technique seen last month.
 ![Screen Shot 2022-05-03 at 8 43 24 AM](https://user-images.githubusercontent.com/86126040/166455288-2aa32233-069e-4555-aa08-20561ab13bd0.png)
 
-
+To view a more indepth look at our methodology, please see the methodology document within this github.
 
 
 <h2>Putting this to practical use</h2>
@@ -39,22 +39,22 @@ There are certainly gaps and errors with our approach, but in the Center, we are
 
 <h2> Understanding the Spreadsheet </h2>
 
-<h1>TOP 10 TECHNIQUES	</h1>
+<h3>TOP 10 TECHNIQUES	</h3>
 B15:19 = You can change your monitoring coverage, which will update the Top Technique score and the Ransomware Top Technique score. The options are None, Low, Medium, High.
 	
-<h2>Methodology</h2>
+<h3>Methodology</h3>
 F:G	= These columns are to adjust the Choke Point score for each technique. Column F is how many techniques happen immediately before that row's technique and column G is how many techniques happen immediately after that row's technique. 
 M:M	= This is our Sightings data and is hardcoded. YOU WON'T BE ABLE TO CHANGE THESE VALUES YET.
 N:Q, S, U	= These columns are to adjust the Actionability score. Each column represents the number of analytics or controls for each technique. 
 AN	= These columns allow you to update the Ransomware Top Technique score. AN is to mark how many ransomware groups have been seen using that row's technique. 
 	
-<h2>Coverage Definitions </h2>
+<h3>Coverage Definitions </h3>
 This sheet describes our definitions for the different levels of network, process, file, hardware, and cloud coverage. This was borrowed from Cyb3rWard0g's work on "How Hot is your Hunt Team"
 	
-<h2>Techniques</h2>
+<h3>Techniques</h3>
 This sheet is from the ATT&CK page and includes all relavent data for each technique
 	
-<h2>Parameters</h2>
+<h3>Parameters</h3>
 This sheet has values that feed our components in the Methodology sheet. 
 
 D2:D5 = changes the upper and lower bounds for Actionability. D6 changes the weighted ratio of detections to mitigations. 1 Mitigations = 2 Detections
