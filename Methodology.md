@@ -62,13 +62,14 @@ Where 𝑥𝑑 and 𝑥𝑚 are the raw counts of detections and mitigations, �
 
 Since we are using utility functions, we need to be careful with how we define the weights.
 
-<b>Bottom line: to make sure the weights have a "physical" meaning, we will define them using weighting ratios
+Bottom line: to make sure the weights have a "physical" meaning, we will define them using weighting ratios
 ![Actionability6](https://user-images.githubusercontent.com/86126040/166447498-3a6b7ea6-cf65-45b8-9be1-4ceba3f7b971.png)
-If we want 1 mitigation to be worth 2 detections, then we'd set  ![Actionability7](https://user-images.githubusercontent.com/86126040/166447525-6ca66218-df6a-446e-bcf6-143ccfa2ccf1.png)=2. This method can be extended to problems with more than two attributes.</b>
+If we want 1 mitigation to be worth 2 detections, then we'd set  ![Actionability7](https://user-images.githubusercontent.com/86126040/166447525-6ca66218-df6a-446e-bcf6-143ccfa2ccf1.png) =2. This method can be extended to problems with more than two attributes.
 
 <h3>How to Get Weights from Weighting Ratios (Optional Reading)</h3>
 The actionability formula is: 
-![Actionability9](https://user-images.githubusercontent.com/86126040/166451374-71738917-2f29-4ada-9db3-2ee85a1e3146.png) If  (i.e. they are both in the main "linear domain") then we can write this as:
+![Actionability9](https://user-images.githubusercontent.com/86126040/166451374-71738917-2f29-4ada-9db3-2ee85a1e3146.png) 
+If  (i.e. they are both in the main "linear domain") then we can write this as:
 ![Actionability10](https://user-images.githubusercontent.com/86126040/166451405-924335f0-98aa-437b-9a71-90e08b96d60f.png)
  If we want each mitigation to be worth two detections, then we should set the 𝑤𝑚 and 𝑤𝑑 so that the following relation is satisfied (if the ratio is changed, then you would change the 2 here to whatever the new ratio is): ![Actionability11](https://user-images.githubusercontent.com/86126040/166451447-2ffc6371-fcfa-40ae-a0ca-2cb9eaba6509.png) the derivatives of 𝐴 are: ![Actionability12](https://user-images.githubusercontent.com/86126040/166451471-3c2d5348-4203-4dbd-8acf-b84635d38748.png) When we plug these into the above relation, we see that the relation to be satisfied becomes ![Actionability13](https://user-images.githubusercontent.com/86126040/166452415-3675e0ea-1e89-4b9b-9950-c7a11de2d178.png) So we can set 𝑤𝑚:=1 and use the above relations to find a value for 𝑤𝑑.
 ![Actionability14](https://user-images.githubusercontent.com/86126040/166452448-1178ac4c-c1d4-41f7-9e5b-8dfddb2d7fa6.png)
