@@ -1,4 +1,7 @@
 # Top Attack Technique Methodology
+A top technique list should be actionable and driven by threat intelligence. Which drove the direction of our prioritized list and methodology to consist of algorithms, math, and analysis on the backend. The Center’s methodology is composed of three different components - actionability, choke point, and prevalence. Algorithms for each component were created to determine a technique’s weight within a specific component, and then each component weight is combined to give an overall confidence score.  
+![Screen Shot 2022-05-03 at 12 45 21 PM](https://user-images.githubusercontent.com/86126040/166500489-9a55d85a-f836-4279-aec6-bd93d8e96b8e.png)
+
 <h1>Prevalence</h1>
 <b>Prevalence: the frequency of which an attacker uses a specific MITRE ATT&CK technique over a period of time. </b>
 
