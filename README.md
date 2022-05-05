@@ -1,6 +1,7 @@
 <h2>Top ATT&CK Techniques</h2>
 Top ATT&CK Techniques provides defenders with a systematic approach to prioritizing ATT&CK techniques. Our open methodology considers technique prevalence, common attack choke points, and actionability to enable defenders to focus on the ATT&CK techniques that are most relevant to their organization.  
 
+
 The Top ATT&CK Techniques Calculator makes building customized top technique lists easy. Users can create a top 10 technique list tailored to their organization. The user inputs include filters for the operating system, security controls, detection analytics, and modifiers for process and network monitoring coverage. The calculator displays the top 10 techniques and provides the option to export every technique in v10 of ATT&CK in JSON format.  
 
 ## Resources
@@ -8,7 +9,7 @@ The Top ATT&CK Techniques Calculator makes building customized top technique lis
 | Resource | Description |
 |----------|-------------|
 | [Top ATT&CK Techniques Methodology](https://github.com/center-for-threat-informed-defense/top-attack-technique/blob/main/Methodology.md) | An overview of the algorithms and analysis that went into creating the calculator. |
-| [Top ATT&CK Techniques Excel Calculator](https://github.com/center-for-threat-informed-defense/top-attack-technique/blob/main/TAT%20Backend.xlsx) | Instructions for how to use the Top ATT&CK Techniques backend calculator. |
+| [Top ATT&CK Techniques Excel Calculator](https://github.com/center-for-threat-informed-defense/top-attack-technique/blob/main/TAT%20Backend.xlsx) | The backend, excel version of the Top ATT&CK Techniques calculator. |
 | [Top ATT&CK Techniques Excel Calculator Readme](https://github.com/center-for-threat-informed-defense/top-attack-technique/blob/main/backend-calculator-readme.md) | Guidance for using the backend Top ATT&CK Techniques excel-based calculator. |
 | [Top ATT&CK Techniques Web Calculator](https://top-attack-techniques.mitre-engenuity.org) | The Top ATT&CK Techniques web-based calculator. |
 
