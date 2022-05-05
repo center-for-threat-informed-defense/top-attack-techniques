@@ -46,7 +46,7 @@ Please submit [issues](https://github.com/center-for-threat-informed-defense/top
 technical questions/concerns or contact ctid@mitre-engenuity.org directly for more general inquiries.
 
 ## Notice
-Copyright 2021 MITRE Engenuity. Approved for public release. Document number CT0047
+Copyright 2022 MITRE Engenuity. Approved for public release. Document number CT0047
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
