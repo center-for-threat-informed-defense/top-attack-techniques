@@ -1,7 +1,15 @@
-<h1>What is Top ATT&CK Techniques?</h1>
+<h2>Top ATT&CK Techniques?</h2>
 
-In its visual form, Top ATT&CK Techniques is a web-based calculator that allows defenders to generate a list of every technique, prioritized based on user inputs. The user inputs include filters for things like operating system, security controls, analytics, and modifiers for things like process and network monitoring coverage. The calculator displays the top 10 techniques and provides the option to export all techniques in JSON format.  This spreadsheet is the backend for the Top ATT&CK Techniques calculator. This README will explain how can you modify this spreadsheet to have the Top 10 Calculator completely customized to your needs. You should only change cells that are highlighted in yellow. Other changes could break the functionality, so do so at your own risk. 	
+In its visual form, Top ATT&CK Techniques is a web-based calculator that allows defenders to generate a list of every technique, prioritized based on user inputs. The user inputs include filters for things like operating system, security controls, analytics, and modifiers for things like process and network monitoring coverage. The calculator displays the top 10 techniques and provides the option to export all techniques in JSON format.  
 ![Screen Shot 2022-05-03 at 8 44 17 AM](https://user-images.githubusercontent.com/86126040/166455196-ca3809ea-3e3b-479e-916c-6b9e61cd90f9.png)
+
+## Resources
+
+| Resource | Description |
+|----------|-------------|
+| [Top ATT&CK Techniques Methodology](/docs/methodology.md) | An overview of the algorithms and analysis that went into creating the calculator. |
+| [Top ATT&CK Techniques Excel Calculator](/docs/backendcalc.md) | Instructions for how to use the Top ATT&CK Techniques backend calculator. |
+
 
 <h2>Methodology</h2>
 
@@ -38,6 +46,8 @@ There are certainly gaps and errors with our approach, but in the Center, we are
 
 
 <h2> Understanding the Spreadsheet </h2>
+
+This spreadsheet is the backend for the Top ATT&CK Techniques calculator. This README will explain how can you modify this spreadsheet to have the Top 10 Calculator completely customized to your needs. You should only change cells that are highlighted in yellow. Other changes could break the functionality, so do so at your own risk. 	
 
 <h3>TOP 10 TECHNIQUES	</h3>
 B15:19 = You can change your monitoring coverage, which will update the Top Technique score and the Ransomware Top Technique score. The options are None, Low, Medium, High.
