@@ -1,8 +1,11 @@
-<h2>Top ATT&CK Techniques</h2>
+# Top ATT&CK Techniques
 Top ATT&CK Techniques provides defenders with a systematic approach to prioritizing ATT&CK techniques. Our open methodology considers technique prevalence, common attack choke points, and actionability to enable defenders to focus on the ATT&CK techniques that are most relevant to their organization.  
 
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/1420025/167134772-933b2bf1-3bd2-44d0-a1c8-f27dd9e1724f.png">
 
-The Top ATT&CK Techniques Calculator makes building customized top technique lists easy. Users can create a top 10 technique list tailored to their organization. The user inputs include filters for the operating system, security controls, detection analytics, and modifiers for process and network monitoring coverage. The calculator displays the top 10 techniques and provides the option to export every technique in v10 of ATT&CK in JSON format.  
+The Top ATT&CK Techniques Calculator makes building customized top technique lists easy. Users can create a top 10 technique list tailored to their organization. The user inputs include filters for the operating system, security controls, detection analytics, and modifiers for process and network monitoring coverage. The calculator displays the top 10 techniques and provides the option to export every technique in v10 of ATT&CK in JSON format.
+
+<img width="412" alt="image" src="https://user-images.githubusercontent.com/1420025/167134857-00f5aa70-1f32-4a31-8698-cdc4f97c8796.png">
 
 ## Resources
 
@@ -13,13 +16,13 @@ The Top ATT&CK Techniques Calculator makes building customized top technique lis
 | [Top ATT&CK Techniques Excel Calculator Readme](https://github.com/center-for-threat-informed-defense/top-attack-technique/blob/main/backend-calculator-readme.md) | Guidance for using the backend Top ATT&CK Techniques excel-based calculator. |
 | [Top ATT&CK Techniques Web Calculator](https://top-attack-techniques.mitre-engenuity.org) | The Top ATT&CK Techniques web-based calculator. |
 
-<h2>Putting this to practical use</h2>
+# Putting this to practical use 
 
 Along with giving defenders a tool to help prioritize techniques, the project wanted to put our methodology to practical use and produce a top 10 list that was focused on a specific topic. A ransomware list was selected because ransomware is wide-reaching, indiscriminate, and relevant. This list is the Center’s assessment of which techniques a defender should prioritize to protect themselves against a ransomware attack.  
 
 To create this ransomware list, the project’s methodology was used and supplemented by adding a separate component that is specific to the Center’s ransomware analysis. To feed this component, CTI (Cyber Threat Intelligence) reporting on 22 different ransomware families was reviewed and extracted techniques that were used during ransomware attacks. The more times a technique was seen across the 22 groups, the higher the weight. 
 
-<h2>A few limitations</h2>
+# A few limitations
 
 ATT&CK was never created with the intent of assigning values to each technique. It is a compendium of things adversaries have done and gives defenders a common lexicon. Therefore, quantifying the data within ATT&CK is a bit precarious. This project applied discrete values to abstract ideas and generated a weighted score for every technique.  
 
