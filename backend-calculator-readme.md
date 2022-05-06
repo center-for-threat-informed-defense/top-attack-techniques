@@ -1,6 +1,6 @@
 <h3>Understanding the Spreadsheet</h3>
 
-The [Top ATT&CK Techniques backend spreadsheet](https://github.com/center-for-threat-informed-defense/top-attack-technique/blob/main/TAT%20Backend.xlsx) is the backend for the Top ATT&CK Techniques calculator. This README will explain how can you modify this spreadsheet to have the Top 10 Calculator completely customized to your needs. You should only change cells that are highlighted in yellow. Other changes could break the functionality, so do so at your own risk. 	
+The [Top ATT&CK Techniques backend spreadsheet](https://github.com/center-for-threat-informed-defense/top-attack-techniques/releases/tag/v1.0.0) is the backend for the Top ATT&CK Techniques calculator. This README will explain how can you modify this spreadsheet to have the Top 10 Calculator completely customized to your needs. You should only change cells that are highlighted in yellow. Other changes could break the functionality, so do so at your own risk. 	
 
 <h3>TOP 10 TECHNIQUES</h3>
 B15:19 = You can change your monitoring coverage, which will update the Top Technique score and the Ransomware Top Technique score. The options are None, Low, Medium, High.
@@ -26,4 +26,4 @@ D8:D11 = changes the upper and lower bounds for Choke Point. D12 changes the wei
 
 D14 = sets the date for which the prevalence methodology should use as ""today's date."" This should reflect the latest date that you have data for prevalence. 
 
-D21:22 = sets the upper and lower bounds for the ranswomare list. The upper bound is how many different groups are in the ransomware data set
+D21:22 = sets the upper and lower bounds for the ransomware list. The upper bound is how many different groups are in the ransomware data set
