@@ -13,7 +13,7 @@ The Top ATT&CK Techniques Calculator makes building customized top technique lis
 |----------|-------------|
 | [Top ATT&CK Techniques Methodology](https://github.com/center-for-threat-informed-defense/top-attack-techniques/blob/main/Methodology.md) | An overview of the algorithms and analysis that went into creating the calculator. |
 | [Top ATT&CK Techniques Excel Calculator](https://github.com/center-for-threat-informed-defense/top-attack-techniques/releases/tag/v1.0.0) | The backend, excel version of the Top ATT&CK Techniques calculator. |
-| [Top ATT&CK Techniques Excel Calculator Readme](https://github.com/center-for-threat-informed-defense/top-attack-technique/blob/main/backend-calculator-readme.md) | Guidance for using the backend Top ATT&CK Techniques excel-based calculator. |
+| [Top ATT&CK Techniques Excel Calculator README](https://github.com/center-for-threat-informed-defense/top-attack-techniques/blob/main/Backend-Calculator-README.md) | Guidance for using the Top ATT&CK Techniques backend calculator. |
 | [Top ATT&CK Techniques Web Calculator](https://top-attack-techniques.mitre-engenuity.org) | The Top ATT&CK Techniques web-based calculator. |
 
 # Putting this to practical use 
