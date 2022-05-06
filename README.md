@@ -34,7 +34,7 @@ There are certainly gaps and errors with our approach, but in the Center, we are
 There are several ways that you can get involved with this project and help advance threat-informed defense: 
 - **Review the methodology, use the calculator, and tell us what you think.**  We welcome your review and feedback on the calculator and our methodology.
 - **Help us prioritize improvements.** Let us know where we can improve. Your input will help us prioritize improvements.
-- **Share your use cases.** We are interested in developing additional tools and resources to help the community understand and make threat-informed decisions in their risk management programs. If you have ideas or suggestions, we consider them as we explore additional research projects. 
+- **Share your use cases.** We are interested in hearing from you about your use cases and ideas. Tell us how you leveage the Top ATT&CK Techniques resources and share your ideas for improving upon this foundation.  
 
 ## Questions and Feedback
 Please submit issues for any technical questions/concerns or contact ctid@mitre-engenuity.org directly for more general inquiries.
