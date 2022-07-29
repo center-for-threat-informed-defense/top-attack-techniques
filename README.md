@@ -20,10 +20,10 @@ to export every technique in v10 of ATT&CK in JSON format.
 
 | Resource | Description |
 |----------|-------------|
+| [Top ATT&CK Techniques Web Calculator](https://top-attack-techniques.mitre-engenuity.org/) | The Top ATT&CK Techniques web-based calculator. |
 | [Top ATT&CK Techniques Methodology](https://github.com/center-for-threat-informed-defense/top-attack-techniques/blob/main/Methodology.md) | An overview of the algorithms and analysis that went into creating the calculator. |
 | [Top ATT&CK Techniques Excel Calculator](https://github.com/center-for-threat-informed-defense/top-attack-techniques/raw/main/Calculator.xlsx) | The Excel version of the Top ATT&CK Techniques calculator. |
 | [Top ATT&CK Techniques Excel Calculator README](https://github.com/center-for-threat-informed-defense/top-attack-techniques/blob/main/Calculator.md) | Guidance for using the Top ATT&CK Techniques Excel calculator. |
-| Top ATT&CK Techniques Web Calculator (Coming Soon) | The Top ATT&CK Techniques web-based calculator. |
 
 # Putting this to practical use
 
