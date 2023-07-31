@@ -5,27 +5,45 @@ prioritizing ATT&CK techniques. Our open methodology considers technique
 prevalence, common attack choke points, and actionability to enable defenders to
 focus on the ATT&CK techniques that are most relevant to their organization.
 
+**Table of Contents:**
+- [Getting Started](#getting-started)
+- [Overview](#overview)
+- [Limitations](#limitations)
+- [Getting Involved](#getting-involved)
+- [Questions and Feedback](#questions-and-feedback)
+- [How Do I Contribute?](#how-do-i-contribute)
+- [Notice](#notice)
+
+
+## Getting Started
+
+To get started, try using the web-based calculator. If you want to go deeper, review the
+methodology and consult the Excel calculator spreadsheet to see the underlying data and
+computations.
+
+| Resource                                                                                                                       | Description                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
+| [Web Calculator](https://top-attack-techniques.mitre-engenuity.org/)                                                           | A web-based calculator for building customized priority lists of techniques tailored to your needs. |
+| [Methodology](https://github.com/center-for-threat-informed-defense/top-attack-techniques/blob/main/Methodology.md)            | An overview of the algorithms and analysis that went into creating the calculator.                  |
+| [Excel Calculator](https://github.com/center-for-threat-informed-defense/top-attack-techniques/raw/main/Calculator.xlsx)       | The Excel version of the Top ATT&CK Techniques calculator.                                          |
+| [Excel Calculator README](https://github.com/center-for-threat-informed-defense/top-attack-techniques/blob/main/Calculator.md) | Guidance for using the Top ATT&CK Techniques Excel calculator.                                      |
+
+## Overview
+
+The Top ATT&CK Techniques Calculator makes it easy to build customized lists of
+high-priority ATT&CK techniques lists. The prioritization is based on a
+[methodology](./Methodology.md) that incorporate technique prevalence, choke point
+analysis and actionability.
+
 <img width="468" alt="image" src="https://user-images.githubusercontent.com/1420025/167134772-933b2bf1-3bd2-44d0-a1c8-f27dd9e1724f.png">
 
-The Top ATT&CK Techniques Calculator makes building customized top technique
-lists easy. Users can create a top 10 technique list tailored to their
+Users can create a top 10 technique list tailored to their
 organization. The user inputs include filters for the operating system, security
 controls, detection analytics, and modifiers for process and network monitoring
 coverage. The calculator displays the top 10 techniques and provides the option
 to export every technique in v10 of ATT&CK in JSON format.
 
 <img width="412" alt="image" src="https://user-images.githubusercontent.com/1420025/167134857-00f5aa70-1f32-4a31-8698-cdc4f97c8796.png">
-
-## Resources
-
-| Resource | Description |
-|----------|-------------|
-| [Top ATT&CK Techniques Web Calculator](https://top-attack-techniques.mitre-engenuity.org/) | The Top ATT&CK Techniques web-based calculator. |
-| [Top ATT&CK Techniques Methodology](https://github.com/center-for-threat-informed-defense/top-attack-techniques/blob/main/Methodology.md) | An overview of the algorithms and analysis that went into creating the calculator. |
-| [Top ATT&CK Techniques Excel Calculator](https://github.com/center-for-threat-informed-defense/top-attack-techniques/raw/main/Calculator.xlsx) | The Excel version of the Top ATT&CK Techniques calculator. |
-| [Top ATT&CK Techniques Excel Calculator README](https://github.com/center-for-threat-informed-defense/top-attack-techniques/blob/main/Calculator.md) | Guidance for using the Top ATT&CK Techniques Excel calculator. |
-
-# Putting this to practical use
 
 Along with giving defenders a tool to help prioritize techniques, the project
 wanted to put our methodology to practical use and produce a top 10 list that
@@ -41,7 +59,7 @@ reporting on 22 different ransomware families was reviewed and extracted
 techniques that were used during ransomware attacks. The more times a technique
 was seen across the 22 groups, the higher the weight.
 
-# A few limitations
+## Limitations
 
 ATT&CK was never created with the intent of assigning values to each technique.
 It is a compendium of things adversaries have done and gives defenders a common
