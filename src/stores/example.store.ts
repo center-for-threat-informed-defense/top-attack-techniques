@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
 export const useExampleStore = defineStore("example", () => {
-    const name = "App Lab";
-    return { name };
+  const name = "Top ATT&CK Techniques";
+  return { name };
 });

@@ -15,6 +15,7 @@ module.exports = {
           "dark-gray": "#7E8284",
           silver: "#D4D4D3",
           "light-silver": "#F1F3F4",
+          "primary-purple": "#5C6FC6",
         },
       },
     },
