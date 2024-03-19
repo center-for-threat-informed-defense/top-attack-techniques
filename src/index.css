@@ -2,8 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+#page-body {
+    @apply mt-20
+}
+
+#app {
+    font-family: "Roboto Condensed", sans-serif;
+}
 
 .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+}
+.p-menuitem-link {
+    @apply bg-mitre-primary-purple uppercase;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.p-menuitem-text {
+    @apply my-2
 }

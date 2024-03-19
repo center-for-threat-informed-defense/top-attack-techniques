@@ -1,6 +1,6 @@
 <template>
   <Navigation />
-  <router-view></router-view>
+  <router-view id="page-body"></router-view>
 </template>
 
 <script lang="ts">

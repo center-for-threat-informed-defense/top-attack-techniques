@@ -1,7 +1,9 @@
 <template>
-  <nav class="bg-white shadow-xl">
+  <nav
+    class="bg-highlighter bg-mitre-primary-purple text-white shadow-xl pt-1 fixed w-full top-0"
+  >
     <div class="flex justify-between mx-8">
-      <h1 class="my-auto bold">Top ATT&CK Techniques</h1>
+      <h1 class="my-auto bold uppercase">Top ATT&CK Techniques</h1>
       <div class="card">
         <TabMenu :model="items">
           <template #item="{ item, props }">
