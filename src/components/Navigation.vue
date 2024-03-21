@@ -5,7 +5,7 @@
     <div class="flex justify-between mx-8">
       <h1 class="my-auto bold uppercase">Top ATT&CK Techniques</h1>
       <div class="card">
-        <TabMenu :model="items">
+        <TabMenu :model="items" :active-index="getActiveIndex()">
           <template #item="{ item, props }">
             <router-link
               v-if="item.route"
@@ -13,7 +13,7 @@
               :to="item.route"
               custom
             >
-              <a :href="href" v-bind="props.action" @click="navigate">
+              <a :to="href" v-bind="props.action" @click="navigate">
                 <span v-bind="props.label">{{ item.label }}</span>
               </a>
             </router-link>
@@ -39,6 +39,14 @@ export default defineComponent({
         { label: "Help", route: "/help" },
       ],
     };
+  },
+  methods: {
+    getActiveIndex() {
+      let route = this.$route.path;
+      return this.items.findIndex(function (item) {
+        return item.route === route;
+      });
+    },
   },
 });
 </script>
