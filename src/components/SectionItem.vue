@@ -1,17 +1,24 @@
 <template>
-  <div class="my-6">
+  <div class="mx-4">
     <router-link
       :to="link"
       routerLinkActive="router-link-active"
-      class="bg-mitre-light-purple text-mitre-navy py-2 px-4 flex"
+      class="py-2 -ml-2 flex"
     >
       <img v-bind:src="getImgUrl()" class="h-11" />
-      <h2 class="text-xl uppercase my-auto ml-4 mr-auto">{{ title }}</h2>
-      <img src="../assets/arrow-right.svg" />
+      <h2 class="text-2xl uppercase font-medium my-auto ml-2 mr-auto">
+        {{ title }}
+      </h2>
     </router-link>
-    <div class="py-2 px-4 pb-4">
-      <p>{{ description }}</p>
-    </div>
+    <p>{{ description }}</p>
+    <router-link
+      :to="link"
+      routerLinkActive="router-link-active"
+      class="flex border-b-2 border-mitre-light-purple uppercase w-max mt-6"
+    >
+      <p>Learn More</p>
+      <img src="../assets/arrow-right.svg" class="h-6 ml-8" />
+    </router-link>
   </div>
 </template>
 
