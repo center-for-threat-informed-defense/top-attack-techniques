@@ -1,11 +1,12 @@
 <template>
-  <div class="bg-gray-100">
-    <div class="flex w-5/6 mx-auto h-full" id="hero">
-      <div class="w-1/2 my-auto pr-10">
+  <div></div>
+  <div class="" id="hero">
+    <div class="lg:flex w-5/6 mx-auto h-full">
+      <div class="lg:w-1/2 lg:my-auto mt-20 mb-10 lg:pr-10">
         <h1 class="uppercase text-6xl font-semibold">
-          <span class="text-mitre-primary-purple">Top</span> ATT&CK Techniques
+          <span class="text-mitre-light-purple">Top</span> ATT&CK Techniques
         </h1>
-        <hr class="border-2 border-mitre-primary-purple my-4" />
+        <hr class="border-2 border-mitre-light-purple my-4" />
         <p>
           Top ATT&CK Techniques provides defenders with a systematic approach to
           prioritizing ATT&CK techniques. Our open methodology considers
@@ -14,7 +15,7 @@
           relevant to their organization.
         </p>
       </div>
-      <div class="w-1/2 my-auto pl-10 gap-10">
+      <div class="lg:w-1/2 my-auto lg:pl-10 gap-10">
         <section-item
           title="Calculator"
           description="Use the criteria to score your system and click generate in order to see your personalized list of techniques. Our calculator will show you a customized list of the vulnerabilities you have and what you need to prioritize for your system."
