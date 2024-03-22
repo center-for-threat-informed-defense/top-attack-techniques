@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-white my-6 shadow-lg">
+  <div class="my-6">
     <router-link
       :to="link"
       routerLinkActive="router-link-active"
-      class="bg-mitre-primary-purple text-white py-2 px-4 flex"
+      class="bg-mitre-light-purple text-mitre-navy py-2 px-4 flex"
     >
       <img v-bind:src="getImgUrl()" class="h-11" />
       <h2 class="text-xl uppercase my-auto ml-4 mr-auto">{{ title }}</h2>
