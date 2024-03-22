@@ -10,10 +10,6 @@
     font-family: "Roboto Condensed", sans-serif;
 }
 
-#hero {
-    height: 90vh;
-    @apply pt-0 bg-mitre-navy
-}
 .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
     border-top-right-radius: 0;
     border-top-left-radius: 0;

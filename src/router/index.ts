@@ -3,6 +3,7 @@ import Home from "@/components/Home.vue";
 import Methodology from "@/components/Methodology.vue";
 import Help from "@/components/Help.vue";
 import Calculator from "@/components/Calculator.vue";
+import TopTen from "@/components/TopTen.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/calculator",
     name: "calculator",
     component: Calculator,
+  },
+  {
+    path: "/top-10-lists",
+    name: "top-10-lists",
+    component: TopTen,
   },
 ];
 

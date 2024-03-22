@@ -1,30 +1,8 @@
-<svg
-id="calculate"
-xmlns="http://www.w3.org/2000/svg"
-width="45.85"
-height="45.85"
-viewBox="0 0 45.85 45.85"
->
-<g id="Group_479" data-name="Group 479">
-    <rect
-    id="Rectangle_85"
-    data-name="Rectangle 85"
-    width="45.85"
-    height="45.85"
-    fill="none"
-    />
-</g>
-<g
-    id="Group_480"
-    data-name="Group 480"
-    transform="translate(5.696 5.696)"
->
-    <path
-    id="Path_169"
-    data-name="Path 169"
-    d="M33.381,3H6.8A3.809,3.809,0,0,0,3,6.8V33.381a3.809,3.809,0,0,0,3.8,3.8H33.381a3.809,3.809,0,0,0,3.8-3.8V6.8A3.809,3.809,0,0,0,33.381,3ZM22.045,10.709,24.058,8.7l2.677,2.677L29.412,8.7l2.013,2.013-2.677,2.677,2.677,2.677-2.013,2.013-2.677-2.658L24.058,18.1l-2.013-2.013,2.677-2.677ZM9.171,11.962h9.494V14.81H9.171ZM19.14,27.684h-3.8v3.8H12.494v-3.8H8.7V24.836h3.8v-3.8h2.848v3.8h3.8Zm12.342,2.373H21.988V27.209h9.494Zm0-4.747H21.988V22.463h9.494Z"
-    transform="translate(-3 -3)"
-    fill="#fff"
-    />
-</g>
+<svg id="calculate" xmlns="http://www.w3.org/2000/svg" width="45.85" height="45.85" viewBox="0 0 45.85 45.85">
+  <g id="Group_479" data-name="Group 479">
+    <rect id="Rectangle_85" data-name="Rectangle 85" width="45.85" height="45.85" fill="none"/>
+  </g>
+  <g id="Group_480" data-name="Group 480" transform="translate(5.696 5.696)">
+    <path id="Path_169" data-name="Path 169" d="M33.381,3H6.8A3.809,3.809,0,0,0,3,6.8V33.381a3.809,3.809,0,0,0,3.8,3.8H33.381a3.809,3.809,0,0,0,3.8-3.8V6.8A3.809,3.809,0,0,0,33.381,3ZM22.045,10.709,24.058,8.7l2.677,2.677L29.412,8.7l2.013,2.013-2.677,2.677,2.677,2.677-2.013,2.013-2.677-2.658L24.058,18.1l-2.013-2.013,2.677-2.677ZM9.171,11.962h9.494V14.81H9.171ZM19.14,27.684h-3.8v3.8H12.494v-3.8H8.7V24.836h3.8v-3.8h2.848v3.8h3.8Zm12.342,2.373H21.988V27.209h9.494Zm0-4.747H21.988V22.463h9.494Z" transform="translate(-3 -3)" fill="#bca9dd"/>
+  </g>
 </svg>

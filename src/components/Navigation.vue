@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed bg-highlighter bg-mitre-navy text-white shadow-xl pt-1 w-full top-0"
+    class="fixed bg-highlighter bg-mitre-navy text-white shadow-xl pt-1 w-full top-0 z-50"
   >
     <div class="flex mx-8">
       <h1 class="my-auto bold uppercase mr-auto">Top ATT&CK Techniques</h1>
@@ -65,6 +65,7 @@ export default defineComponent({
       items: [
         { label: "Home", route: "/" },
         { label: "Calculator", route: "/calculator" },
+        { label: "Top Ten Lists", route: "/top-10-lists" },
         { label: "Methodology", route: "/methodology" },
         { label: "Help", route: "/help" },
       ],
