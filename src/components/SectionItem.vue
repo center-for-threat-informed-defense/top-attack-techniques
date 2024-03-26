@@ -16,7 +16,7 @@
       routerLinkActive="router-link-active"
       class="flex border-b-2 border-mitre-light-purple uppercase w-max mt-6"
     >
-      <p>Learn More</p>
+      <p class="link font-semibold">Learn More</p>
       <img src="../assets/arrow-right.svg" class="h-6 ml-8" />
     </router-link>
   </div>

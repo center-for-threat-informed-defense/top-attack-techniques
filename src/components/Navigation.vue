@@ -1,9 +1,13 @@
 <template>
   <nav
-    class="fixed bg-highlighter bg-mitre-navy text-white shadow-xl pt-1 w-full top-0 z-50"
+    class="fixed bg-highlighter bg-mitre-navy text-white pt-1 w-full top-0 z-50"
   >
     <div class="flex mx-8">
-      <h1 class="my-auto bold uppercase mr-auto">Top ATT&CK Techniques</h1>
+      <router-link to="/" class="mr-auto my-auto w-max">
+        <h1 class="my-auto font-medium text-xl uppercase w-max">
+          <span class="text-mitre-light-purple">Top</span> ATT&CK Techniques
+        </h1>
+      </router-link>
       <div class="lg:visible invisible card">
         <TabMenu :model="items" :active-index="getActiveIndex()">
           <template #item="{ item, props }">
@@ -20,34 +24,36 @@
           </template>
         </TabMenu>
       </div>
-      <button
-        class="lg:invisible lg:w-0 w-6 visible"
-        @click="toggle"
-        aria-haspopup="true"
-        aria-controls="overlay_menu"
-      >
-        <img src="../assets/menu.svg" />
-      </button>
-      <TieredMenu
-        ref="menu"
-        id="overlay_menu"
-        :model="items"
-        :popup="true"
-        class="absolute right-4 top-4 shadow-md"
-      >
-        <template #item="{ item, props }">
-          <router-link
-            v-if="item.route"
-            v-slot="{ href, navigate }"
-            :to="item.route"
-            custom
-          >
-            <a :to="href" v-bind="props.action" @click="navigate">
-              <span v-bind="props.label">{{ item.label }}</span>
-            </a>
-          </router-link>
-        </template>
-      </TieredMenu>
+      <div class="lg:invisible visible lg:w-0 w-min my-auto">
+        <Button
+          class="lg:w-0 w-6 my-auto cursor-pointer"
+          type="button"
+          @click="toggle"
+          aria-haspopup="true"
+          aria-controls="overlay_menu"
+        >
+          <img src="../assets/menu.svg" />
+        </Button>
+        <TieredMenu
+          :model="items"
+          id="overlay_menu"
+          ref="menu"
+          class="absolute right-10 top-14 shadow-lg z-50 invisible"
+        >
+          <template #item="{ item, props }">
+            <router-link
+              v-if="item.route"
+              v-slot="{ href, navigate }"
+              :to="item.route"
+              custom
+            >
+              <a :to="href" v-bind="props.action" @click="navigate">
+                <span v-bind="props.label">{{ item.label }}</span>
+              </a>
+            </router-link>
+          </template>
+        </TieredMenu>
+      </div>
     </div>
   </nav>
 </template>
@@ -56,10 +62,12 @@
 import { defineComponent } from "vue";
 import TabMenu from "primevue/tabmenu";
 import TieredMenu from "primevue/tieredmenu";
+import Menu from "primevue/menu";
+import Button from "primevue/button";
 import { ref } from "vue";
 
 export default defineComponent({
-  components: { TabMenu, TieredMenu },
+  components: { TabMenu, TieredMenu, Menu, Button },
   data() {
     return {
       items: [
@@ -69,7 +77,6 @@ export default defineComponent({
         { label: "Methodology", route: "/methodology" },
         { label: "Help", route: "/help" },
       ],
-      menu: ref(),
     };
   },
   methods: {
@@ -80,7 +87,12 @@ export default defineComponent({
       });
     },
     toggle(event) {
-      this.menu.value.toggle(event);
+      const menu = document.getElementById("overlay_menu");
+      if (menu.classList.contains("invisible")) {
+        menu.classList.remove("invisible");
+      } else {
+        menu.classList.add("invisible");
+      }
     },
   },
 });
