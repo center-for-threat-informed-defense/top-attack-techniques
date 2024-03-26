@@ -2,22 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    margin: 0;
+}
 #page-body {
-    @apply pt-20 bg-white text-mitre-black min-h-screen
+    @apply pt-40 bg-white text-mitre-black min-h-screen
 }
 
 #app {
-    font-family: "Roboto Condensed", sans-serif;
+    @apply top-0 m-0;
+    font-family: "Roboto", sans-serif;
 }
 
 .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
 }
-.p-menuitem-link, .p-tieredmenu {
+.p-tabmenu .p-menuitem-link {
     @apply bg-mitre-navy uppercase text-white;
     font-family: "Roboto Condensed", sans-serif;
 }
+.p-tieredmenu .p-menuitem-link, .p-tieredmenu {
+    @apply uppercase font-medium ;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+
+}
 .p-menuitem-text {
     @apply my-2
+}
+h1, h2, h3, h4, h5, h6 {
+    @apply uppercase;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.link {
+    @apply hover:text-mitre-light-purple text-lg;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.btn-primary {
+    @apply bg-mitre-light-purple hover:bg-mitre-navy hover:text-white my-4 py-4 uppercase font-bold text-lg;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
 }
