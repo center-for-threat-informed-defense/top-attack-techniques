@@ -2,11 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global Styles */
 body {
     margin: 0;
 }
 #page-body {
-    @apply pt-40 bg-white text-mitre-black min-h-screen
+    @apply pt-20 bg-white text-mitre-black min-h-screen
 }
 
 #app {
@@ -14,22 +15,6 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-}
-.p-tabmenu .p-menuitem-link {
-    @apply bg-mitre-navy uppercase text-white;
-    font-family: "Roboto Condensed", sans-serif;
-}
-.p-tieredmenu .p-menuitem-link, .p-tieredmenu {
-    @apply uppercase font-medium ;
-    font-family: "Fira Sans Extra Condensed", sans-serif;
-
-}
-.p-menuitem-text {
-    @apply my-2
-}
 h1, h2, h3, h4, h5, h6 {
     @apply uppercase;
     font-family: "Fira Sans Extra Condensed", sans-serif;
@@ -41,4 +26,48 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary {
     @apply bg-mitre-light-purple hover:bg-mitre-navy hover:text-white my-4 py-4 uppercase font-bold text-lg;
     font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+
+/* Navigation */
+.navbar {
+    @apply fixed bg-mitre-navy text-white pt-1 w-full top-0 z-50
+}
+.navbar h1 {
+    @apply my-auto font-medium text-xl uppercase w-max
+}
+
+/* Homepage */
+
+.hero {
+    @apply bg-mitre-navy min-h-[100vh] -mt-20 lg:pt-2 xl:pb-10 pt-20 pb-20 text-white;
+}
+.hero .title {
+    @apply xl:w-3/5 lg:w-2/3 mx-auto lg:mt-60 mt-20 lg:flex gap-6
+}
+.hero .title h1 {
+    @apply uppercase text-6xl font-semibold lg:my-auto
+}
+
+/* Primevue Overrides */
+.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.p-tabmenu .p-menuitem-link {
+    @apply bg-mitre-navy uppercase text-white hover:text-mitre-light-purple;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.p-tieredmenu .p-menuitem-link, .p-tieredmenu {
+    @apply uppercase font-medium ;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+
+}
+.p-menuitem-text {
+    @apply my-2
+}
+.p-tabmenu-ink-bar {
+    @apply  bg-mitre-light-purple;
+}
+.p-highlight .p-menuitem-text {
+    @apply text-mitre-light-purple
 }
