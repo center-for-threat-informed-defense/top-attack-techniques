@@ -1,16 +1,12 @@
 <template>
   <div>
-    <div
-      class="bg-mitre-navy top-0 -mt-60 lg:pt-10 lg:pb-0 pt-40 pb-20 text-white"
-    >
-      <div class="relative w-5/6 min-h-[80vh] mx-auto">
-        <div class="xl:w-3/5 lg:w-2/3 mx-auto lg:mt-80 mt-40 lg:flex gap-6">
-          <h1 class="uppercase text-6xl font-semibold lg:my-auto">
+    <div class="hero">
+      <div class="w-5/6 h-full mx-auto my-auto">
+        <div class="title">
+          <h1 class="">
             <span class="text-mitre-light-purple">Top</span> ATT&CK Techniques
           </h1>
-          <div
-            class="lg:w-6 lg:h-36 w-full h-1 bg-mitre-light-purple my-4"
-          ></div>
+          <div class="lg:w-6 lg:h-36 w-full h-1 bg-mitre-light-purple my-4"></div>
           <p class="my-auto">
             Top ATT&CK Techniques provides defenders with a systematic approach
             to prioritizing ATT&CK techniques. Our open methodology considers
@@ -19,33 +15,19 @@
             relevant to their organization.
           </p>
         </div>
-        <div
-          class="mx-auto my-16 grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8"
-        >
-          <section-item
-            title="Calculator"
+        <div class="mx-auto my-16 grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
+          <section-item title="Calculator"
             description="Use the criteria to score your system and click generate in order to see your personalized list of techniques. Our calculator will show you a customized list of the vulnerabilities you have and what you need to prioritize for your system."
-            imgSrc="calculator.svg"
-            link="calculator"
-          />
-          <section-item
-            title="Top 10 lists"
+            imgSrc="calculator.svg" link="calculator" />
+          <section-item title="Top 10 lists"
             description="The Top Ransomware Technique List provides a starting point for defending against ransomware attacks and demonstrates how the Top ATT&CK Techniques methodology can be tailored to different use cases."
-            imgSrc="list.svg"
-            link="top-10-lists"
-          />
-          <section-item
-            title="Methodology"
+            imgSrc="list.svg" link="top-10-lists" />
+          <section-item title="Methodology"
             description="Use the criteria to score your system and click generate in order to see your personalized list of techniques. Our calculator will show you a customized list of the vulnerabilities you have and what you need to prioritize for your system."
-            imgSrc="book.svg"
-            link="methodology"
-          />
-          <section-item
-            title="Help"
+            imgSrc="book.svg" link="methodology" />
+          <section-item title="Help"
             description="The Top Ransomware Technique List provides a starting point for defending against ransomware attacks and demonstrates how the Top ATT&CK Techniques methodology can be tailored to different use cases."
-            imgSrc="help.svg"
-            link="help"
-          />
+            imgSrc="help.svg" link="help" />
         </div>
       </div>
     </div>

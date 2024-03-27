@@ -1,22 +1,15 @@
 <template>
-  <nav
-    class="fixed bg-highlighter bg-mitre-navy text-white pt-1 w-full top-0 z-50"
-  >
+  <nav class="navbar">
     <div class="flex mx-8">
       <router-link to="/" class="mr-auto my-auto w-max">
-        <h1 class="my-auto font-medium text-xl uppercase w-max">
+        <h1>
           <span class="text-mitre-light-purple">Top</span> ATT&CK Techniques
         </h1>
       </router-link>
       <div class="lg:visible invisible card">
         <TabMenu :model="items" :active-index="getActiveIndex()">
           <template #item="{ item, props }">
-            <router-link
-              v-if="item.route"
-              v-slot="{ href, navigate }"
-              :to="item.route"
-              custom
-            >
+            <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
               <a :to="href" v-bind="props.action" @click="navigate">
                 <span v-bind="props.label">{{ item.label }}</span>
               </a>
@@ -25,28 +18,14 @@
         </TabMenu>
       </div>
       <div class="lg:invisible visible lg:w-0 w-min my-auto">
-        <Button
-          class="lg:w-0 w-6 my-auto cursor-pointer"
-          type="button"
-          @click="toggle"
-          aria-haspopup="true"
-          aria-controls="overlay_menu"
-        >
+        <Button class="lg:w-0 w-6 my-auto cursor-pointer" type="button" @click="toggle" aria-haspopup="true"
+          aria-controls="overlay_menu">
           <img src="../assets/menu.svg" />
         </Button>
-        <TieredMenu
-          :model="items"
-          id="overlay_menu"
-          ref="menu"
-          class="absolute right-10 top-14 shadow-lg z-50 invisible"
-        >
+        <TieredMenu :model="items" id="overlay_menu" ref="menu"
+          class="absolute right-10 top-14 shadow-lg z-50 invisible">
           <template #item="{ item, props }">
-            <router-link
-              v-if="item.route"
-              v-slot="{ href, navigate }"
-              :to="item.route"
-              custom
-            >
+            <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
               <a :to="href" v-bind="props.action" @click="navigate">
                 <span v-bind="props.label">{{ item.label }}</span>
               </a>
@@ -86,7 +65,7 @@ export default defineComponent({
         return item.route === route;
       });
     },
-    toggle(event) {
+    toggle() {
       const menu = document.getElementById("overlay_menu");
       if (menu.classList.contains("invisible")) {
         menu.classList.remove("invisible");
