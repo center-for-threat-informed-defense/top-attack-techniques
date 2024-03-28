@@ -21,3 +21,22 @@
 .p-menuitem-text {
     @apply my-2
 }
+
+.container {
+    @apply border-2 h-full border-mitre-black text-left 
+}
+.container-body, .container-header {
+    @apply lg:px-8 lg:py-4
+}
+.container-header {
+    @apply bg-mitre-navy text-white
+}
+.container h2 {
+    @apply uppercase text-xl w-full
+}
+.container-row {
+    @apply flex gap-4 my-8
+}
+.btn-primary {
+    @apply bg-mitre-navy hover:bg-mitre-dark-navy text-white my-4 py-4 uppercase font-bold text-lg;
+}
