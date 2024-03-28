@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        mitre: {
+        ctid: {
           "primary-purple": "#5C6FC6",
           navy: "#212C5E",
           black: "#0B2338",

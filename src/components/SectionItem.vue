@@ -14,7 +14,7 @@
     <router-link
       :to="link"
       routerLinkActive="router-link-active"
-      class="flex border-b-2 border-mitre-light-purple uppercase w-max mt-6"
+      class="flex border-b-2 border-ctid-light-purple uppercase w-max mt-6"
     >
       <p class="link font-semibold">Learn More</p>
       <img src="../assets/arrow-right.svg" class="h-6 ml-8" />

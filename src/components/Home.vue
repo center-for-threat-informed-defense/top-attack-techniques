@@ -4,9 +4,9 @@
       <div class="w-5/6 h-full mx-auto my-auto">
         <div class="title">
           <h1 class="">
-            <span class="text-mitre-light-purple">Top</span> ATT&CK Techniques
+            <span class="text-ctid-light-purple">Top</span> ATT&CK Techniques
           </h1>
-          <div class="lg:w-6 lg:h-36 w-full h-1 bg-mitre-light-purple my-4"></div>
+          <div class="lg:w-6 lg:h-36 w-full h-1 bg-ctid-light-purple my-4"></div>
           <p class="my-auto">
             Top ATT&CK Techniques provides defenders with a systematic approach
             to prioritizing ATT&CK techniques. Our open methodology considers

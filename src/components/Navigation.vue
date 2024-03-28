@@ -3,7 +3,7 @@
     <div class="flex mx-8">
       <router-link to="/" class="mr-auto my-auto w-max">
         <h1>
-          <span class="text-mitre-light-purple">Top</span> ATT&CK Techniques
+          <span class="text-ctid-light-purple">Top</span> ATT&CK Techniques
         </h1>
       </router-link>
       <div class="lg:inline lg:w-auto w-0 hidden card">

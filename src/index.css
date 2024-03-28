@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 #page-body {
-    @apply pt-20 bg-white text-mitre-black min-h-screen
+    @apply pt-20 bg-white text-ctid-black min-h-screen
 }
 
 #app {
@@ -20,17 +20,17 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 .link {
-    @apply hover:text-mitre-light-purple text-lg;
+    @apply hover:text-ctid-light-purple text-lg;
     font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 .btn-primary {
-    @apply bg-mitre-light-purple hover:bg-mitre-navy hover:text-white my-4 py-4 uppercase font-bold text-lg;
+    @apply bg-ctid-light-purple hover:bg-ctid-navy hover:text-white my-4 py-4 uppercase font-bold text-lg;
     font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 
 /* Navigation */
 .navbar {
-    @apply fixed bg-mitre-navy text-white pt-1 w-full top-0 z-50
+    @apply fixed bg-ctid-navy text-white pt-1 w-full top-0 z-50
 }
 .navbar h1 {
     @apply my-auto font-medium text-xl uppercase w-max
@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Homepage */
 
 .hero {
-    @apply bg-mitre-navy min-h-[100vh] -mt-20 lg:pt-2 xl:pb-10 pt-20 pb-20 text-white;
+    @apply bg-ctid-navy min-h-[100vh] -mt-20 lg:pt-2 xl:pb-10 pt-20 pb-20 text-white;
 }
 .hero .title {
     @apply  2xl:w-3/5 xl:w-2/3 mx-auto lg:mt-60 mt-20 lg:flex gap-6
@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     border-top-left-radius: 0;
 }
 .p-tabmenu .p-menuitem-link {
-    @apply bg-mitre-navy uppercase text-white hover:text-mitre-light-purple;
+    @apply bg-ctid-navy uppercase text-white hover:text-ctid-light-purple;
     font-family: "Roboto Condensed", sans-serif;
 }
 .p-menubar .p-menuitem-link, .p-menubar {
@@ -66,10 +66,10 @@ h1, h2, h3, h4, h5, h6 {
     @apply my-2
 }
 .p-tabmenu-ink-bar {
-    @apply  bg-mitre-light-purple;
+    @apply  bg-ctid-light-purple;
 }
 .p-highlight .p-menuitem-text {
-    @apply text-mitre-light-purple
+    @apply text-ctid-light-purple
 }
 .p-menubar-root-list {
     @apply w-60 -ml-40
