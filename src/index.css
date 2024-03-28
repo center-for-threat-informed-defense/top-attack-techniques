@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply bg-mitre-navy min-h-[100vh] -mt-20 lg:pt-2 xl:pb-10 pt-20 pb-20 text-white;
 }
 .hero .title {
-    @apply xl:w-3/5 lg:w-2/3 mx-auto lg:mt-60 mt-20 lg:flex gap-6
+    @apply  2xl:w-3/5 xl:w-2/3 mx-auto lg:mt-60 mt-20 lg:flex gap-6
 }
 .hero .title h1 {
     @apply uppercase text-6xl font-semibold lg:my-auto
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply bg-mitre-navy uppercase text-white hover:text-mitre-light-purple;
     font-family: "Roboto Condensed", sans-serif;
 }
-.p-tieredmenu .p-menuitem-link, .p-tieredmenu {
+.p-menubar .p-menuitem-link, .p-menubar {
     @apply uppercase font-medium ;
     font-family: "Fira Sans Extra Condensed", sans-serif;
 
@@ -70,4 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .p-highlight .p-menuitem-text {
     @apply text-mitre-light-purple
+}
+.p-menubar-root-list {
+    @apply w-60 -ml-40
 }

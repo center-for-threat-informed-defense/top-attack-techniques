@@ -6,7 +6,7 @@
           <span class="text-mitre-light-purple">Top</span> ATT&CK Techniques
         </h1>
       </router-link>
-      <div class="lg:visible invisible card">
+      <div class="lg:inline lg:w-auto w-0 hidden card">
         <TabMenu :model="items" :active-index="getActiveIndex()">
           <template #item="{ item, props }">
             <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
@@ -17,13 +17,9 @@
           </template>
         </TabMenu>
       </div>
-      <div class="lg:invisible visible lg:w-0 w-min my-auto">
-        <Button class="lg:w-0 w-6 my-auto cursor-pointer" type="button" @click="toggle" aria-haspopup="true"
-          aria-controls="overlay_menu">
-          <img src="../assets/menu.svg" />
-        </Button>
-        <TieredMenu :model="items" id="overlay_menu" ref="menu"
-          class="absolute right-10 top-14 shadow-lg z-50 invisible">
+      <div class="lg:hidden lg:w-0 inline-block w-max my-auto">
+        <MenuBar :model="items" id="overlay_menu" ref="menu"
+          class=" text-white z-50">
           <template #item="{ item, props }">
             <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
               <a :to="href" v-bind="props.action" @click="navigate">
@@ -31,7 +27,7 @@
               </a>
             </router-link>
           </template>
-        </TieredMenu>
+        </MenuBar>
       </div>
     </div>
   </nav>
@@ -40,13 +36,10 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import TabMenu from "primevue/tabmenu";
-import TieredMenu from "primevue/tieredmenu";
-import Menu from "primevue/menu";
-import Button from "primevue/button";
-import { ref } from "vue";
+import MenuBar from "primevue/menubar";
 
 export default defineComponent({
-  components: { TabMenu, TieredMenu, Menu, Button },
+  components: { TabMenu, MenuBar },
   data() {
     return {
       items: [
@@ -64,14 +57,6 @@ export default defineComponent({
       return this.items.findIndex(function (item) {
         return item.route === route;
       });
-    },
-    toggle() {
-      const menu = document.getElementById("overlay_menu");
-      if (menu.classList.contains("invisible")) {
-        menu.classList.remove("invisible");
-      } else {
-        menu.classList.add("invisible");
-      }
     },
   },
 });
