@@ -1,7 +1,6 @@
 import { defineStore } from "pinia";
 
-export const useCalculatorStore = defineStore({
-  id: "calculator",
+export const useCalculatorStore = defineStore("calculator", {
   state: () => ({
     activeFiltersObj: [],
     filterPropertiesObj: [
@@ -31,6 +30,13 @@ export const useCalculatorStore = defineStore({
         options: [{ id: "test", name: "Test", value: false }],
       },
     ],
+    systemScoreObj: {
+      network: 1,
+      process: 1,
+      file: 1,
+      cloud: 1,
+      hardware: 1,
+    },
   }),
   getters: {
     activeFilters(state) {
@@ -38,6 +44,9 @@ export const useCalculatorStore = defineStore({
     },
     filterProperties(state) {
       return state.filterPropertiesObj;
+    },
+    systemScore(state) {
+      return state.systemScoreObj;
     },
   },
   actions: {
