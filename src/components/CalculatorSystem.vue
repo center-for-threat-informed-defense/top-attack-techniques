@@ -1,8 +1,8 @@
 <template>
     <div>
         <div v-for="monitoringType of Object.keys(this.calculatorStore.systemScore)" :key="monitoringType"
-            class="flex my-4">
-            <h3 class="uppercase font-bold text-xl my-auto">{{ monitoringType }} Monitoring </h3>
+            class=" 2xl:flex lg:block md:flex my-4">
+            <h3 class="uppercase font-bold text-xl my-auto">{{ monitoringType }} Monitoring Components</h3>
             <select-button v-model="localScores[monitoringType]" :options="this.options" optionLabel="label"
                 dataKey="value" class="my-auto ml-auto"></select-button>
         </div>
