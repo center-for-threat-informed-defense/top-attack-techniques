@@ -44,7 +44,7 @@ jobs:
     - name: Type Check
       run: npm run type-check
     - name: Build
-      run: npm run build-only
+      run: npm run build-only -- --base /$BRANCH_NAME/
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
