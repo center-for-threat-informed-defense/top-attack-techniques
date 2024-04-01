@@ -33,22 +33,17 @@ jobs:
         node-version: '19'
         cache: 'npm'
         cache-dependency-path: './package-lock.json'
-    - name: List Files
-      run: ls -a
     - name: Install dependencies
       run: npm ci
 
     # Lint (Skip for now)
     # - name: Lint
-      # working-directory: ./
       # run: npm run lint
 
     # Build and Upload Artifact
     - name: Type Check
-      working-directory: ./
       run: npm run type-check
     - name: Build
-      working-directory: ./
       run: npm run build-only
     - name: Upload artifact
       uses: actions/upload-artifact@v3
