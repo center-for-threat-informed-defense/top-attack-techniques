@@ -17,7 +17,7 @@
                     <h2>Score your system</h2>
                 </div>
                 <div class="container-body">
-                    <calculator-system />
+                    <calculator-system ref="calcSystemSection" />
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useCalculatorStore } from "@/stores/calculator.store";
+import { useCalculatorStore } from "../stores/calculator.store";
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
 import Checkbox from "primevue/checkbox";
@@ -48,7 +48,8 @@ export default defineComponent({
     },
     methods: {
         generateResults() {
-            console.log(this.$refs.calcFilterSection.localFilters)
+            this.$refs.calcFilterSection.saveNewFilterValues()
+            this.$refs.calcSystemSection.saveNewScores()
         }
     }
 });

@@ -40,32 +40,7 @@ export default defineComponent({
     },
     methods: {
         saveNewFilterValues() {
-            this.calculatorStore.updateActiveFilters(this.getNewFilterValues)
-        },
-        getNewFilterValues() {
-            let nistFilters = [],
-                cisFilters = [],
-                detectionAnalytics = [],
-                platforms = [];
-
-            for (const filter of this.localFilters.values(this.filters)) {
-                filter.options.forEach((option) => {
-                    if (option.value) {
-                        if (filter.id === "nist_controls") nistFilters.push(option.id);
-                        else if (filter.id === "cis_controls") cisFilters.push(option.id);
-                        else if (filter.id === "detection_analytics")
-                            detectionAnalytics.push(option.id);
-                        else if (filter.id === "platforms") platforms.push(option.id);
-                    }
-                });
-            }
-
-            return {
-                nist_controls: nistFilters,
-                cis_controls: cisFilters,
-                detection_analytics: detectionAnalytics,
-                platforms: platforms,
-            };
+            this.calculatorStore.updateActiveFilters(this.localFilters)
         },
     }
 });

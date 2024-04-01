@@ -31,11 +31,11 @@ export const useCalculatorStore = defineStore("calculator", {
       },
     ],
     systemScoreObj: {
-      network: 1,
-      process: 1,
-      file: 1,
-      cloud: 1,
-      hardware: 1,
+      network: { label: "None", value: 1 },
+      process: { label: "None", value: 1 },
+      file: { label: "None", value: 1 },
+      cloud: { label: "None", value: 1 },
+      hardware: { label: "None", value: 1 },
     },
   }),
   getters: {
@@ -51,7 +51,12 @@ export const useCalculatorStore = defineStore("calculator", {
   },
   actions: {
     updateActiveFilters(filterValues) {
-      this.activeFilters = filterValues;
+      console.log("updating filter values to", filterValues);
+      this.activeFiltersObj = filterValues;
+    },
+    updateSystemScores(scores) {
+      console.log("updating system scores to", scores);
+      this.systemScoreObj = scores;
     },
   },
 });
