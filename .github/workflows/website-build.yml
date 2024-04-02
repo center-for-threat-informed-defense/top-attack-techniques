@@ -36,9 +36,9 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    # Lint (Skip for now)
-    # - name: Lint
-      # run: npm run lint
+    # Lint
+    - name: Lint
+      run: npm run lint
 
     # Build and Upload Artifact
     - name: Type Check
