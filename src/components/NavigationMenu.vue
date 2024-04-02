@@ -53,7 +53,7 @@ export default defineComponent({
   },
   methods: {
     getActiveIndex() {
-      let route = this.$route.path;
+      const route = this.$route.path;
       return this.items.findIndex(function (item) {
         return item.route === route;
       });

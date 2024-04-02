@@ -18,16 +18,16 @@
         <div class="mx-auto my-16 grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
           <section-item title="Calculator"
             description="Use the criteria to score your system and click generate in order to see your personalized list of techniques. Our calculator will show you a customized list of the vulnerabilities you have and what you need to prioritize for your system."
-            imgSrc="calculator.svg" link="calculator" />
+            :imgSrc="CalculatorSvg" link="calculator" />
           <section-item title="Top 10 lists"
             description="The Top Ransomware Technique List provides a starting point for defending against ransomware attacks and demonstrates how the Top ATT&CK Techniques methodology can be tailored to different use cases."
-            imgSrc="list.svg" link="top-10-lists" />
+            :imgSrc="ListSvg" link="top-10-lists" />
           <section-item title="Methodology"
             description="Use the criteria to score your system and click generate in order to see your personalized list of techniques. Our calculator will show you a customized list of the vulnerabilities you have and what you need to prioritize for your system."
-            imgSrc="book.svg" link="methodology" />
+            :imgSrc="BookSvg" link="methodology" />
           <section-item title="Help"
             description="The Top Ransomware Technique List provides a starting point for defending against ransomware attacks and demonstrates how the Top ATT&CK Techniques methodology can be tailored to different use cases."
-            imgSrc="help.svg" link="help" />
+            :imgSrc="HelpSvg" link="help" />
         </div>
       </div>
     </div>
@@ -73,12 +73,20 @@
 import { defineComponent } from "vue";
 import { useExampleStore } from "../stores/example.store";
 import SectionItem from "./SectionItem.vue";
+import CalculatorSvg from "@/assets/calculator.svg";
+import ListSvg from "@/assets/list.svg";
+import BookSvg from "@/assets/book.svg";
+import HelpSvg from "@/assets/help.svg";
 
 export default defineComponent({
   components: { SectionItem },
   data() {
     return {
       exampleStore: useExampleStore(),
+      CalculatorSvg,
+      ListSvg,
+      BookSvg,
+      HelpSvg,
     };
   },
 });

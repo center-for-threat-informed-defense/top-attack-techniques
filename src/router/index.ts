@@ -1,30 +1,30 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "@/components/Home.vue";
-import Methodology from "@/components/Methodology.vue";
-import Help from "@/components/Help.vue";
-import Calculator from "@/components/Calculator.vue";
+import HomePage from "@/components/HomePage.vue";
+import MethodologyPage from "@/components/MethodologyPage.vue";
 import TopTen from "@/components/TopTen.vue";
+import HelpPage from "@/components/HelpPage.vue";
+import CalculatorPage from "@/components/CalculatorPage.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: Home,
+    component: HomePage,
   },
   {
     path: "/methodology",
     name: "methodology",
-    component: Methodology,
+    component: MethodologyPage,
   },
   {
     path: "/help",
     name: "help",
-    component: Help,
+    component: HelpPage,
   },
   {
     path: "/calculator",
     name: "calculator",
-    component: Calculator,
+    component: CalculatorPage,
   },
   {
     path: "/top-10-lists",
