@@ -1,10 +1,11 @@
 {
-    "compilerOptions": {
-        "outDir": "./built",
-        "allowJs": true,
-        "target": "es5"
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
     },
-    "include": [
-        "./src/**/*"
-    ]
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ]
 }
