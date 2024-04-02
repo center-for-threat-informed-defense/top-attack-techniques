@@ -67,3 +67,6 @@
 .p-selectbutton .p-highlight.p-button.p-component {
     @apply bg-mitre-navy text-white
 }
+.p-accordion-tab {
+    @apply -mt-[1px]
+}

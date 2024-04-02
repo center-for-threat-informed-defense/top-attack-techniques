@@ -3,6 +3,7 @@ import { defineStore } from "pinia";
 export const useCalculatorStore = defineStore("calculator", {
   state: () => ({
     activeFiltersObj: [],
+    // todo: set NIST, CIS, and OS options from the technique data
     filterPropertiesObj: [
       {
         id: "nist",
