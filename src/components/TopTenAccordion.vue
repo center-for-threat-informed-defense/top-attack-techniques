@@ -1,7 +1,16 @@
 <template>
     <div>
         <Accordion :active-index="activeItemId">
-            <AccordionTab v-for="(n, i) in 10" :key="i" :header="accordionName(topTen[i])">
+            <AccordionTab v-for="(n, i) in 10" :key="i">
+                <template #header>
+                    <h2>
+                        {{ i + 1 }}.
+                        <span class="highlight">
+                            {{ topTen[i].tid }}
+                        </span>
+                        {{ topTen[i].name }}
+                    </h2>
+                </template>
                 <TopTenDetails :technique="topTen[i]" />
             </AccordionTab>
         </Accordion>

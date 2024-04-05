@@ -4,11 +4,18 @@
         <p>
             {{ this.technique.description }}
         </p>
-        <div v-if="this.technique.subtechniques.length > 0">
+        <div v-if="this.technique.subtechniques.length > 0" class="subtechniques">
             <h3 class="mt-4">Subtechniques</h3>
             <Accordion>
-                <AccordionTab v-for="subtechnique in this.technique.subtechniques" :key="subtechnique.tid"
-                    :header="accordionName(subtechnique)">
+                <AccordionTab v-for="subtechnique in this.technique.subtechniques" :key="subtechnique.tid">
+                    <template #header>
+                        <h4>
+                            <span class="highlight">
+                                {{ subtechnique.tid }}
+                            </span>
+                            {{ subtechnique.name }}
+                        </h4>
+                    </template>
                     <h4>Subtechnique Description</h4>
                     <p>{{ subtechnique.description }}</p>
                     <h4 class="mt-4">Mitigations</h4>

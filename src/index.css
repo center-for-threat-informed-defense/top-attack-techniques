@@ -25,7 +25,7 @@
     @apply 
 } */
 .calculator-list .list-item {
-    @apply border-mitre-black border-[1px] -mt-[1px] px-5 py-3 text-lg cursor-pointer flex uppercase
+    @apply border-mitre-black border-[1px] -mt-[1px] px-5 py-3 text-lg cursor-pointer flex uppercase font-semibold
 }
 .calculator-list .list-item.active {
     @apply bg-mitre-navy text-white
@@ -74,4 +74,13 @@
 .p-accordion-header-link {
     @apply p-4
 
+}
+.p-accordion-tab h2, .p-accordion-tab h4 {
+    @apply uppercase font-semibold
+}
+.p-accordion-tab h2 .highlight, .p-accordion-tab h4 .highlight {
+    @apply mx-1
+}
+.p-accordion-tab-active h2 .highlight, .subtechniques .p-accordion-tab-active h4 .highlight {
+    @apply text-mitre-light-purple
 }
