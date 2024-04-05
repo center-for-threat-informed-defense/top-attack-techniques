@@ -65,5 +65,9 @@ export const useCalculatorStore = defineStore("calculator", {
       this.techniques = this.myJson;
       console.log("Number of techniques: ", this.techniques.length);
     },
+    removeTechnique(index) {
+      console.log("delete technique ", this.techniques[index].tid, index);
+      this.techniques.splice(index, 1);
+    },
   },
 });

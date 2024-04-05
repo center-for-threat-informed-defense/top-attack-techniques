@@ -25,10 +25,13 @@
     @apply 
 } */
 .calculator-list .list-item {
-    @apply border-mitre-black border-[1px] -mt-[1px] px-5 py-3 text-lg cursor-pointer
+    @apply border-mitre-black border-[1px] -mt-[1px] px-5 py-3 text-lg cursor-pointer flex uppercase
 }
 .calculator-list .list-item.active {
     @apply bg-mitre-navy text-white
+}
+.calculator-list .list-item.active .highlight {
+    @apply text-mitre-light-purple
 }
 .btn-primary {
     @apply w-full p-4 text-center text-lg bg-mitre-navy text-white uppercase
@@ -36,18 +39,28 @@
 .calculator-details {
     @apply border-mitre-black border-[1px]
 }
-.calculator-details .container-header {
-    @apply w-full bg-mitre-navy text-white px-5 py-3 text-lg
+.container-header {
+    @apply w-full bg-mitre-navy text-white px-5 py-3 text-lg uppercase
 }
-.calculator-details .container-body {
+.container-body {
     @apply p-4 overflow-scroll
 }
-.calculator-details .container-body h3 {
+.container-body h3 {
     @apply uppercase font-bold text-lg
 }
-.calculator-details .container-body h4 {
+.container-body h4 {
     @apply uppercase font-bold
 }
+.list-item img {
+    visibility: hidden;
+}
+.list-item:hover img {
+    visibility: visible;
+}
+.list-item.active:hover img {
+    fill: white;
+}
+
 
 .p-accordion-tab {
     @apply rounded-none shadow-none border-[1px] border-mitre-black -mt-[1px]
@@ -57,4 +70,8 @@
 }
 .p-accordion-tab .p-highlight, .p-highlight .p-accordion-header-link {
     @apply bg-mitre-navy text-white
+}
+.p-accordion-header-link {
+    @apply p-4
+
 }
