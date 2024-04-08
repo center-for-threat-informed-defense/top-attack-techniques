@@ -132,3 +132,6 @@
 .p-accordion-tab {
     @apply -mt-[1px]
 }
+.system-score-row .highlight {
+    @apply text-mitre-primary-purple
+}

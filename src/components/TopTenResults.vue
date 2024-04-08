@@ -1,8 +1,8 @@
 <template>
     <div id="calculator">
         <div class="w-5/6 mx-auto pt-20 pb-10">
-            <h1 class="text-center uppercase font-bold text-5xl">Your Top 10 Techniques </h1>
-            <p class="text-center">System settings</p>
+            <h1 class="text-center uppercase font-bold text-5xl">Your Top 10 Techniques</h1>
+            <SystemScoreSection />
         </div>
         <div class="lg:grid hidden grid-cols-3 gap-4 w-5/6 mx-auto calculator-box auto-rows-fr">
             <div class="col-span-1 calculator-list">
@@ -39,13 +39,14 @@ import { useCalculatorStore } from "../stores/calculator.store";
 import TopTenSidebar from "./TopTenSidebar.vue"
 import TopTenDetails from "./TopTenDetails.vue"
 import TopTenAccordion from "./TopTenAccordion.vue"
+import SystemScoreSection from "../components/SystemScoreSection.vue"
 
 export default defineComponent({
-    components: { TopTenSidebar, TopTenDetails, TopTenAccordion },
+    components: { TopTenSidebar, TopTenDetails, TopTenAccordion, SystemScoreSection },
     data() {
         return {
             calculatorStore: useCalculatorStore(),
-            activeItemId: 1,
+            activeItemId: 0,
         };
     },
     computed: {

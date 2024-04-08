@@ -3,6 +3,7 @@ import Home from "@/views/Home.vue";
 import Methodology from "@/views/Methodology.vue";
 import Help from "@/views/Help.vue";
 import Calculator from "@/views/Calculator.vue";
+import TopTenResults from "../components/TopTenResults.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/calculator",
     name: "calculator",
     component: Calculator,
+  },
+  {
+    path: "/calculator-results",
+    name: "calculator-results",
+    component: TopTenResults,
   },
 ];
 
