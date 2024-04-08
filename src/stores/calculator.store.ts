@@ -1,7 +1,10 @@
 import { defineStore } from "pinia";
+import json from "../data/TopAttackTechniques.json";
 
 export const useCalculatorStore = defineStore("calculator", {
   state: () => ({
+    myJson: json,
+    techniques: [],
     activeFiltersObj: [],
     // todo: set NIST, CIS, and OS options from the technique data
     filterPropertiesObj: [
@@ -58,6 +61,14 @@ export const useCalculatorStore = defineStore("calculator", {
     updateSystemScores(scores) {
       console.log("updating system scores to", scores);
       this.systemScoreObj = scores;
+    },
+    setTechniques() {
+      this.techniques = this.myJson;
+      console.log("Number of techniques: ", this.techniques.length);
+    },
+    removeTechnique(index) {
+      console.log("delete technique ", this.techniques[index].tid, index);
+      this.techniques.splice(index, 1);
     },
   },
 });

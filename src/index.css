@@ -22,6 +22,68 @@
     @apply my-2
 }
 
+.calculator-list .list-item {
+    @apply border-mitre-black border-[1px] -mt-[1px] px-5 py-3 text-lg cursor-pointer flex uppercase font-semibold
+}
+.calculator-list .list-item.active {
+    @apply bg-mitre-navy text-white
+}
+.calculator-list .list-item.active .highlight {
+    @apply text-mitre-light-purple
+}
+.btn-primary {
+    @apply w-full p-4 text-center text-lg bg-mitre-navy text-white uppercase
+}
+.calculator-details {
+    @apply border-mitre-black border-[1px]
+}
+.container-header {
+    @apply w-full bg-mitre-navy text-white px-5 py-3 text-lg uppercase
+}
+.container-body {
+    @apply p-4 overflow-scroll
+}
+.container-body h3 {
+    @apply uppercase font-bold text-lg
+}
+.container-body h4 {
+    @apply uppercase font-bold
+}
+.list-item img {
+    visibility: hidden;
+}
+.list-item:hover img {
+    visibility: visible;
+}
+.list-item.active:hover img {
+    fill: white;
+}
+
+
+.p-accordion-tab {
+    @apply rounded-none shadow-none border-[1px] border-mitre-black -mt-[1px]
+}
+.p-accordion-header {
+    @apply uppercase
+}
+.p-accordion-tab .p-highlight, .p-highlight .p-accordion-header-link {
+    @apply bg-mitre-navy text-white
+}
+.p-accordion-header-link {
+    @apply p-4
+
+}
+.p-accordion-tab h2, .p-accordion-tab h4 {
+    @apply uppercase font-semibold
+}
+.p-accordion-tab h2 .highlight, .p-accordion-tab h4 .highlight {
+    @apply mx-1
+}
+.p-accordion-tab-active h2 .highlight, .subtechniques .p-accordion-tab-active h4 .highlight {
+    @apply text-mitre-light-purple
+}
+
+
 .container {
     @apply border-[1px] h-full border-mitre-black text-left lg:my-0 my-2
 }

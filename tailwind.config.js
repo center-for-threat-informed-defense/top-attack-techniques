@@ -16,6 +16,7 @@ module.exports = {
           silver: "#D4D4D3",
           "light-silver": "#F1F3F4",
           "primary-purple": "#5C6FC6",
+          "light-purple": "#BCA9DD",
         },
       },
     },
