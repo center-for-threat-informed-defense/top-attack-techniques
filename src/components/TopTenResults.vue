@@ -1,8 +1,10 @@
 <template>
     <div id="calculator">
-        <div class="w-5/6 mx-auto pt-20 pb-10">
+        <div class="w-5/6 mx-auto pt-20">
             <h1 class="text-center uppercase font-bold text-5xl">Your Top 10 Techniques</h1>
-            <SystemScoreSection />
+            <div class="w-full h-auto lg:border-0 border-[1px] border-mitre-black mt-4 mb-6 py-2 lg:py-0">
+                <SystemScoreSection />
+            </div>
         </div>
         <div class="lg:grid hidden grid-cols-3 gap-4 w-5/6 mx-auto calculator-box auto-rows-fr">
             <div class="col-span-1 calculator-list">

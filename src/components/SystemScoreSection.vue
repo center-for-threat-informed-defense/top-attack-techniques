@@ -1,28 +1,39 @@
 <template>
-    <div class="flex w-max gap-6 mx-auto mt-4 system-score-row">
-        <div v-for="monitoringType of Object.keys(this.calculatorStore.systemScore)" :key="monitoringType">
-            <h2 class="uppercase font-bold text-mitre-black"><span class="highlight">{{
-            getScoreText(monitoringType) }}</span>
-                {{ monitoringType }} Monitoring </h2>
-        </div>
-        <button class="flex gap-2" @click="editSelections()">
-            <img :src="GearSvg" class="my-auto" />
-            <h2 class="xl:block hidden uppercase font-bold text-mitre-black my-auto">Edit Selections</h2>
+    <div class="lg:hidden flex px-4 py-2">
+        <h2 class="uppercase font-bold text-xl">Your System:</h2>
+        <button class=" ml-auto" @click="editSelections()">
+            <i class="pi pi-cog"
+                v-tooltip="'Click here to edit your system selections and recalibrate the top ten list'"></i>
         </button>
+    </div>
+    <div>
+        <p class="system-score-row px-4 w-max max-w-full mx-auto my-auto uppercase font-bold text-mitre-black">
+            <span v-for="monitoringType of Object.keys(this.calculatorStore.systemScore)" :key="monitoringType"
+                class=" mr-4 "><span class="highlight">{{
+            getScoreText(monitoringType) }}</span>
+                {{ monitoringType }} Monitoring </span>
+            <span class="lg:inline hidden cursor-pointer" @click="editSelections()"
+                v-tooltip.top="'Click here to edit your system selections and recalibrate the top ten list'">
+                <i class="pi pi-cog mr-2 mt-auto"></i>
+                <span class="my-auto">Edit Selection</span>
+            </span>
+        </p>
+
+
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import { useCalculatorStore } from "../stores/calculator.store";
-import GearSvg from "@/assets/gear.svg"
 import { router } from "../router";
+import Tooltip from 'primevue/tooltip';
+
 export default defineComponent({
     data() {
         return {
             calculatorStore: useCalculatorStore(),
             activeItemId: 1,
-            GearSvg
         };
     },
     methods: {
@@ -33,6 +44,9 @@ export default defineComponent({
         editSelections() {
             router.push({ path: '/calculator' })
         }
+    },
+    directives: {
+        Tooltip
     }
 });
 </script>

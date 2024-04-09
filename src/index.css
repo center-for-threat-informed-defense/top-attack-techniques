@@ -133,5 +133,8 @@
     @apply -mt-[1px]
 }
 .system-score-row .highlight {
-    @apply text-mitre-primary-purple
+    @apply text-mitre-primary-purple 
+}
+.p-tooltip-text {
+    @apply bg-mitre-light-purple/80 text-mitre-black
 }
