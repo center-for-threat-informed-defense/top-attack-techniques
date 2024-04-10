@@ -6,7 +6,7 @@
           <span class="text-ctid-light-purple">Top</span> ATT&CK Techniques
         </h1>
       </router-link>
-      <div class="lg:inline lg:w-auto w-0 hidden card">
+      <div class="lg:inline-block hidden card">
         <TabMenu :model="items" :active-index="getActiveIndex()">
           <template #item="{ item, props }">
             <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
@@ -17,9 +17,8 @@
           </template>
         </TabMenu>
       </div>
-      <div class="lg:hidden lg:w-0 inline-block w-max my-auto">
-        <MenuBar :model="items" id="overlay_menu" ref="menu"
-          class=" text-white z-50">
+      <div class=" lg:hidden inline-block w-max my-auto">
+        <MenuBar :model="items" id="overlay_menu" ref="menu" class=" text-white z-50  p-menubar-mobile">
           <template #item="{ item, props }">
             <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
               <a :to="href" v-bind="props.action" @click="navigate">
