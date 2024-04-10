@@ -38,4 +38,28 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.calculator-list .list-item {
+    @apply border-mitre-black border-[1px] -mt-[1px] px-5 py-3 text-lg cursor-pointer flex uppercase font-medium
+}
+
+.calculator-list .list-item.active {
+    @apply bg-mitre-navy text-white
+}
+
+.calculator-list .list-item.active .highlight {
+    @apply text-mitre-light-purple
+}
+
+.list-item img {
+    visibility: hidden;
+}
+
+.list-item:hover img {
+    visibility: visible;
+}
+
+.list-item.active:hover img {
+    fill: white;
+}
+</style>

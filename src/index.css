@@ -22,43 +22,9 @@
     @apply my-2
 }
 
-.calculator-list .list-item {
-    @apply border-mitre-black border-[1px] -mt-[1px] px-5 py-3 text-lg cursor-pointer flex uppercase font-semibold
-}
-.calculator-list .list-item.active {
-    @apply bg-mitre-navy text-white
-}
-.calculator-list .list-item.active .highlight {
-    @apply text-mitre-light-purple
-}
 .btn-primary {
     @apply w-full p-4 text-center text-lg bg-mitre-navy text-white uppercase
 }
-.calculator-details {
-    @apply border-mitre-black border-[1px]
-}
-.container-header {
-    @apply w-full bg-mitre-navy text-white px-5 py-3 text-lg uppercase
-}
-.container-body {
-    @apply p-4 overflow-scroll
-}
-.container-body h3 {
-    @apply uppercase font-bold text-lg
-}
-.container-body h4 {
-    @apply uppercase font-bold
-}
-.list-item img {
-    visibility: hidden;
-}
-.list-item:hover img {
-    visibility: visible;
-}
-.list-item.active:hover img {
-    fill: white;
-}
-
 
 .p-accordion-tab {
     @apply rounded-none shadow-none border-[1px] border-mitre-black -mt-[1px]
@@ -83,7 +49,9 @@
     @apply text-mitre-light-purple
 }
 
-
+.calculator-details {
+    @apply border-mitre-black border-[1px]
+}
 .container {
     @apply border-[1px] h-full border-mitre-black text-left lg:my-0 my-2
 }
@@ -91,7 +59,7 @@
     @apply lg:px-8 lg:py-4 px-4 py-2 
 }
 .container-header {
-    @apply bg-mitre-navy text-white
+    @apply bg-mitre-navy text-white font-medium uppercase text-lg
 }
 .container h2 {
     @apply uppercase text-xl w-full
@@ -132,9 +100,9 @@
 .p-accordion-tab {
     @apply -mt-[1px]
 }
-.system-score-row .highlight {
-    @apply text-mitre-primary-purple 
-}
 .p-tooltip-text {
     @apply bg-mitre-light-purple/80 text-mitre-black
+}
+#description a {
+    @apply text-mitre-blue hover:underline
 }

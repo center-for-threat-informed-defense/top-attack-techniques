@@ -21,7 +21,7 @@
                             {{ topTen[activeItemId].name }}
                         </h2>
                     </div>
-                    <div class="container-body">
+                    <div>
                         <TopTenDetails :technique="topTen[activeItemId]" />
                     </div>
                 </div>

@@ -51,4 +51,8 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.system-score-row .highlight {
+    @apply text-mitre-primary-purple
+}
+</style>
