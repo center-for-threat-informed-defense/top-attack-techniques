@@ -2,8 +2,9 @@ name: Build Website
 
 on:
   push:
-    branches: [main]
+    branches: [TAT-121-single-page-app-conversion]
   pull_request:
+  workflow_dispatch:
 
 # If another web build starts for the same branch, cancel the previous build. This
 # protects us from two builds trying to upload at the same time and clobbering each
