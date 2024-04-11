@@ -1,15 +1,15 @@
 <template>
-  <Navigation />
+  <navigation-menu />
   <router-view id="page-body"></router-view>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Navigation from "@/components/Navigation.vue";
+import NavigationMenu from "@/components/NavigationMenu.vue";
 
 export default defineComponent({
   components: {
-    Navigation,
+    NavigationMenu
   },
 });
 </script>
