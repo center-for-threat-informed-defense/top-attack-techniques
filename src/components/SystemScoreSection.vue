@@ -12,6 +12,12 @@
                 class=" mr-4 "><span class="highlight">{{
             getScoreText(monitoringType) }}</span>
                 {{ monitoringType }} Monitoring </span>
+            <span v-for="filter of Object.keys(this.calculatorStore.activeFilters)" :key="filter">
+                <span class="mr-4" v-if="this.calculatorStore.activeFilters[filter].length > 0">
+                    {{ filter }}:
+                    <span class="highlight">{{ getFilterLabel(filter) }}</span>
+                </span>
+            </span>
             <span class="lg:inline hidden cursor-pointer" @click="editSelections()"
                 v-tooltip.top="'Click here to edit your system selections and recalibrate the top ten list'">
                 <i class="pi pi-cog mr-2 mt-auto"></i>
@@ -43,6 +49,14 @@ export default defineComponent({
         },
         editSelections() {
             router.push({ path: '/calculator' })
+        },
+        getFilterLabel(filter) {
+            let labelArray = this.calculatorStore.activeFilters[filter]
+            let reference = this.calculatorStore.filterProperties.find(obj => obj.id === filter)
+            for (let item in this.calculatorStore.activeFilters[filter]) {
+                labelArray[item] = reference.options.find(option => option.id === this.calculatorStore.activeFilters[filter][item]).name
+            }
+            return labelArray.join(", ")
         }
     },
     directives: {

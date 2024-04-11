@@ -6,7 +6,6 @@ module.exports = {
     extend: {
       colors: {
         ctid: {
-          "primary-purple": "#5C6FC6",
           navy: "#212C5E",
           black: "#0B2338",
           "primary-purple": "#7450B2",

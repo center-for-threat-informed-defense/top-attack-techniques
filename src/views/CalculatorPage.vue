@@ -28,15 +28,12 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { useCalculatorStore } from "../stores/calculator.store";
-import Accordion from "primevue/accordion";
-import AccordionTab from "primevue/accordiontab";
-import Checkbox from "primevue/checkbox";
 import CalculatorFilters from "@/components/CalculatorFilters.vue";
 import CalculatorSystem from "@/components/CalculatorSystem.vue";
 import { router } from "../router";
 
 export default defineComponent({
-    components: { Accordion, AccordionTab, Checkbox, CalculatorFilters, CalculatorSystem },
+    components: { CalculatorFilters, CalculatorSystem },
     data() {
         return {
             calculatorStore: useCalculatorStore(),
