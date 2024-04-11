@@ -2,21 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global Styles */
+body {
+    margin: 0;
+}
 #page-body {
-    @apply mt-20
+    @apply pt-20 bg-white text-ctid-black min-h-screen
 }
 
 #app {
-    font-family: "Roboto Condensed", sans-serif;
+    @apply top-0 m-0;
+    font-family: "Roboto", sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    @apply uppercase;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.link {
+    @apply hover:text-ctid-light-purple text-lg;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.btn-primary {
+    @apply bg-ctid-light-purple hover:bg-ctid-navy hover:text-white my-4 py-4 uppercase font-bold text-lg;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+
+/* Navigation */
+.navbar {
+    @apply fixed bg-ctid-navy text-white pt-1 w-full top-0 z-50
+}
+.navbar h1 {
+    @apply my-auto font-medium text-xl uppercase w-max
+}
+
+/* Homepage */
+
+.hero {
+    @apply bg-ctid-navy min-h-[100vh] -mt-20 lg:pt-2 xl:pb-10 pt-20 pb-20 text-white;
+}
+.hero .title {
+    @apply  2xl:w-3/5 xl:w-2/3 mx-auto lg:mt-60 mt-20 lg:flex gap-6
+}
+.hero .title h1 {
+    @apply uppercase text-6xl font-semibold lg:my-auto
+}
+
+/* Primevue Overrides */
 .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
 }
-.p-menuitem-link {
-    @apply bg-mitre-primary-purple uppercase;
+.p-tabmenu .p-menuitem-link {
+    @apply bg-ctid-navy uppercase text-white hover:text-ctid-light-purple;
     font-family: "Roboto Condensed", sans-serif;
+}
+.p-menubar .p-menuitem-link, .p-menubar {
+    @apply uppercase font-medium ;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+
 }
 .p-menuitem-text {
     @apply my-2
@@ -105,4 +149,13 @@
 }
 #description a {
     @apply text-mitre-blue hover:underline
+}
+.p-tabmenu-ink-bar {
+    @apply  bg-ctid-light-purple;
+}
+.p-highlight .p-menuitem-text {
+    @apply text-ctid-light-purple
+}
+.p-menubar-root-list {
+    @apply w-60 -ml-40
 }

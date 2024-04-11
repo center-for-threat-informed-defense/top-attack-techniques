@@ -18,6 +18,12 @@ module.exports = {
           "primary-purple": "#7450B2",
           "light-purple": "#CEBEEA",
         },
+        ctid: {
+          "primary-purple": "#5C6FC6",
+          navy: "#212C5E",
+          black: "#0B2338",
+          "light-purple": "#BCA9DD",
+        },
       },
     },
   },
