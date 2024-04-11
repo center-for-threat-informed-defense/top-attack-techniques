@@ -40,15 +40,17 @@ export default defineComponent({
 
 <style scoped>
 .calculator-list .list-item {
-    @apply border-mitre-black border-[1px] -mt-[1px] px-5 py-3 text-lg cursor-pointer flex uppercase font-medium
+    @apply border-ctid-black border-[1px] -mt-[1px] px-5 py-3 text-lg cursor-pointer flex uppercase font-medium;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+
 }
 
 .calculator-list .list-item.active {
-    @apply bg-mitre-navy text-white
+    @apply bg-ctid-navy text-white
 }
 
 .calculator-list .list-item.active .highlight {
-    @apply text-mitre-light-purple
+    @apply text-ctid-light-purple
 }
 
 .list-item img {

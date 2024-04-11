@@ -42,7 +42,7 @@
         <h3 class="mt-4">Related</h3>
         <ul>
             <li>
-                <a class=" text-mitre-blue hover:underline" target="_blank" :href="this.technique.url">
+                <a class=" text-ctid-blue hover:underline" target="_blank" :href="this.technique.url">
                     {{ this.technique.url }}
                 </a>
             </li>

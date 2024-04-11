@@ -7,7 +7,7 @@
         </button>
     </div>
     <div>
-        <p class="system-score-row px-4 w-max max-w-full mx-auto my-auto uppercase font-bold text-mitre-black">
+        <p class="system-score-row px-4 w-max max-w-full mx-auto my-auto uppercase font-bold text-ctid-black">
             <span v-for="monitoringType of Object.keys(this.calculatorStore.systemScore)" :key="monitoringType"
                 class=" mr-4 "><span class="highlight">{{
             getScoreText(monitoringType) }}</span>
@@ -52,7 +52,12 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.system-score-row {
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+
+}
+
 .system-score-row .highlight {
-    @apply text-mitre-primary-purple
+    @apply text-ctid-primary-purple
 }
 </style>

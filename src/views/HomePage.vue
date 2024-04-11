@@ -71,8 +71,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useExampleStore } from "../stores/example.store";
-import SectionItem from "./SectionItem.vue";
+import SectionItem from "../components/SectionItem.vue";
 import CalculatorSvg from "@/assets/calculator.svg";
 import ListSvg from "@/assets/list.svg";
 import BookSvg from "@/assets/book.svg";
@@ -82,7 +81,6 @@ export default defineComponent({
   components: { SectionItem },
   data() {
     return {
-      exampleStore: useExampleStore(),
       CalculatorSvg,
       ListSvg,
       BookSvg,

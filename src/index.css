@@ -67,17 +67,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    @apply w-full p-4 text-center text-lg bg-mitre-navy text-white uppercase
+    @apply w-full p-4 text-center text-lg bg-ctid-navy text-white uppercase
 }
 
 .p-accordion-tab {
-    @apply rounded-none shadow-none border-[1px] border-mitre-black -mt-[1px]
+    @apply rounded-none shadow-none border-[1px] border-ctid-black -mt-[1px]
 }
 .p-accordion-header {
     @apply uppercase
 }
 .p-accordion-tab .p-highlight, .p-highlight .p-accordion-header-link {
-    @apply bg-mitre-navy text-white
+    @apply bg-ctid-navy text-white
 }
 .p-accordion-header-link {
     @apply p-4
@@ -90,20 +90,20 @@ h1, h2, h3, h4, h5, h6 {
     @apply mx-1
 }
 .p-accordion-tab-active h2 .highlight, .subtechniques .p-accordion-tab-active h4 .highlight {
-    @apply text-mitre-light-purple
+    @apply text-ctid-light-purple
 }
 
 .calculator-details {
-    @apply border-mitre-black border-[1px]
+    @apply border-ctid-black border-[1px]
 }
 .container {
-    @apply border-[1px] h-full border-mitre-black text-left lg:my-0 my-2
+    @apply border-[1px] h-full border-ctid-black text-left lg:my-0 my-2
 }
 .container-body, .container-header {
     @apply lg:px-8 lg:py-4 px-4 py-2 
 }
 .container-header {
-    @apply bg-mitre-navy text-white font-medium uppercase text-lg
+    @apply bg-ctid-navy text-white font-medium uppercase text-lg
 }
 .container h2 {
     @apply uppercase text-xl w-full
@@ -112,43 +112,43 @@ h1, h2, h3, h4, h5, h6 {
     @apply lg:flex gap-4 my-8
 }
 .btn-primary {
-    @apply bg-mitre-navy hover:bg-mitre-dark-navy text-white my-4 py-4 uppercase font-bold text-lg;
+    @apply bg-ctid-navy hover:bg-ctid-dark-navy text-white my-4 py-4 uppercase font-bold text-lg;
 }
 .p-accordion {
     @apply border-collapse
 }
 .p-accordion-tab {
-    @apply rounded-none shadow-none border-[1px] border-mitre-black
+    @apply rounded-none shadow-none border-[1px] border-ctid-black
 }
 .p-accordion-header {
     @apply uppercase
 }
 .p-accordion-tab .p-highlight, .p-highlight .p-accordion-header-link {
-    @apply bg-mitre-navy text-white
+    @apply bg-ctid-navy text-white
 }
 .p-checkbox-box {
-    @apply border-[1px] border-mitre-black rounded-none
+    @apply border-[1px] border-ctid-black rounded-none
 }
 .checkbox-group {
     @apply w-full my-4 flex gap-4
 }
 .p-checkbox.p-highlight, .p-highlight .p-checkbox-box {
-    @apply bg-mitre-navy
+    @apply bg-ctid-navy
 }
 .p-selectbutton .p-button.p-component {
-    @apply uppercase border-[1px] border-mitre-black rounded-none mx-1
+    @apply uppercase border-[1px] border-ctid-black rounded-none mx-1
 }
 .p-selectbutton .p-highlight.p-button.p-component {
-    @apply bg-mitre-navy text-white
+    @apply bg-ctid-navy text-white
 }
 .p-accordion-tab {
     @apply -mt-[1px]
 }
 .p-tooltip-text {
-    @apply bg-mitre-light-purple/80 text-mitre-black
+    @apply bg-ctid-light-purple/80 text-ctid-black
 }
 #description a {
-    @apply text-mitre-blue hover:underline
+    @apply text-ctid-blue hover:underline
 }
 .p-tabmenu-ink-bar {
     @apply  bg-ctid-light-purple;

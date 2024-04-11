@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomePage from "@/components/HomePage.vue";
-import MethodologyPage from "@/components/MethodologyPage.vue";
-import TopTen from "@/components/TopTen.vue";
-import HelpPage from "@/components/HelpPage.vue";
-import CalculatorPage from "@/components/CalculatorPage.vue";
-
+import HomePage from "@/views/HomePage.vue";
+import MethodologyPage from "@/views/MethodologyPage.vue";
+import TopTen from "@/views/TopTen.vue";
+import HelpPage from "@/views/HelpPage.vue";
+import TopTenResults from "../views/TopTenResults.vue";
+import CalculatorPage from "../views/CalculatorPage.vue";
 const routes = [
   {
     path: "/",
