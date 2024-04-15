@@ -2,8 +2,8 @@
     <div>
         <div v-for="monitoringType of Object.keys(this.calculatorStore.systemScore)" :key="monitoringType"
             class=" 2xl:flex lg:block md:flex my-4">
-            <h3 class="uppercase font-bold text-xl my-auto">{{ monitoringType }} Monitoring Components</h3>
-            <select-button v-model="localScores[monitoringType]" :options="this.options" optionLabel="label"
+            <h3 class="uppercase font-semibold text-xl my-auto">{{ monitoringType }} Monitoring Components</h3>
+            <select-button v-model="this.systemScores[monitoringType]" :options="this.options" optionLabel="label"
                 dataKey="value" class="my-auto ml-auto"></select-button>
         </div>
     </div>
@@ -19,13 +19,6 @@ export default defineComponent({
     data() {
         return {
             calculatorStore: useCalculatorStore(),
-            localScores: {
-                network: { label: "None", value: 1 },
-                process: { label: "None", value: 1 },
-                file: { label: "None", value: 1 },
-                cloud: { label: "None", value: 1 },
-                hardware: { label: "None", value: 1 },
-            },
             selectedValue: 0,
             options: [
                 { label: "None", value: 1 },
@@ -42,7 +35,7 @@ export default defineComponent({
     },
     methods: {
         saveNewScores() {
-            this.calculatorStore.updateSystemScores(this.localScores)
+            this.calculatorStore.updateSystemScores(this.systemScores)
         },
     }
 });

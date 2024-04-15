@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "downloadjs": "^1.4.7",
     "marked": "^12.0.1",
     "pinia": "^2.0.29",
     "primeicons": "^7.0.0",

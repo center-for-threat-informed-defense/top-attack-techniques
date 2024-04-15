@@ -3,7 +3,7 @@
         <Accordion>
             <AccordionTab v-for="group in calculatorStore.filterProperties" :key="group.id" :header="group.label">
                 <div v-for="option in group.options" :key="option.id" class="checkbox-group">
-                    <Checkbox :input-id="option.id" :value="option.id" v-model="localFilters[group.id]"
+                    <Checkbox :input-id="option.id" :value="option.name" v-model="this.filters[group.id]"
                         class="my-auto" />
                     <label class="my-auto">{{ option.name }}</label>
                 </div>
@@ -25,12 +25,6 @@ export default defineComponent({
     data() {
         return {
             calculatorStore: useCalculatorStore(),
-            localFilters: {
-                nist: [],
-                cis: [],
-                detection: [],
-                os: [],
-            }
         };
     },
     computed: {
@@ -40,7 +34,7 @@ export default defineComponent({
     },
     methods: {
         saveNewFilterValues() {
-            this.calculatorStore.updateActiveFilters(this.localFilters)
+            this.calculatorStore.updateActiveFilters(this.filters)
         },
     }
 });

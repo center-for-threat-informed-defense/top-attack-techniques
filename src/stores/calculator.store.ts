@@ -5,7 +5,12 @@ export const useCalculatorStore = defineStore("calculator", {
   state: () => ({
     myJson: json,
     techniques: [],
-    activeFiltersObj: [],
+    activeFiltersObj: {
+      nist: [],
+      cis: [],
+      detection: [],
+      os: [],
+    },
     // todo: set NIST, CIS, and OS options from the technique data
     filterPropertiesObj: [
       {

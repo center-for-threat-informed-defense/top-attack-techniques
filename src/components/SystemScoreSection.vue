@@ -51,10 +51,13 @@ export default defineComponent({
             router.push({ path: '/calculator' })
         },
         getFilterLabel(filter) {
-            let labelArray = this.calculatorStore.activeFilters[filter]
-            let reference = this.calculatorStore.filterProperties.find(obj => obj.id === filter)
-            for (let item in this.calculatorStore.activeFilters[filter]) {
-                labelArray[item] = reference.options.find(option => option.id === this.calculatorStore.activeFilters[filter][item]).name
+            const labelArray = this.calculatorStore.activeFilters[filter]
+            const reference = this.calculatorStore.filterProperties.find(obj => obj.id === filter)
+            for (const item in this.calculatorStore.activeFilters[filter]) {
+                const i = reference.options.find(option => option.id === this.calculatorStore.activeFilters[filter][item])
+                if (i) {
+                    labelArray[item] = i.name
+                }
             }
             return labelArray.join(", ")
         }

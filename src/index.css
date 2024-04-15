@@ -99,8 +99,8 @@ h1, h2, h3, h4, h5, h6 {
 .container {
     @apply border-[1px] h-full border-ctid-black text-left lg:my-0 my-2
 }
-.container-body, .container-header {
-    @apply lg:px-8 lg:py-4 px-4 py-2 
+.container-header {
+    @apply py-4 px-6
 }
 .container-header {
     @apply bg-ctid-navy text-white font-medium uppercase text-lg
@@ -120,8 +120,9 @@ h1, h2, h3, h4, h5, h6 {
 .p-accordion-tab {
     @apply rounded-none shadow-none border-[1px] border-ctid-black
 }
-.p-accordion-header {
-    @apply uppercase
+.p-accordion-header-text {
+    @apply uppercase font-semibold text-lg;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 .p-accordion-tab .p-highlight, .p-highlight .p-accordion-header-link {
     @apply bg-ctid-navy text-white

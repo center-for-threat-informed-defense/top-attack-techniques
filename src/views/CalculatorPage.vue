@@ -1,8 +1,11 @@
 <template>
     <section class="w-5/6 mx-auto py-20 text-center">
-        <h1 class="uppercase text-4xl">Top ATT&CK Techniques Calculator</h1>
-        <p>Use the following criteria to score your system and click generate in order to see your personalized list of
-            techniques</p>
+        <div class="pt-20">
+            <h1 class="uppercase font-bold text-5xl">Top ATT&CK Techniques Calculator</h1>
+            <p class="pt-4">Use the following criteria to score your system and click generate in order to see your
+                personalized list of techniques</p>
+        </div>
+
         <div class="container-row">
             <div class="lg:w-2/5 container">
                 <div class="container-header">
@@ -54,4 +57,9 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.container-body,
+.container-header {
+    @apply py-4 px-6
+}
+</style>
