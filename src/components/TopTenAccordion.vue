@@ -32,11 +32,6 @@ export default defineComponent({
     data() {
         return {};
     },
-    methods: {
-        accordionName(technique) {
-            return technique.tid + " " + technique.name
-        },
-    }
 });
 </script>
 

@@ -15,7 +15,7 @@
             <span v-for="filter of Object.keys(this.calculatorStore.activeFilters)" :key="filter">
                 <span class="mr-4" v-if="this.calculatorStore.activeFilters[filter].length > 0">
                     {{ filter }}:
-                    <span class="highlight">{{ getFilterLabel(filter) }}</span>
+                    <span class="highlight">{{ this.calculatorStore.activeFilters[filter].join(", ") }}</span>
                 </span>
             </span>
             <span class="lg:inline hidden cursor-pointer" @click="editSelections()"
@@ -50,17 +50,6 @@ export default defineComponent({
         editSelections() {
             router.push({ path: '/calculator' })
         },
-        getFilterLabel(filter) {
-            const labelArray = this.calculatorStore.activeFilters[filter]
-            const reference = this.calculatorStore.filterProperties.find(obj => obj.id === filter)
-            for (const item in this.calculatorStore.activeFilters[filter]) {
-                const i = reference.options.find(option => option.id === this.calculatorStore.activeFilters[filter][item])
-                if (i) {
-                    labelArray[item] = i.name
-                }
-            }
-            return labelArray.join(", ")
-        }
     },
     directives: {
         Tooltip

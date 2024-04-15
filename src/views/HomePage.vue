@@ -44,7 +44,7 @@
             Prevalence.
           </p>
           <router-link to="/methodology">
-            <button class="btn-primary w-full">Read the Methodology</button>
+            <button class="btn-primary-light w-full">Read the Methodology</button>
           </router-link>
         </div>
         <div class="md:w-1/2">
@@ -55,7 +55,7 @@
             to your system.
           </p>
           <router-link to="/help">
-            <button class="btn-primary w-full">Check out the FAQ</button>
+            <button class="btn-primary-light w-full">Check out the FAQ</button>
           </router-link>
         </div>
       </div>

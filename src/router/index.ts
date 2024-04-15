@@ -32,7 +32,7 @@ const routes = [
     component: TopTen,
   },
   {
-    path: "/calculator-results",
+    path: "/calculator/results",
     name: "calculator-results",
     component: TopTenResults,
   },

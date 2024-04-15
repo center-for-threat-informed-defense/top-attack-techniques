@@ -62,9 +62,6 @@ export default defineComponent({
         setActiveIndex(index) {
             this.activeItemId = index
         },
-        accordionName(technique) {
-            return technique.tid + " " + technique.name
-        },
         deleteTechnique(index) {
             this.calculatorStore.removeTechnique(index)
             if (index < this.activeItemId) {

@@ -7,10 +7,9 @@
                     <span class="ml-3 mr-1 highlight">{{ this.topTen[i].tid }}</span>
                     {{ this.topTen[i].name }}
                 </div>
-                <img v-if="i === activeItemId" :src="TrashSvgWhite" class="my-auto ml-auto"
-                    @click="this.$parent.deleteTechnique(i)" />
-                <img v-if="i !== activeItemId" :src="TrashSvg" class="my-auto ml-auto"
-                    @click="this.$parent.deleteTechnique(i)" />
+                <button @click="this.$parent.deleteTechnique(i)">
+                    <i class="pi pi-trash"></i>
+                </button>
             </li>
         </ul>
     </div>
@@ -18,8 +17,6 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import TrashSvg from "../assets/trash.svg";
-import TrashSvgWhite from "../assets/trash-white.svg";
 import { useCalculatorStore } from "../stores/calculator.store";
 export default defineComponent({
     props: {
@@ -29,8 +26,6 @@ export default defineComponent({
     data() {
         return {
             calculatorStore: useCalculatorStore(),
-            TrashSvg,
-            TrashSvgWhite,
         };
     },
     methods: {
@@ -53,15 +48,11 @@ export default defineComponent({
     @apply text-ctid-light-purple
 }
 
-.list-item img {
+.list-item i {
     visibility: hidden;
 }
 
-.list-item:hover img {
+.list-item:hover i {
     visibility: visible;
-}
-
-.list-item.active:hover img {
-    fill: white;
 }
 </style>
