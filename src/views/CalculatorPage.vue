@@ -2,8 +2,8 @@
     <section class="w-5/6 mx-auto py-20 text-center">
         <div class="pt-20">
             <h1 class="uppercase font-bold text-5xl">Top ATT&CK Techniques Calculator</h1>
-            <p class="pt-4">Use the following criteria to score your system and click generate in order to see your
-                personalized list of techniques</p>
+            <p class="pt-4">Select the filters and/or components below, then click Generate to see a customized ranking
+                of ATT&CK techniques.</p>
         </div>
 
         <div class="container-row">

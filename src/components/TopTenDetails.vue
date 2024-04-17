@@ -42,7 +42,7 @@
         <p>
             {{ this.technique.detection }}
         </p>
-        <h3 class="mt-4">Related</h3>
+        <h3 class="mt-4">References</h3>
         <ul>
             <li>
                 <a class=" text-ctid-blue hover:underline" target="_blank" :href="this.technique.url">

@@ -6,12 +6,12 @@
                     <h2>
                         {{ i + 1 }}.
                         <span class="highlight">
-                            {{ topTen[i].tid }}
+                            {{ rankedList[i].tid }}
                         </span>
-                        {{ topTen[i].name }}
+                        {{ rankedList[i].name }}
                     </h2>
                 </template>
-                <TopTenDetails :technique="topTen[i]" />
+                <TopTenDetails :technique="rankedList[i]" />
             </AccordionTab>
         </Accordion>
     </div>
@@ -26,7 +26,7 @@ import TopTenDetails from "./TopTenDetails.vue";
 export default defineComponent({
     components: { Accordion, AccordionTab, TopTenDetails },
     props: {
-        topTen: [],
+        rankedList: [],
         activeItemId: Number,
     },
     data() {

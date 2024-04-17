@@ -60,19 +60,15 @@ export const useCalculatorStore = defineStore("calculator", {
   },
   actions: {
     updateActiveFilters(filterValues) {
-      console.log("updating filter values to", filterValues);
       this.activeFiltersObj = filterValues;
     },
     updateSystemScores(scores) {
-      console.log("updating system scores to", scores);
       this.systemScoreObj = scores;
     },
     setTechniques() {
       this.techniques = this.myJson;
-      console.log("Number of techniques: ", this.techniques.length);
     },
     removeTechnique(index) {
-      console.log("delete technique ", this.techniques[index].tid, index);
       this.techniques.splice(index, 1);
     },
   },

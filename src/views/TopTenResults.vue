@@ -8,7 +8,7 @@
         </div>
         <div class="lg:grid hidden grid-cols-3 gap-4 w-5/6 mx-auto calculator-box auto-rows-fr">
             <div class="col-span-1 calculator-list">
-                <TopTenSidebar :top-ten="topTen" :activeItemId="activeItemId" />
+                <TopTenSidebar :ranked-list="rankedList" :activeItemId="activeItemId" />
                 <button class="btn-primary mt-4" @click="download()">Download List</button>
             </div>
             <div class="col-span-2 h-full">
@@ -16,20 +16,20 @@
                     <div class="container-header">
                         <h2>
                             <span class=" text-ctid-light-purple">
-                                {{ topTen[activeItemId].tid }}
+                                {{ rankedList[activeItemId].tid }}
                             </span>
-                            {{ topTen[activeItemId].name }}
+                            {{ rankedList[activeItemId].name }}
                         </h2>
                     </div>
                     <div>
-                        <TopTenDetails :technique="topTen[activeItemId]" />
+                        <TopTenDetails :technique="rankedList[activeItemId]" />
                     </div>
                 </div>
             </div>
 
         </div>
         <div class="w-5/6 mx-auto lg:hidden block">
-            <TopTenAccordion :top-ten="topTen" :activeItemId="activeItemId" />
+            <TopTenAccordion :ranked-list="rankedList" :activeItemId="activeItemId" />
             <button class="btn-primary mt-10" @click="download()">Download List</button>
         </div>
     </div>
@@ -53,7 +53,7 @@ export default defineComponent({
         };
     },
     computed: {
-        topTen() {
+        rankedList() {
             this.calculatorStore.setTechniques()
             return this.calculatorStore.techniques
         }
@@ -69,7 +69,7 @@ export default defineComponent({
             }
         },
         download() {
-            downloadjs(JSON.stringify(this.topTen.slice(0, 10)), "TopTenTechniques.json", JSON)
+            downloadjs(JSON.stringify(this.rankedList.slice(0, 10)), "TopTenTechniques.json", JSON)
         }
     }
 });
