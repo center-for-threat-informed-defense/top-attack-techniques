@@ -54,7 +54,7 @@ export default defineComponent({
     getActiveIndex() {
       const route = this.$route.path;
       return this.items.findIndex(function (item) {
-        return item.route === route;
+        return item.route.split("/")[1] === route.split("/")[1];
       });
     },
   },
