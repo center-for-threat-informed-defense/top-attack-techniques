@@ -1,16 +1,18 @@
-const ExcelJS = require("exceljs");
-const fs = require("fs");
+import ExcelJS from "exceljs";
+import fs from "fs";
 
 const SOURCE_FILE = "src/data/Calculator.xlsx";
 const DESTINATION_FILE = "src/data/Techniques.json";
 
 const wb = new ExcelJS.Workbook();
+// initialize new list for techniques
 const techniques = [];
+// read from techniques tab first to get the technique metadata (ID, name, etc.)
 wb.xlsx.readFile(SOURCE_FILE).then(function () {
-  console.log("this is working");
+  console.log("Reading from Calculator spreadsheet...");
   const techniqueList = wb.getWorksheet("techniques");
   techniqueList.eachRow((r) => {
-    if (r.number !== 0) {
+    if (r.number > 1) {
       const data = r.values;
       const t = {};
       t.id = data[1];
@@ -29,8 +31,8 @@ wb.xlsx.readFile(SOURCE_FILE).then(function () {
       techniques.push(t);
     }
   });
-  techniques.splice(0, 1);
-  // add scores to the technique objects
+  console.log("Parsed technique metadata from Techniques tab");
+  // read from the methodology tab to add scores to the technique objects
   const scoreList = wb.getWorksheet("Methodology");
   scoreList.eachRow((r) => {
     const id = r.getCell(3).value;
@@ -38,7 +40,7 @@ wb.xlsx.readFile(SOURCE_FILE).then(function () {
       const technique = techniques.find((t) => t.id == id);
       if (technique && technique.id) {
         technique.cumulative_score = r.getCell("B").value.result;
-        technique.actionability_score = r.getCell("V").value.result;
+
         technique.has_car = !!r.getCell("N").value;
         technique.has_sigma = !!r.getCell("O").value;
         technique.has_es_siem = !!r.getCell("P").value;
@@ -47,14 +49,15 @@ wb.xlsx.readFile(SOURCE_FILE).then(function () {
         technique.cis_controls = r.getCell("R").value;
         technique.nist_controls = r.getCell("T").value;
 
-        technique.process_coverage = r.getCell(31).value.result;
-        technique.network_coverage = r.getCell(33).value.result;
-        technique.file_coverage = r.getCell(35).value.result;
-        technique.cloud_coverage = r.getCell(37).value.result;
-        technique.hardware_coverage = r.getCell(39).value.result;
+        technique.process_coverage = parseInt(r.getCell(31).value.result);
+        technique.network_coverage = parseInt(r.getCell(33).value.result);
+        technique.file_coverage = parseInt(r.getCell(35).value.result);
+        technique.cloud_coverage = parseInt(r.getCell(37).value.result);
+        technique.hardware_coverage = parseInt(r.getCell(39).value.result);
       }
     }
   });
+  console.log("Parsed scores from Methodology page");
   const str = JSON.stringify(techniques);
   fs.writeFile(DESTINATION_FILE, str, (error) => {
     if (error) {
@@ -62,4 +65,5 @@ wb.xlsx.readFile(SOURCE_FILE).then(function () {
       throw error;
     }
   });
+  console.log("Export technique data to Techniques.json");
 });
