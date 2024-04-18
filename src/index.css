@@ -23,9 +23,16 @@ h1, h2, h3, h4, h5, h6 {
     @apply hover:text-ctid-light-purple text-lg;
     font-family: "Fira Sans Extra Condensed", sans-serif;
 }
-.btn-primary {
+.btn-primary-light {
     @apply bg-ctid-light-purple hover:bg-ctid-navy hover:text-white my-4 py-4 uppercase font-bold text-lg;
     font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.btn-primary {
+    @apply bg-ctid-navy hover:bg-ctid-dark-navy  text-white w-full p-4 text-center my-4 py-4 uppercase font-bold text-lg;
+}
+
+#description a {
+    @apply text-ctid-blue hover:underline
 }
 
 /* Navigation */
@@ -47,6 +54,28 @@ h1, h2, h3, h4, h5, h6 {
 .hero .title h1 {
     @apply uppercase text-6xl font-semibold lg:my-auto
 }
+/* Calculator */
+.calculator-details {
+    @apply border-ctid-black border-[1px]
+}
+.container {
+    @apply border-[1px] h-full border-ctid-black text-left lg:my-0 my-2
+}
+.container-header {
+    @apply py-4 px-6
+}
+.container-header {
+    @apply bg-ctid-navy text-white font-medium uppercase text-lg
+}
+.container h2 {
+    @apply uppercase text-xl w-full
+}
+.container-row {
+    @apply lg:flex gap-4 my-8
+}
+.checkbox-group {
+    @apply w-full my-4 flex gap-4
+}
 
 /* Primevue Overrides */
 .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
@@ -55,15 +84,60 @@ h1, h2, h3, h4, h5, h6 {
 }
 .p-tabmenu .p-menuitem-link {
     @apply bg-ctid-navy uppercase text-white hover:text-ctid-light-purple;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 .p-menubar .p-menuitem-link, .p-menubar {
     @apply uppercase font-medium ;
     font-family: "Fira Sans Extra Condensed", sans-serif;
-
 }
 .p-menuitem-text {
     @apply my-2
+}
+.p-accordion-tab {
+    @apply rounded-none shadow-none border-[1px] border-ctid-black -mt-[1px]
+}
+.p-accordion-header {
+    @apply uppercase
+}
+.p-accordion-tab .p-highlight, .p-highlight .p-accordion-header-link {
+    @apply bg-ctid-navy text-white
+}
+.p-accordion-header-link {
+    @apply p-4
+}
+.p-accordion-tab h2, .p-accordion-tab h4 {
+    @apply uppercase font-semibold
+}
+.p-accordion-tab h2 .highlight, .p-accordion-tab h4 .highlight {
+    @apply mx-1
+}
+.p-accordion-tab-active h2 .highlight, .subtechniques .p-accordion-tab-active h4 .highlight {
+    @apply text-ctid-light-purple
+}
+.p-accordion {
+    @apply border-collapse
+}
+.p-accordion-tab {
+    @apply rounded-none shadow-none border-[1px] border-ctid-black
+}
+.p-accordion-header-text {
+    @apply uppercase font-semibold text-lg;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.p-checkbox-box {
+    @apply border-[1px] border-ctid-black rounded-none
+}
+.p-checkbox.p-highlight, .p-highlight .p-checkbox-box {
+    @apply bg-ctid-navy
+}
+.p-selectbutton .p-button.p-component {
+    @apply uppercase border-[1px] border-ctid-black rounded-none mx-1
+}
+.p-selectbutton .p-highlight.p-button.p-component {
+    @apply bg-ctid-navy text-white
+}
+.p-tooltip-text {
+    @apply bg-ctid-light-purple/80 text-ctid-black
 }
 .p-tabmenu-ink-bar {
     @apply  bg-ctid-light-purple;

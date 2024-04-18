@@ -6,10 +6,12 @@ module.exports = {
     extend: {
       colors: {
         ctid: {
-          "primary-purple": "#5C6FC6",
           navy: "#212C5E",
           black: "#0B2338",
-          "light-purple": "#BCA9DD",
+          "primary-purple": "#7450B2",
+          "light-purple": "#CEBEEA",
+          blue: "#005B94",
+          "dark-navy": "#0B2338",
         },
       },
     },
