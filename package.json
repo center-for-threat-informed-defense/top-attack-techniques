@@ -8,7 +8,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "update": "node ./src/scripts/update_techniques.js"
+    "update": "node ./scripts/update_techniques.js"
   },
   "dependencies": {
     "exceljs": "^4.4.0",
