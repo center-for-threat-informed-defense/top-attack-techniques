@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import json from "../data/TopAttackTechniques.json";
+import json from "../data/Techniques.json";
 
 export const useCalculatorStore = defineStore("calculator", {
   state: () => ({
