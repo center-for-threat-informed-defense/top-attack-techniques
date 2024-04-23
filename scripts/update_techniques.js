@@ -4,33 +4,33 @@ const fs = require("fs");
 const SOURCE_FILE = "src/data/Calculator.xlsx";
 const DESTINATION_FILE = "src/data/Techniques.json";
 
-const wb = new ExcelJS.Workbook();
-// initialize new list for techniques
-const techniques = [];
-const subtechniques = [];
-// read from techniques tab first to get the technique metadata (ID, name, etc.)
-wb.xlsx.readFile(SOURCE_FILE).then(function () {
+(async function () {
+  const wb = new ExcelJS.Workbook();
+  // initialize new list for techniques
+  const techniques = [];
+  const subtechniques = [];
+  // read from techniques tab first to get the technique metadata (ID, name, etc.)
+  await wb.xlsx.readFile(SOURCE_FILE);
   console.log("Reading from Calculator spreadsheet...");
   const techniqueList = wb.getWorksheet("techniques");
   techniqueList.eachRow((r) => {
     if (r.number > 1) {
-      const data = r.values;
-      const t = {};
-      t.tid = data[1];
-      t.name = data[2];
-      t.description = data[3];
-      t.url = data[4].hyperlink;
-      t.created_date = new Date(data[5]);
-      t.updated_date = new Date(data[6]);
-      t.version = data[7];
-      t.tactics = data[8].split(", ");
-      t.detection = data[9];
-      t.platforms = data[10].split(", ");
-      t.data_sources = data[11] ? data[11].split(", ") : "";
-      t.is_subtechnique = Boolean(data[12]);
-      t.supertechnique = data[13];
-      t.subtechniques = [];
-      t.mitigations = [];
+      const t = {
+        tid: r.getCell(1).value,
+        name: r.getCell(2).value,
+        description: r.getCell(3).value,
+        url: r.getCell(4).hyperlink,
+        tactics: r.getCell(8).value.toString().split(", "),
+        detection: r.getCell(9).value,
+        platforms: r.getCell(10).value.toString().split(", "),
+        data_sources: r.getCell(11).value
+          ? r.getCell(11).value.toString().split(", ")
+          : [],
+        is_subtechnique: Boolean(r.getCell(12).value),
+        supertechnique: r.getCell(13).value,
+        subtechniques: [],
+        mitigations: [],
+      };
       if (t.is_subtechnique) {
         subtechniques.push(t);
       } else {
@@ -38,22 +38,21 @@ wb.xlsx.readFile(SOURCE_FILE).then(function () {
       }
     }
   });
-  console.log("Parsed technique metadata from Techniques tab");
-  // read from mitigations tab to get a list of all mitigations
+
+  console.log("Parsed technique metadata from Techniques tab ");
+
+  // // read from mitigations tab to get a list of all mitigations
   const mitigations = [];
   const mitigationSheet = wb.getWorksheet("mitigations");
   console.log("Parsing mitigation objects... ");
   mitigationSheet.eachRow((r) => {
     if (r.number > 1) {
-      const m = {};
-      m.mid = r.getCell(1).value;
-      m.name = r.getCell(2).value;
-      m.description = r.getCell(3).value;
-      m.url = r.getCell(4).value.hyperlink;
-      m.created_date = new Date(r.getCell(5).value);
-      m.updated_date = new Date(r.getCell(6).value);
-      m.version = Number(r.getCell(7).value);
-
+      const m = {
+        mid: r.getCell(1).value,
+        name: r.getCell(2).value,
+        description: r.getCell(3).value,
+        url: r.getCell(4).hyperlink,
+      };
       mitigations.push(m);
     }
   });
@@ -71,6 +70,7 @@ wb.xlsx.readFile(SOURCE_FILE).then(function () {
         const subtechnique = subtechniques.find(
           (t) => t.tid === r.getCell(5).value
         );
+
         subtechnique.mitigations.push(mitigation);
       } else {
         const technique = techniques.find((t) => t.tid === r.getCell(5).value);
@@ -80,7 +80,21 @@ wb.xlsx.readFile(SOURCE_FILE).then(function () {
   });
   console.log("Parsed relationships");
   // add subtechniques to techniques
-  addSubtechniques(techniques, subtechniques);
+  console.log("Parsing subtechniques...");
+  for (const subtechnique of subtechniques) {
+    const technique = techniques.find(
+      (t) => t.tid === subtechnique.supertechnique
+    );
+    const s = {
+      tid: subtechnique.tid,
+      name: subtechnique.name,
+      url: subtechnique.url,
+      description: subtechnique.description,
+      detection: subtechnique.detection,
+      mitigations: subtechnique.mitigations,
+    };
+    technique.subtechniques.push(s);
+  }
   console.log("Parsed subtechniques");
   // read from the methodology tab to add scores to the technique objects
   const scoreList = wb.getWorksheet("Methodology");
@@ -121,22 +135,4 @@ wb.xlsx.readFile(SOURCE_FILE).then(function () {
     }
   });
   console.log("Export technique data to Techniques.json");
-});
-
-function addSubtechniques(techniques, subtechniques) {
-  console.log("parsing subetechniques");
-  for (const subtechnique of subtechniques) {
-    // const id = subtechnique.supertechnique;
-    const technique = techniques.find(
-      (t) => t.tid === subtechnique.supertechnique
-    );
-    const s = {};
-    s.tid = subtechnique.tid;
-    s.name = subtechnique.name;
-    s.url = subtechnique.url;
-    s.description = subtechnique.description;
-    s.detection = subtechnique.detection;
-    s.mitigations = subtechnique.mitigations;
-    technique.subtechniques.push(s);
-  }
-}
+})();
