@@ -29,6 +29,7 @@ export default defineComponent({
     },
     computed: {
         filters() {
+            this.calculatorStore.setFilters()
             return this.calculatorStore.activeFilters
         },
     },

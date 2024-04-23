@@ -96,8 +96,12 @@ wb.xlsx.readFile(SOURCE_FILE).then(function () {
         technique.has_es_siem = !!r.getCell("P").value;
         technique.has_splunk = !!r.getCell("Q").value;
 
-        technique.cis_controls = r.getCell("R").value;
-        technique.nist_controls = r.getCell("T").value;
+        technique.cis_controls = r.getCell("R").value
+          ? r.getCell("R").value.toString().split(",")
+          : [];
+        technique.nist_controls = r.getCell("T").value
+          ? r.getCell("T").value.toString().split(",")
+          : [];
 
         technique.process_coverage = !!parseInt(r.getCell(31).value.result);
         technique.network_coverage = !!parseInt(r.getCell(33).value.result);

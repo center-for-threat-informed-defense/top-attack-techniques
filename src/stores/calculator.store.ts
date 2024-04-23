@@ -71,5 +71,57 @@ export const useCalculatorStore = defineStore("calculator", {
     removeTechnique(index) {
       this.techniques.splice(index, 1);
     },
+    setFilters() {
+      // set filter options from technique values
+      this.setTechniques();
+      const platforms = new Set();
+      const nist = new Set();
+      const cis = new Set();
+      const platform_array = [];
+      const cis_array = [];
+      const nist_array = [];
+      // get all unique filter values for each category by adding to set objects
+      for (const t of this.techniques) {
+        if (t.platforms) {
+          platforms.add(...t.platforms);
+        }
+        if (t.nist_controls) {
+          nist.add(...t.nist_controls);
+        }
+        if (t.cis_controls) {
+          cis.add(...t.cis_controls);
+        }
+      }
+      // convert sets to array objects in checkbox format and remove undefined values
+      for (const platform of platforms) {
+        if (platform) {
+          platform_array.push({ id: platform, name: platform, value: false });
+        }
+      }
+      for (const item of cis) {
+        if (item) {
+          cis_array.push({ id: item, name: item, value: false });
+        }
+      }
+      for (const item of nist) {
+        if (item) {
+          nist_array.push({ id: item, name: item, value: false });
+        }
+      }
+      // sort filter arrays alphabetically
+      nist_array.sort((a, b) =>
+        a.name.localeCompare(b.name, "en", { numeric: true })
+      );
+      cis_array.sort((a, b) =>
+        a.name.localeCompare(b.name, "en", { numeric: true })
+      );
+      platform_array.sort((a, b) =>
+        a.name.localeCompare(b.name, "en", { numeric: true })
+      );
+      // update filter object with list of all nist, cis, and os options
+      this.filterPropertiesObj[0].options = nist_array;
+      this.filterPropertiesObj[1].options = cis_array;
+      this.filterPropertiesObj[3].options = platform_array;
+    },
   },
 });
