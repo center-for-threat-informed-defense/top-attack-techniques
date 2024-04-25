@@ -1,6 +1,5 @@
 const ExcelJS = require("exceljs");
 const fs = require("fs");
-
 const SOURCE_FILE = "src/data/Calculator.xlsx";
 const DESTINATION_FILE = "src/data/Techniques.json";
 
@@ -111,7 +110,7 @@ const DESTINATION_FILE = "src/data/Techniques.json";
         technique.has_splunk = !!r.getCell("Q").value;
 
         technique.cis_controls = r.getCell("R").value
-          ? r.getCell("R").value.toString().split(",")
+          ? r.getCell("R").value.toString().split(", ")
           : [];
         technique.nist_controls = r.getCell("T").value
           ? r.getCell("T").value.toString().split(",")

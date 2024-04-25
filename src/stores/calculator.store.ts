@@ -1,10 +1,10 @@
 import { defineStore } from "pinia";
 import json from "../data/Techniques.json";
+import type { Technique } from "@/data/DataTypes";
 
 export const useCalculatorStore = defineStore("calculator", {
   state: () => ({
-    myJson: json,
-    techniques: [],
+    techniques: json as Array<Technique>,
     activeFiltersObj: {
       nist: [] as Array<string>,
       cis: [] as Array<string>,
@@ -76,21 +76,29 @@ export const useCalculatorStore = defineStore("calculator", {
     }) {
       this.systemScoreObj = scores;
     },
-    setTechniques() {
-      this.techniques = this.myJson;
-    },
-    removeTechnique(index) {
+    removeTechnique(index: number) {
       this.techniques.splice(index, 1);
     },
     setFilters() {
       // set filter options from technique values
-      this.setTechniques();
-      const platforms = new Set();
-      const nist = new Set();
-      const cis = new Set();
-      const platform_array = [] as Array<string>;
-      const cis_array = [] as Array<string>;
-      const nist_array = [] as Array<string>;
+      const platforms = new Set<string>();
+      const nist = new Set<string>();
+      const cis = new Set<string>();
+      const platform_array = [] as Array<{
+        id: string;
+        name: string;
+        value: boolean;
+      }>;
+      const cis_array = [] as Array<{
+        id: string;
+        name: string;
+        value: boolean;
+      }>;
+      const nist_array = [] as Array<{
+        id: string;
+        name: string;
+        value: boolean;
+      }>;
       // get all unique filter values for each category by adding to set objects
       for (const t of this.techniques) {
         if (t.platforms) {
