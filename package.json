@@ -7,9 +7,11 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "update": "node ./scripts/update_techniques.js"
   },
   "dependencies": {
+    "exceljs": "^4.4.0",
     "downloadjs": "^1.4.7",
     "marked": "^12.0.1",
     "pinia": "^2.0.29",

@@ -25,6 +25,12 @@
                             </li>
                         </ul>
                     </div>
+                    <div v-if="subtechnique.detection">
+                        <h4 class="mt-4">Detections</h4>
+                        <p>
+                            {{ subtechnique.detection }}
+                        </p>
+                    </div>
 
                 </AccordionTab>
             </Accordion>

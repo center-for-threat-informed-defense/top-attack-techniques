@@ -1,15 +1,15 @@
 import { defineStore } from "pinia";
-import json from "../data/TopAttackTechniques.json";
+import json from "../data/Techniques.json";
+import type { Technique } from "@/data/DataTypes";
 
 export const useCalculatorStore = defineStore("calculator", {
   state: () => ({
-    myJson: json,
-    techniques: [],
+    techniques: json as Array<Technique>,
     activeFiltersObj: {
-      nist: [],
-      cis: [],
-      detection: [],
-      os: [],
+      nist: [] as Array<string>,
+      cis: [] as Array<string>,
+      detection: [] as Array<string>,
+      os: [] as Array<string>,
     },
     // todo: set NIST, CIS, and OS options from the technique data
     filterPropertiesObj: [
@@ -59,17 +59,88 @@ export const useCalculatorStore = defineStore("calculator", {
     },
   },
   actions: {
-    updateActiveFilters(filterValues) {
+    updateActiveFilters(filterValues: {
+      nist: [];
+      cis: [];
+      detection: [];
+      os: [];
+    }) {
       this.activeFiltersObj = filterValues;
     },
-    updateSystemScores(scores) {
+    updateSystemScores(scores: {
+      network: { label: string; value: number };
+      process: { label: string; value: number };
+      file: { label: string; value: number };
+      cloud: { label: string; value: number };
+      hardware: { label: string; value: number };
+    }) {
       this.systemScoreObj = scores;
     },
-    setTechniques() {
-      this.techniques = this.myJson;
-    },
-    removeTechnique(index) {
+    removeTechnique(index: number) {
       this.techniques.splice(index, 1);
+    },
+    setFilters() {
+      // set filter options from technique values
+      const platforms = new Set<string>();
+      const nist = new Set<string>();
+      const cis = new Set<string>();
+      const platform_array = [] as Array<{
+        id: string;
+        name: string;
+        value: boolean;
+      }>;
+      const cis_array = [] as Array<{
+        id: string;
+        name: string;
+        value: boolean;
+      }>;
+      const nist_array = [] as Array<{
+        id: string;
+        name: string;
+        value: boolean;
+      }>;
+      // get all unique filter values for each category by adding to set objects
+      for (const t of this.techniques) {
+        if (t.platforms) {
+          t.platforms.forEach((i) => platforms.add(i));
+        }
+        if (t.nist_controls) {
+          t.nist_controls.forEach((i) => nist.add(i));
+        }
+        if (t.cis_controls) {
+          t.cis_controls.forEach((i) => cis.add(i));
+        }
+      }
+      // convert sets to array objects in checkbox format and remove undefined values
+      for (const platform of platforms) {
+        if (platform) {
+          platform_array.push({ id: platform, name: platform, value: false });
+        }
+      }
+      for (const item of cis) {
+        if (item) {
+          cis_array.push({ id: item, name: item, value: false });
+        }
+      }
+      for (const item of nist) {
+        if (item) {
+          nist_array.push({ id: item, name: item, value: false });
+        }
+      }
+      // sort filter arrays alphabetically
+      nist_array.sort((a, b) =>
+        a.name.localeCompare(b.name, "en", { numeric: true })
+      );
+      cis_array.sort((a, b) =>
+        a.name.localeCompare(b.name, "en", { numeric: true })
+      );
+      platform_array.sort((a, b) =>
+        a.name.localeCompare(b.name, "en", { numeric: true })
+      );
+      // update filter object with list of all nist, cis, and os options
+      this.filterPropertiesObj[0].options = nist_array;
+      this.filterPropertiesObj[1].options = cis_array;
+      this.filterPropertiesObj[3].options = platform_array;
     },
   },
 });

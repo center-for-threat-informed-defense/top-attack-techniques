@@ -54,7 +54,6 @@ export default defineComponent({
     },
     computed: {
         rankedList() {
-            this.calculatorStore.setTechniques()
             return this.calculatorStore.techniques
         }
     },
