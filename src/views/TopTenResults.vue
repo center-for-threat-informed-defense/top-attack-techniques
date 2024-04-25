@@ -50,27 +50,62 @@ export default defineComponent({
         return {
             calculatorStore: useCalculatorStore(),
             activeItemId: 0,
+            rankedList: []
         };
     },
     computed: {
-        rankedList() {
-            return this.calculatorStore.techniques
-        }
+        filters() {
+            return this.calculatorStore.activeFilters;
+        },
+        scores() {
+            return this.calculatorStore.systemScoreObj;
+        },
     },
     methods: {
         setActiveIndex(index) {
             this.activeItemId = index
         },
         deleteTechnique(index) {
-            this.calculatorStore.removeTechnique(index)
+            this.rankedList.splice(index, 1)
             if (index < this.activeItemId) {
                 this.setActiveIndex(this.activeItemId - 1)
             }
         },
         download() {
             downloadjs(JSON.stringify(this.rankedList.slice(0, 10)), "TopTenTechniques.json", JSON)
+        },
+        setRankedList() {
+            let filteredList = JSON.parse(JSON.stringify(this.calculatorStore.techniques));
+            filteredList = this.applyScores(filteredList)
+
+            filteredList.sort(
+                (a, b) => b.adjusted_score - a.adjusted_score
+            );
+            console.log("new first three items in list", filteredList[0], filteredList[1], filteredList[2])
+            this.rankedList = filteredList
+        },
+        applyFilters() {
+
+        },
+        applyScores(filteredList) {
+            for (const monitoringType of Object.keys(this.scores)) {
+                const adjustment = this.scores[monitoringType].value
+                // console.log("monitoring type ", this.scores[monitoringType], (1 / Object.keys(this.scores).length) * adjustment)
+                filteredList = filteredList.map((technique) => {
+                    if (technique[`${monitoringType}_coverage`]) {
+                        const score_adjustment = ((1 / Object.keys(this.scores).length) * adjustment);
+                        technique.adjusted_score += score_adjustment;
+                        technique[`${monitoringType}_score`] = score_adjustment;
+                    }
+                    return technique
+                })
+            }
+            return filteredList
         }
-    }
+    },
+    beforeMount() {
+        this.setRankedList();
+    },
 });
 </script>
 

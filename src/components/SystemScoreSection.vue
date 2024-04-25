@@ -15,7 +15,7 @@
         <div v-for="filter of Object.keys(this.calculatorStore.activeFilters)" :key="filter" class="inline-block">
             <span class="mr-4 w-max inline-block" v-if="this.calculatorStore.activeFilters[filter].length > 0">
                 {{ filter }}:
-                <span class="highlight">{{ this.calculatorStore.activeFilters[filter].join(", ") }}</span>
+                <span class="highlight">{{ getFilterText(filter) }}</span>
             </span>
         </div>
         <div class="lg:inline-block hidden cursor-pointer" @click="editSelections()"
@@ -43,6 +43,15 @@ export default defineComponent({
         getScoreText(key) {
             if (this.calculatorStore.systemScore[key].label === "None") { return "No" }
             return this.calculatorStore.systemScore[key].label
+        },
+        getFilterText(key) {
+            if (key === "nist" && this.calculatorStore.allNISTOptions.toLocaleString() == this.calculatorStore.activeFiltersObj.nist.sort((a, b) => a.localeCompare(b, "en", { numeric: true })).toLocaleString()) {
+                return "All NIST Controls"
+            }
+            if (key === "cis" && this.calculatorStore.allCISOptions.toLocaleString() == this.calculatorStore.activeFiltersObj.cis.sort((a, b) => a.localeCompare(b, "en", { numeric: true })).toLocaleString()) {
+                return "All CIS Controls"
+            }
+            return this.calculatorStore.activeFilters[key].join(", ")
         },
         editSelections() {
             router.push({ path: '/calculator' })

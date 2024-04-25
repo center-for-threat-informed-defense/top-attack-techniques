@@ -57,6 +57,12 @@ export const useCalculatorStore = defineStore("calculator", {
     systemScore(state) {
       return state.systemScoreObj;
     },
+    allNISTOptions(state) {
+      return state.filterPropertiesObj[0].options.map((i) => i.name);
+    },
+    allCISOptions(state) {
+      return state.filterPropertiesObj[1].options.map((i) => i.name);
+    },
   },
   actions: {
     updateActiveFilters(filterValues: {
