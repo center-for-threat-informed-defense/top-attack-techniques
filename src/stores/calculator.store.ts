@@ -6,10 +6,10 @@ export const useCalculatorStore = defineStore("calculator", {
     myJson: json,
     techniques: [],
     activeFiltersObj: {
-      nist: [],
-      cis: [],
-      detection: [],
-      os: [],
+      nist: [] as Array<string>,
+      cis: [] as Array<string>,
+      detection: [] as Array<string>,
+      os: [] as Array<string>,
     },
     // todo: set NIST, CIS, and OS options from the technique data
     filterPropertiesObj: [
@@ -59,10 +59,21 @@ export const useCalculatorStore = defineStore("calculator", {
     },
   },
   actions: {
-    updateActiveFilters(filterValues) {
+    updateActiveFilters(filterValues: {
+      nist: [];
+      cis: [];
+      detection: [];
+      os: [];
+    }) {
       this.activeFiltersObj = filterValues;
     },
-    updateSystemScores(scores) {
+    updateSystemScores(scores: {
+      network: { label: string; value: number };
+      process: { label: string; value: number };
+      file: { label: string; value: number };
+      cloud: { label: string; value: number };
+      hardware: { label: string; value: number };
+    }) {
       this.systemScoreObj = scores;
     },
     setTechniques() {
@@ -77,9 +88,9 @@ export const useCalculatorStore = defineStore("calculator", {
       const platforms = new Set();
       const nist = new Set();
       const cis = new Set();
-      const platform_array = [];
-      const cis_array = [];
-      const nist_array = [];
+      const platform_array = [] as Array<string>;
+      const cis_array = [] as Array<string>;
+      const nist_array = [] as Array<string>;
       // get all unique filter values for each category by adding to set objects
       for (const t of this.techniques) {
         if (t.platforms) {
