@@ -102,13 +102,13 @@ export const useCalculatorStore = defineStore("calculator", {
       // get all unique filter values for each category by adding to set objects
       for (const t of this.techniques) {
         if (t.platforms) {
-          platforms.add(...t.platforms);
+          t.platforms.forEach((i) => platforms.add(i));
         }
         if (t.nist_controls) {
-          nist.add(...t.nist_controls);
+          t.nist_controls.forEach((i) => nist.add(i));
         }
         if (t.cis_controls) {
-          cis.add(...t.cis_controls);
+          t.cis_controls.forEach((i) => cis.add(i));
         }
       }
       // convert sets to array objects in checkbox format and remove undefined values

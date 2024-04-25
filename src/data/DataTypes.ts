@@ -8,7 +8,7 @@ export interface Technique {
   platforms: Array<string>;
   data_sources: Array<string>;
   is_subtechnique: boolean;
-  supertechnique: string;
+  supertechnique: string | null;
   subtechniques: Array<Subtechnique>;
   mitigations: Array<Mitigation>;
   cumulative_score: number;
