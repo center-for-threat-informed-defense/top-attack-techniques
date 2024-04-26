@@ -110,7 +110,7 @@ const DESTINATION_FILE = "src/data/Techniques.json";
         technique.has_splunk = !!r.getCell("Q").value;
 
         technique.cis_controls = r.getCell("R").value
-          ? r.getCell("R").value.toString().split(", ")
+          ? r.getCell("R").value.toString().replace(/\s/g, "").split(",")
           : [];
         technique.nist_controls = r.getCell("T").value
           ? r.getCell("T").value.toString().split(",")
