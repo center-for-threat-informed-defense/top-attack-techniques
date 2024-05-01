@@ -1,7 +1,7 @@
 <template>
     <div>
         <Accordion :active-index="activeItemId">
-            <AccordionTab v-for="(technique, i) of rankedList?.slice(0, 10)" :key="i">
+            <AccordionTab v-for="(technique, i) of rankedList?.slice(0, results)" :key="i">
                 <template #header>
                     <h2>
                         {{ i + 1 }}.
@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, type PropType } from "vue";
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
 import TopTenDetails from "./TopTenDetails.vue";
@@ -27,8 +27,15 @@ import { type Technique } from "@/data/DataTypes";
 export default defineComponent({
     components: { Accordion, AccordionTab, TopTenDetails },
     props: {
-        rankedList: Array<Technique>,
+        rankedList: {
+            type: Array as PropType<Technique[]>,
+            required: true
+        },
         activeItemId: Number,
+        results: {
+            type: Number,
+            default: 10
+        }
     },
     data() {
         return {};

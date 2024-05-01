@@ -1,17 +1,19 @@
 <template>
     <div>
         <Accordion>
-            <AccordionTab v-for="group in calculatorStore.filterProperties" :key="group.id" :header="group.label">
-                <div v-if="group.id === 'nist'" class="checkbox-group">
+            <AccordionTab v-for="group in Object.keys(calculatorStore.filterProperties)" :key="group"
+                :header="calculatorStore.filterProperties[group].label">
+                <div v-if="group === 'nist'" class="checkbox-group">
                     <Checkbox v-model="checkAllNIST" :binary="true" input-id="select_all_nist"></Checkbox>
                     <label for="select_all_nist" class="my-auto">All NIST Controls</label>
                 </div>
-                <div v-if="group.id === 'cis'" class="checkbox-group">
+                <div v-if="group === 'cis'" class="checkbox-group">
                     <Checkbox v-model="checkAllCIS" :binary="true" input-id="select_all_cis"></Checkbox>
                     <label for="select_all_cis" class="my-auto">All CIS Controls</label>
                 </div>
-                <div v-for="option in group.options" :key="option.id" class="checkbox-group">
-                    <Checkbox v-model="filters[group.id]" :value="option.name" :input-id="option.name" class="my-auto">
+                <div v-for="option in calculatorStore.filterProperties[group].options" :key="option.id"
+                    class="checkbox-group">
+                    <Checkbox v-model="filters[group]" :value="option.name" :input-id="option.name" class="my-auto">
                     </Checkbox>
                     <label :for="option.name" class="my-auto">{{ option.name }}</label>
                 </div>
@@ -38,12 +40,12 @@ export default defineComponent({
     computed: {
         checkAllNIST: {
             get: function () {
-                return this.calculatorStore.filterProperties[0].options ? this.filters.nist.length == this.calculatorStore.filterProperties[0].options.length : false;
+                return this.calculatorStore.filterProperties.nist.options ? this.filters.nist.length == this.calculatorStore.filterProperties.nist.options.length : false;
             },
             set: function (value) {
                 const checked = [];
                 if (value) {
-                    this.calculatorStore.filterProperties[0].options.forEach(function (lang) {
+                    this.calculatorStore.filterProperties.nist.options.forEach(function (lang) {
                         checked.push(lang.id);
                     });
                 }
@@ -52,12 +54,12 @@ export default defineComponent({
         },
         checkAllCIS: {
             get: function () {
-                return this.calculatorStore.filterProperties[1].options ? this.filters.cis.length == this.calculatorStore.filterProperties[1].options.length : false;
+                return this.calculatorStore.filterProperties.cis.options ? this.filters.cis.length == this.calculatorStore.filterProperties.cis.options.length : false;
             },
             set: function (value) {
                 const checked = [];
                 if (value) {
-                    this.calculatorStore.filterProperties[1].options.forEach(function (lang) {
+                    this.calculatorStore.filterProperties.cis.options.forEach(function (lang) {
                         checked.push(lang.id);
                     });
                 }

@@ -76,7 +76,7 @@ export default defineComponent({
             downloadjs(JSON.stringify(this.rankedList.slice(0, 10)), "TopTenTechniques.json", JSON)
         },
         setRankedList() {
-            let filteredList = JSON.parse(JSON.stringify(this.calculatorStore.techniques));
+            let filteredList = structuredClone(this.calculatorStore.techniques);
             filteredList = this.applyScores(filteredList)
             filteredList = this.applyFilters(filteredList)
             filteredList.sort(
@@ -88,10 +88,10 @@ export default defineComponent({
             const newFilterList = []
             let filterByCIS = true;
             let filterByNIST = true;
-            if ((this.filters.nist.length === 0 || this.filters.nist.length === this.calculatorStore.allNISTOptions.length)) {
+            if ((this.filters.nist.length === 0 || this.filters.nist.length === this.calculatorStore.filterProperties.nist.options.map((i) => i.name).length)) {
                 filterByNIST = false
             }
-            if ((this.filters.cis.length === 0 || this.filters.cis.length === this.calculatorStore.allCISOptions.length)) {
+            if ((this.filters.cis.length === 0 || this.filters.cis.length === this.calculatorStore.filterProperties.cis.options.map((i) => i.name).length)) {
                 filterByCIS = false
             }
             // if there are no filters selected, then return full list of techniques
@@ -129,7 +129,7 @@ export default defineComponent({
             }
             if (this.filters.detection.length) {
                 for (const filterProp of this.filters.detection) {
-                    const key = this.calculatorStore.filterProperties[2].options.find(i => i.name === filterProp)
+                    const key = this.calculatorStore.filterProperties.detection.options.find(i => i.name === filterProp)
                     if (technique[key.id]) {
                         return true;
                     }

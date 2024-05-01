@@ -45,10 +45,10 @@ export default defineComponent({
             return this.calculatorStore.systemScore[key].label
         },
         getFilterText(key) {
-            if (key === "nist" && this.calculatorStore.allNISTOptions.toLocaleString() == this.calculatorStore.activeFiltersObj.nist.sort((a, b) => a.localeCompare(b, "en", { numeric: true })).toLocaleString()) {
+            if (key === "nist" && this.calculatorStore.filterProperties.nist.options.map((i) => i.name).toLocaleString() == this.calculatorStore.activeFiltersObj.nist.sort((a, b) => a.localeCompare(b, "en", { numeric: true })).toLocaleString()) {
                 return "All NIST Controls"
             }
-            if (key === "cis" && this.calculatorStore.allCISOptions.toLocaleString() == this.calculatorStore.activeFiltersObj.cis.sort((a, b) => a.localeCompare(b, "en", { numeric: true })).toLocaleString()) {
+            if (key === "cis" && this.calculatorStore.filterProperties.cis.options.map((i) => i.name).toLocaleString() == this.calculatorStore.activeFiltersObj.cis.sort((a, b) => a.localeCompare(b, "en", { numeric: true })).toLocaleString()) {
                 return "All CIS Controls"
             }
             return this.calculatorStore.activeFilters[key].join(", ")

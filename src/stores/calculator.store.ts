@@ -11,20 +11,16 @@ export const useCalculatorStore = defineStore("calculator", {
       detection: [] as Array<string>,
       os: [] as Array<string>,
     },
-    // todo: set NIST, CIS, and OS options from the technique data
-    filterPropertiesObj: [
-      {
-        id: "nist",
+    filterPropertiesObj: {
+      nist: {
         label: "NIST 800-53 Controls",
-        options: [{ id: "test", name: "Test", value: false }],
+        options: [] as Array<{ id: string; name: string; value: boolean }>,
       },
-      {
-        id: "cis",
+      cis: {
         label: "CIS Security Controls",
-        options: [{ id: "test", name: "Test", value: false }],
+        options: [] as Array<{ id: string; name: string; value: boolean }>,
       },
-      {
-        id: "detection",
+      detection: {
         label: "Detection Analytics",
         options: [
           { id: "has_car", name: "CAR", value: false },
@@ -33,12 +29,11 @@ export const useCalculatorStore = defineStore("calculator", {
           { id: "has_splunk", name: "Splunk", value: false },
         ],
       },
-      {
-        id: "os",
+      os: {
         label: "Operating Systems",
-        options: [{ id: "test", name: "Test", value: false }],
+        options: [] as Array<{ id: string; name: string; value: boolean }>,
       },
-    ],
+    },
     systemScoreObj: {
       network: { label: "None", value: 1 },
       process: { label: "None", value: 1 },
@@ -58,10 +53,10 @@ export const useCalculatorStore = defineStore("calculator", {
       return state.systemScoreObj;
     },
     allNISTOptions(state) {
-      return state.filterPropertiesObj[0].options.map((i) => i.name);
+      return state.filterPropertiesObj.nist.options.map((i) => i.name);
     },
     allCISOptions(state) {
-      return state.filterPropertiesObj[1].options.map((i) => i.name);
+      return state.filterPropertiesObj.cis.options.map((i) => i.name);
     },
   },
   actions: {
@@ -144,9 +139,9 @@ export const useCalculatorStore = defineStore("calculator", {
         a.name.localeCompare(b.name, "en", { numeric: true })
       );
       // update filter object with list of all nist, cis, and os options
-      this.filterPropertiesObj[0].options = nist_array;
-      this.filterPropertiesObj[1].options = cis_array;
-      this.filterPropertiesObj[3].options = platform_array;
+      this.filterPropertiesObj.nist.options = nist_array;
+      this.filterPropertiesObj.cis.options = cis_array;
+      this.filterPropertiesObj.os.options = platform_array;
     },
   },
 });
