@@ -13,7 +13,7 @@
             {{ monitoringType }} Monitoring
         </div>
         <div v-for="filter of Object.keys(this.calculatorStore.activeFilters)" :key="filter" class="inline-block">
-            <span class="mr-4 w-max inline-block" v-if="this.calculatorStore.activeFilters[filter].length > 0">
+            <span class="mr-4 w-max inline-block">
                 {{ filter }}:
                 <span class="highlight">{{ getFilterText(filter) }}</span>
             </span>
@@ -45,13 +45,10 @@ export default defineComponent({
             return this.calculatorStore.systemScore[key].label
         },
         getFilterText(key) {
-            if (key === "nist" && this.calculatorStore.filterProperties.nist.options.map((i) => i.name).toLocaleString() == this.calculatorStore.activeFiltersObj.nist.sort((a, b) => a.localeCompare(b, "en", { numeric: true })).toLocaleString()) {
-                return "All NIST Controls"
+            if (this.calculatorStore.activeFiltersObj[key].size < 1) {
+                return `All ${key} Controls`
             }
-            if (key === "cis" && this.calculatorStore.filterProperties.cis.options.map((i) => i.name).toLocaleString() == this.calculatorStore.activeFiltersObj.cis.sort((a, b) => a.localeCompare(b, "en", { numeric: true })).toLocaleString()) {
-                return "All CIS Controls"
-            }
-            return this.calculatorStore.activeFilters[key].join(", ")
+            return Array.from(this.calculatorStore.activeFilters[key]).join(", ")
         },
         editSelections() {
             router.push({ path: '/calculator' })

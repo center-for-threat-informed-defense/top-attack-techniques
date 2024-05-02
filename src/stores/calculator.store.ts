@@ -6,10 +6,10 @@ export const useCalculatorStore = defineStore("calculator", {
   state: () => ({
     techniques: json as Array<Technique>,
     activeFiltersObj: {
-      nist: [] as Array<string>,
-      cis: [] as Array<string>,
-      detection: [] as Array<string>,
-      os: [] as Array<string>,
+      nist: new Set<string>(),
+      cis: new Set<string>(),
+      detection: new Set<string>(),
+      os: new Set<string>(),
     },
     filterPropertiesObj: {
       nist: {

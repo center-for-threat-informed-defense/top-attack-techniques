@@ -36,7 +36,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, toRaw } from "vue";
 import { useCalculatorStore } from "../stores/calculator.store";
 import TopTenSidebar from "../components/TopTenSidebar.vue"
 import TopTenDetails from "../components/TopTenDetails.vue"
@@ -76,7 +76,7 @@ export default defineComponent({
             downloadjs(JSON.stringify(this.rankedList.slice(0, 10)), "TopTenTechniques.json", JSON)
         },
         setRankedList() {
-            let filteredList = structuredClone(this.calculatorStore.techniques);
+            let filteredList = structuredClone(toRaw(this.calculatorStore.techniques));
             filteredList = this.applyScores(filteredList)
             filteredList = this.applyFilters(filteredList)
             filteredList.sort(
@@ -88,14 +88,14 @@ export default defineComponent({
             const newFilterList = []
             let filterByCIS = true;
             let filterByNIST = true;
-            if ((this.filters.nist.length === 0 || this.filters.nist.length === this.calculatorStore.filterProperties.nist.options.map((i) => i.name).length)) {
+            if (this.filters.nist.size === 0) {
                 filterByNIST = false
             }
-            if ((this.filters.cis.length === 0 || this.filters.cis.length === this.calculatorStore.filterProperties.cis.options.map((i) => i.name).length)) {
+            if (this.filters.cis.size === 0) {
                 filterByCIS = false
             }
             // if there are no filters selected, then return full list of techniques
-            if (!filterByNIST && !filterByCIS && this.filters.detection.length === 0 && this.filters.os.length === 0) {
+            if (!filterByNIST && !filterByCIS && this.filters.detection.size === 0 && this.filters.os.size === 0) {
                 return filteredList;
             }
             for (const technique of filteredList) {
@@ -120,14 +120,14 @@ export default defineComponent({
                     }
                 }
             }
-            if (this.filters.os.length) {
+            if (this.filters.os.size) {
                 for (const property of this.filters.os) {
                     if (technique.platforms && technique.platforms.find(n => n === property)) {
                         return true;
                     }
                 }
             }
-            if (this.filters.detection.length) {
+            if (this.filters.detection.size) {
                 for (const filterProp of this.filters.detection) {
                     const key = this.calculatorStore.filterProperties.detection.options.find(i => i.name === filterProp)
                     if (technique[key.id]) {
