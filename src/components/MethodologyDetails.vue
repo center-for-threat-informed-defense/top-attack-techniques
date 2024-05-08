@@ -59,7 +59,7 @@
             </p>
             <p>For simplicity and interpretability, we recommend using a piecewise linear utility function, like this:
             </p>
-            <img src="../assets/methodology/actionability/figure2.svg" class="mx-auto my-2" />
+            <vue-mathjax :formula="formula1"></vue-mathjax>
 
             <p>Here, <em>x</em> is the value of some attribute (ex: # mitigations), <em>upper</em> and <em>lower</em>
                 are the upper and lower "cutoffs" for that attribute. Values below the lower cutoff have zero utility,
@@ -93,44 +93,52 @@
             <h4>Defining Attribute Weighting</h4>
             <p>We then define weights for each of the attributes to rank their importance. Once we have the weights
                 defined, the Actionability score is computed as:</p>
-            <img src="../assets/methodology/actionability/figure4.svg" class="mx-auto my-2" />
-            <p> so in our case with number of detections and number of mitigations as our attributes, it will be:</p>
-            <img src="../assets/methodology/actionability/figure5.svg" class="mx-auto my-2" />
-            <p>Where <em>xd</em> and <em>xm</em> are the raw counts of detections and mitigations, <em>wd</em> and
-                <em>wm</em> are their weights, and <em>ud</em> and <em>um</em> are their utility functions.
+            <vue-mathjax :formula="actionabilityScore"></vue-mathjax>
 
+            <p> so in our case with number of detections and number of mitigations as our attributes, it will be:</p>
+            <vue-mathjax :formula="actionabilityFormula"></vue-mathjax>
+            <p>Where <vue-mathjax formula="$x_{d}$"></vue-mathjax> and <vue-mathjax formula="$x_{m}$"></vue-mathjax> are
+                the raw counts of detections and mitigations, <vue-mathjax formula="$w_{d}$"></vue-mathjax> and
+                <vue-mathjax formula="$w_{m}$"></vue-mathjax> are their weights, and <vue-mathjax
+                    formula="$u_{d}$"></vue-mathjax> and <vue-mathjax formula="$u_{m}$"></vue-mathjax> are their utility
+                functions.
             </p>
             <p>Since we are using utility functions, we need to be careful with how we define the weights.</p>
             <p>Bottom line: to make sure the weights have a "physical" meaning, we will define them using weighting
                 ratios</p>
-            <img src="../assets/methodology/actionability/figure6.svg" class="mx-auto my-2" />
-            <p>If we want 1 mitigation to be worth 2 detections, then we'd set <img
-                    src="../assets/methodology/actionability/figure6.svg" class="inline -mt-2" /> =2. This method can
+            <vue-mathjax :formula="'$$' + formula2 + '$$'"></vue-mathjax>
+            <p>If we want 1 mitigation to be worth 2 detections, then we'd set <vue-mathjax
+                    :formula="'$' + formula2 + '$'"></vue-mathjax> =2. This method can
                 be extended to problems with more than two attributes.
             </p>
             <h4>How to Get Weights from Weighting Ratios</h4>
-            <p>The actionability formula is: <img src="../assets/methodology/actionability/figure5.svg"
-                    class="inline" />. If <img src="../assets/methodology/actionability/figure7.svg" class="inline" />
+            <p>The actionability formula is: <vue-mathjax :formula="'$' + actionabilityFormula + '$'"></vue-mathjax>. If
+                <vue-mathjax :formula="formula3" class="inline"></vue-mathjax> and <vue-mathjax :formula="formula4"
+                    class="inline"></vue-mathjax>
+
                 (i.e. they are both in the main "linear domain") then we can write this as:
             </p>
-            <img src="../assets/methodology/actionability/figure8.svg" class="mx-auto my-2" />
-
+            <vue-mathjax :formula="formula5"></vue-mathjax>
             <p>If we want each mitigation to be worth two detections, then we should set the <em>wm</em> and <em>wd</em>
                 so that the following relation is satisfied (if the ratio is changed, then you would change the 2 here
-                to whatever the new ratio is): <img src="../assets/methodology/actionability/figure9.svg"
-                    class="inline" />. The derivatives of A are: </p>
-            <img src="../assets/methodology/actionability/figure10.svg" class="mx-auto my-2" />
+                to whatever the new ratio is): <vue-mathjax :formula="formula6"></vue-mathjax>. The derivatives of A
+                are: </p>
+            <p class="text-center"><vue-mathjax :formula="formula7"></vue-mathjax> and <vue-mathjax
+                    :formula="formula8"></vue-mathjax></p>
 
-            <p> When we plug these into the above relation, we see that the relation to be satisfied becomes <img
-                    src="../assets/methodology/actionability/figure11.svg" class="inline" />. So we can set 𝑤𝑚:=1 and
-                use the above relations to find a value for <em>wd</em>.</p>
-            <img src="../assets/methodology/actionability/figure12.svg" class="mx-auto my-2" />
+            <p> When we plug these into the above relation, we see that the relation to be satisfied becomes
+                <vue-mathjax :formula="formula9"></vue-mathjax>. So we can set <vue-mathjax
+                    :formula="formula10"></vue-mathjax> and use the above relations to find a value for <em>wd</em>.
+            </p>
+            <p class="text-center"><vue-mathjax :formula="formula10"></vue-mathjax> and <vue-mathjax
+                    :formula="formula11"></vue-mathjax></p>
             <p>Then, to ensure actionability ranges from zero to one, we just need to normalize the weights so that they
-                add up to one (i.e. we want <em>wd</em> + <em>wm</em> = 1.) We can do this by dividing each
-                un-normalized weight by
-                the sum of all weights: <img src="../assets/methodology/actionability/figure13.svg" class="inline" />
-                and <img src="../assets/methodology/actionability/figure14.svg" class="inline" />
-                where <em>w'm</em> and <em>w'd</em> are the values of <em>wm</em> and <em>wd</em> before normalizing.
+                add up to one (i.e. we want <vue-mathjax formula="$w'_{d} + w'_{m} = 1$"></vue-mathjax>.) We
+                can do this by dividing each un-normalized weight by the sum of all weights: <vue-mathjax
+                    :formula="formula12"></vue-mathjax> and <vue-mathjax :formula="formula13"></vue-mathjax> where
+                <vue-mathjax formula="$w'_{m}$"></vue-mathjax> and <vue-mathjax formula="$w'_{d}$"></vue-mathjax> are
+                the values of <vue-mathjax formula="$w_{m}$"></vue-mathjax> and <vue-mathjax
+                    formula="$w_{d}$"></vue-mathjax> before normalizing.
             </p>
 
             <h4>What if we have more than two attributes?</h4>
@@ -138,7 +146,7 @@
                 technique has. Furthermore, this method might be used for one of the other scores, which may have more
                 than two attributes. It is not too difficult to generalize this to work with three or more attributes.
             </p>
-            <p>Suppose we have 5 attributes, named 𝑎, 𝑏, 𝑐, 𝑑, and 𝑒, and each attribute has an upper and lower
+            <p>Suppose we have 5 attributes, named a, b, c, d, and e, and each attribute has an upper and lower
                 cutoff. The steps to defining their weights are:</p>
             <ol class="list-decimal pl-6">
                 <li>Make a "hierarchy" of attributes by importance</li>
@@ -147,17 +155,24 @@
                 </ul>
                 <li>For each "level", define the weighting ratios</li>
                 <ul>
-                    <li>Example: <img src="../assets/methodology/actionability/figure15.svg" class="inline" /></li>
+                    <li>Example: <vue-mathjax :formula="formula14"></vue-mathjax></li>
                 </ul>
                 <li>Set highest level's weights to 1 and use ratios to set the weights for the lower levels according to
-                    <img src="../assets/methodology/actionability/figure16.svg" class="inline" />
+                    <vue-mathjax :formula="formula15"></vue-mathjax>
                 </li>
-
                 <ul>
-                    <li>Example: <img src="../assets/methodology/actionability/figure17.svg" class="inline" /></li>
+                    <li>Example: <vue-mathjax formula="$w_{e} := 1$"></vue-mathjax>, then <vue-mathjax
+                            :formula="formula16"></vue-mathjax> and <vue-mathjax :formula="formula17"></vue-mathjax>,
+                        etc.</li>
                 </ul>
-                <li>Adjust the weights with each attribute's cutoffs according to <img
-                        src="../assets/methodology/actionability/figure18.svg" class="inline" /></li>
+                <li>Adjust the weights with each attribute's cutoffs according to <vue-mathjax
+                        :formula="formula18"></vue-mathjax></li>
+                <li>Adjust so the weights add up to one</li>
+                <ul>
+                    <li>Let <vue-mathjax formula="$S = w_{a}+...+w_{e}$"></vue-mathjax>. Then, set <vue-mathjax
+                            formula="$w_{a}:=w_{a}/S$,..., $w_{e}:=w_{e}/S$"></vue-mathjax>
+                    </li>
+                </ul>
             </ol>
 
             <p>This is a contour plot of actionability scores -- patches of the same color have (roughly) the same value
@@ -309,6 +324,8 @@
                 Where 𝑤 is the time weighting function which assigns a weight (between zero and one) to an attack based
                 on its proximity to the present time (𝑡𝑛𝑜𝑤). It is defined by:</p>
             <img src="../assets/methodology/prevalence/figure2.svg" class="mx-auto my-2" />
+            <!-- <vue-mathjax :formula="actionabilityScoreFormula"></vue-mathjax> -->
+
             <p>Here, Δ𝑡 is the time between the attack and the present time. We have three parameters in the weighting
                 function that can be adjusted:</p>
             <ul>
@@ -378,9 +395,33 @@ export default defineComponent({
     },
     data() {
         return {
-
+            formula1: '\\begin{equation*}\\mathrm{u(x)=}\\begin{cases}\\mathrm{0} & \\mathrm{x< lower}\\\\ \\mathrm{\\frac{x-lower}{upper-lower}} & \\mathrm{lower \\leq x \\leq upper}\\\\ \\mathrm{1} & \\mathrm{x >upper}\\end{cases}\\end{equation*}',
+            actionabilityScore: '$$\\mathrm{A(x)=\\sum\\limits _{i} w_{i} \\cdot u_{i}( x_{i})}$$',
+            actionabilityFormula: `\\begin{equation}
+            \\mathrm{A( x_{d} ,x_{m}) \\ =\\ w_{d} \\cdot \\ u_{d}( \\ x_{d}) +w_{m} \\cdot \\ u_{m}( x_{m})}
+            \\end{equation}`,
+            formula2: `\\mathrm{ratio\\left(\\frac{mitigations}{detections}\\right)}`,
+            formula3: '$\\mathrm{lower_{d}  \\leq x_{d}  \\leq upper_{d}}$',
+            formula4: '$\\mathrm{lower_{m}  \\leq x_{m}  \\leq upper_{m}}$',
+            formula5: '\\begin{equation*}\\mathrm{A( x_{d} ,x_{m}) \\ =w_{d} \\cdot \\frac{x\\mathrm{_{d}} -lower\\mathrm{_{d}}}{upper\\mathrm{_{d}} -lower\\mathrm{_{d}}} +\\ w_{m} \\cdot \\frac{x\\mathrm{_{m}} -lower\\mathrm{_{m}}}{upper\\mathrm{_{m}} -lower\\mathrm{_{m}}}}\\end{equation*}',
+            formula6: '$\\mathrm{\\frac{\\partial A}{\\partial x\\mathrm{_{m}}} \\ =\\ 2\\ \\cdot \\frac{\\partial A}{\\partial x\\mathrm{_{d}}}}$',
+            formula7: '$\\mathrm{\\frac{\\partial A}{\\partial x\\mathrm{_{m}}}  = \\frac{w\\mathrm{_{m}}}{upper\\mathrm{_{m}} -lower\\mathrm{_{m}}}}$',
+            formula8: '$\\mathrm{\\frac{\\partial A}{\\partial x\\mathrm{_{d}}}  = \\frac{w\\mathrm{_{d}}}{upper\\mathrm{_{d}} -lower\\mathrm{_{d}}}}$',
+            formula9: '$\\mathrm{\\frac{w\\mathrm{_{m}}}{upper\\mathrm{_{m}} -lower\\mathrm{_{m}}}} =2\\mathrm{\\cdot \\frac{w\\mathrm{_{d}}}{upper\\mathrm{_{d}} -lower\\mathrm{_{d}}}}$',
+            formula10: '$\\begin{equation*}\\mathrm{w_{m} := \\ 1}\\end{equation*}$',
+            formula11: '$\\mathrm{w_{d} \\:=  \\frac{w\\mathrm{_{m}}}{2} \\cdot \\frac{upper\\mathrm{_{d}} -lower\\mathrm{_{d}}}{upper\\mathrm{_{m}} -lower\\mathrm{_{m}}}}$',
+            formula12: `$\\begin{equation*}\\mathrm{w_{m} \\:= \\ \\frac{w'\\mathrm{_{m}}}{w'\\mathrm{_{m}} -w'\\mathrm{_{d}}}}\\end{equation*}$`,
+            formula13: `$\\mathrm{\\ w_{d} \\:= \\ \\frac{w'\\mathrm{_{d}}}{w'\\mathrm{_{m}} -w'\\mathrm{_{d}}}}$`,
+            formula14: '$\\begin{equation*}\\mathrm{ratio\\left(\\frac{e}{a}\\right) =ratio\\left(\\frac{e}{b}\\right) =2\\ ,\\ ratio\\left(\\frac{a}{d}\\right) =ratio\\left(\\frac{b}{d}\\right) =3\\ ,\\ \\text{and}\\ ratio\\left(\\frac{d}{c}\\right) =\\frac{3}{2}}\\end{equation*}$',
+            formula15: '$\\begin{equation*}\\mathrm{w_{y} \\cdot ratio\\left(\\frac{x}{y}\\right)} =\\mathrm{w_{x}}\\end{equation*}$',
+            formula16: '$\\mathrm{w_{a} \\cdot ratio\\left(\\frac{e}{a}\\right) =w_{e} \\Rightarrow \\ w_{a} := \\ \\frac{1}{2}}$',
+            formula17: '$\\mathrm{\\ w_{b} := \\frac{1}{2}}$',
+            formula18: '$\\begin{equation*}\\mathrm{w_{x} := \\frac{w\\mathrm{_{x}}}{upper\\mathrm{_{x}} -lower\\mathrm{_{x}}}}\\end{equation*}$',
         };
     },
+    // components: {
+    //     'vue-mathjax': VueMathjax
+    // }
 });
 </script>
 
