@@ -4,8 +4,8 @@
             <AccordionTab v-for="group in Object.keys(calculatorStore.filterProperties)" :key="group"
                 :header="calculatorStore.filterProperties[group].label">
                 <div class="checkbox-group">
-                    <Checkbox :model-value="isSelected(group)" :binary="true" :input-id="`select_all_${group}`"
-                        @change="select(group)">
+                    <Checkbox :model-value="isSelected(group)" :disabled="isSelected(group)" :binary="true"
+                        :input-id="`select_all_${group}`" @change="select(group)">
                     </Checkbox>
                     <label for="`select_all_${group}`" class="my-auto">All {{ group.toUpperCase() }} Controls</label>
                 </div>
@@ -46,14 +46,19 @@ export default defineComponent({
             this.calculatorStore.updateActiveFilters(this.filters)
         },
         isSelected(group: string, option?: string): boolean {
-            if (!this.filters[group].size || this.filters[group].size < 1 || this.filters[group].size === this.calculatorStore.filterProperties[group].options.length) {
-                // if the list of filters is empty, it is effectively select all
-                return true;
+            if (!option) {
+                return this.filters[group].size === 0
+            } else {
+                return this.filters[group].has(option);
             }
-            if (option && this.filters[group].has(option)) {
-                return true;
-            }
-            return false;
+            // if (!this.filters[group].size || this.filters[group].size < 1 || this.filters[group].size === this.calculatorStore.filterProperties[group].options.length) {
+            //     // if the list of filters is empty, it is effectively select all
+            //     return true;
+            // }
+            // if (option && this.filters[group].has(option)) {
+            //     return true;
+            // }
+            // return false;
         },
         select(group: string, option?: string) {
             if (group && !option) {
