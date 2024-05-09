@@ -89,7 +89,9 @@
             </ul>
             <p>For example scores, the cutoffs are 0 and 100 for detections, and 0 and 55 for mitigations.</p>
             <p>Examples of potential utility functions are illustrated below:</p>
-            <p class="text-center italic">Insert figure 3</p>
+            <div class="my-4">
+                <img src="../assets/methodology/utility_examples.png" class="w-1/2 mx-auto" />
+            </div>
             <h4>Defining Attribute Weighting</h4>
             <p>We then define weights for each of the attributes to rank their importance. Once we have the weights
                 defined, the Actionability score is computed as:</p>
@@ -231,11 +233,17 @@
                 facilitation.</p>
             <p>The MITRE team considered choke point to be the middle technique where many other techniques could go
                 into and come out of in an attack flow proceeding. </p>
-            <p class="text-center italic">Insert figure 1</p>
+            <div class="my-4">
+                <img src="../assets/methodology/choke_point_success.png" class="w-1/2 mx-auto" />
+                <p class="text-center italic mt-2">T1055: Process Injection Successful Choke Point</p>
+            </div>
             <p><a href="https://attack.mitre.org/techniques/T1055/" target="_blank">T1055: Process Injection</a> is a
                 great example of many techniques calling Process Injection as the next technique in succession for the
                 cyber attack then proceeding to any number of other techniques afterwards.</p>
-            <p class="text-center italic">Insert figure 2</p>
+            <div class="my-4">
+                <img src="../assets/methodology/choke_point_failure.png" class="w-1/3 mx-auto" />
+                <p class="text-center italic mt-2">T1491: Defacement Non-Successful Choke Point</p>
+            </div>
             <p><a href="https://attack.mitre.org/techniques/T1491/" target="_blank">T1491: Defacement</a> is a great
                 example of how only one technique could funnel into another and there wouldn’t be a following technique
                 after Defacement.</p>
@@ -243,54 +251,68 @@
                 confidence level of choke point and to set parameters. This method is much clearer to see what the
                 inputs are and how changing them will change the output. This method also does not make any assumptions
                 about the structure of the connections between techniques beyond the data that was initially used.</p>
-            <p>The chokepoint formula for a technique is written as <img
-                    src="../assets/methodology/choke-point/figure3.svg" class="inline -mt-1" /></p>
-            <p> Here 𝑥𝑏 and 𝑥𝑎 are the number of before and after techniques for the technique in question, while
-                𝑢𝑏 and 𝑢𝑎 are their "utility" functions. Finally, 𝑤𝑏 and 𝑤𝑎 are the weights for before and after
-                techniques, which are define further below using relative weighting ratios.</p>
+            <p>The chokepoint formula for a technique is written as <vue-mathjax :formula="chokePoint1"></vue-mathjax>
+            </p>
+            <p> Here <vue-mathjax formula="$x_{b}$"></vue-mathjax> and <vue-mathjax formula="$x_{a}$"></vue-mathjax> are
+                the number of before and after techniques for the technique in question, while
+                <vue-mathjax formula="$u_{b}$"></vue-mathjax> and <vue-mathjax formula="$u_{a}$"></vue-mathjax> are
+                their "utility" functions. Finally, <vue-mathjax formula="$w_{b}$"></vue-mathjax> and <vue-mathjax
+                    formula="$w_{a}$"></vue-mathjax> are the weights for before and after techniques, which are define
+                further below using relative weighting ratios.
+            </p>
             <h4>Utility Functions</h4>
             <p>For each potential chokepoint, we have two attributes: the number of before techniques it has, and the
-                number of after techniques it has. In order to combine them, we define "utility" functions 𝑢𝑏 and 𝑢𝑎
+                number of after techniques it has. In order to combine them, we define "utility" functions <vue-mathjax
+                    formula="$u_{b}$"></vue-mathjax> and <vue-mathjax formula="$u_{a}$"></vue-mathjax>
                 for # before and # after, respectively. These functions define the "value" as:</p>
-            <img src="../assets/methodology/actionability/figure2.svg" class="mx-auto my-2" />
-            <p>Where 𝑥 is the value of some attribute (ex: # of before techniques), and 𝑢𝑝𝑝𝑒𝑟 and 𝑙𝑜𝑤𝑒𝑟 are
-                the upper and lower "cutoffs" for that attribute. Values below the lower cutoff have zero utility,
-                values above the upper cutoff have maximum utility. We set these to the smallest "useful" number of
-                before or after techniques</p>
+            <vue-mathjax :formula="formula1"></vue-mathjax>
+            <p>Where <em>x</em> is the value of some attribute (ex: # of before techniques), and <em>upper</em> and
+                <em>lower</em> are the upper and lower "cutoffs" for that attribute. Values below the lower cutoff have
+                zero utility, values above the upper cutoff have maximum utility. We set these to the smallest "useful"
+                number of before or after techniques.
+            </p>
             <p>[note: the upper cutoff should be no larger than the largest value for its attribute, and the lower
                 cutoff should be no lower than the smallest value for its attribute.]</p>
             <p>Examples of potential utility functions are illustrated below:</p>
-            <p class="text-center italic">Insert figure 4</p>
+            <div class="my-4">
+                <img src="../assets/methodology/utility_examples.png" class="w-1/2 mx-auto" />
+            </div>
             <h4>Attribute Weighting</h4>
-            <p>We define the weights 𝑤𝑏 and 𝑤𝑎 by a "weighting ratio" which is set by asking how many after
-                techniques is "worth" one before technique: <img src="../assets/methodology/choke-point/figure5.svg"
-                    class="inline -mt-1" /> the number of after techniques worth one before technique</p>
+            <p>We define the weights <vue-mathjax formula="$w_{b}$"></vue-mathjax> and <vue-mathjax
+                    formula="$w_{a}$"></vue-mathjax> by a "weighting ratio" which is set by asking how many after
+                techniques is "worth" one before technique: <vue-mathjax :formula="chokePoint2"></vue-mathjax> the
+                number of after techniques worth one before technique.
+            </p>
             <p>If you want them to be weighted equally, set this equal to 1. If you want before techniques to be worth
                 1.2 after techniques, set this equal to 1.2. Below is how to go from this ratio to the actual weights
-                𝑤𝑏 and 𝑤𝑎.</p>
-            <p>First, we find the un-normalized weights 𝑤′𝑏 and 𝑤′𝑎. Set</p>
-            <img src="../assets/methodology/choke-point/figure6.svg" class="mx-auto my-2" />
+                <vue-mathjax formula="$w_{b}$"></vue-mathjax> and <vue-mathjax formula="$w_{a}$"></vue-mathjax>.
+            </p>
+            <p>First, we find the un-normalized weights <vue-mathjax formula="$w'_{b}$"></vue-mathjax> and <vue-mathjax
+                    formula="$w'_{a}$"></vue-mathjax>. Set</p>
+            <vue-mathjax :formula="chokePoint3"></vue-mathjax>
 
-            <p>Then normalize so that they add up to 1 to get the actual weights: <img
-                    src="../assets/methodology/choke-point/figure7.svg" class="inline -mt-1" /></p>
-            <p> Here is how the expression for 𝑤′𝑏 and 𝑤′𝑎 was derived:</p>
-            <p>The chokepoint formula is <img src="../assets/methodology/choke-point/figure3.svg"
-                    class="inline -mt-1" />. if
-                𝑙𝑜𝑤𝑒𝑟𝑏 ≤ 𝑥𝑏 ≤ 𝑢𝑝𝑝𝑒𝑟𝑏 and 𝑙𝑜𝑤𝑒𝑟𝑎 ≤ 𝑥𝑎 ≤ 𝑢𝑝𝑝𝑒𝑟𝑎 (i.e. they are both in the
+            <p>Then normalize so that they add up to 1 to get the actual weights: <vue-mathjax
+                    :formula="chokePoint4"></vue-mathjax></p>
+            <p> Here is how the expression for <vue-mathjax formula="$w'_{b}$"></vue-mathjax> and <vue-mathjax
+                    formula="$w'_{a}$"></vue-mathjax> was derived:</p>
+            <p>The chokepoint formula is <vue-mathjax :formula="'$' + chokePoint1 + '$'"></vue-mathjax>. If <vue-mathjax
+                    :formula="chokePoint5"></vue-mathjax> (i.e. they are both in the
                 main "linear domain") then we can write this as:</p>
-            <img src="../assets/methodology/choke-point/figure8.svg" class="mx-auto my-2" />
-            <p>In order to be weighted according to the ratio we specified, the weights 𝑤𝑏 and 𝑤𝑎 should be set so
-                that the following relation is satisfied: <img src="../assets/methodology/choke-point/figure9.svg"
-                    class="inline -mt-1" /></p>
-            <p>The derivatives of <em>C</em> are: <img src="../assets/methodology/choke-point/figure10.svg"
-                    class="inline -mt-1" /></p>
+            <vue-mathjax :formula="chokePoint6"></vue-mathjax>
+            <p>In order to be weighted according to the ratio we specified, the weights <vue-mathjax
+                    formula="$w_{b}$"></vue-mathjax> and <vue-mathjax formula="$w_{a}$"></vue-mathjax> should be set so
+                that the following relation is satisfied: <vue-mathjax :formula="chokePoint7"></vue-mathjax></p>
+            <p>The derivatives of <em>C</em> are: <vue-mathjax :formula="chokePoint8"></vue-mathjax></p>
             <p>When we plug these into the above relation, we see that the relation to be satisfied becomes:</p>
-            <img src="../assets/methodology/choke-point/figure11.svg" class="mx-auto my-2" />
-            <p> So we can set 𝑤𝑏:=1 and use the above relations to find a value for 𝑤𝑎.</p>
+            <vue-mathjax :formula="chokePoint9"></vue-mathjax>
+            <p> So we can set <vue-mathjax formula="$w_{b} :=1$"></vue-mathjax> and use the above relations to find a
+                value for <vue-mathjax formula="$w_{a}$"></vue-mathjax>.</p>
             <h3>Plotting Chokepoint</h3>
             <p>We can make a scatter plot of the number of before and after techniques among the potential chokepoints:
             </p>
-            <p class="text-center italic">Insert figure 12</p>
+            <div class="my-4">
+                <img src="../assets/methodology/before_after_techniques.png" class="w-2/3 mx-auto" />
+            </div>
             <p>And we can overlay this with a contour plot of the actual chokepoint function (patches of the same color
                 have roughly the same chokepoint score)</p>
             <p class="text-center italic">Insert figure 13</p>
@@ -319,41 +341,48 @@
                 insights into techniques that are frequently used by adversaries and its inclusion in our Top ATT&CK
                 Techniques methodologies is helps insert real-world data into our analysis.</p>
             <h3>Framing the Analysis</h3>
-            <p>For a technique that has attack times {t0, t1, … , tn}, we calculate the technique’s un-normalized
-                prevalence score as: <img src="../assets/methodology/prevalence/figure1.svg" class="inline -mt-1" />
-                Where 𝑤 is the time weighting function which assigns a weight (between zero and one) to an attack based
-                on its proximity to the present time (𝑡𝑛𝑜𝑤). It is defined by:</p>
-            <img src="../assets/methodology/prevalence/figure2.svg" class="mx-auto my-2" />
-            <!-- <vue-mathjax :formula="actionabilityScoreFormula"></vue-mathjax> -->
+            <p>For a technique that has attack times {<vue-mathjax
+                    formula="$t_{0}, t_{1}, ... , t_{n} $"></vue-mathjax>}, we calculate the technique's un-normalized
+                prevalence score as: <vue-mathjax :formula="prevalence1"></vue-mathjax>
+                Where <em>w</em> is the time weighting function which assigns a weight (between zero and one) to an
+                attack based
+                on its proximity to the present time (<vue-mathjax formula="$t_{now}$"></vue-mathjax>). It is defined
+                by:</p>
+            <vue-mathjax :formula="prevalence2"></vue-mathjax>
 
             <p>Here, Δ𝑡 is the time between the attack and the present time. We have three parameters in the weighting
                 function that can be adjusted:</p>
             <ul>
                 <li><em>full</em> is the number of days into the past (relative to the present) for which we want
                     attacks to be given full weighting. The weighting of attacks will start to decline if they occur
-                    more than <em>full</em> days into the past
+                    more than <em>full</em> days into the past.
                 </li>
                 <li><em>decline</em> is the number of days after <em>full</em> has been reached over which the weighting
-                    decreases to its minimum value. This controls the "steepness" of the falloff
+                    decreases to its minimum value. This controls the "steepness" of the falloff.
                 </li>
-                <li><em>𝑤𝑚𝑖𝑛</em> is the minimum weight an attack can have. Attacks that occurred more than
-                    <em>full</em>+<em>decline</em> days into the past will have a weighting of <em>𝑤𝑚𝑖𝑛</em>. This
-                    controls the "strength" of the weighting
+                <li><vue-mathjax formula="$w_{min}$"></vue-mathjax> is the minimum weight an attack can have. Attacks
+                    that occurred more than <em>full</em> + <em>decline</em> days into the past will have a weighting of
+                    <vue-mathjax formula="$w_{min}$"></vue-mathjax>. This controls the "strength" of the weighting.
                 </li>
             </ul>
             <p>The combination of these three parameters controls the strength and rate of weighting. For example, if we
-                want weighting to gradually decrease to zero over a long period of time, then we may set <em>wmin
-                    :=0</em> and <em>decline</em> to be large.</p>
+                want weighting to gradually decrease to zero over a long period of time, then we may set <vue-mathjax
+                    formula="$w_{min} := 0$"></vue-mathjax> and <em>decline</em> to be large.</p>
             <p>The weighting function and its parameters may sound complicated in text, but it is best understood
                 visually:</p>
-            <p class="text-center italic">Insert figure 3</p>
+            <div class="my-4">
+                <img src="../assets/methodology/weighting_function.png" class="w-1/2 mx-auto" />
+            </div>
             <p>Some examples of the weighting function using various parameters are given below:</p>
-            <p class="text-center italic">Insert figure 4</p>
-
+            <div class="my-4">
+                <img src="../assets/methodology/weighting-examples.png" class="w-2/3 mx-auto" />
+            </div>
             <h3>Normalizing Prevalence Scores</h3>
             <p>Since only a few techniques make up a large majority of all sightings, we need to be careful about
                 accounting for these outliers when we put the prevalence scores on a zero-to-one scale.</p>
-            <p class="text-center italic">Insert figure 5</p>
+            <div class="my-4">
+                <img src="../assets/methodology/distribution.png" class="w-2/3 mx-auto" />
+            </div>
             <p>This is a histogram of the distribution of prevalence scores across all techniques for which we have
                 attack times. Note that there are a few techniques that have a prevalence score that is FAR greater than
                 the scores for every other technique. If we normalize the scores using the min-max normalization
@@ -387,6 +416,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { VueMathjax } from "vue-mathjax-next";
 
 export default defineComponent({
     props: {
@@ -417,11 +447,22 @@ export default defineComponent({
             formula16: '$\\mathrm{w_{a} \\cdot ratio\\left(\\frac{e}{a}\\right) =w_{e} \\Rightarrow \\ w_{a} := \\ \\frac{1}{2}}$',
             formula17: '$\\mathrm{\\ w_{b} := \\frac{1}{2}}$',
             formula18: '$\\begin{equation*}\\mathrm{w_{x} := \\frac{w\\mathrm{_{x}}}{upper\\mathrm{_{x}} -lower\\mathrm{_{x}}}}\\end{equation*}$',
+            chokePoint1: '\\begin{equation}\\mathrm{C( x_{b} ,x_{a})=\\ w_{b} \\cdot \\ u_{d}( \\ x_{b}) +w_{a} \\cdot \\ u_{a}( x_{a})}\\end{equation}',
+            chokePoint2: '$\\begin{equation*}\\mathrm{ratio\\left(\\frac{before}{after}\\right) := }\\end{equation*}$',
+            chokePoint3: "$$\\mathrm{w'_{b} := 1 \\text{ and }\\ w'_{a} := \\frac{w'\\mathrm{_{b}}}{\\mathrm{ratio\\left(\\frac{before}{after}\\right)}} \\cdot \\frac{upper\\mathrm{_{after}} -lower\\mathrm{_{after}}}{upper\\mathrm{_{before}} -lower\\mathrm{_{before}}}}$$",
+            chokePoint4: "$\\mathrm{ w_{b} :=  \\frac{w'\\mathrm{_{b}}}{w'\\mathrm{_{b}} -w'\\mathrm{_{a}}} \\text{ and } w_{a} :=  \\frac{w'\\mathrm{_{a}}}{w'\\mathrm{_{a}} -w'\\mathrm{_{b}}}}$",
+            chokePoint5: "$\\mathrm{ lower_{b} \\leq x_{b} \\leq upper_{b} \\text{ and } lower_{a} \\leq x_{a} \\leq upper_{a}}$",
+            chokePoint6: '$$\\mathrm{C( x_{b} ,x_{a})  = w_{b} \\cdot \\frac{x\\mathrm{_{b}} -lower\\mathrm{_{b}}}{upper\\mathrm{_{b}} -lower\\mathrm{_{b}}}} +\\mathrm{ w_{a} \\cdot \\frac{x\\mathrm{_{a}} -lower\\mathrm{_{a}}}{upper\\mathrm{_{a}} -lower\\mathrm{_{a}}}}$$',
+            chokePoint7: '$\\mathrm{\\frac{\\partial C}{\\partial x\\mathrm{_{b}}}  =ratio\\left(  \\frac{before}{after}\\right) \\cdot \\frac{\\partial C}{\\partial x\\mathrm{_{b}}}}$',
+            chokePoint8: '$\\mathrm{\\frac{\\partial C}{\\partial x\\mathrm{_{b}}}  = \\frac{w\\mathrm{_{b}}}{upper\\mathrm{_{b}} -lower\\mathrm{_{b}}} \\text{ and } \\frac{\\partial C}{\\partial x\\mathrm{_{a}}}  = \\frac{w\\mathrm{_{a}}}{upper\\mathrm{_{a}} -lower\\mathrm{_{a}}}}$',
+            chokePoint9: '\\begin{equation*}\\mathrm{ \\frac{w\\mathrm{_{b}}}{upper\\mathrm{_{b}} -lower\\mathrm{_{b}}} =ratio\\left(  \\frac{before}{after}\\right)\\cdot \\frac{w\\mathrm{_{a}}}{upper\\mathrm{_{a}} -lower\\mathrm{_{a}}} }\\end{equation*}',
+            prevalence1: '$\\mathrm{P = \\sum\\limits _{i=1}^{n} w( t_{now} -t_{i})}$',
+            prevalence2: "\\begin{equation*}\\mathrm{w( t_{now} -t_{i}) =w( \\Delta t)} = \\begin{cases}\\mathrm{w_{min}} & \\mathrm{ \\Delta t > full + decline} \\\\ \\mathrm{w_{min}\\frac{\\Delta t - full}{decline}- \\frac{\\Delta t - full - decline}{decline}}& \\mathrm{ full \\leq \\Delta t \\leq full + decline} \\\\ 1 & \\mathrm{ \\Delta t < full } \\end{cases}\\end{equation*}",
         };
     },
-    // components: {
-    //     'vue-mathjax': VueMathjax
-    // }
+    components: {
+        'vue-mathjax': VueMathjax
+    }
 });
 </script>
 
