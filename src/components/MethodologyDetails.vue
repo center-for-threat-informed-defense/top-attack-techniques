@@ -45,7 +45,9 @@
             <p>Finally, we recognize that for some, defending against rootkits, or other similarly stealthy techniques,
                 is just as, if not more, important than other techniques. We tried to account for this by allowing users
                 to choose which analytics and controls should be included in the weighted list.</p>
-            <p class="text-center italic">Insert figure 1</p>
+            <div class="my-4">
+                <img src="../assets/methodology/figure1.png" class="w-1/2 mx-auto" />
+            </div>
             <p>You can see there are quite a few outliers, especially for detections. Keep in mind that there are known
                 to be duplicates, so there is likely some double counting.</p>
 
@@ -185,12 +187,16 @@
                     the scores from actionability, chokepoint and so on.</li>
                 <li>You can see that the highest score that a technique with no mitigations can have is about 0.45</li>
             </ul>
-            <p class="text-center italic">Insert figure 19</p>
+            <div class="my-4">
+                <img src="../assets/methodology/actionability_with_utility.png" class="w-1/2 mx-auto" />
+            </div>
             <p> Here's what actionability would look like if we didn't use utility functions to scale detections and
                 mitigations. We can see that actionability is now unbounded, which will make things difficult to combine
                 later on. Also, even if a technique has zero mitigations, it could still receive a high actionability
                 score if its detections is high enough.</p>
-            <p class="text-center italic">Insert figure 20</p>
+            <div class="my-4">
+                <img src="../assets/methodology/actionability_without_utility.png" class="w-1/2 mx-auto" />
+            </div>
         </div>
         <div v-if="activeItemId === 1">
             <h3>Why we include choke points</h3>
@@ -315,10 +321,14 @@
             </div>
             <p>And we can overlay this with a contour plot of the actual chokepoint function (patches of the same color
                 have roughly the same chokepoint score)</p>
-            <p class="text-center italic">Insert figure 13</p>
+            <div class="my-4">
+                <img src="../assets/methodology/chokepoint_with_utility.png" class="w-1/2 mx-auto" />
+            </div>
             <p> and we can compare this with a plot of what the chokepoint function would look like had we not used
                 utility functions to scale the number of before and after techniques</p>
-            <p class="text-center italic">Insert figure 14</p>
+            <div class="my-4">
+                <img src="../assets/methodology/chokepoint_without_utility.png" class="w-1/2 mx-auto" />
+            </div>
         </div>
         <div v-if="activeItemId === 2">
             <h3>Why we Include Prevalence</h3>
