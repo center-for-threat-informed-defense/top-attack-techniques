@@ -46,7 +46,8 @@
                 is just as, if not more, important than other techniques. We tried to account for this by allowing users
                 to choose which analytics and controls should be included in the weighted list.</p>
             <div class="my-4">
-                <img src="../assets/methodology/figure1.png" class="w-1/2 mx-auto" />
+                <img src="../assets/methodology/figure1.png" class="md:w-1/2 mx-auto"
+                    alt="Scatterplot mapping number of detections on the x axis and number of mitigations on the y axis. Each point represents a single technique. The majority of techniques are below 20 detections and under 30 mitigations, but there are about 20 outliers. " />
             </div>
             <p>You can see there are quite a few outliers, especially for detections. Keep in mind that there are known
                 to be duplicates, so there is likely some double counting.</p>
@@ -92,7 +93,8 @@
             <p>For example scores, the cutoffs are 0 and 100 for detections, and 0 and 55 for mitigations.</p>
             <p>Examples of potential utility functions are illustrated below:</p>
             <div class="my-4">
-                <img src="../assets/methodology/utility_examples.png" class="w-1/2 mx-auto" />
+                <img src="../assets/methodology/utility_examples.png" class="md:w-1/2 mx-auto"
+                    alt="line graph that visualizes different examples of the recommended piecewise utility function with lower and upper cutoffs used to normalize a technique's mitigation and detection score into a single number " />
             </div>
             <h4>Defining Attribute Weighting</h4>
             <p>We then define weights for each of the attributes to rank their importance. Once we have the weights
@@ -188,14 +190,16 @@
                 <li>You can see that the highest score that a technique with no mitigations can have is about 0.45</li>
             </ul>
             <div class="my-4">
-                <img src="../assets/methodology/actionability_with_utility.png" class="w-1/2 mx-auto" />
+                <img src="../assets/methodology/actionability_with_utility.png" class="md:w-1/2 mx-auto"
+                    alt="scatterplot displaying number of detections on the x axis and number of mitigations on the y axis with actionability scores calculated from the actionability formula overlayed on top. Most techniques have an actionability score between 0 and 0.45" />
             </div>
             <p> Here's what actionability would look like if we didn't use utility functions to scale detections and
                 mitigations. We can see that actionability is now unbounded, which will make things difficult to combine
                 later on. Also, even if a technique has zero mitigations, it could still receive a high actionability
                 score if its detections is high enough.</p>
             <div class="my-4">
-                <img src="../assets/methodology/actionability_without_utility.png" class="w-1/2 mx-auto" />
+                <img src="../assets/methodology/actionability_without_utility.png" class="md:w-1/2 mx-auto"
+                    alt="scatterplot displaying number of detections on the x axis and number of mitigations on the y axis with actionability scores overlayed on top. Since these scores have not been scaled with the utility function, actionability is unbounded and the highest value is 350 as opposed to 0. Most techniques have a score between o and 100." />
             </div>
         </div>
         <div v-if="activeItemId === 1">
@@ -240,14 +244,16 @@
             <p>The MITRE team considered choke point to be the middle technique where many other techniques could go
                 into and come out of in an attack flow proceeding. </p>
             <div class="my-4">
-                <img src="../assets/methodology/choke_point_success.png" class="w-1/2 mx-auto" />
+                <img src="../assets/methodology/choke_point_success.png" class="md:w-1/2 mx-auto"
+                    alt="example of a choke point where six techniques all point to process injection as the next technique in an attack flow before moving on to another technique" />
                 <p class="text-center italic mt-2">T1055: Process Injection Successful Choke Point</p>
             </div>
             <p><a href="https://attack.mitre.org/techniques/T1055/" target="_blank">T1055: Process Injection</a> is a
                 great example of many techniques calling Process Injection as the next technique in succession for the
                 cyber attack then proceeding to any number of other techniques afterwards.</p>
             <div class="my-4">
-                <img src="../assets/methodology/choke_point_failure.png" class="w-1/3 mx-auto" />
+                <img src="../assets/methodology/choke_point_failure.png" class="md:w-1/3 mx-auto"
+                    alt="example of a failed choke point where one technique leads to another technique and does not have another technique afterwards." />
                 <p class="text-center italic mt-2">T1491: Defacement Non-Successful Choke Point</p>
             </div>
             <p><a href="https://attack.mitre.org/techniques/T1491/" target="_blank">T1491: Defacement</a> is a great
@@ -281,7 +287,8 @@
                 cutoff should be no lower than the smallest value for its attribute.]</p>
             <p>Examples of potential utility functions are illustrated below:</p>
             <div class="my-4">
-                <img src="../assets/methodology/utility_examples.png" class="w-1/2 mx-auto" />
+                <img src="../assets/methodology/utility_examples.png" class="md:w-1/2 mx-auto"
+                    alt="line graph that visualizes different examples of the recommended piecewise utility function with lower and upper cutoffs used to normalize a technique's mitigation and detection score into a single number " />
             </div>
             <h4>Attribute Weighting</h4>
             <p>We define the weights <vue-mathjax formula="$w_{b}$"></vue-mathjax> and <vue-mathjax
@@ -317,17 +324,20 @@
             <p>We can make a scatter plot of the number of before and after techniques among the potential chokepoints:
             </p>
             <div class="my-4">
-                <img src="../assets/methodology/before_after_techniques.png" class="w-2/3 mx-auto" />
+                <img src="../assets/methodology/before_after_techniques.png" class="md:w-1/2 mx-auto"
+                    alt="Scatterplot mapping the number of techniques before on the x axis and the number of techniques after on the y axis. Most techniques that are possible chokepoints have more techniques before them than after" />
             </div>
             <p>And we can overlay this with a contour plot of the actual chokepoint function (patches of the same color
                 have roughly the same chokepoint score)</p>
             <div class="my-4">
-                <img src="../assets/methodology/chokepoint_with_utility.png" class="w-1/2 mx-auto" />
+                <img src="../assets/methodology/chokepoint_with_utility.png" class="md:w-1/2 mx-auto"
+                    alt="Scatterplot mapping the number of techniques before on the x axis and the number of techniques after on the y axis with chokepoint scores overlayed on top. Most techniques have a chokepoint score below 0.45" />
             </div>
-            <p> and we can compare this with a plot of what the chokepoint function would look like had we not used
-                utility functions to scale the number of before and after techniques</p>
+            <p>And we can compare this with a plot of what the chokepoint function would look like had we not used
+                utility functions to scale the number of before and after techniques:</p>
             <div class="my-4">
-                <img src="../assets/methodology/chokepoint_without_utility.png" class="w-1/2 mx-auto" />
+                <img src="../assets/methodology/chokepoint_without_utility.png" class="md:w-1/2 mx-auto"
+                    alt="Scatterplot mapping the number of techniques before on the x axis and the number of techniques after on the y axis with chokepoint scores overlayed on top. Because it is not normalized by the utility function, chokepoint scores can range up to 30." />
             </div>
         </div>
         <div v-if="activeItemId === 2">
@@ -381,17 +391,20 @@
             <p>The weighting function and its parameters may sound complicated in text, but it is best understood
                 visually:</p>
             <div class="my-4">
-                <img src="../assets/methodology/weighting_function.png" class="w-1/2 mx-auto" />
+                <img src="../assets/methodology/weighting_function.png" class="md:w-1/2 mx-auto"
+                    alt="Line graph that visualizes the weight of a technique on the y axis over time on the x axis. Techniques have a weight of wmin until decline is reached, at which point the weight increases in a straight line until full is reached. For the full time period, the weight is 1. " />
             </div>
             <p>Some examples of the weighting function using various parameters are given below:</p>
             <div class="my-4">
-                <img src="../assets/methodology/weighting-examples.png" class="w-2/3 mx-auto" />
+                <img src="../assets/methodology/weighting-examples.png" class="md:w-2/3 mx-auto"
+                    alt="Examples of three weighting functions, demonstrating how changing the values for full, decline, and wmin can alter the weighting function. The smaller the distance between full and decline and the larger the distance between wwmin and 1, the steeper the slope of the weighting function becomes." />
             </div>
             <h3>Normalizing Prevalence Scores</h3>
             <p>Since only a few techniques make up a large majority of all sightings, we need to be careful about
                 accounting for these outliers when we put the prevalence scores on a zero-to-one scale.</p>
             <div class="my-4">
-                <img src="../assets/methodology/distribution.png" class="w-2/3 mx-auto" />
+                <img src="../assets/methodology/distribution.png" class="md:w-2/3 mx-auto"
+                    alt="bar chart showing unnormalized prevalence on the x axis and weight on the y axis. The scale is so varied that most weights are hardly visible, demonstrating the need for normalization." />
             </div>
             <p>This is a histogram of the distribution of prevalence scores across all techniques for which we have
                 attack times. Note that there are a few techniques that have a prevalence score that is FAR greater than
@@ -490,7 +503,11 @@ export default defineComponent({
 }
 
 ul {
-    @apply list-disc ml-6
+    @apply list-disc ml-6 mb-4
+}
+
+ol {
+    @apply mb-4
 }
 
 ul p {
@@ -507,5 +524,9 @@ a {
 
 p {
     @apply mb-2
+}
+
+.MathJax_Display {
+    margin-bottom: 10px !important;
 }
 </style>
