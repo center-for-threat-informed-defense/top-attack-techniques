@@ -24,8 +24,14 @@ import { useCalculatorStore } from "../stores/calculator.store";
 import { type Technique } from "@/data/DataTypes";
 export default defineComponent({
     props: {
-        rankedList: Array<Technique>,
-        activeItemId: Number,
+        rankedList: {
+            type: Array<Technique>,
+            required: true
+        },
+        activeItemId: {
+            type: Number,
+            default: 0,
+        }
     },
     data() {
         return {
