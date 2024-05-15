@@ -51,14 +51,6 @@ export default defineComponent({
             } else {
                 return this.filters[group].has(option);
             }
-            // if (!this.filters[group].size || this.filters[group].size < 1 || this.filters[group].size === this.calculatorStore.filterProperties[group].options.length) {
-            //     // if the list of filters is empty, it is effectively select all
-            //     return true;
-            // }
-            // if (option && this.filters[group].has(option)) {
-            //     return true;
-            // }
-            // return false;
         },
         select(group: string, option?: string) {
             if (group && !option) {

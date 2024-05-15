@@ -86,53 +86,38 @@ export default defineComponent({
         },
         applyFilters(filteredList: Array<Technique>) {
             const newFilterList = []
-            let filterByCIS = true;
-            let filterByNIST = true;
-            if (this.filters.nist.size === 0) {
-                filterByNIST = false
-            }
-            if (this.filters.cis.size === 0) {
-                filterByCIS = false
-            }
             // if there are no filters selected, then return full list of techniques
-            if (!filterByNIST && !filterByCIS && this.filters.detection.size === 0 && this.filters.os.size === 0) {
+            if (this.filters.nist.size === 0 && this.filters.cis.size === 0 && this.filters.detection.size === 0 && this.filters.os.size === 0) {
                 return filteredList;
             }
             for (const technique of filteredList) {
-                if (this.addTechniqueToList(technique, filterByNIST, filterByCIS)) {
+                if (this.addTechniqueToList(technique)) {
                     newFilterList.push(technique)
                 }
             }
             return newFilterList
         },
-        addTechniqueToList(technique: Technique, filterByNIST: boolean, filterByCIS: boolean): boolean {
-            if (filterByCIS) {
-                for (const property of this.filters.cis) {
-                    if (technique.cis_controls && technique.cis_controls.find(c => c === property)) {
-                        return true;
-                    }
+        addTechniqueToList(technique: Technique): boolean {
+            for (const property of this.filters.cis) {
+                if (technique.cis_controls && technique.cis_controls.find(c => c === property)) {
+                    return true;
                 }
             }
-            if (filterByNIST) {
-                for (const property of this.filters.nist) {
-                    if (technique.nist_controls && technique.nist_controls.find(n => n === property)) {
-                        return true;
-                    }
+
+            for (const property of this.filters.nist) {
+                if (technique.nist_controls && technique.nist_controls.find(n => n === property)) {
+                    return true;
                 }
             }
-            if (this.filters.os.size) {
-                for (const property of this.filters.os) {
-                    if (technique.platforms && technique.platforms.find(n => n === property)) {
-                        return true;
-                    }
+            for (const property of this.filters.os) {
+                if (technique.platforms && technique.platforms.find(n => n === property)) {
+                    return true;
                 }
             }
-            if (this.filters.detection.size) {
-                for (const filterProp of this.filters.detection) {
-                    const key = this.calculatorStore.filterProperties.detection.options.find(i => i.name === filterProp)
-                    if (technique[key.id]) {
-                        return true;
-                    }
+            for (const filterProp of this.filters.detection) {
+                const key = this.calculatorStore.filterProperties.detection.options.find(i => i.name === filterProp)
+                if (technique[key.id]) {
+                    return true;
                 }
             }
             return false;
