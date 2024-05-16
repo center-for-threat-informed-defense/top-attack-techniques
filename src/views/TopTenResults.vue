@@ -95,7 +95,7 @@ export default defineComponent({
                 parsedList.push(t);
             })
 
-            downloadjs(JSON.stringify(parsedList), "TopTenTechniques.json", JSON)
+            downloadjs(JSON.stringify(parsedList, null, 4), "TopTenTechniques.json", JSON)
         },
         setRankedList() {
             let filteredList = structuredClone(toRaw(this.calculatorStore.techniques));
