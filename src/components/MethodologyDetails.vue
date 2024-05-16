@@ -444,7 +444,10 @@ import { VueMathjax } from "vue-mathjax-next";
 export default defineComponent({
     props: {
         methodologyList: Array,
-        activeItemId: 0,
+        activeItemId: {
+            type: Number,
+            default: 0
+        },
     },
     data() {
         return {
