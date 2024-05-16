@@ -13,9 +13,9 @@
             {{ monitoringType }} Monitoring
         </div>
         <div v-for="filter of Object.keys(this.calculatorStore.activeFilters)" :key="filter" class="inline-block">
-            <span class="mr-4 w-max inline-block" v-if="this.calculatorStore.activeFilters[filter].length > 0">
+            <span class="mr-4 w-max inline-block">
                 {{ filter }}:
-                <span class="highlight">{{ this.calculatorStore.activeFilters[filter].join(", ") }}</span>
+                <span class="highlight">{{ getFilterText(filter) }}</span>
             </span>
         </div>
         <div class="lg:inline-block hidden cursor-pointer" @click="editSelections()"
@@ -43,6 +43,12 @@ export default defineComponent({
         getScoreText(key) {
             if (this.calculatorStore.systemScore[key].label === "None") { return "No" }
             return this.calculatorStore.systemScore[key].label
+        },
+        getFilterText(key) {
+            if (this.calculatorStore.activeFiltersObj[key].size < 1) {
+                return `All ${key} Controls`
+            }
+            return Array.from(this.calculatorStore.activeFilters[key]).join(", ")
         },
         editSelections() {
             router.push({ path: '/calculator' })

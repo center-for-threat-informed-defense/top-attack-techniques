@@ -36,13 +36,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, toRaw } from "vue";
 import { useCalculatorStore } from "../stores/calculator.store";
 import TopTenSidebar from "../components/TopTenSidebar.vue"
 import TopTenDetails from "../components/TopTenDetails.vue"
 import TopTenAccordion from "../components/TopTenAccordion.vue"
 import SystemScoreSection from "../components/SystemScoreSection.vue"
 import downloadjs from "downloadjs";
+import { type Technique } from "../data/DataTypes"
 
 export default defineComponent({
     components: { TopTenSidebar, TopTenDetails, TopTenAccordion, SystemScoreSection },
@@ -50,27 +51,95 @@ export default defineComponent({
         return {
             calculatorStore: useCalculatorStore(),
             activeItemId: 0,
+            rankedList: Array<Technique>
         };
     },
     computed: {
-        rankedList() {
-            return this.calculatorStore.techniques
-        }
+        filters() {
+            return this.calculatorStore.activeFilters;
+        },
+        scores() {
+            return this.calculatorStore.systemScoreObj;
+        },
     },
     methods: {
-        setActiveIndex(index) {
+        setActiveIndex(index: number) {
             this.activeItemId = index
         },
-        deleteTechnique(index) {
-            this.calculatorStore.removeTechnique(index)
+        deleteTechnique(index: number) {
+            this.rankedList.splice(index, 1)
             if (index < this.activeItemId) {
                 this.setActiveIndex(this.activeItemId - 1)
             }
         },
         download() {
             downloadjs(JSON.stringify(this.rankedList.slice(0, 10)), "TopTenTechniques.json", JSON)
+        },
+        setRankedList() {
+            let filteredList = structuredClone(toRaw(this.calculatorStore.techniques));
+            filteredList = this.applyScores(filteredList)
+            filteredList = this.applyFilters(filteredList)
+            filteredList.sort(
+                (a, b) => b.adjusted_score - a.adjusted_score
+            );
+            this.rankedList = filteredList
+        },
+        applyFilters(filteredList: Array<Technique>) {
+            const newFilterList = []
+            // if there are no filters selected, then return full list of techniques
+            if (this.filters.nist.size === 0 && this.filters.cis.size === 0 && this.filters.detection.size === 0 && this.filters.os.size === 0) {
+                return filteredList;
+            }
+            for (const technique of filteredList) {
+                if (this.addTechniqueToList(technique)) {
+                    newFilterList.push(technique)
+                }
+            }
+            return newFilterList
+        },
+        addTechniqueToList(technique: Technique): boolean {
+            for (const property of this.filters.cis) {
+                if (technique.cis_controls && technique.cis_controls.find(c => c === property)) {
+                    return true;
+                }
+            }
+
+            for (const property of this.filters.nist) {
+                if (technique.nist_controls && technique.nist_controls.find(n => n === property)) {
+                    return true;
+                }
+            }
+            for (const property of this.filters.os) {
+                if (technique.platforms && technique.platforms.find(n => n === property)) {
+                    return true;
+                }
+            }
+            for (const filterProp of this.filters.detection) {
+                const key = this.calculatorStore.filterProperties.detection.options.find(i => i.name === filterProp)
+                if (technique[key.id]) {
+                    return true;
+                }
+            }
+            return false;
+        },
+        applyScores(filteredList: Array<Technique>) {
+            for (const monitoringType of Object.keys(this.scores)) {
+                const adjustment = this.scores[monitoringType].value;
+                filteredList = filteredList.map((technique) => {
+                    if (technique[`${monitoringType}_coverage`]) {
+                        const score_adjustment = ((1 / Object.keys(this.scores).length) * adjustment)
+                        technique.adjusted_score += score_adjustment;
+                        technique[`${monitoringType}_score`] = score_adjustment;
+                    }
+                    return technique
+                })
+            }
+            return filteredList
         }
-    }
+    },
+    beforeMount() {
+        this.setRankedList();
+    },
 });
 </script>
 
