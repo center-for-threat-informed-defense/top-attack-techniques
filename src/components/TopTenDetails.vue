@@ -35,27 +35,33 @@
                 </AccordionTab>
             </Accordion>
         </div>
-        <h3 class="mt-4">Mitigations</h3>
-        <ul class="mitigations">
-            <li v-for="mitigation of this.technique.mitigations" :key="mitigation.mid">
-                <h4>
-                    {{ mitigation.mid }} - {{ mitigation.name }}
-                </h4>
-                <p>{{ mitigation.description }}</p>
-            </li>
-        </ul>
-        <h3 class="mt-4">Detections</h3>
-        <p>
-            {{ this.technique.detection }}
-        </p>
-        <h3 class="mt-4">References</h3>
-        <ul>
-            <li>
-                <a class=" text-ctid-blue hover:underline" target="_blank" :href="this.technique.url">
-                    {{ this.technique.url }}
-                </a>
-            </li>
-        </ul>
+        <div v-if="this.technique.mitigations.length > 0">
+            <h3 class="mt-4">Mitigations</h3>
+            <ul class="mitigations">
+                <li v-for="mitigation of this.technique.mitigations" :key="mitigation.mid">
+                    <h4>
+                        {{ mitigation.mid }} - {{ mitigation.name }}
+                    </h4>
+                    <p>{{ mitigation.description }}</p>
+                </li>
+            </ul>
+        </div>
+        <div v-if="this.technique.detection">
+            <h3 class="mt-4">Detections</h3>
+            <p>
+                {{ this.technique.detection }}
+            </p>
+        </div>
+        <div v-if="this.technique.url">
+            <h3 class="mt-4">References</h3>
+            <ul>
+                <li>
+                    <a class=" text-ctid-blue hover:underline" target="_blank" :href="this.technique.url">
+                        {{ this.technique.url }}
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
