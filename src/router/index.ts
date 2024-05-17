@@ -8,32 +8,32 @@ import CalculatorPage from "../views/CalculatorPage.vue";
 const routes = [
   {
     path: "/",
-    name: "home",
+    name: "",
     component: HomePage,
   },
   {
     path: "/methodology",
-    name: "methodology",
+    name: "Methodology",
     component: MethodologyPage,
   },
   {
     path: "/help",
-    name: "help",
+    name: "Help",
     component: HelpPage,
   },
   {
     path: "/calculator",
-    name: "calculator",
+    name: "Calculator",
     component: CalculatorPage,
   },
   {
     path: "/top-10-lists",
-    name: "top-10-lists",
+    name: "Top Ten Lists",
     component: TopTen,
   },
   {
     path: "/calculator/results",
-    name: "calculator-results",
+    name: "Calculator Results",
     component: TopTenResults,
   },
 ];
@@ -41,6 +41,12 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: routes,
+});
+
+router.beforeEach((to) => {
+  document.title = to.name
+    ? to.name.toString() + " | Top ATT&CK Techniques"
+    : "Top ATT&CK Techniques";
 });
 
 export { router };
