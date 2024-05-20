@@ -93,7 +93,8 @@ export default defineComponent({
   },
   computed: {
     rankedList() {
-      console.log("ransomware", this.calculatorStore.ransomwareList)
+      // fetch static ransomware list from calculator store
+      // edit items in that list by changing the ID list in the store
       return this.calculatorStore.ransomwareList
     }
   },

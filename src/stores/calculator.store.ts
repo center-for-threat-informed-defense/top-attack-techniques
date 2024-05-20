@@ -58,8 +58,8 @@ export const useCalculatorStore = defineStore("calculator", {
     allCISOptions(state) {
       return state.filterPropertiesObj.cis.options.map((i) => i.name);
     },
-    ransomwareList(state) {
-      console.log(state.techniques);
+    ransomwareList(state): Array<Technique> {
+      // return static ransomware list as determined by spreadsheet
       const ids = [
         "T1486",
         "T1490",
@@ -74,7 +74,6 @@ export const useCalculatorStore = defineStore("calculator", {
       ];
       const ransomwareTop = [] as Array<Technique>;
       for (const id of ids) {
-        console.log("finding match for id ", id);
         const technique = state.techniques.find((t) => t.tid === id);
         if (technique) {
           ransomwareTop.push(technique);
