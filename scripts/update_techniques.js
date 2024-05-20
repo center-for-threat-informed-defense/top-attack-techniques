@@ -32,9 +32,8 @@ const DESTINATION_FILE = "src/data/Techniques.json";
       };
       if (t.is_subtechnique) {
         subtechniques.push(t);
-      } else {
-        techniques.push(t);
       }
+      techniques.push(t);
     }
   });
 

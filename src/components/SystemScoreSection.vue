@@ -63,7 +63,7 @@ export default defineComponent({
 <style scoped>
 .system-score-row {
     font-family: "Fira Sans Extra Condensed", sans-serif;
-    @apply lg:max-w-max lg:mx-auto mx-4 uppercase font-bold;
+    @apply lg:max-w-max lg:mx-auto mx-4 uppercase font-bold text-center;
 }
 
 .system-score-row .highlight {

@@ -60,11 +60,11 @@
         </div>
       </div>
     </section>
-    <section class="h-96 w-full py-20">
-      <h2 class="text-center text-5xl font-medium">
-        Ransomware Top 10 Techniques
-      </h2>
-      <p class="text-center">content coming soon...</p>
+    <section class="h-96 w-full py-10">
+      <div class="w-5/6 mx-auto py-10">
+        <h2 class="text-center uppercase font-bold text-5xl">Ransomware Top 10 Techniques</h2>
+      </div>
+      <top-ten-wrapper :rankedList="this.rankedList" :allowDelete="false" />
     </section>
   </div>
 </template>
@@ -76,17 +76,32 @@ import CalculatorSvg from "@/assets/calculator.svg";
 import ListSvg from "@/assets/list.svg";
 import BookSvg from "@/assets/book.svg";
 import HelpSvg from "@/assets/help.svg";
+import { useCalculatorStore } from "@/stores/calculator.store";
+import TopTenWrapper from "@/components/TopTenWrapper.vue";
 
 export default defineComponent({
-  components: { SectionItem },
+  components: { SectionItem, TopTenWrapper },
   data() {
     return {
+      calculatorStore: useCalculatorStore(),
       CalculatorSvg,
       ListSvg,
       BookSvg,
       HelpSvg,
+      activeItemId: 0,
     };
   },
+  computed: {
+    rankedList() {
+      console.log("ransomware", this.calculatorStore.ransomwareList)
+      return this.calculatorStore.ransomwareList
+    }
+  },
+  methods: {
+    setActiveIndex(index: number) {
+      this.activeItemId = index
+    },
+  }
 });
 </script>
 

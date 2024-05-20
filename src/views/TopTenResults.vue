@@ -6,32 +6,7 @@
                 <SystemScoreSection />
             </div>
         </div>
-        <div class="lg:grid hidden grid-cols-3 gap-4 w-5/6 mx-auto calculator-box auto-rows-fr">
-            <div class="col-span-1 calculator-list">
-                <TopTenSidebar :ranked-list="rankedList" :activeItemId="activeItemId" />
-                <button class="btn-primary mt-4" @click="download()">Download List</button>
-            </div>
-            <div class="col-span-2 h-full">
-                <div class="calculator-details">
-                    <div class="container-header">
-                        <h2>
-                            <span class=" text-ctid-light-purple">
-                                {{ rankedList[activeItemId].tid }}
-                            </span>
-                            {{ rankedList[activeItemId].name }}
-                        </h2>
-                    </div>
-                    <div>
-                        <TopTenDetails :technique="rankedList[activeItemId]" />
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="w-5/6 mx-auto lg:hidden block">
-            <TopTenAccordion :ranked-list="rankedList" :activeItemId="activeItemId" />
-            <button class="btn-primary mt-10" @click="download()">Download List</button>
-        </div>
+        <top-ten-wrapper :ranked-list="rankedList" :allowDelete="true" />
     </div>
 </template>
 
@@ -44,9 +19,10 @@ import TopTenAccordion from "../components/TopTenAccordion.vue"
 import SystemScoreSection from "../components/SystemScoreSection.vue"
 import downloadjs from "downloadjs";
 import { type Technique } from "../data/DataTypes"
+import TopTenWrapper from "../components/TopTenWrapper.vue";
 
 export default defineComponent({
-    components: { TopTenSidebar, TopTenDetails, TopTenAccordion, SystemScoreSection },
+    components: { TopTenSidebar, TopTenDetails, TopTenAccordion, SystemScoreSection, TopTenWrapper },
     data() {
         return {
             calculatorStore: useCalculatorStore(),

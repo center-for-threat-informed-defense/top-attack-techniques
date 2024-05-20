@@ -58,6 +58,30 @@ export const useCalculatorStore = defineStore("calculator", {
     allCISOptions(state) {
       return state.filterPropertiesObj.cis.options.map((i) => i.name);
     },
+    ransomwareList(state) {
+      console.log(state.techniques);
+      const ids = [
+        "T1486",
+        "T1490",
+        "T1027",
+        "T1059",
+        "T1036",
+        "T1112",
+        "T1047",
+        "T1562.001",
+        "T1204",
+        "T1059.001",
+      ];
+      const ransomwareTop = [] as Array<Technique>;
+      for (const id of ids) {
+        console.log("finding match for id ", id);
+        const technique = state.techniques.find((t) => t.tid === id);
+        if (technique) {
+          ransomwareTop.push(technique);
+        }
+      }
+      return ransomwareTop;
+    },
   },
   actions: {
     updateActiveFilters(filterValues: {

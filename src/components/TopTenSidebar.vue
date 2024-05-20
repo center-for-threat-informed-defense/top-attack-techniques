@@ -9,7 +9,7 @@
                     <span class="ml-3 mr-1 highlight">{{ technique.tid }}</span>
                     {{ technique.name }}
                 </div>
-                <button @click="this.$parent.deleteTechnique(i)">
+                <button v-if="allowDelete" @click="this.$parent.deleteTechnique(i)">
                     <i class="pi pi-trash"></i>
                 </button>
             </li>
@@ -31,7 +31,8 @@ export default defineComponent({
         activeItemId: {
             type: Number,
             default: 0,
-        }
+        },
+        allowDelete: Boolean
     },
     data() {
         return {
