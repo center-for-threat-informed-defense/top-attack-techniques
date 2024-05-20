@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, toRaw } from "vue";
+import { defineComponent } from "vue";
 import { useCalculatorStore } from "../stores/calculator.store";
 import TopTenSidebar from "../components/TopTenSidebar.vue"
 import TopTenDetails from "../components/TopTenDetails.vue"
@@ -69,10 +69,7 @@ export default defineComponent({
             this.activeItemId = index
         },
         deleteTechnique(index: number) {
-            this.rankedList.splice(index, 1)
-            if (index < this.activeItemId) {
-                this.setActiveIndex(this.activeItemId - 1)
-            }
+            this.$parent.deleteTechnique(index)
         },
         download() {
             downloadjs(JSON.stringify(this.rankedList.slice(0, 10)), "TopTenTechniques.json", JSON)

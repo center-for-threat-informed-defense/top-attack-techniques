@@ -13,16 +13,13 @@
 <script lang="ts">
 import { defineComponent, toRaw } from "vue";
 import { useCalculatorStore } from "../stores/calculator.store";
-import TopTenSidebar from "../components/TopTenSidebar.vue"
-import TopTenDetails from "../components/TopTenDetails.vue"
-import TopTenAccordion from "../components/TopTenAccordion.vue"
 import SystemScoreSection from "../components/SystemScoreSection.vue"
 import downloadjs from "downloadjs";
 import { type Technique } from "../data/DataTypes"
 import TopTenWrapper from "../components/TopTenWrapper.vue";
 
 export default defineComponent({
-    components: { TopTenSidebar, TopTenDetails, TopTenAccordion, SystemScoreSection, TopTenWrapper },
+    components: { SystemScoreSection, TopTenWrapper },
     data() {
         return {
             calculatorStore: useCalculatorStore(),
