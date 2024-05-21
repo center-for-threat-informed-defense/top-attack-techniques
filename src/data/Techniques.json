@@ -96,7 +96,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.08571428571428572,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.01157747
     },
     {
         "tid": "T1003",
@@ -490,7 +493,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.8333333333333334,
+        "choke_point_score": 0.3,
+        "prevalence_score": 0.32699817
     },
     {
         "tid": "T1005",
@@ -549,7 +555,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.17142857142857143,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.00266759
     },
     {
         "tid": "T1006",
@@ -583,7 +592,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.009523809523809523,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1007",
@@ -618,7 +630,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.023809523809523808,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1008",
@@ -673,7 +688,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.10476190476190476,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1010",
@@ -709,7 +727,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.009523809523809523,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1011",
@@ -786,7 +807,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.06666666666666667,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1012",
@@ -822,7 +846,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.07619047619047618,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.12907804
     },
     {
         "tid": "T1014",
@@ -858,7 +885,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.019047619047619046,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00087447
     },
     {
         "tid": "T1016",
@@ -905,7 +935,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.08095238095238096,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.02451534
     },
     {
         "tid": "T1018",
@@ -943,7 +976,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.18095238095238095,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.01949044
     },
     {
         "tid": "T1020",
@@ -1000,7 +1036,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.057142857142857134,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00021153
     },
     {
         "tid": "T1021",
@@ -1286,7 +1325,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.4761904761904762,
+        "choke_point_score": 0.45,
+        "prevalence_score": 0.66605219
     },
     {
         "tid": "T1025",
@@ -1345,7 +1387,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.14285714285714285,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1027",
@@ -1465,7 +1510,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.5714285714285714,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0.77288591
     },
     {
         "tid": "T1029",
@@ -1519,7 +1567,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.09047619047619047,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1030",
@@ -1573,7 +1624,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.09523809523809523,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1033",
@@ -1609,7 +1663,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1952380952380952,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00046537
     },
     {
         "tid": "T1036",
@@ -1796,7 +1853,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.519047619047619,
+        "choke_point_score": 0.1,
+        "prevalence_score": 1
     },
     {
         "tid": "T1037",
@@ -1944,7 +2004,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.18571428571428572,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0.00706611
     },
     {
         "tid": "T1039",
@@ -1981,7 +2044,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.019047619047619046,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1040",
@@ -2050,7 +2116,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20952380952380953,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0.02189928
     },
     {
         "tid": "T1041",
@@ -2124,7 +2193,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20952380952380953,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00072207
     },
     {
         "tid": "T1046",
@@ -2208,7 +2280,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.29523809523809524,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.01570808
     },
     {
         "tid": "T1047",
@@ -2295,7 +2370,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.5333333333333333,
+        "choke_point_score": 0.65,
+        "prevalence_score": 1
     },
     {
         "tid": "T1048",
@@ -2488,7 +2566,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.419047619047619,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00182874
     },
     {
         "tid": "T1049",
@@ -2526,7 +2607,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.07619047619047618,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1052",
@@ -2638,7 +2722,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.2380952380952381,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1053",
@@ -2890,7 +2977,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.5142857142857142,
+        "choke_point_score": 0.6,
+        "prevalence_score": 1
     },
     {
         "tid": "T1055",
@@ -3145,7 +3235,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.49523809523809526,
+        "choke_point_score": 0.44999999999999996,
+        "prevalence_score": 1
     },
     {
         "tid": "T1056",
@@ -3234,7 +3327,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.014285714285714284,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.25782564
     },
     {
         "tid": "T1057",
@@ -3271,7 +3367,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.04285714285714285,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.11777326
     },
     {
         "tid": "T1059",
@@ -3624,7 +3723,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.9142857142857143,
+        "choke_point_score": 1,
+        "prevalence_score": 1
     },
     {
         "tid": "T1068",
@@ -3726,7 +3828,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.5714285714285714,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.00221982
     },
     {
         "tid": "T1069",
@@ -3797,7 +3902,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.14761904761904762,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.02214451
     },
     {
         "tid": "T1070",
@@ -4001,7 +4109,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.6000000000000001,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.59605554
     },
     {
         "tid": "T1071",
@@ -4130,7 +4241,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1761904761904762,
+        "choke_point_score": 0.5,
+        "prevalence_score": 0.10491513
     },
     {
         "tid": "T1072",
@@ -4277,7 +4391,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.5095238095238095,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.00164997
     },
     {
         "tid": "T1074",
@@ -4332,7 +4449,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.47619047619047616,
+        "choke_point_score": 0.6000000000000001,
+        "prevalence_score": 0.10548938
     },
     {
         "tid": "T1078",
@@ -4542,7 +4662,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.8,
+        "choke_point_score": 0.55,
+        "prevalence_score": 0.00772313
     },
     {
         "tid": "T1080",
@@ -4620,7 +4743,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.17142857142857143,
+        "choke_point_score": 0.30000000000000004,
+        "prevalence_score": 0.00028245
     },
     {
         "tid": "T1082",
@@ -4659,7 +4785,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.13333333333333333,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.447342
     },
     {
         "tid": "T1083",
@@ -4696,7 +4825,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.07142857142857142,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.0584645
     },
     {
         "tid": "T1087",
@@ -4815,7 +4947,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2714285714285714,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.10442914
     },
     {
         "tid": "T1090",
@@ -4953,7 +5088,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.24285714285714285,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 1
     },
     {
         "tid": "T1091",
@@ -5028,7 +5166,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.16666666666666669,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.19170357
     },
     {
         "tid": "T1092",
@@ -5094,7 +5235,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.14285714285714285,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1095",
@@ -5176,7 +5320,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2619047619047619,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 1
     },
     {
         "tid": "T1098",
@@ -5371,7 +5518,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.638095238095238,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00749729
     },
     {
         "tid": "T1102",
@@ -5500,7 +5650,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1523809523809524,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.03502902
     },
     {
         "tid": "T1104",
@@ -5555,7 +5708,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0.00012692
     },
     {
         "tid": "T1105",
@@ -5612,7 +5768,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.49047619047619045,
+        "choke_point_score": 0.4,
+        "prevalence_score": 0.69578581
     },
     {
         "tid": "T1106",
@@ -5669,7 +5828,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.16190476190476188,
+        "choke_point_score": 0.55,
+        "prevalence_score": 0.24088032
     },
     {
         "tid": "T1110",
@@ -5870,7 +6032,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.46666666666666673,
+        "choke_point_score": 0.4,
+        "prevalence_score": 0.00452135
     },
     {
         "tid": "T1111",
@@ -5925,7 +6090,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.09047619047619047,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0
     },
     {
         "tid": "T1112",
@@ -5975,7 +6143,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.5047619047619047,
+        "choke_point_score": 0.1,
+        "prevalence_score": 1
     },
     {
         "tid": "T1113",
@@ -6011,7 +6182,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.047619047619047616,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.06137048
     },
     {
         "tid": "T1114",
@@ -6156,7 +6330,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2523809523809524,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0
     },
     {
         "tid": "T1115",
@@ -6192,7 +6369,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.03809523809523809,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1119",
@@ -6264,7 +6444,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2142857142857143,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00602063
     },
     {
         "tid": "T1120",
@@ -6300,7 +6483,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.014285714285714284,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00397872
     },
     {
         "tid": "T1123",
@@ -6336,7 +6522,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.03333333333333333,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1124",
@@ -6371,7 +6560,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.019047619047619046,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1125",
@@ -6406,7 +6598,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1127",
@@ -6493,7 +6688,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3142857142857143,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.03619713
     },
     {
         "tid": "T1129",
@@ -6543,7 +6741,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.07142857142857142,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00029615
     },
     {
         "tid": "T1132",
@@ -6627,7 +6828,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.08571428571428572,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0.02480491
     },
     {
         "tid": "T1133",
@@ -6732,7 +6936,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.4285714285714286,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1134",
@@ -6887,7 +7094,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2142857142857143,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.00270913
     },
     {
         "tid": "T1135",
@@ -6939,7 +7149,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.10476190476190475,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00265113
     },
     {
         "tid": "T1136",
@@ -7122,7 +7335,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.419047619047619,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.00029615
     },
     {
         "tid": "T1137",
@@ -7337,7 +7553,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2857142857142857,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00456953
     },
     {
         "tid": "T1140",
@@ -7374,7 +7593,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.10476190476190475,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.36307678
     },
     {
         "tid": "T1176",
@@ -7469,7 +7691,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.22380952380952382,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00054999
     },
     {
         "tid": "T1185",
@@ -7540,7 +7765,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20476190476190478,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00401915
     },
     {
         "tid": "T1187",
@@ -7611,7 +7839,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20476190476190478,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0
     },
     {
         "tid": "T1189",
@@ -7708,7 +7939,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.32380952380952377,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.0006346
     },
     {
         "tid": "T1190",
@@ -7839,7 +8073,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.9809523809523809,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00224226
     },
     {
         "tid": "T1195",
@@ -7967,7 +8204,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.24761904761904766,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00401915
     },
     {
         "tid": "T1197",
@@ -8053,7 +8293,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3857142857142857,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.04992977
     },
     {
         "tid": "T1199",
@@ -8121,7 +8364,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.14761904761904762,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1200",
@@ -8182,7 +8428,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.15714285714285714,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00571594
     },
     {
         "tid": "T1201",
@@ -8233,7 +8482,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.10952380952380952,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00111904
     },
     {
         "tid": "T1202",
@@ -8267,7 +8519,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.15238095238095237,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.01815086
     },
     {
         "tid": "T1203",
@@ -8329,7 +8584,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.28095238095238095,
+        "choke_point_score": 0.3,
+        "prevalence_score": 0.00706866
     },
     {
         "tid": "T1204",
@@ -8520,7 +8778,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3619047619047619,
+        "choke_point_score": 0.4,
+        "prevalence_score": 0.54990659
     },
     {
         "tid": "T1205",
@@ -8604,7 +8865,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.12380952380952381,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1207",
@@ -8640,7 +8904,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1210",
@@ -8787,7 +9054,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.580952380952381,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0
     },
     {
         "tid": "T1211",
@@ -8878,7 +9148,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3142857142857143,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.02745711
     },
     {
         "tid": "T1212",
@@ -8970,7 +9243,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.35714285714285715,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1213",
@@ -9158,7 +9434,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3761904761904762,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1216",
@@ -9231,7 +9510,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.15238095238095237,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00604168
     },
     {
         "tid": "T1217",
@@ -9268,7 +9550,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.014285714285714284,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1218",
@@ -9634,7 +9919,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.780952380952381,
+        "choke_point_score": 0.1,
+        "prevalence_score": 1
     },
     {
         "tid": "T1219",
@@ -9716,7 +10004,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.38095238095238093,
+        "choke_point_score": 0.55,
+        "prevalence_score": 0.00469327
     },
     {
         "tid": "T1220",
@@ -9767,7 +10058,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1142857142857143,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.0214707
     },
     {
         "tid": "T1221",
@@ -9854,7 +10148,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.24285714285714288,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1222",
@@ -9969,7 +10266,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2523809523809524,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.00096863
     },
     {
         "tid": "T1480",
@@ -10028,7 +10328,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1482",
@@ -10097,7 +10399,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.29523809523809524,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.08870884
     },
     {
         "tid": "T1484",
@@ -10216,7 +10521,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2571428571428571,
+        "choke_point_score": 0.55,
+        "prevalence_score": 0
     },
     {
         "tid": "T1485",
@@ -10284,7 +10592,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.319047619047619,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.0000423067961740376
     },
     {
         "tid": "T1486",
@@ -10356,7 +10667,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.23809523809523808,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.01368903
     },
     {
         "tid": "T1489",
@@ -10447,7 +10761,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3476190476190476,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.19533198
     },
     {
         "tid": "T1490",
@@ -10521,7 +10838,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.37142857142857144,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.0517985
     },
     {
         "tid": "T1491",
@@ -10615,7 +10935,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.15238095238095237,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1495",
@@ -10698,7 +11021,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.2619047619047619,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1496",
@@ -10740,7 +11066,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.023809523809523808,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.00029615
     },
     {
         "tid": "T1497",
@@ -10803,7 +11132,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.009523809523809523,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.3330587
     },
     {
         "tid": "T1498",
@@ -10894,7 +11226,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.12380952380952381,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1499",
@@ -11020,7 +11355,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.12857142857142856,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1505",
@@ -11234,7 +11572,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3523809523809524,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00992082
     },
     {
         "tid": "T1518",
@@ -11287,7 +11628,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.023809523809523808,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.0388719
     },
     {
         "tid": "T1525",
@@ -11368,7 +11712,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.24285714285714288,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00012692
     },
     {
         "tid": "T1526",
@@ -11406,7 +11753,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.047619047619047616,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1528",
@@ -11501,7 +11851,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3666666666666667,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0
     },
     {
         "tid": "T1529",
@@ -11538,7 +11891,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.04285714285714285,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1530",
@@ -11662,7 +12018,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.5476190476190477,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1531",
@@ -11699,7 +12058,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.07619047619047618,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1534",
@@ -11739,7 +12101,9 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.30000000000000004,
+        "prevalence_score": 0
     },
     {
         "tid": "T1535",
@@ -11785,7 +12149,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0761904761904762,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1537",
@@ -11871,7 +12238,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.33333333333333326,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1538",
@@ -11930,7 +12300,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.12380952380952381,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1539",
@@ -12008,7 +12381,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.19523809523809524,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0
     },
     {
         "tid": "T1542",
@@ -12232,7 +12608,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.319047619047619,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00067691
     },
     {
         "tid": "T1543",
@@ -12420,7 +12799,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.5666666666666667,
+        "choke_point_score": 0.2,
+        "prevalence_score": 1
     },
     {
         "tid": "T1546",
@@ -12725,7 +13107,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.22380952380952382,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.24164573
     },
     {
         "tid": "T1547",
@@ -13034,7 +13419,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.22857142857142856,
+        "choke_point_score": 0.44999999999999996,
+        "prevalence_score": 0.31083108
     },
     {
         "tid": "T1548",
@@ -13238,7 +13626,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.33333333333333337,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.62304979
     },
     {
         "tid": "T1550",
@@ -13417,7 +13808,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1619047619047619,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0
     },
     {
         "tid": "T1552",
@@ -13770,7 +14164,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.6095238095238096,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.10949453
     },
     {
         "tid": "T1553",
@@ -13977,7 +14374,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.24285714285714288,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.03940008
     },
     {
         "tid": "T1554",
@@ -14035,7 +14435,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.18571428571428572,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1555",
@@ -14168,7 +14571,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.06190476190476191,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.20047604
     },
     {
         "tid": "T1556",
@@ -14361,7 +14767,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.29523809523809524,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1557",
@@ -14569,7 +14978,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.46190476190476193,
+        "choke_point_score": 0.3,
+        "prevalence_score": 0.01029676
     },
     {
         "tid": "T1558",
@@ -14768,7 +15180,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.00491824
     },
     {
         "tid": "T1559",
@@ -14918,7 +15333,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2761904761904762,
+        "choke_point_score": 0.3,
+        "prevalence_score": 0.01561121
     },
     {
         "tid": "T1560",
@@ -15008,7 +15426,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20476190476190476,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.37974036
     },
     {
         "tid": "T1561",
@@ -15102,7 +15523,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.14761904761904762,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.03180408
     },
     {
         "tid": "T1562",
@@ -15405,7 +15829,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.7047619047619047,
+        "choke_point_score": 0.1,
+        "prevalence_score": 1
     },
     {
         "tid": "T1563",
@@ -15593,7 +16020,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3523809523809524,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00021153
     },
     {
         "tid": "T1564",
@@ -15769,7 +16199,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.07142857142857142,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.69861754
     },
     {
         "tid": "T1565",
@@ -15943,7 +16376,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.4285714285714286,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.0006346
     },
     {
         "tid": "T1566",
@@ -16132,7 +16568,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.46190476190476193,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.02842361
     },
     {
         "tid": "T1567",
@@ -16236,7 +16675,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20476190476190478,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1568",
@@ -16337,7 +16779,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.10476190476190478,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0
     },
     {
         "tid": "T1569",
@@ -16466,7 +16911,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20476190476190478,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.66633245
     },
     {
         "tid": "T1570",
@@ -16544,7 +16992,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.21904761904761905,
+        "choke_point_score": 0.5,
+        "prevalence_score": 0.00012692
     },
     {
         "tid": "T1571",
@@ -16610,7 +17061,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.22857142857142856,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.07951844
     },
     {
         "tid": "T1572",
@@ -16680,7 +17134,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20476190476190476,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.00071922
     },
     {
         "tid": "T1573",
@@ -16780,7 +17237,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.12380952380952381,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00046016
     },
     {
         "tid": "T1574",
@@ -17178,7 +17638,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.47619047619047616,
+        "choke_point_score": 0.35,
+        "prevalence_score": 1
     },
     {
         "tid": "T1578",
@@ -17327,7 +17790,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.18095238095238098,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1580",
@@ -17388,7 +17854,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.11428571428571428,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1583",
@@ -17523,7 +17992,9 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1584",
@@ -17658,7 +18129,9 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.00401915
     },
     {
         "tid": "T1585",
@@ -17730,7 +18203,9 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1586",
@@ -17802,7 +18277,9 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1587",
@@ -17905,7 +18382,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.047619047619047616,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1588",
@@ -18039,7 +18519,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1589",
@@ -18123,7 +18606,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1590",
@@ -18255,7 +18741,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.01904761904761905,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1591",
@@ -18354,7 +18843,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1592",
@@ -18455,7 +18946,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1593",
@@ -18524,7 +19018,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1594",
@@ -18564,7 +19060,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1595",
@@ -18639,7 +19138,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.01904761904761905,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1596",
@@ -18753,7 +19255,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1597",
@@ -18822,7 +19326,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1598",
@@ -18944,7 +19450,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.13333333333333333,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1599",
@@ -19083,7 +19592,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3047619047619048,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1600",
@@ -19133,7 +19645,9 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1601",
@@ -19321,7 +19835,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.36190476190476195,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1602",
@@ -19526,7 +20043,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.380952380952381,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1606",
@@ -19666,7 +20186,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1523809523809524,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0
     },
     {
         "tid": "T1608",
@@ -19782,7 +20305,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1609",
@@ -19844,7 +20370,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1610",
@@ -19911,7 +20440,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.028571428571428567,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1611",
@@ -19988,7 +20520,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.028571428571428567,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1612",
@@ -20104,7 +20639,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.009523809523809523,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1614",
@@ -20152,7 +20690,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1615",
@@ -20189,7 +20730,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.019047619047619046,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1619",
@@ -20238,7 +20782,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1620",
@@ -20275,6 +20821,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     }
 ]

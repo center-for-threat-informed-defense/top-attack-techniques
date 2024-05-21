@@ -24,6 +24,9 @@ export interface Technique {
   file_coverage: boolean;
   cloud_coverage: boolean;
   hardware_coverage: boolean;
+  actionability_score: number;
+  choke_point_score: number;
+  prevalence_score: number;
 }
 export interface Subtechnique {
   tid: string;
