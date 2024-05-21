@@ -91,6 +91,9 @@ export default defineComponent({
                     hardware_score: technique.hardware_score,
                     mitigations: technique.mitigations,
                     subtechniques: technique.subtechniques,
+                    actionability_score: technique.actionability_score,
+                    choke_point_score: technique.choke_point_score,
+                    prevalence_score: technique.prevalence_score,
                 }
                 parsedList.push(t);
             })

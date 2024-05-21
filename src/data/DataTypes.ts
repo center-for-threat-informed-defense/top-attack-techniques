@@ -63,4 +63,7 @@ export interface ExportedTechnique {
   hardware_score: number;
   subtechniques: Array<Subtechnique>;
   mitigations: Array<Mitigation>;
+  actionability_score: number;
+  choke_point_score: number;
+  prevalence_score: number;
 }
