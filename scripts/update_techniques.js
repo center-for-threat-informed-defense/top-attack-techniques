@@ -124,6 +124,10 @@ const DESTINATION_FILE = "src/data/Techniques.json";
         technique.file_coverage = !!parseInt(r.getCell(35).value.result);
         technique.cloud_coverage = !!parseInt(r.getCell(37).value.result);
         technique.hardware_coverage = !!parseInt(r.getCell(39).value.result);
+
+        technique.actionability_score = r.getCell(22).value.result;
+        technique.choke_point_score = r.getCell(8).value.result;
+        technique.prevalence_score = r.getCell(13).value;
       }
     }
   });

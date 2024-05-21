@@ -29,6 +29,9 @@ export interface Technique {
   file_score: number;
   cloud_score: number;
   hardware_score: number;
+  actionability_score: number;
+  choke_point_score: number;
+  prevalence_score: number;
 }
 export interface Subtechnique {
   tid: string;
