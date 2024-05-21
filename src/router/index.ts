@@ -41,6 +41,10 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: routes,
+  scrollBehavior() {
+    // always scroll to top when linking to a new page
+    return { top: 0 };
+  },
 });
 
 export { router };
