@@ -18,16 +18,16 @@
         <div class="mx-auto my-16 grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
           <section-item title="Calculator"
             description="Use the criteria to score your system and click generate in order to see your personalized list of techniques. Our calculator will show you a customized list of the vulnerabilities you have and what you need to prioritize for your system."
-            :imgSrc="CalculatorSvg" link="calculator" />
+            :imgSrc="CalculatorSvg" link="calculator" linkText="Go To Calculator" />
           <section-item title="Top 10 lists"
             description="The Top Ransomware Technique List provides a starting point for defending against ransomware attacks and demonstrates how the Top ATT&amp;CK Techniques methodology can be tailored to different use cases."
-            :imgSrc="ListSvg" link="top-10-lists" />
+            :imgSrc="ListSvg" link="top-10-lists" linkText="View Top 10 Lists" />
           <section-item title="Methodology"
             description="Use the criteria to score your system and click generate in order to see your personalized list of techniques. Our calculator will show you a customized list of the vulnerabilities you have and what you need to prioritize for your system."
-            :imgSrc="BookSvg" link="methodology" />
+            :imgSrc="BookSvg" link="methodology" linkText="Read About It" />
           <section-item title="Help"
             description="The Top Ransomware Technique List provides a starting point for defending against ransomware attacks and demonstrates how the Top ATT&amp;CK Techniques methodology can be tailored to different use cases."
-            :imgSrc="HelpSvg" link="help" />
+            :imgSrc="HelpSvg" link="help" linkText="Learn More" />
         </div>
       </div>
     </div>
