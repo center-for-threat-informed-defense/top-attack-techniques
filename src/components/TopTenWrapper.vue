@@ -1,6 +1,8 @@
 <template>
     <div id="calculator" class="pb-20">
-        <div class="lg:grid hidden grid-cols-3 gap-4 w-5/6 mx-auto calculator-box auto-rows-fr">
+        <div v-if="rankedList.length > 1"
+            class="lg:grid hidden grid-cols-3 gap-4 w-5/6 mx-auto calculator-box auto-rows-fr">
+
             <div class="col-span-1 calculator-list">
                 <TopTenSidebar :ranked-list="rankedList" :activeItemId="activeItemId" :allowDelete="allowDelete" />
                 <button class="btn-primary mt-4" @click="download()">Download List</button>
@@ -22,9 +24,12 @@
             </div>
 
         </div>
-        <div class="w-5/6 mx-auto lg:hidden block">
+        <div v-if="rankedList.length > 1" class="w-5/6 mx-auto lg:hidden block">
             <TopTenAccordion :ranked-list="rankedList" :activeItemId="activeItemId" :allowDelete="allowDelete" />
             <button class="btn-primary mt-10" @click="download()">Download List</button>
+        </div>
+        <div v-if="rankedList.length <= 1" class="mx-auto italic w-max">
+            No techniques found for the given criteria.
         </div>
     </div>
 </template>

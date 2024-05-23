@@ -95,7 +95,7 @@ export default defineComponent({
     rankedList() {
       // fetch static ransomware list from calculator store
       // edit items in that list by changing the ID list in the store
-      return this.calculatorStore.ransomwareList
+      return this.calculatorStore.ransomwareList()
     }
   },
   methods: {
