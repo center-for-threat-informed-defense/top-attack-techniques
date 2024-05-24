@@ -7,7 +7,7 @@
         </button>
     </div>
     <div class="system-score-row">
-        <div v-for="monitoringType, i of Object.keys(this.calculatorStore.systemScore)" :key="monitoringType"
+        <div v-for="monitoringType of Object.keys(this.calculatorStore.systemScore)" :key="monitoringType"
             class="w-max inline-block mr-2">
             <span class="highlight">{{ getScoreText(monitoringType) }}</span>
             {{ monitoringType }} Monitoring<span class="comma">,</span><span class="pipe">|</span>
