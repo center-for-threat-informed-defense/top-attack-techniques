@@ -7,16 +7,17 @@
         </button>
     </div>
     <div class="system-score-row">
-        <div v-for="monitoringType of Object.keys(this.calculatorStore.systemScore)" :key="monitoringType"
-            class="w-max inline-block mr-4">
+        <div v-for="monitoringType, i of Object.keys(this.calculatorStore.systemScore)" :key="monitoringType"
+            class="w-max inline-block mr-2">
             <span class="highlight">{{ getScoreText(monitoringType) }}</span>
-            {{ monitoringType }} Monitoring
+            {{ monitoringType }} Monitoring<span class="comma">,</span><span class="pipe">|</span>
         </div>
-        <div v-for="filter of Object.keys(this.calculatorStore.activeFilters)" :key="filter" class="inline-block">
-            <span class="mr-4 w-max inline-block">
-                {{ filter }}:
-                <span class="highlight">{{ getFilterText(filter) }}</span>
-            </span>
+        <div v-for="filter, i of Object.keys(this.calculatorStore.activeFilters)" :key="filter"
+            class="inline-block mr-2 w-max">
+            {{ filter }}:
+            <span class="highlight">{{ getFilterText(filter) }}</span>
+            <span v-if="i !== Object.keys(this.calculatorStore.activeFilters).length - 1" class="comma">,</span>
+            <span v-if="i !== Object.keys(this.calculatorStore.activeFilters).length - 1" class="pipe">|</span>
         </div>
         <div class="lg:inline-block hidden cursor-pointer" @click="editSelections()"
             v-tooltip.top="'Edit your filters and components to fine tune your top ten techniques'">
@@ -63,10 +64,18 @@ export default defineComponent({
 <style scoped>
 .system-score-row {
     font-family: "Fira Sans Extra Condensed", sans-serif;
-    @apply lg:max-w-max lg:mx-auto mx-4 uppercase font-bold text-center;
+    @apply lg:max-w-max lg:mx-auto mx-4 uppercase font-bold lg:text-center;
 }
 
 .system-score-row .highlight {
     @apply text-ctid-primary-purple
+}
+
+.pipe {
+    @apply lg:inline hidden text-ctid-light-gray ml-2
+}
+
+.comma {
+    @apply lg:hidden inline ml-[1px]
 }
 </style>
