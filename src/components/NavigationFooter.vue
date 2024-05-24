@@ -27,23 +27,16 @@
             </div>
         </div>
         <div class="xl:w-1/2 xl:pl-10 xl:my-auto mt-8">
-            <h2>Explore</h2>
+            <h2 class="mt-8">Related Projects</h2>
             <div class="internal-links">
-                <div v-for="(item, i) of items" :key="item.label" class="flex">
-                    <router-link :to="item.route" class="hover:underline hover:text-ctid-light-purple md:mx-0 mx-2">{{
-                    item.label
-                }}</router-link>
-                    <div v-if="i !== items.length - 1"
-                        class="md:block hidden mx-4 2xl:mx-8 w-1 h-full bg-ctid-light-purple"></div>
+                <div v-for="(item, i) of externalProjects" :key="item.label" class="flex">
+                    <a :href="item.route" target="blank"
+                        class="hover:underline hover:text-ctid-light-purple md:mx-0 mx-2 my-auto">{{
+                    item.label }}</a>
+                    <div v-if="i !== externalProjects.length - 1"
+                        class="md:block hidden mx-4 2xl:mx-8 w-[3px] h-full bg-ctid-light-purple"></div>
                 </div>
             </div>
-            <!-- <h2>Learn More</h2>
-            <div class="internal-links">
-                <div v-for="(item, i) of items" :key="item.label" class="flex">
-                    <router-link :to="item.route">{{ item.label }}</router-link>
-                    <div v-if="i !== items.length - 1" class="mx-4 2xl:mx-8 w-1 h-full bg-ctid-light-purple"></div>
-                </div>
-            </div> -->
         </div>
     </div>
 </template>
@@ -54,22 +47,13 @@ import { defineComponent } from "vue";
 export default defineComponent({
     data() {
         return {
-            items: [
-                { label: "Home", route: "/" },
-                { label: "Calculator", route: "/calculator" },
-                { label: "Top Ten Lists", route: "/top-10-lists" },
-                { label: "Methodology", route: "/methodology" },
-                { label: "Help", route: "/help" },
-            ],
+            externalProjects: [
+                { label: "ATT&CK Flow", route: "https://center-for-threat-informed-defense.github.io/attack-flow/" },
+                { label: "M3TID", route: "https://center-for-threat-informed-defense.github.io/m3tid/" },
+                { label: "Mappings Explorer", route: "https://center-for-threat-informed-defense.github.io/mappings-explorer/" },
+                { label: "Summiting the Pyramid", route: "https://center-for-threat-informed-defense.github.io/summiting-the-pyramid/" },
+            ]
         };
-    },
-    methods: {
-        getActiveIndex() {
-            const route = this.$route.path;
-            return this.items.findIndex(function (item) {
-                return item.route.split("/")[1] === route.split("/")[1];
-            });
-        },
     },
 });
 </script>
@@ -96,14 +80,8 @@ h2 {
     content: "-";
 }
 
-/* .internal-links div::after {
-    @apply text-ctid-light-purple mx-8;
-    content: "|";
-} */
-
 .social-links a {
-    @apply bg-ctid-light-purple hover:bg-white text-ctid-navy rounded-full flex h-8 w-8 my-auto;
-
+    @apply bg-ctid-light-purple hover:bg-white text-ctid-navy rounded-full flex h-8 w-8 my-auto text-center;
 }
 
 .social-links i {
