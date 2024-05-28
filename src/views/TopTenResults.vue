@@ -43,7 +43,7 @@ import TopTenDetails from "../components/TopTenDetails.vue"
 import TopTenAccordion from "../components/TopTenAccordion.vue"
 import SystemScoreSection from "../components/SystemScoreSection.vue"
 import downloadjs from "downloadjs";
-import { type Technique } from "../data/DataTypes"
+import type { ExportedTechnique, Technique } from "@/data/DataTypes";
 
 export default defineComponent({
     components: { TopTenSidebar, TopTenDetails, TopTenAccordion, SystemScoreSection },
@@ -73,7 +73,32 @@ export default defineComponent({
             }
         },
         download() {
-            downloadjs(JSON.stringify(this.rankedList.slice(0, 10)), "TopTenTechniques.json", JSON)
+            const parsedList = [] as Array<ExportedTechnique>;
+
+            this.rankedList.slice(0, 10).forEach((technique, i) => {
+                const t = {
+                    rank: i + 1,
+                    tid: technique.tid,
+                    name: technique.name,
+                    description: technique.description,
+                    url: technique.url,
+                    detection: technique.detection,
+                    score: technique.adjusted_score,
+                    network_score: technique.network_score,
+                    process_score: technique.process_score,
+                    file_score: technique.file_score,
+                    cloud_score: technique.cloud_score,
+                    hardware_score: technique.hardware_score,
+                    mitigations: technique.mitigations,
+                    subtechniques: technique.subtechniques,
+                    actionability_score: technique.actionability_score,
+                    choke_point_score: technique.choke_point_score,
+                    prevalence_score: technique.prevalence_score,
+                }
+                parsedList.push(t);
+            })
+
+            downloadjs(JSON.stringify(parsedList, null, 4), "TopTenTechniques.json", JSON)
         },
         setRankedList() {
             let filteredList = structuredClone(toRaw(this.calculatorStore.techniques));
