@@ -13,28 +13,33 @@ const routes = [
   },
   {
     path: "/methodology",
-    name: "Methodology",
+    name: "methodology",
     component: MethodologyPage,
+    meta: { title: "Methodology" },
   },
   {
     path: "/help",
-    name: "Help",
+    name: "help",
     component: HelpPage,
+    meta: { title: "Help" },
   },
   {
     path: "/calculator",
-    name: "Calculator",
+    name: "calculator",
     component: CalculatorPage,
+    meta: { title: "Calculator" },
   },
   {
     path: "/top-10-lists",
-    name: "Top Ten Lists",
+    name: "top-ten-lists",
     component: TopTen,
+    meta: { title: "Top 10 Lists" },
   },
   {
     path: "/calculator/results",
-    name: "Calculator Results",
+    name: "calculator-results",
     component: TopTenResults,
+    meta: { title: "Calculator Results" },
   },
 ];
 
@@ -44,9 +49,10 @@ const router = createRouter({
 });
 
 router.beforeEach((to) => {
-  document.title = to.name
-    ? to.name.toString() + " | Top ATT&CK Techniques"
-    : "Top ATT&CK Techniques";
+  document.title =
+    to.meta && to.meta.title
+      ? to.meta.title.toString() + " | Top ATT&CK Techniques"
+      : "Top ATT&CK Techniques";
 });
 
 export { router };
