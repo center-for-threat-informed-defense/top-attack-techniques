@@ -5,6 +5,7 @@ import TopTen from "@/views/TopTen.vue";
 import HelpPage from "@/views/HelpPage.vue";
 import TopTenResults from "../views/TopTenResults.vue";
 import CalculatorPage from "../views/CalculatorPage.vue";
+import { nextTick } from "vue";
 const routes = [
   {
     path: "/",
@@ -48,11 +49,12 @@ const router = createRouter({
   routes: routes,
 });
 
-router.beforeEach((to) => {
-  document.title =
-    to.meta && to.meta.title
-      ? to.meta.title.toString() + " | Top ATT&CK Techniques"
+router.afterEach((to) => {
+  nextTick(() => {
+    document.title = to.meta.title
+      ? to.meta.title + " | Top ATT&CK Techniques"
       : "Top ATT&CK Techniques";
+  });
 });
 
 export { router };
