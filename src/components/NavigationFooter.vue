@@ -14,7 +14,7 @@
             <div class="md:flex">
                 <img src="../assets/logo-horizontal-white.png" class="h-6 my-auto" />
                 <div class="social-links">
-                    <a href="mailto:ctid@mitre-engenuity.org?subject=Top%20ATT&CK%20Techniques" class="email"><i
+                    <a href="mailto:ctid@mitre-engenuity.org?subject=Top%20ATT&amp;CK%20Techniques" class="email"><i
                             class="pi pi-envelope"></i></a>
                     <a href="https://www.linkedin.com/showcase/center-for-threat-informed-defense/" target="blank"
                         class="linkedin"><i class="pi pi-linkedin"></i></a>
