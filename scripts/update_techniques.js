@@ -110,7 +110,10 @@ const DESTINATION_FILE = "src/data/Techniques.json";
         technique.has_splunk = !!r.getCell("Q").value;
 
         technique.cis_controls = r.getCell("R").value
-          ? r.getCell("R").value.toString().split(", ")
+          ? r
+              .getCell("R")
+              .value.toString()
+              .split(/\s*,\s*/)
           : [];
         technique.nist_controls = r.getCell("T").value
           ? r.getCell("T").value.toString().split(",")
@@ -121,6 +124,10 @@ const DESTINATION_FILE = "src/data/Techniques.json";
         technique.file_coverage = !!parseInt(r.getCell(35).value.result);
         technique.cloud_coverage = !!parseInt(r.getCell(37).value.result);
         technique.hardware_coverage = !!parseInt(r.getCell(39).value.result);
+
+        technique.actionability_score = r.getCell(22).value.result;
+        technique.choke_point_score = r.getCell(8).value.result;
+        technique.prevalence_score = r.getCell(13).value;
       }
     }
   });

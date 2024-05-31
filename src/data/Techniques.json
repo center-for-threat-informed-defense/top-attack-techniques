@@ -73,8 +73,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1031"
             }
         ],
-        "cumulative_score": 0.3561555233457143,
-        "adjusted_score": 0.3561555233457143,
+        "cumulative_score": 0.29729175571428573,
+        "adjusted_score": 0.29729175571428573,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
@@ -96,7 +96,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.08571428571428572,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.01157747
     },
     {
         "tid": "T1003",
@@ -435,8 +438,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 2.3277684163133334,
-        "adjusted_score": 2.3277684163133334,
+        "cumulative_score": 1.4603315033333333,
+        "adjusted_score": 1.4603315033333333,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -456,7 +459,8 @@
             "6.8",
             "11.3",
             "14.1",
-            "14.3,16.1",
+            "14.3",
+            "16.1",
             "16.9",
             "18.3",
             "18.5"
@@ -489,7 +493,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.8333333333333334,
+        "choke_point_score": 0.3,
+        "prevalence_score": 0.32699817
     },
     {
         "tid": "T1005",
@@ -521,8 +528,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1057"
             }
         ],
-        "cumulative_score": 0.5222382413542856,
-        "adjusted_score": 0.5222382413542856,
+        "cumulative_score": 0.37409616142857144,
+        "adjusted_score": 0.37409616142857144,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -548,7 +555,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.17142857142857143,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.00266759
     },
     {
         "tid": "T1006",
@@ -570,8 +580,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.15289523809523808,
-        "adjusted_score": 0.15289523809523808,
+        "cumulative_score": 0.10952380952380952,
+        "adjusted_score": 0.10952380952380952,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -582,7 +592,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.009523809523809523,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1007",
@@ -605,8 +618,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.14832380952380952,
-        "adjusted_score": 0.14832380952380952,
+        "cumulative_score": 0.12380952380952381,
+        "adjusted_score": 0.12380952380952381,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": false,
@@ -617,7 +630,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.023809523809523808,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1008",
@@ -648,14 +664,15 @@
                 "url": "https://attack.mitre.org/mitigations/M1031"
             }
         ],
-        "cumulative_score": 0.2453047619047619,
-        "adjusted_score": 0.2453047619047619,
+        "cumulative_score": 0.20476190476190476,
+        "adjusted_score": 0.20476190476190476,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "13.3,13.8"
+            "13.3",
+            "13.8"
         ],
         "nist_controls": [
             "AC-4",
@@ -671,7 +688,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.10476190476190476,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1010",
@@ -695,8 +715,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.1312095238095238,
-        "adjusted_score": 0.1312095238095238,
+        "cumulative_score": 0.10952380952380952,
+        "adjusted_score": 0.10952380952380952,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": false,
@@ -707,7 +727,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.009523809523809523,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1011",
@@ -763,14 +786,16 @@
                 "url": "https://attack.mitre.org/mitigations/M1028"
             }
         ],
-        "cumulative_score": 0.2656666666666667,
-        "adjusted_score": 0.2656666666666667,
+        "cumulative_score": 0.16666666666666669,
+        "adjusted_score": 0.16666666666666669,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "4.1,18.3,18.5"
+            "4.1",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-18",
@@ -782,7 +807,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.06666666666666667,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1012",
@@ -806,8 +834,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.7751548486019046,
-        "adjusted_score": 0.7751548486019046,
+        "cumulative_score": 0.5552685161904761,
+        "adjusted_score": 0.5552685161904761,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
@@ -818,7 +846,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.07619047619047618,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.12907804
     },
     {
         "tid": "T1014",
@@ -842,8 +873,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.1674112363104762,
-        "adjusted_score": 0.1674112363104762,
+        "cumulative_score": 0.11992208904761906,
+        "adjusted_score": 0.11992208904761906,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
@@ -854,7 +885,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.019047619047619046,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00087447
     },
     {
         "tid": "T1016",
@@ -889,8 +923,8 @@
             }
         ],
         "mitigations": [],
-        "cumulative_score": 0.2461503297009524,
-        "adjusted_score": 0.2461503297009524,
+        "cumulative_score": 0.20546772095238097,
+        "adjusted_score": 0.20546772095238097,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
@@ -901,7 +935,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.08095238095238096,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.02451534
     },
     {
         "tid": "T1018",
@@ -927,8 +964,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.47890585659809526,
-        "adjusted_score": 0.47890585659809526,
+        "cumulative_score": 0.30044282095238095,
+        "adjusted_score": 0.30044282095238095,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
@@ -939,7 +976,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.18095238095238095,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.01949044
     },
     {
         "tid": "T1020",
@@ -984,8 +1024,8 @@
             }
         ],
         "mitigations": [],
-        "cumulative_score": 0.2508228931057143,
-        "adjusted_score": 0.2508228931057143,
+        "cumulative_score": 0.15735438714285716,
+        "adjusted_score": 0.15735438714285716,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -996,7 +1036,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.057142857142857134,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00021153
     },
     {
         "tid": "T1021",
@@ -1249,14 +1292,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 2.5380348099076193,
-        "adjusted_score": 2.5380348099076193,
+        "cumulative_score": 1.5922426661904763,
+        "adjusted_score": 1.5922426661904763,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.7,5.3,6.1,6.2,6.4,6.5,6.8"
+            "4.7",
+            "5.3",
+            "6.1",
+            "6.2",
+            "6.4",
+            "6.5",
+            "6.8"
         ],
         "nist_controls": [
             "AC-17",
@@ -1276,7 +1325,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.4761904761904762,
+        "choke_point_score": 0.45,
+        "prevalence_score": 0.66605219
     },
     {
         "tid": "T1025",
@@ -1307,8 +1359,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1057"
             }
         ],
-        "cumulative_score": 0.3390285714285714,
-        "adjusted_score": 0.3390285714285714,
+        "cumulative_score": 0.24285714285714285,
+        "adjusted_score": 0.24285714285714285,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
@@ -1335,7 +1387,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.14285714285714285,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1027",
@@ -1430,14 +1485,18 @@
                 "url": "https://attack.mitre.org/mitigations/M1040"
             }
         ],
-        "cumulative_score": 2.0860630160742857,
-        "adjusted_score": 2.0860630160742857,
+        "cumulative_score": 1.4943144814285714,
+        "adjusted_score": 1.4943144814285714,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "10.1,10.2,10.7,13.2,13.7"
+            "10.1",
+            "10.2",
+            "10.7",
+            "13.2",
+            "13.7"
         ],
         "nist_controls": [
             "CM-2",
@@ -1451,7 +1510,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.5714285714285714,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0.77288591
     },
     {
         "tid": "T1029",
@@ -1482,14 +1544,15 @@
                 "url": "https://attack.mitre.org/mitigations/M1031"
             }
         ],
-        "cumulative_score": 0.22819047619047617,
-        "adjusted_score": 0.22819047619047617,
+        "cumulative_score": 0.19047619047619047,
+        "adjusted_score": 0.19047619047619047,
         "has_car": true,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "13.3,13.8"
+            "13.3",
+            "13.8"
         ],
         "nist_controls": [
             "AC-4",
@@ -1504,7 +1567,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.09047619047619047,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1030",
@@ -1535,14 +1601,15 @@
                 "url": "https://attack.mitre.org/mitigations/M1031"
             }
         ],
-        "cumulative_score": 0.23389523809523807,
-        "adjusted_score": 0.23389523809523807,
+        "cumulative_score": 0.19523809523809524,
+        "adjusted_score": 0.19523809523809524,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "13.3,13.8"
+            "13.3",
+            "13.8"
         ],
         "nist_controls": [
             "AC-4",
@@ -1557,7 +1624,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.09523809523809523,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1033",
@@ -1581,8 +1651,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.4713513235895238,
-        "adjusted_score": 0.4713513235895238,
+        "cumulative_score": 0.2957034652380952,
+        "adjusted_score": 0.2957034652380952,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
@@ -1593,7 +1663,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1952380952380952,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00046537
     },
     {
         "tid": "T1036",
@@ -1747,14 +1820,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1022"
             }
         ],
-        "cumulative_score": 2.580761904761905,
-        "adjusted_score": 2.580761904761905,
+        "cumulative_score": 1.619047619047619,
+        "adjusted_score": 1.619047619047619,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.5,2.7,3.3,4.1,6.1,6.2,6.8"
+            "2.5",
+            "2.7",
+            "3.3",
+            "4.1",
+            "6.1",
+            "6.2",
+            "6.8"
         ],
         "nist_controls": [
             "AC-2",
@@ -1774,7 +1853,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.519047619047619,
+        "choke_point_score": 0.1,
+        "prevalence_score": 1
     },
     {
         "tid": "T1037",
@@ -1892,14 +1974,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1024"
             }
         ],
-        "cumulative_score": 0.4785214324171429,
-        "adjusted_score": 0.4785214324171429,
+        "cumulative_score": 0.34278039571428576,
+        "adjusted_score": 0.34278039571428576,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.7,3.3,4.1,5.4,6.1,6.2,6.8"
+            "2.7",
+            "3.3",
+            "4.1",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8"
         ],
         "nist_controls": [
             "AC-17",
@@ -1916,7 +2004,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.18571428571428572,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0.00706611
     },
     {
         "tid": "T1039",
@@ -1941,8 +2032,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.18976190476190477,
-        "adjusted_score": 0.18976190476190477,
+        "cumulative_score": 0.11904761904761905,
+        "adjusted_score": 0.11904761904761905,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": false,
@@ -1953,7 +2044,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.019047619047619046,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1040",
@@ -1992,14 +2086,18 @@
                 "url": "https://attack.mitre.org/mitigations/M1032"
             }
         ],
-        "cumulative_score": 0.4569448612495238,
-        "adjusted_score": 0.4569448612495238,
+        "cumulative_score": 0.38142308952380954,
+        "adjusted_score": 0.38142308952380954,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.2,4.6,6.4,6.5,3.10"
+            "4.2",
+            "4.6",
+            "6.4",
+            "6.5",
+            "3.10"
         ],
         "nist_controls": [
             "AC-16",
@@ -2018,7 +2116,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20952380952380953,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0.02189928
     },
     {
         "tid": "T1041",
@@ -2058,14 +2159,15 @@
                 "url": "https://attack.mitre.org/mitigations/M1031"
             }
         ],
-        "cumulative_score": 0.49453193196095246,
-        "adjusted_score": 0.49453193196095246,
+        "cumulative_score": 0.31024587952380955,
+        "adjusted_score": 0.31024587952380955,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": true,
         "cis_controls": [
-            "13.3,13.8"
+            "13.3",
+            "13.8"
         ],
         "nist_controls": [
             "AC-16",
@@ -2091,7 +2193,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20952380952380953,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00072207
     },
     {
         "tid": "T1046",
@@ -2137,14 +2242,26 @@
                 "url": "https://attack.mitre.org/mitigations/M1030"
             }
         ],
-        "cumulative_score": 0.6550482033295238,
-        "adjusted_score": 0.6550482033295238,
+        "cumulative_score": 0.41094617523809523,
+        "adjusted_score": 0.41094617523809523,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "3.12,4.4,4.8,7.6,7.7,12.2,12.8,13.3,13.8,16.8,18.2,18.3,16.10"
+            "3.12",
+            "4.4",
+            "4.8",
+            "7.6",
+            "7.7",
+            "12.2",
+            "12.8",
+            "13.3",
+            "13.8",
+            "16.8",
+            "18.2",
+            "18.3",
+            "16.10"
         ],
         "nist_controls": [
             "AC-4",
@@ -2163,7 +2280,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.29523809523809524,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.01570808
     },
     {
         "tid": "T1047",
@@ -2211,14 +2331,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 3.047933333333333,
-        "adjusted_score": 3.047933333333333,
+        "cumulative_score": 2.183333333333333,
+        "adjusted_score": 2.183333333333333,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.7,5.2,5.3,5.4,6.1,6.2,6.8"
+            "4.7",
+            "5.2",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8"
         ],
         "nist_controls": [
             "AC-17",
@@ -2244,7 +2370,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.5333333333333333,
+        "choke_point_score": 0.65,
+        "prevalence_score": 1
     },
     {
         "tid": "T1048",
@@ -2390,14 +2519,23 @@
                 "url": "https://attack.mitre.org/mitigations/M1030"
             }
         ],
-        "cumulative_score": 0.8302769163219047,
-        "adjusted_score": 0.8302769163219047,
+        "cumulative_score": 0.520876359047619,
+        "adjusted_score": 0.520876359047619,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.2,4.4,7.6,7.7,9.2,12.2,12.8,13.3,13.4,13.8"
+            "4.2",
+            "4.4",
+            "7.6",
+            "7.7",
+            "9.2",
+            "12.2",
+            "12.8",
+            "13.3",
+            "13.4",
+            "13.8"
         ],
         "nist_controls": [
             "AC-16",
@@ -2428,7 +2566,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.419047619047619,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00182874
     },
     {
         "tid": "T1049",
@@ -2454,8 +2595,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.21107619047619045,
-        "adjusted_score": 0.21107619047619045,
+        "cumulative_score": 0.17619047619047618,
+        "adjusted_score": 0.17619047619047618,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
@@ -2466,7 +2607,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.07619047619047618,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1052",
@@ -2539,14 +2683,19 @@
                 "url": "https://attack.mitre.org/mitigations/M1034"
             }
         ],
-        "cumulative_score": 0.5389238095238096,
-        "adjusted_score": 0.5389238095238096,
+        "cumulative_score": 0.3380952380952381,
+        "adjusted_score": 0.3380952380952381,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "2.3,2.5,4.1,10.3,18.3,18.5"
+            "2.3",
+            "2.5",
+            "4.1",
+            "10.3",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-16",
@@ -2573,7 +2722,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.2380952380952381,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1053",
@@ -2786,14 +2938,23 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 3.3701714285714286,
-        "adjusted_score": 3.3701714285714286,
+        "cumulative_score": 2.1142857142857143,
+        "adjusted_score": 2.1142857142857143,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.1,4.7,4.8,5.3,5.4,6.1,6.2,6.8,18.3,18.5"
+            "4.1",
+            "4.7",
+            "4.8",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -2816,7 +2977,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.5142857142857142,
+        "choke_point_score": 0.6,
+        "prevalence_score": 1
     },
     {
         "tid": "T1055",
@@ -3036,14 +3200,22 @@
                 "url": "https://attack.mitre.org/mitigations/M1026"
             }
         ],
-        "cumulative_score": 2.715552380952381,
-        "adjusted_score": 2.715552380952381,
+        "cumulative_score": 1.9452380952380952,
+        "adjusted_score": 1.9452380952380952,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.1,4.7,5.3,5.4,6.1,6.2,6.8,13.2,13.7"
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "13.2",
+            "13.7"
         ],
         "nist_controls": [
             "AC-2",
@@ -3063,7 +3235,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.49523809523809526,
+        "choke_point_score": 0.44999999999999996,
+        "prevalence_score": 1
     },
     {
         "tid": "T1056",
@@ -3140,8 +3315,8 @@
             }
         ],
         "mitigations": [],
-        "cumulative_score": 0.9916454987314285,
-        "adjusted_score": 0.9916454987314285,
+        "cumulative_score": 0.6221113542857142,
+        "adjusted_score": 0.6221113542857142,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
@@ -3152,7 +3327,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.014285714285714284,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.25782564
     },
     {
         "tid": "T1057",
@@ -3177,8 +3355,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.3122352226228572,
-        "adjusted_score": 0.3122352226228572,
+        "cumulative_score": 0.2606304028571429,
+        "adjusted_score": 0.2606304028571429,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
@@ -3189,7 +3367,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.04285714285714285,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.11777326
     },
     {
         "tid": "T1059",
@@ -3482,14 +3663,35 @@
                 "url": "https://attack.mitre.org/mitigations/M1021"
             }
         ],
-        "cumulative_score": 3.4913142857142856,
-        "adjusted_score": 3.4913142857142856,
+        "cumulative_score": 2.914285714285714,
+        "adjusted_score": 2.914285714285714,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.3,2.5,2.7,4.1,4.7,4.8,5.3,5.4,6.1,6.2,6.8,9.3,9.6,9.7,10.1,10.2,10.7,13.2,13.7,18.3,18.5,16.10"
+            "2.3",
+            "2.5",
+            "2.7",
+            "4.1",
+            "4.7",
+            "4.8",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "9.3",
+            "9.6",
+            "9.7",
+            "10.1",
+            "10.2",
+            "10.7",
+            "13.2",
+            "13.7",
+            "18.3",
+            "18.5",
+            "16.10"
         ],
         "nist_controls": [
             "AC-17",
@@ -3521,7 +3723,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.9142857142857143,
+        "choke_point_score": 1,
+        "prevalence_score": 1
     },
     {
         "tid": "T1068",
@@ -3576,14 +3781,21 @@
                 "url": "https://attack.mitre.org/mitigations/M1051"
             }
         ],
-        "cumulative_score": 1.2894131544342855,
-        "adjusted_score": 1.2894131544342855,
+        "cumulative_score": 0.9236483914285714,
+        "adjusted_score": 0.9236483914285714,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "7.1,7.2,7.3,7.4,7.5,10.5,18.3,18.5"
+            "7.1",
+            "7.2",
+            "7.3",
+            "7.4",
+            "7.5",
+            "10.5",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -3616,7 +3828,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.5714285714285714,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.00221982
     },
     {
         "tid": "T1069",
@@ -3675,8 +3890,8 @@
             }
         ],
         "mitigations": [],
-        "cumulative_score": 0.3765899264361905,
-        "adjusted_score": 0.3765899264361905,
+        "cumulative_score": 0.26976355761904763,
+        "adjusted_score": 0.26976355761904763,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -3687,7 +3902,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.14761904761904762,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.02214451
     },
     {
         "tid": "T1070",
@@ -3839,14 +4057,30 @@
                 "url": "https://attack.mitre.org/mitigations/M1022"
             }
         ],
-        "cumulative_score": 2.0659125307600004,
-        "adjusted_score": 2.0659125307600004,
+        "cumulative_score": 1.2960555400000002,
+        "adjusted_score": 1.2960555400000002,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "3.1,3.11,3.12,3.3,3.4,4.1,5.4,6.1,6.2,6.8,8.1,8.2,8.3,8.9,12.8,3.10,8.10"
+            "3.1",
+            "3.11",
+            "3.12",
+            "3.3",
+            "3.4",
+            "4.1",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "8.1",
+            "8.2",
+            "8.3",
+            "8.9",
+            "12.8",
+            "3.10",
+            "8.10"
         ],
         "nist_controls": [
             "AC-16",
@@ -3875,7 +4109,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.6000000000000001,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.59605554
     },
     {
         "tid": "T1071",
@@ -3973,14 +4210,15 @@
                 "url": "https://attack.mitre.org/mitigations/M1031"
             }
         ],
-        "cumulative_score": 0.9357645162161905,
-        "adjusted_score": 0.9357645162161905,
+        "cumulative_score": 0.7811056061904762,
+        "adjusted_score": 0.7811056061904762,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": true,
         "cis_controls": [
-            "13.3,13.8"
+            "13.3",
+            "13.8"
         ],
         "nist_controls": [
             "AC-4",
@@ -4003,7 +4241,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1761904761904762,
+        "choke_point_score": 0.5,
+        "prevalence_score": 0.10491513
     },
     {
         "tid": "T1072",
@@ -4083,14 +4324,42 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 1.202198596215238,
-        "adjusted_score": 1.202198596215238,
+        "cumulative_score": 0.8611737795238095,
+        "adjusted_score": 0.8611737795238095,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "3.12,4.1,4.4,4.7,5.1,5.2,5.3,5.4,5.5,6.1,6.2,6.4,6.5,6.8,7.1,7.2,7.3,7.4,7.5,12.2,12.8,14.9,15.7,16.1,16.8,16.9,18.3,18.5,16.10"
+            "3.12",
+            "4.1",
+            "4.4",
+            "4.7",
+            "5.1",
+            "5.2",
+            "5.3",
+            "5.4",
+            "5.5",
+            "6.1",
+            "6.2",
+            "6.4",
+            "6.5",
+            "6.8",
+            "7.1",
+            "7.2",
+            "7.3",
+            "7.4",
+            "7.5",
+            "12.2",
+            "12.8",
+            "14.9",
+            "15.7",
+            "16.1",
+            "16.8",
+            "16.9",
+            "18.3",
+            "18.5",
+            "16.10"
         ],
         "nist_controls": [
             "AC-12",
@@ -4122,7 +4391,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.5095238095238095,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.00164997
     },
     {
         "tid": "T1074",
@@ -4165,8 +4437,8 @@
             }
         ],
         "mitigations": [],
-        "cumulative_score": 1.6496250792419047,
-        "adjusted_score": 1.6496250792419047,
+        "cumulative_score": 1.1816798561904762,
+        "adjusted_score": 1.1816798561904762,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -4177,7 +4449,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.47619047619047616,
+        "choke_point_score": 0.6000000000000001,
+        "prevalence_score": 0.10548938
     },
     {
         "tid": "T1078",
@@ -4339,14 +4614,24 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 1.62655230974,
-        "adjusted_score": 1.62655230974,
+        "cumulative_score": 1.3577231300000001,
+        "adjusted_score": 1.3577231300000001,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.7,5.1,5.2,5.3,5.4,5.5,6.1,6.2,6.8,16.1,16.9"
+            "4.7",
+            "5.1",
+            "5.2",
+            "5.3",
+            "5.4",
+            "5.5",
+            "6.1",
+            "6.2",
+            "6.8",
+            "16.1",
+            "16.9"
         ],
         "nist_controls": [
             "AC-2",
@@ -4377,7 +4662,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.8,
+        "choke_point_score": 0.55,
+        "prevalence_score": 0.00772313
     },
     {
         "tid": "T1080",
@@ -4424,14 +4712,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1022"
             }
         ],
-        "cumulative_score": 0.751907368157143,
-        "adjusted_score": 0.751907368157143,
+        "cumulative_score": 0.47171102142857146,
+        "adjusted_score": 0.47171102142857146,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "2.5,3.3,4.1,6.1,6.2,6.8,10.5"
+            "2.5",
+            "3.3",
+            "4.1",
+            "6.1",
+            "6.2",
+            "6.8",
+            "10.5"
         ],
         "nist_controls": [
             "AC-3",
@@ -4449,7 +4743,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.17142857142857143,
+        "choke_point_score": 0.30000000000000004,
+        "prevalence_score": 0.00028245
     },
     {
         "tid": "T1082",
@@ -4476,8 +4773,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.8154490493333333,
-        "adjusted_score": 0.8154490493333333,
+        "cumulative_score": 0.6806753333333333,
+        "adjusted_score": 0.6806753333333333,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
@@ -4488,7 +4785,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.13333333333333333,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.447342
     },
     {
         "tid": "T1083",
@@ -4513,8 +4813,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.45511189957142856,
-        "adjusted_score": 0.45511189957142856,
+        "cumulative_score": 0.3798930714285714,
+        "adjusted_score": 0.3798930714285714,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -4525,7 +4825,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.07142857142857142,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.0584645
     },
     {
         "tid": "T1087",
@@ -4623,14 +4926,17 @@
                 "url": "https://attack.mitre.org/mitigations/M1028"
             }
         ],
-        "cumulative_score": 0.6642973651542856,
-        "adjusted_score": 0.6642973651542856,
+        "cumulative_score": 0.4758577114285714,
+        "adjusted_score": 0.4758577114285714,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.1,4.8,18.3,18.5"
+            "4.1",
+            "4.8",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "CM-6",
@@ -4641,7 +4947,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2714285714285714,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.10442914
     },
     {
         "tid": "T1090",
@@ -4747,14 +5056,19 @@
                 "url": "https://attack.mitre.org/mitigations/M1020"
             }
         ],
-        "cumulative_score": 1.668642857142857,
-        "adjusted_score": 1.668642857142857,
+        "cumulative_score": 1.3928571428571428,
+        "adjusted_score": 1.3928571428571428,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.2,4.4,9.3,13.3,13.4,13.8"
+            "4.2",
+            "4.4",
+            "9.3",
+            "13.3",
+            "13.4",
+            "13.8"
         ],
         "nist_controls": [
             "AC-3",
@@ -4774,7 +5088,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.24285714285714285,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 1
     },
     {
         "tid": "T1091",
@@ -4818,14 +5135,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1034"
             }
         ],
-        "cumulative_score": 0.7306421572466668,
-        "adjusted_score": 0.7306421572466668,
+        "cumulative_score": 0.4583702366666667,
+        "adjusted_score": 0.4583702366666667,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "2.3,2.5,4.1,7.7,10.3,18.3,18.5"
+            "2.3",
+            "2.5",
+            "4.1",
+            "7.7",
+            "10.3",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-3",
@@ -4843,7 +5166,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.16666666666666669,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.19170357
     },
     {
         "tid": "T1092",
@@ -4880,14 +5206,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1028"
             }
         ],
-        "cumulative_score": 0.2909428571428571,
-        "adjusted_score": 0.2909428571428571,
+        "cumulative_score": 0.24285714285714285,
+        "adjusted_score": 0.24285714285714285,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "2.3,2.5,4.1,4.8,10.3,18.3,18.5"
+            "2.3",
+            "2.5",
+            "4.1",
+            "4.8",
+            "10.3",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "CM-2",
@@ -4903,7 +5235,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.14285714285714285,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1095",
@@ -4947,14 +5282,26 @@
                 "url": "https://attack.mitre.org/mitigations/M1030"
             }
         ],
-        "cumulative_score": 1.6914619047619046,
-        "adjusted_score": 1.6914619047619046,
+        "cumulative_score": 1.4119047619047618,
+        "adjusted_score": 1.4119047619047618,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.2,4.4,4.5,7.6,7.7,12.2,12.8,13.3,13.4,13.8,18.2,18.3,13.10"
+            "4.2",
+            "4.4",
+            "4.5",
+            "7.6",
+            "7.7",
+            "12.2",
+            "12.8",
+            "13.3",
+            "13.4",
+            "13.8",
+            "18.2",
+            "18.3",
+            "13.10"
         ],
         "nist_controls": [
             "AC-3",
@@ -4973,7 +5320,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2619047619047619,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 1
     },
     {
         "tid": "T1098",
@@ -5121,14 +5471,34 @@
                 "url": "https://attack.mitre.org/mitigations/M1026"
             }
         ],
-        "cumulative_score": 1.0408471692209522,
-        "adjusted_score": 1.0408471692209522,
+        "cumulative_score": 0.745592528095238,
+        "adjusted_score": 0.745592528095238,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "3.12,3.3,4.1,4.2,4.4,4.7,4.8,5.3,5.4,6.1,6.2,6.3,6.4,6.5,11.3,11.4,12.2,12.8,16.8,18.3,18.5"
+            "3.12",
+            "3.3",
+            "4.1",
+            "4.2",
+            "4.4",
+            "4.7",
+            "4.8",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.3",
+            "6.4",
+            "6.5",
+            "11.3",
+            "11.4",
+            "12.2",
+            "12.8",
+            "16.8",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -5148,7 +5518,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.638095238095238,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00749729
     },
     {
         "tid": "T1102",
@@ -5250,14 +5623,18 @@
                 "url": "https://attack.mitre.org/mitigations/M1021"
             }
         ],
-        "cumulative_score": 0.643817146912381,
-        "adjusted_score": 0.643817146912381,
+        "cumulative_score": 0.5374099723809524,
+        "adjusted_score": 0.5374099723809524,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.3,2.5,9.3,13.3,13.8"
+            "2.3",
+            "2.5",
+            "9.3",
+            "13.3",
+            "13.8"
         ],
         "nist_controls": [
             "AC-4",
@@ -5273,7 +5650,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1523809523809524,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.03502902
     },
     {
         "tid": "T1104",
@@ -5304,14 +5684,15 @@
                 "url": "https://attack.mitre.org/mitigations/M1031"
             }
         ],
-        "cumulative_score": 0.29965205016,
-        "adjusted_score": 0.29965205016,
+        "cumulative_score": 0.25012692000000003,
+        "adjusted_score": 0.25012692000000003,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "13.3,13.8"
+            "13.3",
+            "13.8"
         ],
         "nist_controls": [
             "AC-4",
@@ -5327,7 +5708,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0.00012692
     },
     {
         "tid": "T1105",
@@ -5360,14 +5744,15 @@
                 "url": "https://attack.mitre.org/mitigations/M1031"
             }
         ],
-        "cumulative_score": 2.214421752664762,
-        "adjusted_score": 2.214421752664762,
+        "cumulative_score": 1.5862620004761905,
+        "adjusted_score": 1.5862620004761905,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "13.3,13.8"
+            "13.3",
+            "13.8"
         ],
         "nist_controls": [
             "AC-4",
@@ -5383,7 +5768,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.49047619047619045,
+        "choke_point_score": 0.4,
+        "prevalence_score": 0.69578581
     },
     {
         "tid": "T1106",
@@ -5420,8 +5808,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1038"
             }
         ],
-        "cumulative_score": 1.1414365281219048,
-        "adjusted_score": 1.1414365281219048,
+        "cumulative_score": 0.952785081904762,
+        "adjusted_score": 0.952785081904762,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -5440,7 +5828,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.16190476190476188,
+        "choke_point_score": 0.55,
+        "prevalence_score": 0.24088032
     },
     {
         "tid": "T1110",
@@ -5605,14 +5996,21 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 1.2161784712666668,
-        "adjusted_score": 1.2161784712666668,
+        "cumulative_score": 0.8711880166666668,
+        "adjusted_score": 0.8711880166666668,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.1,4.7,5.2,5.3,6.3,6.4,6.5,4.10"
+            "4.1",
+            "4.7",
+            "5.2",
+            "5.3",
+            "6.3",
+            "6.4",
+            "6.5",
+            "4.10"
         ],
         "nist_controls": [
             "AC-2",
@@ -5634,7 +6032,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.46666666666666673,
+        "choke_point_score": 0.4,
+        "prevalence_score": 0.00452135
     },
     {
         "tid": "T1111",
@@ -5666,14 +6067,15 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 0.5427190476190477,
-        "adjusted_score": 0.5427190476190477,
+        "cumulative_score": 0.3404761904761905,
+        "adjusted_score": 0.3404761904761905,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "14.1,14.3"
+            "14.1",
+            "14.3"
         ],
         "nist_controls": [
             "CA-7",
@@ -5688,7 +6090,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.09047619047619047,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0
     },
     {
         "tid": "T1112",
@@ -5721,8 +6126,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1024"
             }
         ],
-        "cumulative_score": 2.240247619047619,
-        "adjusted_score": 2.240247619047619,
+        "cumulative_score": 1.6047619047619048,
+        "adjusted_score": 1.6047619047619048,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
@@ -5738,7 +6143,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.5047619047619047,
+        "choke_point_score": 0.1,
+        "prevalence_score": 1
     },
     {
         "tid": "T1113",
@@ -5762,8 +6170,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.43006945408761904,
-        "adjusted_score": 0.43006945408761904,
+        "cumulative_score": 0.3589895276190476,
+        "adjusted_score": 0.3589895276190476,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -5774,7 +6182,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.047619047619047616,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.06137048
     },
     {
         "tid": "T1114",
@@ -5886,14 +6297,18 @@
                 "url": "https://attack.mitre.org/mitigations/M1032"
             }
         ],
-        "cumulative_score": 0.7210952380952381,
-        "adjusted_score": 0.7210952380952381,
+        "cumulative_score": 0.4523809523809524,
+        "adjusted_score": 0.4523809523809524,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "6.3,6.5,18.3,18.5,3.10"
+            "6.3",
+            "6.5",
+            "18.3",
+            "18.5",
+            "3.10"
         ],
         "nist_controls": [
             "AC-16",
@@ -5915,7 +6330,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2523809523809524,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0
     },
     {
         "tid": "T1115",
@@ -5939,8 +6357,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.16543809523809525,
-        "adjusted_score": 0.16543809523809525,
+        "cumulative_score": 0.1380952380952381,
+        "adjusted_score": 0.1380952380952381,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
@@ -5951,7 +6369,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.03809523809523809,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1119",
@@ -5989,14 +6410,16 @@
                 "url": "https://attack.mitre.org/mitigations/M1029"
             }
         ],
-        "cumulative_score": 0.44714765662285716,
-        "adjusted_score": 0.44714765662285716,
+        "cumulative_score": 0.3203063442857143,
+        "adjusted_score": 0.3203063442857143,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "3.11,11.4,12.8"
+            "3.11",
+            "11.4",
+            "12.8"
         ],
         "nist_controls": [
             "AC-16",
@@ -6021,7 +6444,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2142857142857143,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00602063
     },
     {
         "tid": "T1120",
@@ -6045,8 +6471,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.1416807922742857,
-        "adjusted_score": 0.1416807922742857,
+        "cumulative_score": 0.11826443428571429,
+        "adjusted_score": 0.11826443428571429,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -6057,7 +6483,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.014285714285714284,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00397872
     },
     {
         "tid": "T1123",
@@ -6081,8 +6510,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.15973333333333334,
-        "adjusted_score": 0.15973333333333334,
+        "cumulative_score": 0.13333333333333333,
+        "adjusted_score": 0.13333333333333333,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -6093,7 +6522,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.03333333333333333,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1124",
@@ -6116,8 +6548,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.14261904761904762,
-        "adjusted_score": 0.14261904761904762,
+        "cumulative_score": 0.11904761904761905,
+        "adjusted_score": 0.11904761904761905,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
@@ -6128,7 +6560,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.019047619047619046,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1125",
@@ -6151,8 +6586,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.1255047619047619,
-        "adjusted_score": 0.1255047619047619,
+        "cumulative_score": 0.10476190476190476,
+        "adjusted_score": 0.10476190476190476,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
@@ -6163,7 +6598,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1127",
@@ -6220,14 +6658,21 @@
                 "url": "https://attack.mitre.org/mitigations/M1038"
             }
         ],
-        "cumulative_score": 0.5396784474542857,
-        "adjusted_score": 0.5396784474542857,
+        "cumulative_score": 0.4504828442857143,
+        "adjusted_score": 0.4504828442857143,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.3,2.5,2.7,4.1,4.8,18.3,18.5,16.10"
+            "2.3",
+            "2.5",
+            "2.7",
+            "4.1",
+            "4.8",
+            "18.3",
+            "18.5",
+            "16.10"
         ],
         "nist_controls": [
             "CM-2",
@@ -6243,7 +6688,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3142857142857143,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.03619713
     },
     {
         "tid": "T1129",
@@ -6272,14 +6720,15 @@
                 "url": "https://attack.mitre.org/mitigations/M1038"
             }
         ],
-        "cumulative_score": 0.20572621627142856,
-        "adjusted_score": 0.20572621627142856,
+        "cumulative_score": 0.17172472142857143,
+        "adjusted_score": 0.17172472142857143,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "2.5,2.6"
+            "2.5",
+            "2.6"
         ],
         "nist_controls": [
             "CM-2",
@@ -6292,7 +6741,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.07142857142857142,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00029615
     },
     {
         "tid": "T1132",
@@ -6353,14 +6805,15 @@
                 "url": "https://attack.mitre.org/mitigations/M1031"
             }
         ],
-        "cumulative_score": 0.3121019964657143,
-        "adjusted_score": 0.3121019964657143,
+        "cumulative_score": 0.2605191957142857,
+        "adjusted_score": 0.2605191957142857,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "13.3,13.8"
+            "13.3",
+            "13.8"
         ],
         "nist_controls": [
             "AC-4",
@@ -6375,7 +6828,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.08571428571428572,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0.02480491
     },
     {
         "tid": "T1133",
@@ -6427,14 +6883,34 @@
                 "url": "https://attack.mitre.org/mitigations/M1030"
             }
         ],
-        "cumulative_score": 0.7378857142857143,
-        "adjusted_score": 0.7378857142857143,
+        "cumulative_score": 0.5285714285714286,
+        "adjusted_score": 0.5285714285714286,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "2.3,2.5,3.12,4.1,4.2,4.4,4.8,6.3,6.4,6.5,7.6,7.7,12.2,12.7,12.8,13.5,16.8,18.3,18.5,13.10,16.10"
+            "2.3",
+            "2.5",
+            "3.12",
+            "4.1",
+            "4.2",
+            "4.4",
+            "4.8",
+            "6.3",
+            "6.4",
+            "6.5",
+            "7.6",
+            "7.7",
+            "12.2",
+            "12.7",
+            "12.8",
+            "13.5",
+            "16.8",
+            "18.3",
+            "18.5",
+            "13.10",
+            "16.10"
         ],
         "nist_controls": [
             "AC-17",
@@ -6460,7 +6936,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.4285714285714286,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1134",
@@ -6587,14 +7066,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.5821248026228572,
-        "adjusted_score": 0.5821248026228572,
+        "cumulative_score": 0.4169948442857143,
+        "adjusted_score": 0.4169948442857143,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.1,4.7,5.3,5.4,6.1,6.2,6.8"
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8"
         ],
         "nist_controls": [
             "AC-2",
@@ -6609,7 +7094,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2142857142857143,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.00270913
     },
     {
         "tid": "T1135",
@@ -6641,14 +7129,16 @@
                 "url": "https://attack.mitre.org/mitigations/M1028"
             }
         ],
-        "cumulative_score": 0.24848081564476188,
-        "adjusted_score": 0.24848081564476188,
+        "cumulative_score": 0.20741303476190476,
+        "adjusted_score": 0.20741303476190476,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "4.1,18.3,18.5"
+            "4.1",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "CM-6",
@@ -6659,7 +7149,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.10476190476190475,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00265113
     },
     {
         "tid": "T1136",
@@ -6795,14 +7288,31 @@
                 "url": "https://attack.mitre.org/mitigations/M1026"
             }
         ],
-        "cumulative_score": 0.9344039015904759,
-        "adjusted_score": 0.9344039015904759,
+        "cumulative_score": 0.6693437690476189,
+        "adjusted_score": 0.6693437690476189,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "3.12,4.1,4.2,4.4,4.7,5.3,5.4,6.1,6.2,6.3,6.4,6.5,11.3,11.4,12.2,12.8,18.3,18.5"
+            "3.12",
+            "4.1",
+            "4.2",
+            "4.4",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.3",
+            "6.4",
+            "6.5",
+            "11.3",
+            "11.4",
+            "12.2",
+            "12.8",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -6825,7 +7335,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.419047619047619,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.00029615
     },
     {
         "tid": "T1137",
@@ -7000,14 +7513,26 @@
                 "url": "https://attack.mitre.org/mitigations/M1051"
             }
         ],
-        "cumulative_score": 0.5448362067371428,
-        "adjusted_score": 0.5448362067371428,
+        "cumulative_score": 0.3902838157142857,
+        "adjusted_score": 0.3902838157142857,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "2.3,2.7,4.1,4.8,7.1,7.2,7.3,7.4,7.5,7.7,9.4,18.3,18.5"
+            "2.3",
+            "2.7",
+            "4.1",
+            "4.8",
+            "7.1",
+            "7.2",
+            "7.3",
+            "7.4",
+            "7.5",
+            "7.7",
+            "9.4",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-10",
@@ -7028,7 +7553,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2857142857142857,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00456953
     },
     {
         "tid": "T1140",
@@ -7053,8 +7581,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.7927028039276189,
-        "adjusted_score": 0.7927028039276189,
+        "cumulative_score": 0.5678386847619047,
+        "adjusted_score": 0.5678386847619047,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
@@ -7065,7 +7593,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.10476190476190475,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.36307678
     },
     {
         "tid": "T1176",
@@ -7123,14 +7654,21 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 0.517029065012381,
-        "adjusted_score": 0.517029065012381,
+        "cumulative_score": 0.3243595138095238,
+        "adjusted_score": 0.3243595138095238,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "2.3,2.5,2.7,4.1,9.4,14.4,18.3,18.5"
+            "2.3",
+            "2.5",
+            "2.7",
+            "4.1",
+            "9.4",
+            "14.4",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-6",
@@ -7153,7 +7691,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.22380952380952382,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00054999
     },
     {
         "tid": "T1185",
@@ -7189,14 +7730,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 0.43105835244761903,
-        "adjusted_score": 0.43105835244761903,
+        "cumulative_score": 0.30878105476190476,
+        "adjusted_score": 0.30878105476190476,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "3.3,4.7,5.3,6.1,6.2,6.8,14.4"
+            "3.3",
+            "4.7",
+            "5.3",
+            "6.1",
+            "6.2",
+            "6.8",
+            "14.4"
         ],
         "nist_controls": [
             "AC-10",
@@ -7218,7 +7765,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20476190476190478,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00401915
     },
     {
         "tid": "T1187",
@@ -7256,14 +7806,22 @@
                 "url": "https://attack.mitre.org/mitigations/M1027"
             }
         ],
-        "cumulative_score": 0.4952476190476191,
-        "adjusted_score": 0.4952476190476191,
+        "cumulative_score": 0.35476190476190483,
+        "adjusted_score": 0.35476190476190483,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": true,
         "cis_controls": [
-            "4.2,4.4,4.7,5.2,7.6,7.7,13.4,18.2,18.3"
+            "4.2",
+            "4.4",
+            "4.7",
+            "5.2",
+            "7.6",
+            "7.7",
+            "13.4",
+            "18.2",
+            "18.3"
         ],
         "nist_controls": [
             "AC-3",
@@ -7281,7 +7839,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20476190476190478,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0
     },
     {
         "tid": "T1189",
@@ -7334,14 +7895,25 @@
                 "url": "https://attack.mitre.org/mitigations/M1051"
             }
         ],
-        "cumulative_score": 0.676563933352381,
-        "adjusted_score": 0.676563933352381,
+        "cumulative_score": 0.4244441238095238,
+        "adjusted_score": 0.4244441238095238,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.3,2.7,7.1,7.2,7.4,7.5,9.1,9.3,9.6,10.5,18.3,18.5"
+            "2.3",
+            "2.7",
+            "7.1",
+            "7.2",
+            "7.4",
+            "7.5",
+            "9.1",
+            "9.3",
+            "9.6",
+            "10.5",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-4",
@@ -7367,7 +7939,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.32380952380952377,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.0006346
     },
     {
         "tid": "T1190",
@@ -7431,14 +8006,37 @@
                 "url": "https://attack.mitre.org/mitigations/M1016"
             }
         ],
-        "cumulative_score": 1.5121397187695238,
-        "adjusted_score": 1.5121397187695238,
+        "cumulative_score": 1.083194640952381,
+        "adjusted_score": 1.083194640952381,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "3.12,4.4,4.7,5.3,5.5,6.1,6.2,6.8,7.1,7.2,7.3,7.4,7.6,7.7,10.5,12.1,12.2,12.8,16.13,16.8,18.1,18.2,18.3,13.10"
+            "3.12",
+            "4.4",
+            "4.7",
+            "5.3",
+            "5.5",
+            "6.1",
+            "6.2",
+            "6.8",
+            "7.1",
+            "7.2",
+            "7.3",
+            "7.4",
+            "7.6",
+            "7.7",
+            "10.5",
+            "12.1",
+            "12.2",
+            "12.8",
+            "16.13",
+            "16.8",
+            "18.1",
+            "18.2",
+            "18.3",
+            "13.10"
         ],
         "nist_controls": [
             "AC-2",
@@ -7475,7 +8073,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.9809523809523809,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00224226
     },
     {
         "tid": "T1195",
@@ -7567,14 +8168,27 @@
                 "url": "https://attack.mitre.org/mitigations/M1016"
             }
         ],
-        "cumulative_score": 0.49088692387619054,
-        "adjusted_score": 0.49088692387619054,
+        "cumulative_score": 0.3516381976190477,
+        "adjusted_score": 0.3516381976190477,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "7.1,7.2,7.3,7.4,7.5,16.1,16.11,16.12,16.2,16.3,16.4,16.5,18.3,18.5"
+            "7.1",
+            "7.2",
+            "7.3",
+            "7.4",
+            "7.5",
+            "16.1",
+            "16.11",
+            "16.12",
+            "16.2",
+            "16.3",
+            "16.4",
+            "16.5",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "CA-2",
@@ -7590,7 +8204,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.24761904761904766,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00401915
     },
     {
         "tid": "T1197",
@@ -7634,14 +8251,27 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.9571591017771427,
-        "adjusted_score": 0.9571591017771427,
+        "cumulative_score": 0.6856440557142857,
+        "adjusted_score": 0.6856440557142857,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.1,4.2,4.4,4.5,4.7,5.3,5.4,6.1,6.2,6.8,13.4,18.2,18.3,18.5"
+            "4.1",
+            "4.2",
+            "4.4",
+            "4.5",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "13.4",
+            "18.2",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -7663,7 +8293,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3857142857142857,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.04992977
     },
     {
         "tid": "T1199",
@@ -7703,14 +8336,19 @@
                 "url": "https://attack.mitre.org/mitigations/M1052"
             }
         ],
-        "cumulative_score": 0.34567619047619047,
-        "adjusted_score": 0.34567619047619047,
+        "cumulative_score": 0.24761904761904763,
+        "adjusted_score": 0.24761904761904763,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": true,
         "cis_controls": [
-            "3.12,4.1,4.4,12.2,12.8,15.7"
+            "3.12",
+            "4.1",
+            "4.4",
+            "12.2",
+            "12.8",
+            "15.7"
         ],
         "nist_controls": [
             "AC-3",
@@ -7726,7 +8364,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.14761904761904762,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1200",
@@ -7760,14 +8401,21 @@
                 "url": "https://attack.mitre.org/mitigations/M1034"
             }
         ],
-        "cumulative_score": 0.4189969226457143,
-        "adjusted_score": 0.4189969226457143,
+        "cumulative_score": 0.26285879714285715,
+        "adjusted_score": 0.26285879714285715,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": true,
         "cis_controls": [
-            "1.1,1.2,1.4,4.1,4.2,12.2,12.6,13.9"
+            "1.1",
+            "1.2",
+            "1.4",
+            "4.1",
+            "4.2",
+            "12.2",
+            "12.6",
+            "13.9"
         ],
         "nist_controls": [
             "AC-20",
@@ -7780,7 +8428,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.15714285714285714,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00571594
     },
     {
         "tid": "T1201",
@@ -7813,8 +8464,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1027"
             }
         ],
-        "cumulative_score": 0.29405741793523804,
-        "adjusted_score": 0.29405741793523804,
+        "cumulative_score": 0.21064284952380952,
+        "adjusted_score": 0.21064284952380952,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
@@ -7831,7 +8482,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.10952380952380952,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00111904
     },
     {
         "tid": "T1202",
@@ -7853,8 +8507,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.32409711123238094,
-        "adjusted_score": 0.32409711123238094,
+        "cumulative_score": 0.27053181238095236,
+        "adjusted_score": 0.27053181238095236,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
@@ -7865,7 +8519,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.15238095238095237,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.01815086
     },
     {
         "tid": "T1203",
@@ -7899,8 +8556,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1050"
             }
         ],
-        "cumulative_score": 0.8208773731695237,
-        "adjusted_score": 0.8208773731695237,
+        "cumulative_score": 0.588021040952381,
+        "adjusted_score": 0.588021040952381,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -7927,7 +8584,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.28095238095238095,
+        "choke_point_score": 0.3,
+        "prevalence_score": 0.00706866
     },
     {
         "tid": "T1204",
@@ -8081,14 +8741,23 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 2.350765942613333,
-        "adjusted_score": 2.350765942613333,
+        "cumulative_score": 1.3118113519047618,
+        "adjusted_score": 1.3118113519047618,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.3,2.5,2.7,9.3,9.6,13.3,13.8,14.1,14.2,14.6"
+            "2.3",
+            "2.5",
+            "2.7",
+            "9.3",
+            "9.6",
+            "13.3",
+            "13.8",
+            "14.1",
+            "14.2",
+            "14.6"
         ],
         "nist_controls": [
             "AC-4",
@@ -8109,7 +8778,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3619047619047619,
+        "choke_point_score": 0.4,
+        "prevalence_score": 0.54990659
     },
     {
         "tid": "T1205",
@@ -8166,14 +8838,17 @@
                 "url": "https://attack.mitre.org/mitigations/M1037"
             }
         ],
-        "cumulative_score": 0.31243809523809524,
-        "adjusted_score": 0.31243809523809524,
+        "cumulative_score": 0.22380952380952382,
+        "adjusted_score": 0.22380952380952382,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "4.2,4.4,7.7,13.4"
+            "4.2",
+            "4.4",
+            "7.7",
+            "13.4"
         ],
         "nist_controls": [
             "AC-3",
@@ -8190,7 +8865,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.12380952380952381,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1207",
@@ -8214,8 +8892,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.14624761904761904,
-        "adjusted_score": 0.14624761904761904,
+        "cumulative_score": 0.10476190476190476,
+        "adjusted_score": 0.10476190476190476,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
@@ -8226,7 +8904,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1210",
@@ -8299,14 +8980,41 @@
                 "url": "https://attack.mitre.org/mitigations/M1016"
             }
         ],
-        "cumulative_score": 1.0204095238095239,
-        "adjusted_score": 1.0204095238095239,
+        "cumulative_score": 0.730952380952381,
+        "adjusted_score": 0.730952380952381,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.3,2.5,3.12,4.1,4.4,4.7,4.8,5.3,5.5,6.1,6.2,6.8,7.1,7.2,7.3,7.4,7.5,7.6,10.5,12.2,12.8,16.13,16.8,18.1,18.2,18.3,18.5,16.10"
+            "2.3",
+            "2.5",
+            "3.12",
+            "4.1",
+            "4.4",
+            "4.7",
+            "4.8",
+            "5.3",
+            "5.5",
+            "6.1",
+            "6.2",
+            "6.8",
+            "7.1",
+            "7.2",
+            "7.3",
+            "7.4",
+            "7.5",
+            "7.6",
+            "10.5",
+            "12.2",
+            "12.8",
+            "16.13",
+            "16.8",
+            "18.1",
+            "18.2",
+            "18.3",
+            "18.5",
+            "16.10"
         ],
         "nist_controls": [
             "AC-2",
@@ -8346,7 +9054,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.580952380952381,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0
     },
     {
         "tid": "T1211",
@@ -8392,14 +9103,21 @@
                 "url": "https://attack.mitre.org/mitigations/M1051"
             }
         ],
-        "cumulative_score": 0.6166729827028572,
-        "adjusted_score": 0.6166729827028572,
+        "cumulative_score": 0.4417428242857143,
+        "adjusted_score": 0.4417428242857143,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "7.1,7.2,7.3,7.4,7.5,10.5,18.3,18.5"
+            "7.1",
+            "7.2",
+            "7.3",
+            "7.4",
+            "7.5",
+            "10.5",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-4",
@@ -8430,7 +9148,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3142857142857143,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.02745711
     },
     {
         "tid": "T1212",
@@ -8476,14 +9197,21 @@
                 "url": "https://attack.mitre.org/mitigations/M1051"
             }
         ],
-        "cumulative_score": 0.6381714285714286,
-        "adjusted_score": 0.6381714285714286,
+        "cumulative_score": 0.4571428571428572,
+        "adjusted_score": 0.4571428571428572,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "7.1,7.2,7.3,7.4,7.5,10.5,18.3,18.5"
+            "7.1",
+            "7.2",
+            "7.3",
+            "7.4",
+            "7.5",
+            "10.5",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -8515,7 +9243,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.35714285714285715,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1213",
@@ -8650,14 +9381,28 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 0.5704761904761905,
-        "adjusted_score": 0.5704761904761905,
+        "cumulative_score": 0.47619047619047616,
+        "adjusted_score": 0.47619047619047616,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": true,
         "cis_controls": [
-            "3.1,3.2,3.3,4.7,5.3,6.1,6.2,6.8,14.1,14.4,14.5,16.1,16.9,18.3,18.5"
+            "3.1",
+            "3.2",
+            "3.3",
+            "4.7",
+            "5.3",
+            "6.1",
+            "6.2",
+            "6.8",
+            "14.1",
+            "14.4",
+            "14.5",
+            "16.1",
+            "16.9",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-16",
@@ -8689,7 +9434,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3761904761904762,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1216",
@@ -8741,8 +9489,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1038"
             }
         ],
-        "cumulative_score": 0.30959031359238093,
-        "adjusted_score": 0.30959031359238093,
+        "cumulative_score": 0.25842263238095237,
+        "adjusted_score": 0.25842263238095237,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
@@ -8762,7 +9510,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.15238095238095237,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00604168
     },
     {
         "tid": "T1217",
@@ -8787,8 +9538,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.15954285714285715,
-        "adjusted_score": 0.15954285714285715,
+        "cumulative_score": 0.1142857142857143,
+        "adjusted_score": 0.1142857142857143,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
@@ -8799,7 +9550,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.014285714285714284,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1218",
@@ -9119,14 +9873,27 @@
                 "url": "https://attack.mitre.org/mitigations/M1026"
             }
         ],
-        "cumulative_score": 2.9982380952380954,
-        "adjusted_score": 2.9982380952380954,
+        "cumulative_score": 1.880952380952381,
+        "adjusted_score": 1.880952380952381,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.3,2.5,2.7,4.1,4.7,4.8,5.3,5.4,6.1,6.2,6.8,10.5,18.3,18.5"
+            "2.3",
+            "2.5",
+            "2.7",
+            "4.1",
+            "4.7",
+            "4.8",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "10.5",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -9152,7 +9919,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.780952380952381,
+        "choke_point_score": 0.1,
+        "prevalence_score": 1
     },
     {
         "tid": "T1219",
@@ -9197,14 +9967,23 @@
                 "url": "https://attack.mitre.org/mitigations/M1031"
             }
         ],
-        "cumulative_score": 1.3061613287295237,
-        "adjusted_score": 1.3061613287295237,
+        "cumulative_score": 0.935645650952381,
+        "adjusted_score": 0.935645650952381,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.5,4.2,4.4,7.6,9.3,13.3,13.4,13.8,18.2,18.3"
+            "2.5",
+            "4.2",
+            "4.4",
+            "7.6",
+            "9.3",
+            "13.3",
+            "13.4",
+            "13.8",
+            "18.2",
+            "18.3"
         ],
         "nist_controls": [
             "AC-17",
@@ -9225,7 +10004,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.38095238095238093,
+        "choke_point_score": 0.55,
+        "prevalence_score": 0.00469327
     },
     {
         "tid": "T1220",
@@ -9254,14 +10036,15 @@
                 "url": "https://attack.mitre.org/mitigations/M1038"
             }
         ],
-        "cumulative_score": 0.28243618431428574,
-        "adjusted_score": 0.28243618431428574,
+        "cumulative_score": 0.2357564142857143,
+        "adjusted_score": 0.2357564142857143,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.5,2.7"
+            "2.5",
+            "2.7"
         ],
         "nist_controls": [
             "CM-2",
@@ -9275,7 +10058,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1142857142857143,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.0214707
     },
     {
         "tid": "T1221",
@@ -9323,14 +10109,24 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 0.4786285714285714,
-        "adjusted_score": 0.4786285714285714,
+        "cumulative_score": 0.34285714285714286,
+        "adjusted_score": 0.34285714285714286,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "2.3,2.7,4.1,4.8,13.3,13.8,14.1,14.2,14.6,18.3,18.5"
+            "2.3",
+            "2.7",
+            "4.1",
+            "4.8",
+            "13.3",
+            "13.8",
+            "14.1",
+            "14.2",
+            "14.6",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "CA-7",
@@ -9352,7 +10148,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.24285714285714288,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1222",
@@ -9434,14 +10233,21 @@
                 "url": "https://attack.mitre.org/mitigations/M1022"
             }
         ],
-        "cumulative_score": 0.8422760170038095,
-        "adjusted_score": 0.8422760170038095,
+        "cumulative_score": 0.6033495823809524,
+        "adjusted_score": 0.6033495823809524,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "3.3,4.1,4.7,5.3,5.4,6.1,6.2,6.8"
+            "3.3",
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8"
         ],
         "nist_controls": [
             "AC-16",
@@ -9460,7 +10266,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2523809523809524,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.00096863
     },
     {
         "tid": "T1480",
@@ -9507,8 +10316,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1055"
             }
         ],
-        "cumulative_score": 0.1198,
-        "adjusted_score": 0.1198,
+        "cumulative_score": 0.1,
+        "adjusted_score": 0.1,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
@@ -9519,7 +10328,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1482",
@@ -9556,14 +10367,22 @@
                 "url": "https://attack.mitre.org/mitigations/M1030"
             }
         ],
-        "cumulative_score": 0.6755899215923808,
-        "adjusted_score": 0.6755899215923808,
+        "cumulative_score": 0.48394693523809523,
+        "adjusted_score": 0.48394693523809523,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "3.12,4.1,4.4,11.3,11.4,12.2,12.8,18.3,18.5"
+            "3.12",
+            "4.1",
+            "4.4",
+            "11.3",
+            "11.4",
+            "12.2",
+            "12.8",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-4",
@@ -9580,7 +10399,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.29523809523809524,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.08870884
     },
     {
         "tid": "T1484",
@@ -9662,14 +10484,23 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 1.1267714285714285,
-        "adjusted_score": 1.1267714285714285,
+        "cumulative_score": 0.8071428571428572,
+        "adjusted_score": 0.8071428571428572,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.1,4.7,5.3,5.4,5.5,6.1,6.2,6.8,18.3,18.5"
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "5.5",
+            "6.1",
+            "6.2",
+            "6.8",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -9690,7 +10521,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2571428571428571,
+        "choke_point_score": 0.55,
+        "prevalence_score": 0
     },
     {
         "tid": "T1485",
@@ -9729,14 +10563,18 @@
                 "url": "https://attack.mitre.org/mitigations/M1053"
             }
         ],
-        "cumulative_score": 0.5883293417950062,
-        "adjusted_score": 0.5883293417950062,
+        "cumulative_score": 0.3690899258437931,
+        "adjusted_score": 0.3690899258437931,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "11.1,11.2,11.3,11.4,11.5"
+            "11.1",
+            "11.2",
+            "11.3",
+            "11.4",
+            "11.5"
         ],
         "nist_controls": [
             "AC-3",
@@ -9754,7 +10592,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.319047619047619,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.0000423067961740376
     },
     {
         "tid": "T1486",
@@ -9796,14 +10637,18 @@
                 "url": "https://attack.mitre.org/mitigations/M1053"
             }
         ],
-        "cumulative_score": 0.5407974084266666,
-        "adjusted_score": 0.5407974084266666,
+        "cumulative_score": 0.30178426809523806,
+        "adjusted_score": 0.30178426809523806,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "11.1,11.2,11.3,11.4,11.5"
+            "11.1",
+            "11.2",
+            "11.3",
+            "11.4",
+            "11.5"
         ],
         "nist_controls": [
             "AC-3",
@@ -9822,7 +10667,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.23809523809523808,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.01368903
     },
     {
         "tid": "T1489",
@@ -9876,14 +10724,23 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.8277596345561904,
-        "adjusted_score": 0.8277596345561904,
+        "cumulative_score": 0.5929510276190476,
+        "adjusted_score": 0.5929510276190476,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "3.12,4.1,4.7,5.3,5.4,6.1,6.2,6.8,12.2,12.8"
+            "3.12",
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "12.2",
+            "12.8"
         ],
         "nist_controls": [
             "AC-2",
@@ -9904,7 +10761,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3476190476190476,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.19533198
     },
     {
         "tid": "T1490",
@@ -9944,14 +10804,21 @@
                 "url": "https://attack.mitre.org/mitigations/M1028"
             }
         ],
-        "cumulative_score": 0.8700249917142857,
-        "adjusted_score": 0.8700249917142857,
+        "cumulative_score": 0.6232270714285715,
+        "adjusted_score": 0.6232270714285715,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.1,11.1,11.2,11.3,11.4,11.5,18.3,18.5"
+            "4.1",
+            "11.1",
+            "11.2",
+            "11.3",
+            "11.4",
+            "11.5",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-3",
@@ -9971,7 +10838,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.37142857142857144,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.0517985
     },
     {
         "tid": "T1491",
@@ -10036,14 +10906,18 @@
                 "url": "https://attack.mitre.org/mitigations/M1053"
             }
         ],
-        "cumulative_score": 0.2825238095238095,
-        "adjusted_score": 0.2825238095238095,
+        "cumulative_score": 0.20238095238095238,
+        "adjusted_score": 0.20238095238095238,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": true,
         "cis_controls": [
-            "11.1,11.2,11.3,11.4,11.5"
+            "11.1",
+            "11.2",
+            "11.3",
+            "11.4",
+            "11.5"
         ],
         "nist_controls": [
             "AC-3",
@@ -10061,7 +10935,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.15238095238095237,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1495",
@@ -10103,14 +10980,24 @@
                 "url": "https://attack.mitre.org/mitigations/M1051"
             }
         ],
-        "cumulative_score": 0.37366190476190475,
-        "adjusted_score": 0.37366190476190475,
+        "cumulative_score": 0.3119047619047619,
+        "adjusted_score": 0.3119047619047619,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "4.1,4.7,5.3,5.4,6.8,7.1,7.2,7.3,7.5,18.3,18.5"
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.8",
+            "7.1",
+            "7.2",
+            "7.3",
+            "7.5",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -10134,7 +11021,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.2619047619047619,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1496",
@@ -10164,8 +11054,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.13279736746666668,
-        "adjusted_score": 0.13279736746666668,
+        "cumulative_score": 0.07410567380952382,
+        "adjusted_score": 0.07410567380952382,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -10176,7 +11066,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.023809523809523808,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.00029615
     },
     {
         "tid": "T1497",
@@ -10227,8 +11120,8 @@
             }
         ],
         "mitigations": [],
-        "cumulative_score": 0.5302138464095238,
-        "adjusted_score": 0.5302138464095238,
+        "cumulative_score": 0.44258250952380956,
+        "adjusted_score": 0.44258250952380956,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
@@ -10239,7 +11132,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.009523809523809523,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.3330587
     },
     {
         "tid": "T1498",
@@ -10307,8 +11203,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1037"
             }
         ],
-        "cumulative_score": 0.2426380952380952,
-        "adjusted_score": 0.2426380952380952,
+        "cumulative_score": 0.1738095238095238,
+        "adjusted_score": 0.1738095238095238,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
@@ -10330,7 +11226,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.12380952380952381,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1499",
@@ -10430,14 +11329,16 @@
                 "url": "https://attack.mitre.org/mitigations/M1037"
             }
         ],
-        "cumulative_score": 0.28464285714285714,
-        "adjusted_score": 0.28464285714285714,
+        "cumulative_score": 0.17857142857142855,
+        "adjusted_score": 0.17857142857142855,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.2,7.6,7.7"
+            "4.2",
+            "7.6",
+            "7.7"
         ],
         "nist_controls": [
             "AC-3",
@@ -10454,7 +11355,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.12857142857142856,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1505",
@@ -10622,14 +11526,22 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.7369090251752382,
-        "adjusted_score": 0.7369090251752382,
+        "cumulative_score": 0.4623017723809524,
+        "adjusted_score": 0.4623017723809524,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.7,4.1,4.7,5.3,5.4,6.1,6.2,18.3,18.5"
+            "2.7",
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-16",
@@ -10660,7 +11572,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3523809523809524,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00992082
     },
     {
         "tid": "T1518",
@@ -10701,8 +11616,8 @@
             }
         ],
         "mitigations": [],
-        "cumulative_score": 0.2271032676380952,
-        "adjusted_score": 0.2271032676380952,
+        "cumulative_score": 0.1626814238095238,
+        "adjusted_score": 0.1626814238095238,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -10713,7 +11628,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.023809523809523808,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.0388719
     },
     {
         "tid": "T1525",
@@ -10755,14 +11673,22 @@
                 "url": "https://attack.mitre.org/mitigations/M1026"
             }
         ],
-        "cumulative_score": 0.41089490730285716,
-        "adjusted_score": 0.41089490730285716,
+        "cumulative_score": 0.3429840628571429,
+        "adjusted_score": 0.3429840628571429,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "4.1,4.7,5.3,5.4,6.1,6.2,6.8,18.3,18.5"
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -10786,7 +11712,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.24285714285714288,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00012692
     },
     {
         "tid": "T1526",
@@ -10812,8 +11741,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.20607619047619047,
-        "adjusted_score": 0.20607619047619047,
+        "cumulative_score": 0.14761904761904762,
+        "adjusted_score": 0.14761904761904762,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -10824,7 +11753,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.047619047619047616,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1528",
@@ -10873,14 +11805,26 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 0.7387666666666667,
-        "adjusted_score": 0.7387666666666667,
+        "cumulative_score": 0.6166666666666667,
+        "adjusted_score": 0.6166666666666667,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "2.3,2.5,3.3,4.1,4.7,5.3,5.4,14.1,14.2,14.3,14.6,18.3,18.5"
+            "2.3",
+            "2.5",
+            "3.3",
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "14.1",
+            "14.2",
+            "14.3",
+            "14.6",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-10",
@@ -10907,7 +11851,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3666666666666667,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0
     },
     {
         "tid": "T1529",
@@ -10932,8 +11879,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.12962857142857143,
-        "adjusted_score": 0.12962857142857143,
+        "cumulative_score": 0.09285714285714286,
+        "adjusted_score": 0.09285714285714286,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
@@ -10944,7 +11891,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.04285714285714285,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1530",
@@ -11002,14 +11952,32 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.775847619047619,
-        "adjusted_score": 0.775847619047619,
+        "cumulative_score": 0.6476190476190476,
+        "adjusted_score": 0.6476190476190476,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "3.11,3.3,4.1,4.2,4.4,4.7,5.3,5.4,6.1,6.2,6.3,6.4,6.5,6.8,11.3,13.4,18.2,18.3,18.5"
+            "3.11",
+            "3.3",
+            "4.1",
+            "4.2",
+            "4.4",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.3",
+            "6.4",
+            "6.5",
+            "6.8",
+            "11.3",
+            "13.4",
+            "18.2",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-16",
@@ -11050,7 +12018,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.5476190476190477,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1531",
@@ -11075,8 +12046,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.15117619047619046,
-        "adjusted_score": 0.15117619047619046,
+        "cumulative_score": 0.1261904761904762,
+        "adjusted_score": 0.1261904761904762,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -11087,7 +12058,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.07619047619047618,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1534",
@@ -11115,8 +12089,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.41880000000000006,
-        "adjusted_score": 0.41880000000000006,
+        "cumulative_score": 0.30000000000000004,
+        "adjusted_score": 0.30000000000000004,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
@@ -11127,7 +12101,9 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.30000000000000004,
+        "prevalence_score": 0
     },
     {
         "tid": "T1535",
@@ -11155,14 +12131,16 @@
                 "url": "https://attack.mitre.org/mitigations/M1054"
             }
         ],
-        "cumulative_score": 0.21107619047619047,
-        "adjusted_score": 0.21107619047619047,
+        "cumulative_score": 0.1761904761904762,
+        "adjusted_score": 0.1761904761904762,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": true,
         "cis_controls": [
-            "4.1,18.3,18.5"
+            "4.1",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "SC-23"
@@ -11171,7 +12149,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0761904761904762,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1537",
@@ -11214,14 +12195,22 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.6049333333333332,
-        "adjusted_score": 0.6049333333333332,
+        "cumulative_score": 0.43333333333333324,
+        "adjusted_score": 0.43333333333333324,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "3.3,4.2,4.4,4.7,5.3,6.1,6.2,6.8,13.4"
+            "3.3",
+            "4.2",
+            "4.4",
+            "4.7",
+            "5.3",
+            "6.1",
+            "6.2",
+            "6.8",
+            "13.4"
         ],
         "nist_controls": [
             "AC-16",
@@ -11249,7 +12238,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.33333333333333326,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1538",
@@ -11281,14 +12273,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.26812380952380954,
-        "adjusted_score": 0.26812380952380954,
+        "cumulative_score": 0.22380952380952382,
+        "adjusted_score": 0.22380952380952382,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "3.3,4.7,5.3,5.4,6.1,6.2,6.8"
+            "3.3",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8"
         ],
         "nist_controls": [
             "AC-2",
@@ -11302,7 +12300,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.12380952380952381,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1539",
@@ -11348,14 +12349,21 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 0.6215523809523809,
-        "adjusted_score": 0.6215523809523809,
+        "cumulative_score": 0.4452380952380952,
+        "adjusted_score": 0.4452380952380952,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "4.1,6.3,14.1,14.2,14.3,14.6,18.3,18.5"
+            "4.1",
+            "6.3",
+            "14.1",
+            "14.2",
+            "14.3",
+            "14.6",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-20",
@@ -11373,7 +12381,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.19523809523809524,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0
     },
     {
         "tid": "T1542",
@@ -11550,14 +12561,27 @@
                 "url": "https://attack.mitre.org/mitigations/M1051"
             }
         ],
-        "cumulative_score": 0.6690408993019048,
-        "adjusted_score": 0.6690408993019048,
+        "cumulative_score": 0.41972452904761903,
+        "adjusted_score": 0.41972452904761903,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": true,
         "cis_controls": [
-            "3.6,4.1,4.7,5.3,5.4,6.1,6.2,6.8,7.1,7.2,7.3,7.5,18.3,18.5"
+            "3.6",
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "7.1",
+            "7.2",
+            "7.3",
+            "7.5",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -11584,7 +12608,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.319047619047619,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00067691
     },
     {
         "tid": "T1543",
@@ -11725,14 +12752,25 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 2.816066666666667,
-        "adjusted_score": 2.816066666666667,
+        "cumulative_score": 1.7666666666666666,
+        "adjusted_score": 1.7666666666666666,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.3,2.5,3.3,4.1,4.7,5.3,5.4,6.1,6.2,6.8,18.3,18.5"
+            "2.3",
+            "2.5",
+            "3.3",
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-17",
@@ -11761,7 +12799,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.5666666666666667,
+        "choke_point_score": 0.2,
+        "prevalence_score": 1
     },
     {
         "tid": "T1546",
@@ -12049,8 +13090,8 @@
             }
         ],
         "mitigations": [],
-        "cumulative_score": 1.060735674572381,
-        "adjusted_score": 1.060735674572381,
+        "cumulative_score": 0.6654552538095239,
+        "adjusted_score": 0.6654552538095239,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -12066,7 +13107,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.22380952380952382,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.24164573
     },
     {
         "tid": "T1547",
@@ -12363,8 +13407,8 @@
             }
         ],
         "mitigations": [],
-        "cumulative_score": 1.577107598662857,
-        "adjusted_score": 1.577107598662857,
+        "cumulative_score": 0.9894025085714285,
+        "adjusted_score": 0.9894025085714285,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -12375,7 +13419,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.22857142857142856,
+        "choke_point_score": 0.44999999999999996,
+        "prevalence_score": 0.31083108
     },
     {
         "tid": "T1548",
@@ -12533,14 +13580,24 @@
                 "url": "https://attack.mitre.org/mitigations/M1052"
             }
         ],
-        "cumulative_score": 1.8237108401733333,
-        "adjusted_score": 1.8237108401733333,
+        "cumulative_score": 1.3063831233333334,
+        "adjusted_score": 1.3063831233333334,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.5,3.3,4.1,4.7,5.3,5.4,6.1,6.2,6.8,18.3,18.5"
+            "2.5",
+            "3.3",
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-16",
@@ -12569,7 +13626,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.33333333333333337,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.62304979
     },
     {
         "tid": "T1550",
@@ -12721,14 +13781,19 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.37366190476190475,
-        "adjusted_score": 0.37366190476190475,
+        "cumulative_score": 0.3119047619047619,
+        "adjusted_score": 0.3119047619047619,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "4.7,5.2,5.3,5.4,6.1,6.2"
+            "4.7",
+            "5.2",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2"
         ],
         "nist_controls": [
             "AC-2",
@@ -12743,7 +13808,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1619047619047619,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0
     },
     {
         "tid": "T1552",
@@ -13021,14 +14089,41 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 1.492349601975238,
-        "adjusted_score": 1.492349601975238,
+        "cumulative_score": 1.0690183395238095,
+        "adjusted_score": 1.0690183395238095,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "3.1,3.11,3.12,3.2,3.3,4.1,4.2,4.5,4.7,5.2,5.3,5.4,6.1,6.2,6.8,7.1,7.2,7.3,7.5,11.3,14.3,14.4,14.9,16.1,16.9,18.3,18.5,13.10"
+            "3.1",
+            "3.11",
+            "3.12",
+            "3.2",
+            "3.3",
+            "4.1",
+            "4.2",
+            "4.5",
+            "4.7",
+            "5.2",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "7.1",
+            "7.2",
+            "7.3",
+            "7.5",
+            "11.3",
+            "14.3",
+            "14.4",
+            "14.9",
+            "16.1",
+            "16.9",
+            "18.3",
+            "18.5",
+            "13.10"
         ],
         "nist_controls": [
             "AC-16",
@@ -13069,7 +14164,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.6095238095238096,
+        "choke_point_score": 0.35,
+        "prevalence_score": 0.10949453
     },
     {
         "tid": "T1553",
@@ -13237,14 +14335,19 @@
                 "url": "https://attack.mitre.org/mitigations/M1054"
             }
         ],
-        "cumulative_score": 0.5336310831085714,
-        "adjusted_score": 0.5336310831085714,
+        "cumulative_score": 0.3822572228571429,
+        "adjusted_score": 0.3822572228571429,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "2.5,2.6,4.1,4.8,18.3,18.5"
+            "2.5",
+            "2.6",
+            "4.1",
+            "4.8",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-6",
@@ -13271,7 +14374,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.24285714285714288,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.03940008
     },
     {
         "tid": "T1554",
@@ -13304,14 +14410,15 @@
                 "url": "https://attack.mitre.org/mitigations/M1045"
             }
         ],
-        "cumulative_score": 0.34228571428571425,
-        "adjusted_score": 0.34228571428571425,
+        "cumulative_score": 0.2857142857142857,
+        "adjusted_score": 0.2857142857142857,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.7,4.1"
+            "2.7",
+            "4.1"
         ],
         "nist_controls": [
             "CA-8",
@@ -13328,7 +14435,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.18571428571428572,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1555",
@@ -13443,8 +14553,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1027"
             }
         ],
-        "cumulative_score": 0.7152835994590475,
-        "adjusted_score": 0.7152835994590475,
+        "cumulative_score": 0.5123808019047619,
+        "adjusted_score": 0.5123808019047619,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -13461,7 +14571,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.06190476190476191,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.20047604
     },
     {
         "tid": "T1556",
@@ -13609,14 +14722,28 @@
                 "url": "https://attack.mitre.org/mitigations/M1022"
             }
         ],
-        "cumulative_score": 0.551752380952381,
-        "adjusted_score": 0.551752380952381,
+        "cumulative_score": 0.3952380952380953,
+        "adjusted_score": 0.3952380952380953,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "2.6,4.1,4.7,5.1,5.3,5.4,5.5,6.1,6.2,6.4,6.5,6.8,12.2,18.3,18.5"
+            "2.6",
+            "4.1",
+            "4.7",
+            "5.1",
+            "5.3",
+            "5.4",
+            "5.5",
+            "6.1",
+            "6.2",
+            "6.4",
+            "6.5",
+            "6.8",
+            "12.2",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -13640,7 +14767,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.29523809523809524,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1557",
@@ -13789,14 +14919,34 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 1.2308892259161908,
-        "adjusted_score": 1.2308892259161908,
+        "cumulative_score": 0.772201521904762,
+        "adjusted_score": 0.772201521904762,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "3.12,4.1,4.2,4.4,4.6,4.8,7.6,7.7,12.2,12.8,13.3,13.4,13.8,14.2,14.6,16.8,18.2,18.3,18.5,16.10,3.10"
+            "3.12",
+            "4.1",
+            "4.2",
+            "4.4",
+            "4.6",
+            "4.8",
+            "7.6",
+            "7.7",
+            "12.2",
+            "12.8",
+            "13.3",
+            "13.4",
+            "13.8",
+            "14.2",
+            "14.6",
+            "16.8",
+            "18.2",
+            "18.3",
+            "18.5",
+            "16.10",
+            "3.10"
         ],
         "nist_controls": [
             "AC-16",
@@ -13828,7 +14978,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.46190476190476193,
+        "choke_point_score": 0.3,
+        "prevalence_score": 0.01029676
     },
     {
         "tid": "T1558",
@@ -13982,14 +15135,25 @@
                 "url": "https://attack.mitre.org/mitigations/M1026"
             }
         ],
-        "cumulative_score": 0.77466586304,
-        "adjusted_score": 0.77466586304,
+        "cumulative_score": 0.55491824,
+        "adjusted_score": 0.55491824,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": true,
         "cis_controls": [
-            "4.1,4.7,5.2,5.3,5.4,5.5,6.1,6.2,6.8,18.3,18.5,3.10"
+            "4.1",
+            "4.7",
+            "5.2",
+            "5.3",
+            "5.4",
+            "5.5",
+            "6.1",
+            "6.2",
+            "6.8",
+            "18.3",
+            "18.5",
+            "3.10"
         ],
         "nist_controls": [
             "AC-16",
@@ -14016,7 +15180,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.00491824
     },
     {
         "tid": "T1559",
@@ -14126,14 +15293,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1054"
             }
         ],
-        "cumulative_score": 0.7089784200561905,
-        "adjusted_score": 0.7089784200561905,
+        "cumulative_score": 0.5918016861904762,
+        "adjusted_score": 0.5918016861904762,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.5,2.6,4.1,4.8,13.7,18.3,18.5"
+            "2.5",
+            "2.6",
+            "4.1",
+            "4.8",
+            "13.7",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -14160,7 +15333,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.2761904761904762,
+        "choke_point_score": 0.3,
+        "prevalence_score": 0.01561121
     },
     {
         "tid": "T1560",
@@ -14225,14 +15401,19 @@
                 "url": "https://attack.mitre.org/mitigations/M1047"
             }
         ],
-        "cumulative_score": 0.9555651616076191,
-        "adjusted_score": 0.9555651616076191,
+        "cumulative_score": 0.6845022647619048,
+        "adjusted_score": 0.6845022647619048,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.1,2.2,2.3,2.4,18.3,18.5"
+            "2.1",
+            "2.2",
+            "2.3",
+            "2.4",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "CA-8",
@@ -14245,7 +15426,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20476190476190476,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.37974036
     },
     {
         "tid": "T1561",
@@ -14310,14 +15494,18 @@
                 "url": "https://attack.mitre.org/mitigations/M1053"
             }
         ],
-        "cumulative_score": 0.3202746861561905,
-        "adjusted_score": 0.3202746861561905,
+        "cumulative_score": 0.22942312761904762,
+        "adjusted_score": 0.22942312761904762,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "11.1,11.2,11.3,11.4,11.5"
+            "11.1",
+            "11.2",
+            "11.3",
+            "11.4",
+            "11.5"
         ],
         "nist_controls": [
             "AC-3",
@@ -14335,7 +15523,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.14761904761904762,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.03180408
     },
     {
         "tid": "T1562",
@@ -14600,14 +15791,21 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 3.5914761904761905,
-        "adjusted_score": 3.5914761904761905,
+        "cumulative_score": 1.8047619047619048,
+        "adjusted_score": 1.8047619047619048,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "3.3,4.1,4.7,5.3,5.4,6.1,6.2,6.8"
+            "3.3",
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8"
         ],
         "nist_controls": [
             "AC-2",
@@ -14631,7 +15829,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.7047619047619047,
+        "choke_point_score": 0.1,
+        "prevalence_score": 1
     },
     {
         "tid": "T1563",
@@ -14768,14 +15969,31 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.7214324169152382,
-        "adjusted_score": 0.7214324169152382,
+        "cumulative_score": 0.4525924823809524,
+        "adjusted_score": 0.4525924823809524,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "2.3,2.5,3.12,4.1,4.2,4.4,4.7,4.8,5.3,6.1,6.2,6.8,7.6,12.2,12.8,18.3,18.5,16.10"
+            "2.3",
+            "2.5",
+            "3.12",
+            "4.1",
+            "4.2",
+            "4.4",
+            "4.7",
+            "4.8",
+            "5.3",
+            "6.1",
+            "6.2",
+            "6.8",
+            "7.6",
+            "12.2",
+            "12.8",
+            "18.3",
+            "18.5",
+            "16.10"
         ],
         "nist_controls": [
             "AC-17",
@@ -14802,7 +16020,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3523809523809524,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00021153
     },
     {
         "tid": "T1564",
@@ -14966,8 +16187,8 @@
             }
         ],
         "mitigations": [],
-        "cumulative_score": 1.3868535016171428,
-        "adjusted_score": 1.3868535016171428,
+        "cumulative_score": 0.8700461114285714,
+        "adjusted_score": 0.8700461114285714,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
@@ -14978,7 +16199,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.07142857142857142,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.69861754
     },
     {
         "tid": "T1565",
@@ -15096,14 +16320,29 @@
                 "url": "https://attack.mitre.org/mitigations/M1022"
             }
         ],
-        "cumulative_score": 0.7638544095428572,
-        "adjusted_score": 0.7638544095428572,
+        "cumulative_score": 0.4792060285714286,
+        "adjusted_score": 0.4792060285714286,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "3.11,3.12,3.3,4.4,6.1,6.2,6.8,11.1,11.2,11.3,11.4,11.5,12.2,12.8,16.8,3.10"
+            "3.11",
+            "3.12",
+            "3.3",
+            "4.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "11.1",
+            "11.2",
+            "11.3",
+            "11.4",
+            "11.5",
+            "12.2",
+            "12.8",
+            "16.8",
+            "3.10"
         ],
         "nist_controls": [
             "AC-16",
@@ -15137,7 +16376,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.4285714285714286,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.0006346
     },
     {
         "tid": "T1566",
@@ -15291,14 +16533,22 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 0.8240984071790476,
-        "adjusted_score": 0.8240984071790476,
+        "cumulative_score": 0.590328371904762,
+        "adjusted_score": 0.590328371904762,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.3,2.7,9.3,9.6,13.3,13.8,14.1,14.2,14.6"
+            "2.3",
+            "2.7",
+            "9.3",
+            "9.6",
+            "13.3",
+            "13.8",
+            "14.1",
+            "14.2",
+            "14.6"
         ],
         "nist_controls": [
             "AC-4",
@@ -15318,7 +16568,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.46190476190476193,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.02842361
     },
     {
         "tid": "T1567",
@@ -15388,14 +16641,16 @@
                 "url": "https://attack.mitre.org/mitigations/M1021"
             }
         ],
-        "cumulative_score": 0.4857904761904763,
-        "adjusted_score": 0.4857904761904763,
+        "cumulative_score": 0.3047619047619048,
+        "adjusted_score": 0.3047619047619048,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "2.3,2.5,9.3"
+            "2.3",
+            "2.5",
+            "9.3"
         ],
         "nist_controls": [
             "AC-16",
@@ -15420,7 +16675,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20476190476190478,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1568",
@@ -15496,14 +16754,16 @@
                 "url": "https://attack.mitre.org/mitigations/M1021"
             }
         ],
-        "cumulative_score": 0.3052047619047619,
-        "adjusted_score": 0.3052047619047619,
+        "cumulative_score": 0.2547619047619048,
+        "adjusted_score": 0.2547619047619048,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "9.2,13.3,13.8"
+            "9.2",
+            "13.3",
+            "13.8"
         ],
         "nist_controls": [
             "AC-4",
@@ -15519,7 +16779,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.10476190476190478,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0
     },
     {
         "tid": "T1569",
@@ -15613,14 +16876,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 1.495247719247619,
-        "adjusted_score": 1.495247719247619,
+        "cumulative_score": 1.0710943547619047,
+        "adjusted_score": 1.0710943547619047,
         "has_car": true,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "4.1,4.7,5.3,5.4,6.1,6.2,6.8"
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8"
         ],
         "nist_controls": [
             "AC-2",
@@ -15642,7 +16911,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20476190476190478,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.66633245
     },
     {
         "tid": "T1570",
@@ -15685,14 +16957,23 @@
                 "url": "https://attack.mitre.org/mitigations/M1031"
             }
         ],
-        "cumulative_score": 1.146364215241905,
-        "adjusted_score": 1.146364215241905,
+        "cumulative_score": 0.7191745390476191,
+        "adjusted_score": 0.7191745390476191,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": false,
         "cis_controls": [
-            "4.2,4.4,4.5,7.6,7.7,13.3,13.4,13.8,18.2,18.3"
+            "4.2",
+            "4.4",
+            "4.5",
+            "7.6",
+            "7.7",
+            "13.3",
+            "13.4",
+            "13.8",
+            "18.2",
+            "18.3"
         ],
         "nist_controls": [
             "AC-3",
@@ -15711,7 +16992,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.21904761904761905,
+        "choke_point_score": 0.5,
+        "prevalence_score": 0.00012692
     },
     {
         "tid": "T1571",
@@ -15749,14 +17033,19 @@
                 "url": "https://attack.mitre.org/mitigations/M1030"
             }
         ],
-        "cumulative_score": 0.6685916625485713,
-        "adjusted_score": 0.6685916625485713,
+        "cumulative_score": 0.5580898685714285,
+        "adjusted_score": 0.5580898685714285,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.2,4.4,12.2,12.8,13.3,13.8"
+            "4.2",
+            "4.4",
+            "12.2",
+            "12.8",
+            "13.3",
+            "13.8"
         ],
         "nist_controls": [
             "AC-4",
@@ -15772,7 +17061,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.22857142857142856,
+        "choke_point_score": 0.25,
+        "prevalence_score": 0.07951844
     },
     {
         "tid": "T1572",
@@ -15810,14 +17102,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1031"
             }
         ],
-        "cumulative_score": 0.4857663874647619,
-        "adjusted_score": 0.4857663874647619,
+        "cumulative_score": 0.4054811247619048,
+        "adjusted_score": 0.4054811247619048,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "4.2,4.4,7.7,9.3,13.3,13.4,13.8"
+            "4.2",
+            "4.4",
+            "7.7",
+            "9.3",
+            "13.3",
+            "13.4",
+            "13.8"
         ],
         "nist_controls": [
             "AC-3",
@@ -15836,7 +17134,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.20476190476190476,
+        "choke_point_score": 0.2,
+        "prevalence_score": 0.00071922
     },
     {
         "tid": "T1573",
@@ -15909,14 +17210,15 @@
                 "url": "https://attack.mitre.org/mitigations/M1020"
             }
         ],
-        "cumulative_score": 0.26867508120380956,
-        "adjusted_score": 0.26867508120380956,
+        "cumulative_score": 0.22426968380952383,
+        "adjusted_score": 0.22426968380952383,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "13.3,13.8"
+            "13.3",
+            "13.8"
         ],
         "nist_controls": [
             "AC-4",
@@ -15935,7 +17237,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.12380952380952381,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0.00046016
     },
     {
         "tid": "T1574",
@@ -16283,14 +17588,30 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 2.5493619047619047,
-        "adjusted_score": 2.5493619047619047,
+        "cumulative_score": 1.8261904761904764,
+        "adjusted_score": 1.8261904761904764,
         "has_car": true,
         "has_sigma": true,
         "has_es_siem": true,
         "has_splunk": true,
         "cis_controls": [
-            "2.5,2.6,4.1,4.7,5.3,5.4,6.1,6.2,6.8,7.1,7.2,7.3,7.4,7.5,16.13,18.3,18.5"
+            "2.5",
+            "2.6",
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "7.1",
+            "7.2",
+            "7.3",
+            "7.4",
+            "7.5",
+            "16.13",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -16317,7 +17638,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.47619047619047616,
+        "choke_point_score": 0.35,
+        "prevalence_score": 1
     },
     {
         "tid": "T1578",
@@ -16433,14 +17757,21 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.33658095238095237,
-        "adjusted_score": 0.33658095238095237,
+        "cumulative_score": 0.28095238095238095,
+        "adjusted_score": 0.28095238095238095,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "4.7,5.3,5.4,6.1,6.2,6.8,18.3,18.5"
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -16459,7 +17790,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.18095238095238098,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1580",
@@ -16494,14 +17828,20 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.25671428571428573,
-        "adjusted_score": 0.25671428571428573,
+        "cumulative_score": 0.2142857142857143,
+        "adjusted_score": 0.2142857142857143,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "3.3,4.7,5.3,5.4,6.1,6.2,6.8"
+            "3.3",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8"
         ],
         "nist_controls": [
             "AC-2",
@@ -16514,7 +17854,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.11428571428571428,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1583",
@@ -16637,8 +17980,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1056"
             }
         ],
-        "cumulative_score": 0.0599,
-        "adjusted_score": 0.0599,
+        "cumulative_score": 0.05,
+        "adjusted_score": 0.05,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
@@ -16649,7 +17992,9 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1584",
@@ -16772,8 +18117,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1056"
             }
         ],
-        "cumulative_score": 0.0647149417,
-        "adjusted_score": 0.0647149417,
+        "cumulative_score": 0.05401915,
+        "adjusted_score": 0.05401915,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
@@ -16784,7 +18129,9 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0.00401915
     },
     {
         "tid": "T1585",
@@ -16844,8 +18191,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1056"
             }
         ],
-        "cumulative_score": 0.0599,
-        "adjusted_score": 0.0599,
+        "cumulative_score": 0.05,
+        "adjusted_score": 0.05,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
@@ -16856,7 +18203,9 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1586",
@@ -16916,8 +18265,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1056"
             }
         ],
-        "cumulative_score": 0.0599,
-        "adjusted_score": 0.0599,
+        "cumulative_score": 0.05,
+        "adjusted_score": 0.05,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
@@ -16928,7 +18277,9 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1587",
@@ -17031,7 +18382,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.047619047619047616,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1588",
@@ -17165,7 +18519,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1589",
@@ -17237,8 +18594,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1056"
             }
         ],
-        "cumulative_score": 0.0656047619047619,
-        "adjusted_score": 0.0656047619047619,
+        "cumulative_score": 0.05476190476190476,
+        "adjusted_score": 0.05476190476190476,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
@@ -17249,7 +18606,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1590",
@@ -17373,14 +18733,18 @@
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "18.2,18.3"
+            "18.2",
+            "18.3"
         ],
         "nist_controls": [],
         "process_coverage": false,
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.01904761904761905,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1591",
@@ -17479,7 +18843,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1592",
@@ -17580,7 +18946,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1593",
@@ -17649,7 +19018,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1594",
@@ -17677,8 +19048,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1056"
             }
         ],
-        "cumulative_score": 0.0656047619047619,
-        "adjusted_score": 0.0656047619047619,
+        "cumulative_score": 0.05476190476190476,
+        "adjusted_score": 0.05476190476190476,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
@@ -17689,7 +19060,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1595",
@@ -17749,21 +19123,25 @@
                 "url": "https://attack.mitre.org/mitigations/M1056"
             }
         ],
-        "cumulative_score": 0.08271904761904762,
-        "adjusted_score": 0.08271904761904762,
+        "cumulative_score": 0.06904761904761905,
+        "adjusted_score": 0.06904761904761905,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "18.2,18.3"
+            "18.2",
+            "18.3"
         ],
         "nist_controls": [],
         "process_coverage": false,
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.01904761904761905,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1596",
@@ -17877,7 +19255,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1597",
@@ -17946,7 +19326,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1598",
@@ -18040,14 +19422,16 @@
                 "url": "https://attack.mitre.org/mitigations/M1017"
             }
         ],
-        "cumulative_score": 0.25593333333333335,
-        "adjusted_score": 0.25593333333333335,
+        "cumulative_score": 0.18333333333333335,
+        "adjusted_score": 0.18333333333333335,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "14.1,14.2,14.6"
+            "14.1",
+            "14.2",
+            "14.6"
         ],
         "nist_controls": [
             "AC-4",
@@ -18066,7 +19450,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.13333333333333333,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1599",
@@ -18159,14 +19546,27 @@
                 "url": "https://attack.mitre.org/mitigations/M1026"
             }
         ],
-        "cumulative_score": 0.4250047619047619,
-        "adjusted_score": 0.4250047619047619,
+        "cumulative_score": 0.3547619047619048,
+        "adjusted_score": 0.3547619047619048,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "4.1,4.2,4.4,4.7,5.2,5.3,5.4,6.1,6.2,6.4,6.5,6.8,12.2,13.4"
+            "4.1",
+            "4.2",
+            "4.4",
+            "4.7",
+            "5.2",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.4",
+            "6.5",
+            "6.8",
+            "12.2",
+            "13.4"
         ],
         "nist_controls": [
             "AC-2",
@@ -18192,7 +19592,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.3047619047619048,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1600",
@@ -18230,8 +19633,8 @@
             }
         ],
         "mitigations": [],
-        "cumulative_score": 0.0599,
-        "adjusted_score": 0.0599,
+        "cumulative_score": 0.05,
+        "adjusted_score": 0.05,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
@@ -18242,7 +19645,9 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1601",
@@ -18391,8 +19796,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1026"
             }
         ],
-        "cumulative_score": 0.5533619047619047,
-        "adjusted_score": 0.5533619047619047,
+        "cumulative_score": 0.46190476190476193,
+        "adjusted_score": 0.46190476190476193,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
@@ -18430,7 +19835,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.36190476190476195,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1602",
@@ -18580,14 +19988,29 @@
                 "url": "https://attack.mitre.org/mitigations/M1051"
             }
         ],
-        "cumulative_score": 0.5162809523809524,
-        "adjusted_score": 0.5162809523809524,
+        "cumulative_score": 0.430952380952381,
+        "adjusted_score": 0.430952380952381,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "3.12,4.1,4.2,4.4,4.6,7.6,12.1,12.2,12.8,13.3,13.4,13.8,18.2,18.3,18.5,3.10"
+            "3.12",
+            "4.1",
+            "4.2",
+            "4.4",
+            "4.6",
+            "7.6",
+            "12.1",
+            "12.2",
+            "12.8",
+            "13.3",
+            "13.4",
+            "13.8",
+            "18.2",
+            "18.3",
+            "18.5",
+            "3.10"
         ],
         "nist_controls": [
             "AC-16",
@@ -18620,7 +20043,10 @@
         "network_coverage": true,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.380952380952381,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1606",
@@ -18730,14 +20156,22 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.362252380952381,
-        "adjusted_score": 0.362252380952381,
+        "cumulative_score": 0.3023809523809524,
+        "adjusted_score": 0.3023809523809524,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
         "has_splunk": false,
         "cis_controls": [
-            "4.1,4.7,5.3,5.4,6.1,6.2,6.8,18.3,18.5"
+            "4.1",
+            "4.7",
+            "5.3",
+            "5.4",
+            "6.1",
+            "6.2",
+            "6.8",
+            "18.3",
+            "18.5"
         ],
         "nist_controls": [
             "AC-2",
@@ -18752,7 +20186,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.1523809523809524,
+        "choke_point_score": 0.15000000000000002,
+        "prevalence_score": 0
     },
     {
         "tid": "T1608",
@@ -18868,7 +20305,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.05,
+        "prevalence_score": 0
     },
     {
         "tid": "T1609",
@@ -18908,8 +20348,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1026"
             }
         ],
-        "cumulative_score": 0.1255047619047619,
-        "adjusted_score": 0.1255047619047619,
+        "cumulative_score": 0.10476190476190476,
+        "adjusted_score": 0.10476190476190476,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
@@ -18930,7 +20370,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1610",
@@ -18975,8 +20418,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.17948571428571425,
-        "adjusted_score": 0.17948571428571425,
+        "cumulative_score": 0.12857142857142856,
+        "adjusted_score": 0.12857142857142856,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
@@ -18997,7 +20440,10 @@
         "network_coverage": false,
         "file_coverage": true,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.028571428571428567,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1611",
@@ -19041,8 +20487,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1026"
             }
         ],
-        "cumulative_score": 0.20494285714285712,
-        "adjusted_score": 0.20494285714285712,
+        "cumulative_score": 0.12857142857142856,
+        "adjusted_score": 0.12857142857142856,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
@@ -19074,7 +20520,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": true
+        "hardware_coverage": true,
+        "actionability_score": 0.028571428571428567,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1612",
@@ -19167,8 +20616,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.1312095238095238,
-        "adjusted_score": 0.1312095238095238,
+        "cumulative_score": 0.10952380952380952,
+        "adjusted_score": 0.10952380952380952,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
@@ -19190,7 +20639,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.009523809523809523,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1614",
@@ -19226,8 +20678,8 @@
             }
         ],
         "mitigations": [],
-        "cumulative_score": 0.1255047619047619,
-        "adjusted_score": 0.1255047619047619,
+        "cumulative_score": 0.10476190476190476,
+        "adjusted_score": 0.10476190476190476,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": true,
@@ -19238,7 +20690,10 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1615",
@@ -19263,8 +20718,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.18976190476190477,
-        "adjusted_score": 0.18976190476190477,
+        "cumulative_score": 0.11904761904761905,
+        "adjusted_score": 0.11904761904761905,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
@@ -19275,7 +20730,10 @@
         "network_coverage": true,
         "file_coverage": true,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.019047619047619046,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1619",
@@ -19304,8 +20762,8 @@
                 "url": "https://attack.mitre.org/mitigations/M1018"
             }
         ],
-        "cumulative_score": 0.1198,
-        "adjusted_score": 0.1198,
+        "cumulative_score": 0.1,
+        "adjusted_score": 0.1,
         "has_car": false,
         "has_sigma": false,
         "has_es_siem": false,
@@ -19324,7 +20782,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": true,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     },
     {
         "tid": "T1620",
@@ -19349,8 +20809,8 @@
         "supertechnique": null,
         "subtechniques": [],
         "mitigations": [],
-        "cumulative_score": 0.1255047619047619,
-        "adjusted_score": 0.1255047619047619,
+        "cumulative_score": 0.10476190476190476,
+        "adjusted_score": 0.10476190476190476,
         "has_car": false,
         "has_sigma": true,
         "has_es_siem": false,
@@ -19361,6 +20821,9 @@
         "network_coverage": false,
         "file_coverage": false,
         "cloud_coverage": false,
-        "hardware_coverage": false
+        "hardware_coverage": false,
+        "actionability_score": 0.0047619047619047615,
+        "choke_point_score": 0.1,
+        "prevalence_score": 0
     }
 ]

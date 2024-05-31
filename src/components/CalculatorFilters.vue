@@ -1,11 +1,20 @@
 <template>
     <div>
         <Accordion>
-            <AccordionTab v-for="group in calculatorStore.filterProperties" :key="group.id" :header="group.label">
-                <div v-for="option in group.options" :key="option.id" class="checkbox-group">
-                    <Checkbox :input-id="option.id" :value="option.name" v-model="this.filters[group.id]"
-                        class="my-auto" />
-                    <label class="my-auto">{{ option.name }}</label>
+            <AccordionTab v-for="group in Object.keys(calculatorStore.filterProperties)" :key="group"
+                :header="calculatorStore.filterProperties[group].label">
+                <div class="checkbox-group">
+                    <Checkbox :model-value="isSelected(group)" :disabled="isSelected(group)" :binary="true"
+                        :input-id="`select_all_${group}`" @change="select(group)">
+                    </Checkbox>
+                    <label for="`select_all_${group}`" class="my-auto">All {{ group.toUpperCase() }} Controls</label>
+                </div>
+                <div v-for="option in calculatorStore.filterProperties[group].options" :key="option.id"
+                    class="checkbox-group">
+                    <Checkbox :model-value="isSelected(group, option.name)" @change="select(group, option.name)"
+                        :binary="true" class="my-auto">
+                    </Checkbox>
+                    <label :for="option.name" class="my-auto">{{ option.name }}</label>
                 </div>
             </AccordionTab>
         </Accordion>
@@ -29,7 +38,6 @@ export default defineComponent({
     },
     computed: {
         filters() {
-            this.calculatorStore.setFilters()
             return this.calculatorStore.activeFilters
         },
     },
@@ -37,6 +45,33 @@ export default defineComponent({
         saveNewFilterValues() {
             this.calculatorStore.updateActiveFilters(this.filters)
         },
+        isSelected(group: string, option?: string): boolean {
+            if (!option) {
+                return this.filters[group].size === 0
+            } else {
+                return this.filters[group].has(option);
+            }
+        },
+        select(group: string, option?: string) {
+            if (group && !option) {
+                this.filters[group].clear()
+            }
+            if (group && option) {
+                if (this.filters[group].has(option)) {
+                    this.filters[group].delete(option)
+                }
+                else {
+                    this.filters[group].add(option)
+                }
+                if (this.filters[group].size === this.calculatorStore.filterProperties[group].options.length) {
+                    // if all options are selected, empty the set 
+                    this.filters[group].clear()
+                }
+            }
+        }
+    },
+    created() {
+        this.calculatorStore.setFilters()
     }
 });
 </script>

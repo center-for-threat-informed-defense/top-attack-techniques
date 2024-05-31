@@ -37,13 +37,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, toRaw } from "vue";
 import { useCalculatorStore } from "../stores/calculator.store";
 import TopTenSidebar from "../components/TopTenSidebar.vue"
 import TopTenDetails from "../components/TopTenDetails.vue"
 import TopTenAccordion from "../components/TopTenAccordion.vue"
 import SystemScoreSection from "../components/SystemScoreSection.vue"
 import downloadjs from "downloadjs";
+import type { ExportedTechnique, Technique } from "@/data/DataTypes";
 
 export default defineComponent({
     components: { TopTenSidebar, TopTenDetails, TopTenAccordion, SystemScoreSection },
@@ -51,12 +52,16 @@ export default defineComponent({
         return {
             calculatorStore: useCalculatorStore(),
             activeItemId: 0,
+            rankedList: Array<Technique>
         };
     },
     computed: {
-        rankedList() {
-            return this.calculatorStore.techniques
-        }
+        filters() {
+            return this.calculatorStore.activeFilters;
+        },
+        scores() {
+            return this.calculatorStore.systemScoreObj;
+        },
     },
     methods: {
         deleteTechnique(index: number) {
@@ -66,9 +71,98 @@ export default defineComponent({
             }
         },
         download() {
-            downloadjs(JSON.stringify(this.rankedList.slice(0, 10)), "TopTenTechniques.json", JSON)
+            const parsedList = [] as Array<ExportedTechnique>;
+
+            this.rankedList.slice(0, 10).forEach((technique, i) => {
+                const t = {
+                    rank: i + 1,
+                    tid: technique.tid,
+                    name: technique.name,
+                    description: technique.description,
+                    url: technique.url,
+                    detection: technique.detection,
+                    score: technique.adjusted_score,
+                    network_score: technique.network_score,
+                    process_score: technique.process_score,
+                    file_score: technique.file_score,
+                    cloud_score: technique.cloud_score,
+                    hardware_score: technique.hardware_score,
+                    mitigations: technique.mitigations,
+                    subtechniques: technique.subtechniques,
+                    actionability_score: technique.actionability_score,
+                    choke_point_score: technique.choke_point_score,
+                    prevalence_score: technique.prevalence_score,
+                }
+                parsedList.push(t);
+            })
+
+            downloadjs(JSON.stringify(parsedList, null, 4), "TopTenTechniques.json", JSON)
+        },
+        setRankedList() {
+            let filteredList = structuredClone(toRaw(this.calculatorStore.techniques));
+            filteredList = this.applyScores(filteredList)
+            filteredList = this.applyFilters(filteredList)
+            filteredList.sort(
+                (a, b) => b.adjusted_score - a.adjusted_score
+            );
+            this.rankedList = filteredList
+        },
+        applyFilters(filteredList: Array<Technique>) {
+            const newFilterList = []
+            // if there are no filters selected, then return full list of techniques
+            if (this.filters.nist.size === 0 && this.filters.cis.size === 0 && this.filters.detection.size === 0 && this.filters.os.size === 0) {
+                return filteredList;
+            }
+            for (const technique of filteredList) {
+                if (this.addTechniqueToList(technique)) {
+                    newFilterList.push(technique)
+                }
+            }
+            return newFilterList
+        },
+        addTechniqueToList(technique: Technique): boolean {
+            for (const property of this.filters.cis) {
+                if (technique.cis_controls && technique.cis_controls.find(c => c === property)) {
+                    return true;
+                }
+            }
+
+            for (const property of this.filters.nist) {
+                if (technique.nist_controls && technique.nist_controls.find(n => n === property)) {
+                    return true;
+                }
+            }
+            for (const property of this.filters.os) {
+                if (technique.platforms && technique.platforms.find(n => n === property)) {
+                    return true;
+                }
+            }
+            for (const filterProp of this.filters.detection) {
+                const key = this.calculatorStore.filterProperties.detection.options.find(i => i.name === filterProp)
+                if (technique[key.id]) {
+                    return true;
+                }
+            }
+            return false;
+        },
+        applyScores(filteredList: Array<Technique>) {
+            for (const monitoringType of Object.keys(this.scores)) {
+                const adjustment = this.scores[monitoringType].value;
+                filteredList = filteredList.map((technique) => {
+                    if (technique[`${monitoringType}_coverage`]) {
+                        const score_adjustment = ((1 / Object.keys(this.scores).length) * adjustment)
+                        technique.adjusted_score += score_adjustment;
+                        technique[`${monitoringType}_score`] = score_adjustment;
+                    }
+                    return technique
+                })
+            }
+            return filteredList
         }
-    }
+    },
+    beforeMount() {
+        this.setRankedList();
+    },
 });
 </script>
 
