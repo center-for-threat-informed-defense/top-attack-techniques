@@ -2,12 +2,12 @@
     <div>
         <ul>
             <li v-for="(n, i) in 10" :key="i" class="list-item" :class="{ 'active': activeItemId === i }">
-                <div class="w-full" @click="this.$parent.setActiveIndex(i)">
+                <div class="w-full" @click="$emit('setActiveIndex', i)">
                     {{ i + 1 }}.
                     <span class="ml-3 mr-1 highlight">{{ this.rankedList[i].tid }}</span>
                     {{ this.rankedList[i].name }}
                 </div>
-                <button @click="this.$parent.deleteTechnique(i)">
+                <button @click="$emit('deleteTechnique', i)">
                     <i class="pi pi-trash"></i>
                 </button>
             </li>

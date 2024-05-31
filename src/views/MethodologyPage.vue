@@ -11,7 +11,8 @@
     <div class="container-row">
       <div class="lg:w-1/4">
         <div class="w-full h-auto lg:border-0 border-[1px] border-ctid-black mb-4">
-          <MethodologySidebar :methodology-list="methodologyList" :active-item-id="activeItemId" />
+          <MethodologySidebar :methodology-list="methodologyList" :active-item-id="activeItemId"
+            @set-active-index="(i) => activeItemId = i" />
         </div>
       </div>
       <div class="lg:w-3/4">
@@ -49,11 +50,6 @@ export default defineComponent({
       ]
     };
   },
-  methods: {
-    setActiveIndex(index: number) {
-      this.activeItemId = index
-    },
-  }
 });
 </script>
 
