@@ -14,7 +14,7 @@
             <div class="md:flex">
                 <img src="../assets/logo-horizontal-white.png" class="h-6 my-auto" />
                 <div class="social-links">
-                    <a href="mailto:ctid@mitre-engenuity.org?subject=Mappings%20Explorer" class="email"><i
+                    <a href="mailto:ctid@mitre-engenuity.org?subject=Top%20ATT&CK%20Techniques" class="email"><i
                             class="pi pi-envelope"></i></a>
                     <a href="https://www.linkedin.com/showcase/center-for-threat-informed-defense/" target="blank"
                         class="linkedin"><i class="pi pi-linkedin"></i></a>
@@ -64,7 +64,7 @@ h1 {
 }
 
 h2 {
-    @apply text-xl font-medium
+    @apply text-xl font-semibold
 }
 
 .social-links {
@@ -72,7 +72,8 @@ h2 {
 }
 
 .internal-links {
-    @apply md:flex my-4;
+    @apply md:flex my-4 uppercase;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 
 .internal-links div::before {
