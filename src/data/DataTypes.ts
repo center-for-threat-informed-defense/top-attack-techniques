@@ -32,6 +32,8 @@ export interface Technique {
   actionability_score: number;
   choke_point_score: number;
   prevalence_score: number;
+  mitigation_actionability: number;
+  detection_actionability: number;
 }
 export interface Subtechnique {
   tid: string;
@@ -66,4 +68,6 @@ export interface ExportedTechnique {
   actionability_score: number;
   choke_point_score: number;
   prevalence_score: number;
+  mitigation_actionability: number;
+  detection_actionability: number;
 }

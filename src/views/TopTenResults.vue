@@ -75,7 +75,7 @@ export default defineComponent({
         download() {
             const parsedList = [] as Array<ExportedTechnique>;
 
-            this.rankedList.slice(0, 10).forEach((technique, i) => {
+            this.rankedList.slice(0, 10).forEach((technique: Technique, i: number) => {
                 const t = {
                     rank: i + 1,
                     tid: technique.tid,
@@ -94,6 +94,8 @@ export default defineComponent({
                     actionability_score: technique.actionability_score,
                     choke_point_score: technique.choke_point_score,
                     prevalence_score: technique.prevalence_score,
+                    mitigation_actionability: technique.mitigation_actionability,
+                    detection_actionability: technique.detection_actionability
                 }
                 parsedList.push(t);
             })

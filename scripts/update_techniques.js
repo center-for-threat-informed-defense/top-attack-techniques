@@ -128,6 +128,8 @@ const DESTINATION_FILE = "src/data/Techniques.json";
         technique.actionability_score = r.getCell(22).value.result;
         technique.choke_point_score = r.getCell(8).value.result;
         technique.prevalence_score = r.getCell(13).value;
+        technique.mitigation_actionability = r.getCell(25).value.result;
+        technique.detection_actionability = r.getCell(28).value.result;
       }
     }
   });
