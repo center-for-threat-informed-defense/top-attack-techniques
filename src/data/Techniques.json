@@ -97,10 +97,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.08571428571428572,
+        "actionability_score": {
+            "combined_score": 0.08571428571428572,
+            "mitigation_score": 0.16363636363636364
+        },
         "choke_point_score": 0.2,
-        "prevalence_score": 0.01157747,
-        "mitigation_actionability": 0.16363636363636364
+        "prevalence_score": 0.01157747
     },
     {
         "tid": "T1003",
@@ -495,11 +497,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.8333333333333334,
+        "actionability_score": {
+            "combined_score": 0.8333333333333334,
+            "mitigation_score": 0.7454545454545455,
+            "detection_score": 0.93
+        },
         "choke_point_score": 0.3,
-        "prevalence_score": 0.32699817,
-        "mitigation_actionability": 0.7454545454545455,
-        "detection_actionability": 0.93
+        "prevalence_score": 0.32699817
     },
     {
         "tid": "T1005",
@@ -559,11 +563,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.17142857142857143,
+        "actionability_score": {
+            "combined_score": 0.17142857142857143,
+            "mitigation_score": 0.23636363636363636,
+            "detection_score": 0.1
+        },
         "choke_point_score": 0.2,
-        "prevalence_score": 0.00266759,
-        "mitigation_actionability": 0.23636363636363636,
-        "detection_actionability": 0.1
+        "prevalence_score": 0.00266759
     },
     {
         "tid": "T1006",
@@ -598,10 +604,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.009523809523809523,
+        "actionability_score": {
+            "combined_score": 0.009523809523809523,
+            "detection_score": 0.02
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.02
+        "prevalence_score": 0
     },
     {
         "tid": "T1007",
@@ -637,10 +645,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.023809523809523808,
+        "actionability_score": {
+            "combined_score": 0.023809523809523808,
+            "detection_score": 0.05
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.05
+        "prevalence_score": 0
     },
     {
         "tid": "T1008",
@@ -696,11 +706,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.10476190476190476,
+        "actionability_score": {
+            "combined_score": 0.10476190476190476,
+            "mitigation_score": 0.18181818181818182,
+            "detection_score": 0.02
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.18181818181818182,
-        "detection_actionability": 0.02
+        "prevalence_score": 0
     },
     {
         "tid": "T1010",
@@ -737,10 +749,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.009523809523809523,
+        "actionability_score": {
+            "combined_score": 0.009523809523809523,
+            "detection_score": 0.02
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.02
+        "prevalence_score": 0
     },
     {
         "tid": "T1011",
@@ -818,10 +832,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.06666666666666667,
+        "actionability_score": {
+            "combined_score": 0.06666666666666667,
+            "mitigation_score": 0.12727272727272726
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.12727272727272726
+        "prevalence_score": 0
     },
     {
         "tid": "T1012",
@@ -858,10 +874,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.07619047619047618,
+        "actionability_score": {
+            "combined_score": 0.07619047619047618,
+            "detection_score": 0.16
+        },
         "choke_point_score": 0.35,
-        "prevalence_score": 0.12907804,
-        "detection_actionability": 0.16
+        "prevalence_score": 0.12907804
     },
     {
         "tid": "T1014",
@@ -898,10 +916,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.019047619047619046,
+        "actionability_score": {
+            "combined_score": 0.019047619047619046,
+            "detection_score": 0.04
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00087447,
-        "detection_actionability": 0.04
+        "prevalence_score": 0.00087447
     },
     {
         "tid": "T1016",
@@ -949,10 +969,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.08095238095238096,
+        "actionability_score": {
+            "combined_score": 0.08095238095238096,
+            "detection_score": 0.17
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.02451534,
-        "detection_actionability": 0.17
+        "prevalence_score": 0.02451534
     },
     {
         "tid": "T1018",
@@ -991,10 +1013,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.18095238095238095,
+        "actionability_score": {
+            "combined_score": 0.18095238095238095,
+            "detection_score": 0.38
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.01949044,
-        "detection_actionability": 0.38
+        "prevalence_score": 0.01949044
     },
     {
         "tid": "T1020",
@@ -1052,10 +1076,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.057142857142857134,
+        "actionability_score": {
+            "combined_score": 0.057142857142857134,
+            "detection_score": 0.12
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00021153,
-        "detection_actionability": 0.12
+        "prevalence_score": 0.00021153
     },
     {
         "tid": "T1021",
@@ -1342,11 +1368,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.4761904761904762,
+        "actionability_score": {
+            "combined_score": 0.4761904761904762,
+            "mitigation_score": 0.34545454545454546,
+            "detection_score": 0.62
+        },
         "choke_point_score": 0.45,
-        "prevalence_score": 0.66605219,
-        "mitigation_actionability": 0.34545454545454546,
-        "detection_actionability": 0.62
+        "prevalence_score": 0.66605219
     },
     {
         "tid": "T1025",
@@ -1406,10 +1434,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.14285714285714285,
+        "actionability_score": {
+            "combined_score": 0.14285714285714285,
+            "mitigation_score": 0.2727272727272727
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.2727272727272727
+        "prevalence_score": 0
     },
     {
         "tid": "T1027",
@@ -1530,11 +1560,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.5714285714285714,
+        "actionability_score": {
+            "combined_score": 0.5714285714285714,
+            "mitigation_score": 0.2,
+            "detection_score": 0.98
+        },
         "choke_point_score": 0.15000000000000002,
-        "prevalence_score": 0.77288591,
-        "mitigation_actionability": 0.2,
-        "detection_actionability": 0.98
+        "prevalence_score": 0.77288591
     },
     {
         "tid": "T1029",
@@ -1589,11 +1621,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.09047619047619047,
+        "actionability_score": {
+            "combined_score": 0.09047619047619047,
+            "mitigation_score": 0.16363636363636364,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.16363636363636364,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1030",
@@ -1648,11 +1682,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.09523809523809523,
+        "actionability_score": {
+            "combined_score": 0.09523809523809523,
+            "mitigation_score": 0.16363636363636364,
+            "detection_score": 0.02
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.16363636363636364,
-        "detection_actionability": 0.02
+        "prevalence_score": 0
     },
     {
         "tid": "T1033",
@@ -1689,10 +1725,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.1952380952380952,
+        "actionability_score": {
+            "combined_score": 0.1952380952380952,
+            "detection_score": 0.41
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00046537,
-        "detection_actionability": 0.41
+        "prevalence_score": 0.00046537
     },
     {
         "tid": "T1036",
@@ -1880,11 +1918,13 @@
         "file_coverage": true,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.519047619047619,
+        "actionability_score": {
+            "combined_score": 0.519047619047619,
+            "mitigation_score": 0.34545454545454546,
+            "detection_score": 0.71
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 1,
-        "mitigation_actionability": 0.34545454545454546,
-        "detection_actionability": 0.71
+        "prevalence_score": 1
     },
     {
         "tid": "T1037",
@@ -2033,11 +2073,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.18571428571428572,
+        "actionability_score": {
+            "combined_score": 0.18571428571428572,
+            "mitigation_score": 0.2909090909090909,
+            "detection_score": 0.07
+        },
         "choke_point_score": 0.15000000000000002,
-        "prevalence_score": 0.00706611,
-        "mitigation_actionability": 0.2909090909090909,
-        "detection_actionability": 0.07
+        "prevalence_score": 0.00706611
     },
     {
         "tid": "T1039",
@@ -2075,10 +2117,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.019047619047619046,
+        "actionability_score": {
+            "combined_score": 0.019047619047619046,
+            "detection_score": 0.04
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.04
+        "prevalence_score": 0
     },
     {
         "tid": "T1040",
@@ -2148,11 +2192,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.20952380952380953,
+        "actionability_score": {
+            "combined_score": 0.20952380952380953,
+            "mitigation_score": 0.2909090909090909,
+            "detection_score": 0.12
+        },
         "choke_point_score": 0.15000000000000002,
-        "prevalence_score": 0.02189928,
-        "mitigation_actionability": 0.2909090909090909,
-        "detection_actionability": 0.12
+        "prevalence_score": 0.02189928
     },
     {
         "tid": "T1041",
@@ -2227,11 +2273,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.20952380952380953,
+        "actionability_score": {
+            "combined_score": 0.20952380952380953,
+            "mitigation_score": 0.36363636363636365,
+            "detection_score": 0.04
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00072207,
-        "mitigation_actionability": 0.36363636363636365,
-        "detection_actionability": 0.04
+        "prevalence_score": 0.00072207
     },
     {
         "tid": "T1046",
@@ -2316,11 +2364,13 @@
         "file_coverage": false,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.29523809523809524,
+        "actionability_score": {
+            "combined_score": 0.29523809523809524,
+            "mitigation_score": 0.43636363636363634,
+            "detection_score": 0.14
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.01570808,
-        "mitigation_actionability": 0.43636363636363634,
-        "detection_actionability": 0.14
+        "prevalence_score": 0.01570808
     },
     {
         "tid": "T1047",
@@ -2408,11 +2458,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.5333333333333333,
+        "actionability_score": {
+            "combined_score": 0.5333333333333333,
+            "mitigation_score": 0.45454545454545453,
+            "detection_score": 0.62
+        },
         "choke_point_score": 0.65,
-        "prevalence_score": 1,
-        "mitigation_actionability": 0.45454545454545453,
-        "detection_actionability": 0.62
+        "prevalence_score": 1
     },
     {
         "tid": "T1048",
@@ -2606,11 +2658,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.419047619047619,
+        "actionability_score": {
+            "combined_score": 0.419047619047619,
+            "mitigation_score": 0.6,
+            "detection_score": 0.22
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00182874,
-        "mitigation_actionability": 0.6,
-        "detection_actionability": 0.22
+        "prevalence_score": 0.00182874
     },
     {
         "tid": "T1049",
@@ -2649,10 +2703,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.07619047619047618,
+        "actionability_score": {
+            "combined_score": 0.07619047619047618,
+            "detection_score": 0.16
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.16
+        "prevalence_score": 0
     },
     {
         "tid": "T1052",
@@ -2765,10 +2821,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.2380952380952381,
+        "actionability_score": {
+            "combined_score": 0.2380952380952381,
+            "mitigation_score": 0.45454545454545453
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.45454545454545453
+        "prevalence_score": 0
     },
     {
         "tid": "T1053",
@@ -3021,11 +3079,13 @@
         "file_coverage": true,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.5142857142857142,
+        "actionability_score": {
+            "combined_score": 0.5142857142857142,
+            "mitigation_score": 0.45454545454545453,
+            "detection_score": 0.58
+        },
         "choke_point_score": 0.6,
-        "prevalence_score": 1,
-        "mitigation_actionability": 0.45454545454545453,
-        "detection_actionability": 0.58
+        "prevalence_score": 1
     },
     {
         "tid": "T1055",
@@ -3281,11 +3341,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.49523809523809526,
+        "actionability_score": {
+            "combined_score": 0.49523809523809526,
+            "mitigation_score": 0.38181818181818183,
+            "detection_score": 0.62
+        },
         "choke_point_score": 0.44999999999999996,
-        "prevalence_score": 1,
-        "mitigation_actionability": 0.38181818181818183,
-        "detection_actionability": 0.62
+        "prevalence_score": 1
     },
     {
         "tid": "T1056",
@@ -3375,10 +3437,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.014285714285714284,
+        "actionability_score": {
+            "combined_score": 0.014285714285714284,
+            "detection_score": 0.03
+        },
         "choke_point_score": 0.35,
-        "prevalence_score": 0.25782564,
-        "detection_actionability": 0.03
+        "prevalence_score": 0.25782564
     },
     {
         "tid": "T1057",
@@ -3416,10 +3480,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.04285714285714285,
+        "actionability_score": {
+            "combined_score": 0.04285714285714285,
+            "detection_score": 0.09
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.11777326,
-        "detection_actionability": 0.09
+        "prevalence_score": 0.11777326
     },
     {
         "tid": "T1059",
@@ -3773,11 +3839,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.9142857142857143,
+        "actionability_score": {
+            "combined_score": 0.9142857142857143,
+            "mitigation_score": 0.8363636363636363,
+            "detection_score": 1
+        },
         "choke_point_score": 1,
-        "prevalence_score": 1,
-        "mitigation_actionability": 0.8363636363636363,
-        "detection_actionability": 1
+        "prevalence_score": 1
     },
     {
         "tid": "T1068",
@@ -3880,11 +3948,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.5714285714285714,
+        "actionability_score": {
+            "combined_score": 0.5714285714285714,
+            "mitigation_score": 0.6,
+            "detection_score": 0.54
+        },
         "choke_point_score": 0.35,
-        "prevalence_score": 0.00221982,
-        "mitigation_actionability": 0.6,
-        "detection_actionability": 0.54
+        "prevalence_score": 0.00221982
     },
     {
         "tid": "T1069",
@@ -3956,10 +4026,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.14761904761904762,
+        "actionability_score": {
+            "combined_score": 0.14761904761904762,
+            "detection_score": 0.31
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.02214451,
-        "detection_actionability": 0.31
+        "prevalence_score": 0.02214451
     },
     {
         "tid": "T1070",
@@ -4164,11 +4236,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.6000000000000001,
+        "actionability_score": {
+            "combined_score": 0.6000000000000001,
+            "mitigation_score": 0.6909090909090909,
+            "detection_score": 0.5
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.59605554,
-        "mitigation_actionability": 0.6909090909090909,
-        "detection_actionability": 0.5
+        "prevalence_score": 0.59605554
     },
     {
         "tid": "T1071",
@@ -4298,11 +4372,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.1761904761904762,
+        "actionability_score": {
+            "combined_score": 0.1761904761904762,
+            "mitigation_score": 0.3090909090909091,
+            "detection_score": 0.03
+        },
         "choke_point_score": 0.5,
-        "prevalence_score": 0.10491513,
-        "mitigation_actionability": 0.3090909090909091,
-        "detection_actionability": 0.03
+        "prevalence_score": 0.10491513
     },
     {
         "tid": "T1072",
@@ -4450,11 +4526,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.5095238095238095,
+        "actionability_score": {
+            "combined_score": 0.5095238095238095,
+            "mitigation_score": 0.9636363636363636,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.35,
-        "prevalence_score": 0.00164997,
-        "mitigation_actionability": 0.9636363636363636,
-        "detection_actionability": 0.01
+        "prevalence_score": 0.00164997
     },
     {
         "tid": "T1074",
@@ -4510,10 +4588,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.47619047619047616,
+        "actionability_score": {
+            "combined_score": 0.47619047619047616,
+            "detection_score": 1
+        },
         "choke_point_score": 0.6000000000000001,
-        "prevalence_score": 0.10548938,
-        "detection_actionability": 1
+        "prevalence_score": 0.10548938
     },
     {
         "tid": "T1078",
@@ -4724,11 +4804,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.8,
+        "actionability_score": {
+            "combined_score": 0.8,
+            "mitigation_score": 0.6181818181818182,
+            "detection_score": 1
+        },
         "choke_point_score": 0.55,
-        "prevalence_score": 0.00772313,
-        "mitigation_actionability": 0.6181818181818182,
-        "detection_actionability": 1
+        "prevalence_score": 0.00772313
     },
     {
         "tid": "T1080",
@@ -4807,11 +4889,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.17142857142857143,
+        "actionability_score": {
+            "combined_score": 0.17142857142857143,
+            "mitigation_score": 0.3090909090909091,
+            "detection_score": 0.02
+        },
         "choke_point_score": 0.30000000000000004,
-        "prevalence_score": 0.00028245,
-        "mitigation_actionability": 0.3090909090909091,
-        "detection_actionability": 0.02
+        "prevalence_score": 0.00028245
     },
     {
         "tid": "T1082",
@@ -4851,10 +4935,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.13333333333333333,
+        "actionability_score": {
+            "combined_score": 0.13333333333333333,
+            "detection_score": 0.28
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.447342,
-        "detection_actionability": 0.28
+        "prevalence_score": 0.447342
     },
     {
         "tid": "T1083",
@@ -4892,10 +4978,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.07142857142857142,
+        "actionability_score": {
+            "combined_score": 0.07142857142857142,
+            "detection_score": 0.15
+        },
         "choke_point_score": 0.25,
-        "prevalence_score": 0.0584645,
-        "detection_actionability": 0.15
+        "prevalence_score": 0.0584645
     },
     {
         "tid": "T1087",
@@ -5015,11 +5103,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.2714285714285714,
+        "actionability_score": {
+            "combined_score": 0.2714285714285714,
+            "mitigation_score": 0.12727272727272726,
+            "detection_score": 0.43
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.10442914,
-        "mitigation_actionability": 0.12727272727272726,
-        "detection_actionability": 0.43
+        "prevalence_score": 0.10442914
     },
     {
         "tid": "T1090",
@@ -5158,11 +5248,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.24285714285714285,
+        "actionability_score": {
+            "combined_score": 0.24285714285714285,
+            "mitigation_score": 0.32727272727272727,
+            "detection_score": 0.15
+        },
         "choke_point_score": 0.15000000000000002,
-        "prevalence_score": 1,
-        "mitigation_actionability": 0.32727272727272727,
-        "detection_actionability": 0.15
+        "prevalence_score": 1
     },
     {
         "tid": "T1091",
@@ -5238,11 +5330,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.16666666666666669,
+        "actionability_score": {
+            "combined_score": 0.16666666666666669,
+            "mitigation_score": 0.3090909090909091,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.19170357,
-        "mitigation_actionability": 0.3090909090909091,
-        "detection_actionability": 0.01
+        "prevalence_score": 0.19170357
     },
     {
         "tid": "T1092",
@@ -5309,10 +5403,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.14285714285714285,
+        "actionability_score": {
+            "combined_score": 0.14285714285714285,
+            "mitigation_score": 0.2727272727272727
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.2727272727272727
+        "prevalence_score": 0
     },
     {
         "tid": "T1095",
@@ -5395,11 +5491,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.2619047619047619,
+        "actionability_score": {
+            "combined_score": 0.2619047619047619,
+            "mitigation_score": 0.43636363636363634,
+            "detection_score": 0.07
+        },
         "choke_point_score": 0.15000000000000002,
-        "prevalence_score": 1,
-        "mitigation_actionability": 0.43636363636363634,
-        "detection_actionability": 0.07
+        "prevalence_score": 1
     },
     {
         "tid": "T1098",
@@ -5595,11 +5693,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.638095238095238,
+        "actionability_score": {
+            "combined_score": 0.638095238095238,
+            "mitigation_score": 0.6,
+            "detection_score": 0.68
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00749729,
-        "mitigation_actionability": 0.6,
-        "detection_actionability": 0.68
+        "prevalence_score": 0.00749729
     },
     {
         "tid": "T1102",
@@ -5729,11 +5829,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.1523809523809524,
+        "actionability_score": {
+            "combined_score": 0.1523809523809524,
+            "mitigation_score": 0.23636363636363636,
+            "detection_score": 0.06
+        },
         "choke_point_score": 0.35,
-        "prevalence_score": 0.03502902,
-        "mitigation_actionability": 0.23636363636363636,
-        "detection_actionability": 0.06
+        "prevalence_score": 0.03502902
     },
     {
         "tid": "T1104",
@@ -5789,11 +5891,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.1,
+        "actionability_score": {
+            "combined_score": 0.1,
+            "mitigation_score": 0.18181818181818182,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.15000000000000002,
-        "prevalence_score": 0.00012692,
-        "mitigation_actionability": 0.18181818181818182,
-        "detection_actionability": 0.01
+        "prevalence_score": 0.00012692
     },
     {
         "tid": "T1105",
@@ -5851,11 +5955,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.49047619047619045,
+        "actionability_score": {
+            "combined_score": 0.49047619047619045,
+            "mitigation_score": 0.18181818181818182,
+            "detection_score": 0.83
+        },
         "choke_point_score": 0.4,
-        "prevalence_score": 0.69578581,
-        "mitigation_actionability": 0.18181818181818182,
-        "detection_actionability": 0.83
+        "prevalence_score": 0.69578581
     },
     {
         "tid": "T1106",
@@ -5913,11 +6019,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.16190476190476188,
+        "actionability_score": {
+            "combined_score": 0.16190476190476188,
+            "mitigation_score": 0.14545454545454545,
+            "detection_score": 0.18
+        },
         "choke_point_score": 0.55,
-        "prevalence_score": 0.24088032,
-        "mitigation_actionability": 0.14545454545454545,
-        "detection_actionability": 0.18
+        "prevalence_score": 0.24088032
     },
     {
         "tid": "T1110",
@@ -6119,11 +6227,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.46666666666666673,
+        "actionability_score": {
+            "combined_score": 0.46666666666666673,
+            "mitigation_score": 0.4,
+            "detection_score": 0.54
+        },
         "choke_point_score": 0.4,
-        "prevalence_score": 0.00452135,
-        "mitigation_actionability": 0.4,
-        "detection_actionability": 0.54
+        "prevalence_score": 0.00452135
     },
     {
         "tid": "T1111",
@@ -6179,11 +6289,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.09047619047619047,
+        "actionability_score": {
+            "combined_score": 0.09047619047619047,
+            "mitigation_score": 0.16363636363636364,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.25,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.16363636363636364,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1112",
@@ -6234,11 +6346,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.5047619047619047,
+        "actionability_score": {
+            "combined_score": 0.5047619047619047,
+            "mitigation_score": 0.05454545454545454,
+            "detection_score": 1
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 1,
-        "mitigation_actionability": 0.05454545454545454,
-        "detection_actionability": 1
+        "prevalence_score": 1
     },
     {
         "tid": "T1113",
@@ -6275,10 +6389,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.047619047619047616,
+        "actionability_score": {
+            "combined_score": 0.047619047619047616,
+            "detection_score": 0.1
+        },
         "choke_point_score": 0.25,
-        "prevalence_score": 0.06137048,
-        "detection_actionability": 0.1
+        "prevalence_score": 0.06137048
     },
     {
         "tid": "T1114",
@@ -6424,11 +6540,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.2523809523809524,
+        "actionability_score": {
+            "combined_score": 0.2523809523809524,
+            "mitigation_score": 0.34545454545454546,
+            "detection_score": 0.15
+        },
         "choke_point_score": 0.2,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.34545454545454546,
-        "detection_actionability": 0.15
+        "prevalence_score": 0
     },
     {
         "tid": "T1115",
@@ -6465,10 +6583,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.03809523809523809,
+        "actionability_score": {
+            "combined_score": 0.03809523809523809,
+            "detection_score": 0.08
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.08
+        "prevalence_score": 0
     },
     {
         "tid": "T1119",
@@ -6541,11 +6661,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.2142857142857143,
+        "actionability_score": {
+            "combined_score": 0.2142857142857143,
+            "mitigation_score": 0.36363636363636365,
+            "detection_score": 0.05
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00602063,
-        "mitigation_actionability": 0.36363636363636365,
-        "detection_actionability": 0.05
+        "prevalence_score": 0.00602063
     },
     {
         "tid": "T1120",
@@ -6582,10 +6704,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.014285714285714284,
+        "actionability_score": {
+            "combined_score": 0.014285714285714284,
+            "detection_score": 0.03
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00397872,
-        "detection_actionability": 0.03
+        "prevalence_score": 0.00397872
     },
     {
         "tid": "T1123",
@@ -6622,10 +6746,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.03333333333333333,
+        "actionability_score": {
+            "combined_score": 0.03333333333333333,
+            "detection_score": 0.07
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.07
+        "prevalence_score": 0
     },
     {
         "tid": "T1124",
@@ -6661,10 +6787,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.019047619047619046,
+        "actionability_score": {
+            "combined_score": 0.019047619047619046,
+            "detection_score": 0.04
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.04
+        "prevalence_score": 0
     },
     {
         "tid": "T1125",
@@ -6700,10 +6828,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.0047619047619047615,
+        "actionability_score": {
+            "combined_score": 0.0047619047619047615,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1127",
@@ -6791,11 +6921,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.3142857142857143,
+        "actionability_score": {
+            "combined_score": 0.3142857142857143,
+            "mitigation_score": 0.2909090909090909,
+            "detection_score": 0.34
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.03619713,
-        "mitigation_actionability": 0.2909090909090909,
-        "detection_actionability": 0.34
+        "prevalence_score": 0.03619713
     },
     {
         "tid": "T1129",
@@ -6846,11 +6978,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.07142857142857142,
+        "actionability_score": {
+            "combined_score": 0.07142857142857142,
+            "mitigation_score": 0.12727272727272726,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00029615,
-        "mitigation_actionability": 0.12727272727272726,
-        "detection_actionability": 0.01
+        "prevalence_score": 0.00029615
     },
     {
         "tid": "T1132",
@@ -6935,10 +7069,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.08571428571428572,
+        "actionability_score": {
+            "combined_score": 0.08571428571428572,
+            "mitigation_score": 0.16363636363636364
+        },
         "choke_point_score": 0.15000000000000002,
-        "prevalence_score": 0.02480491,
-        "mitigation_actionability": 0.16363636363636364
+        "prevalence_score": 0.02480491
     },
     {
         "tid": "T1133",
@@ -7044,11 +7180,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.4285714285714286,
+        "actionability_score": {
+            "combined_score": 0.4285714285714286,
+            "mitigation_score": 0.7090909090909091,
+            "detection_score": 0.12
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.7090909090909091,
-        "detection_actionability": 0.12
+        "prevalence_score": 0
     },
     {
         "tid": "T1134",
@@ -7204,11 +7342,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.2142857142857143,
+        "actionability_score": {
+            "combined_score": 0.2142857142857143,
+            "mitigation_score": 0.2545454545454545,
+            "detection_score": 0.17
+        },
         "choke_point_score": 0.2,
-        "prevalence_score": 0.00270913,
-        "mitigation_actionability": 0.2545454545454545,
-        "detection_actionability": 0.17
+        "prevalence_score": 0.00270913
     },
     {
         "tid": "T1135",
@@ -7261,11 +7401,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.10476190476190475,
+        "actionability_score": {
+            "combined_score": 0.10476190476190475,
+            "mitigation_score": 0.10909090909090909,
+            "detection_score": 0.1
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00265113,
-        "mitigation_actionability": 0.10909090909090909,
-        "detection_actionability": 0.1
+        "prevalence_score": 0.00265113
     },
     {
         "tid": "T1136",
@@ -7449,11 +7591,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.419047619047619,
+        "actionability_score": {
+            "combined_score": 0.419047619047619,
+            "mitigation_score": 0.6,
+            "detection_score": 0.22
+        },
         "choke_point_score": 0.25,
-        "prevalence_score": 0.00029615,
-        "mitigation_actionability": 0.6,
-        "detection_actionability": 0.22
+        "prevalence_score": 0.00029615
     },
     {
         "tid": "T1137",
@@ -7669,11 +7813,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.2857142857142857,
+        "actionability_score": {
+            "combined_score": 0.2857142857142857,
+            "mitigation_score": 0.4727272727272727,
+            "detection_score": 0.08
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00456953,
-        "mitigation_actionability": 0.4727272727272727,
-        "detection_actionability": 0.08
+        "prevalence_score": 0.00456953
     },
     {
         "tid": "T1140",
@@ -7711,10 +7857,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.10476190476190475,
+        "actionability_score": {
+            "combined_score": 0.10476190476190475,
+            "detection_score": 0.22
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.36307678,
-        "detection_actionability": 0.22
+        "prevalence_score": 0.36307678
     },
     {
         "tid": "T1176",
@@ -7810,11 +7958,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.22380952380952382,
+        "actionability_score": {
+            "combined_score": 0.22380952380952382,
+            "mitigation_score": 0.41818181818181815,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00054999,
-        "mitigation_actionability": 0.41818181818181815,
-        "detection_actionability": 0.01
+        "prevalence_score": 0.00054999
     },
     {
         "tid": "T1185",
@@ -7886,11 +8036,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.20476190476190478,
+        "actionability_score": {
+            "combined_score": 0.20476190476190478,
+            "mitigation_score": 0.38181818181818183,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00401915,
-        "mitigation_actionability": 0.38181818181818183,
-        "detection_actionability": 0.01
+        "prevalence_score": 0.00401915
     },
     {
         "tid": "T1187",
@@ -7962,11 +8114,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.20476190476190478,
+        "actionability_score": {
+            "combined_score": 0.20476190476190478,
+            "mitigation_score": 0.34545454545454546,
+            "detection_score": 0.05
+        },
         "choke_point_score": 0.15000000000000002,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.34545454545454546,
-        "detection_actionability": 0.05
+        "prevalence_score": 0
     },
     {
         "tid": "T1189",
@@ -8064,11 +8218,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.32380952380952377,
+        "actionability_score": {
+            "combined_score": 0.32380952380952377,
+            "mitigation_score": 0.5454545454545454,
+            "detection_score": 0.08
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.0006346,
-        "mitigation_actionability": 0.5454545454545454,
-        "detection_actionability": 0.08
+        "prevalence_score": 0.0006346
     },
     {
         "tid": "T1190",
@@ -8200,11 +8356,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.9809523809523809,
+        "actionability_score": {
+            "combined_score": 0.9809523809523809,
+            "mitigation_score": 0.9636363636363636,
+            "detection_score": 1
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00224226,
-        "mitigation_actionability": 0.9636363636363636,
-        "detection_actionability": 1
+        "prevalence_score": 0.00224226
     },
     {
         "tid": "T1195",
@@ -8333,11 +8491,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.24761904761904766,
+        "actionability_score": {
+            "combined_score": 0.24761904761904766,
+            "mitigation_score": 0.4,
+            "detection_score": 0.08
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00401915,
-        "mitigation_actionability": 0.4,
-        "detection_actionability": 0.08
+        "prevalence_score": 0.00401915
     },
     {
         "tid": "T1197",
@@ -8424,11 +8584,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.3857142857142857,
+        "actionability_score": {
+            "combined_score": 0.3857142857142857,
+            "mitigation_score": 0.509090909090909,
+            "detection_score": 0.25
+        },
         "choke_point_score": 0.25,
-        "prevalence_score": 0.04992977,
-        "mitigation_actionability": 0.509090909090909,
-        "detection_actionability": 0.25
+        "prevalence_score": 0.04992977
     },
     {
         "tid": "T1199",
@@ -8497,11 +8659,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.14761904761904762,
+        "actionability_score": {
+            "combined_score": 0.14761904761904762,
+            "mitigation_score": 0.2545454545454545,
+            "detection_score": 0.03
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.2545454545454545,
-        "detection_actionability": 0.03
+        "prevalence_score": 0
     },
     {
         "tid": "T1200",
@@ -8563,11 +8727,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.15714285714285714,
+        "actionability_score": {
+            "combined_score": 0.15714285714285714,
+            "mitigation_score": 0.23636363636363636,
+            "detection_score": 0.07
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00571594,
-        "mitigation_actionability": 0.23636363636363636,
-        "detection_actionability": 0.07
+        "prevalence_score": 0.00571594
     },
     {
         "tid": "T1201",
@@ -8619,11 +8785,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.10952380952380952,
+        "actionability_score": {
+            "combined_score": 0.10952380952380952,
+            "mitigation_score": 0.10909090909090909,
+            "detection_score": 0.11
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00111904,
-        "mitigation_actionability": 0.10909090909090909,
-        "detection_actionability": 0.11
+        "prevalence_score": 0.00111904
     },
     {
         "tid": "T1202",
@@ -8658,10 +8826,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.15238095238095237,
+        "actionability_score": {
+            "combined_score": 0.15238095238095237,
+            "detection_score": 0.32
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.01815086,
-        "detection_actionability": 0.32
+        "prevalence_score": 0.01815086
     },
     {
         "tid": "T1203",
@@ -8724,11 +8894,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.28095238095238095,
+        "actionability_score": {
+            "combined_score": 0.28095238095238095,
+            "mitigation_score": 0.2909090909090909,
+            "detection_score": 0.27
+        },
         "choke_point_score": 0.3,
-        "prevalence_score": 0.00706866,
-        "mitigation_actionability": 0.2909090909090909,
-        "detection_actionability": 0.27
+        "prevalence_score": 0.00706866
     },
     {
         "tid": "T1204",
@@ -8920,11 +9092,13 @@
         "file_coverage": true,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.3619047619047619,
+        "actionability_score": {
+            "combined_score": 0.3619047619047619,
+            "mitigation_score": 0.41818181818181815,
+            "detection_score": 0.3
+        },
         "choke_point_score": 0.4,
-        "prevalence_score": 0.54990659,
-        "mitigation_actionability": 0.41818181818181815,
-        "detection_actionability": 0.3
+        "prevalence_score": 0.54990659
     },
     {
         "tid": "T1205",
@@ -9009,10 +9183,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.12380952380952381,
+        "actionability_score": {
+            "combined_score": 0.12380952380952381,
+            "mitigation_score": 0.23636363636363636
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.23636363636363636
+        "prevalence_score": 0
     },
     {
         "tid": "T1207",
@@ -9049,10 +9225,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.0047619047619047615,
+        "actionability_score": {
+            "combined_score": 0.0047619047619047615,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1210",
@@ -9200,11 +9378,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.580952380952381,
+        "actionability_score": {
+            "combined_score": 0.580952380952381,
+            "mitigation_score": 1,
+            "detection_score": 0.12
+        },
         "choke_point_score": 0.15000000000000002,
-        "prevalence_score": 0,
-        "mitigation_actionability": 1,
-        "detection_actionability": 0.12
+        "prevalence_score": 0
     },
     {
         "tid": "T1211",
@@ -9296,11 +9476,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.3142857142857143,
+        "actionability_score": {
+            "combined_score": 0.3142857142857143,
+            "mitigation_score": 0.5636363636363636,
+            "detection_score": 0.04
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.02745711,
-        "mitigation_actionability": 0.5636363636363636,
-        "detection_actionability": 0.04
+        "prevalence_score": 0.02745711
     },
     {
         "tid": "T1212",
@@ -9393,11 +9575,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.35714285714285715,
+        "actionability_score": {
+            "combined_score": 0.35714285714285715,
+            "mitigation_score": 0.5818181818181818,
+            "detection_score": 0.11
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.5818181818181818,
-        "detection_actionability": 0.11
+        "prevalence_score": 0
     },
     {
         "tid": "T1213",
@@ -9586,11 +9770,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.3761904761904762,
+        "actionability_score": {
+            "combined_score": 0.3761904761904762,
+            "mitigation_score": 0.7090909090909091,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.7090909090909091,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1216",
@@ -9664,11 +9850,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.15238095238095237,
+        "actionability_score": {
+            "combined_score": 0.15238095238095237,
+            "mitigation_score": 0.12727272727272726,
+            "detection_score": 0.18
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00604168,
-        "mitigation_actionability": 0.12727272727272726,
-        "detection_actionability": 0.18
+        "prevalence_score": 0.00604168
     },
     {
         "tid": "T1217",
@@ -9706,10 +9894,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.014285714285714284,
+        "actionability_score": {
+            "combined_score": 0.014285714285714284,
+            "detection_score": 0.03
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.03
+        "prevalence_score": 0
     },
     {
         "tid": "T1218",
@@ -10076,11 +10266,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.780952380952381,
+        "actionability_score": {
+            "combined_score": 0.780952380952381,
+            "mitigation_score": 0.5818181818181818,
+            "detection_score": 1
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 1,
-        "mitigation_actionability": 0.5818181818181818,
-        "detection_actionability": 1
+        "prevalence_score": 1
     },
     {
         "tid": "T1219",
@@ -10163,11 +10355,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.38095238095238093,
+        "actionability_score": {
+            "combined_score": 0.38095238095238093,
+            "mitigation_score": 0.41818181818181815,
+            "detection_score": 0.34
+        },
         "choke_point_score": 0.55,
-        "prevalence_score": 0.00469327,
-        "mitigation_actionability": 0.41818181818181815,
-        "detection_actionability": 0.34
+        "prevalence_score": 0.00469327
     },
     {
         "tid": "T1220",
@@ -10219,11 +10413,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.1142857142857143,
+        "actionability_score": {
+            "combined_score": 0.1142857142857143,
+            "mitigation_score": 0.14545454545454545,
+            "detection_score": 0.08
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.0214707,
-        "mitigation_actionability": 0.14545454545454545,
-        "detection_actionability": 0.08
+        "prevalence_score": 0.0214707
     },
     {
         "tid": "T1221",
@@ -10311,11 +10507,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.24285714285714288,
+        "actionability_score": {
+            "combined_score": 0.24285714285714288,
+            "mitigation_score": 0.45454545454545453,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.45454545454545453,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1222",
@@ -10431,11 +10629,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.2523809523809524,
+        "actionability_score": {
+            "combined_score": 0.2523809523809524,
+            "mitigation_score": 0.34545454545454546,
+            "detection_score": 0.15
+        },
         "choke_point_score": 0.35,
-        "prevalence_score": 0.00096863,
-        "mitigation_actionability": 0.34545454545454546,
-        "detection_actionability": 0.15
+        "prevalence_score": 0.00096863
     },
     {
         "tid": "T1480",
@@ -10495,6 +10695,7 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
+        "actionability_score": {},
         "choke_point_score": 0.1,
         "prevalence_score": 0
     },
@@ -10566,11 +10767,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.29523809523809524,
+        "actionability_score": {
+            "combined_score": 0.29523809523809524,
+            "mitigation_score": 0.32727272727272727,
+            "detection_score": 0.26
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.08870884,
-        "mitigation_actionability": 0.32727272727272727,
-        "detection_actionability": 0.26
+        "prevalence_score": 0.08870884
     },
     {
         "tid": "T1484",
@@ -10690,11 +10893,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.2571428571428571,
+        "actionability_score": {
+            "combined_score": 0.2571428571428571,
+            "mitigation_score": 0.41818181818181815,
+            "detection_score": 0.08
+        },
         "choke_point_score": 0.55,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.41818181818181815,
-        "detection_actionability": 0.08
+        "prevalence_score": 0
     },
     {
         "tid": "T1485",
@@ -10763,11 +10968,13 @@
         "file_coverage": true,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.319047619047619,
+        "actionability_score": {
+            "combined_score": 0.319047619047619,
+            "mitigation_score": 0.2727272727272727,
+            "detection_score": 0.37
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0.0000423067961740376,
-        "mitigation_actionability": 0.2727272727272727,
-        "detection_actionability": 0.37
+        "prevalence_score": 0.0000423067961740376
     },
     {
         "tid": "T1486",
@@ -10840,11 +11047,13 @@
         "file_coverage": true,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.23809523809523808,
+        "actionability_score": {
+            "combined_score": 0.23809523809523808,
+            "mitigation_score": 0.2909090909090909,
+            "detection_score": 0.18
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0.01368903,
-        "mitigation_actionability": 0.2909090909090909,
-        "detection_actionability": 0.18
+        "prevalence_score": 0.01368903
     },
     {
         "tid": "T1489",
@@ -10936,11 +11145,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.3476190476190476,
+        "actionability_score": {
+            "combined_score": 0.3476190476190476,
+            "mitigation_score": 0.41818181818181815,
+            "detection_score": 0.27
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0.19533198,
-        "mitigation_actionability": 0.41818181818181815,
-        "detection_actionability": 0.27
+        "prevalence_score": 0.19533198
     },
     {
         "tid": "T1490",
@@ -11015,11 +11226,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.37142857142857144,
+        "actionability_score": {
+            "combined_score": 0.37142857142857144,
+            "mitigation_score": 0.36363636363636365,
+            "detection_score": 0.38
+        },
         "choke_point_score": 0.2,
-        "prevalence_score": 0.0517985,
-        "mitigation_actionability": 0.36363636363636365,
-        "detection_actionability": 0.38
+        "prevalence_score": 0.0517985
     },
     {
         "tid": "T1491",
@@ -11114,11 +11327,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.15238095238095237,
+        "actionability_score": {
+            "combined_score": 0.15238095238095237,
+            "mitigation_score": 0.2727272727272727,
+            "detection_score": 0.02
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.2727272727272727,
-        "detection_actionability": 0.02
+        "prevalence_score": 0
     },
     {
         "tid": "T1495",
@@ -11202,11 +11417,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.2619047619047619,
+        "actionability_score": {
+            "combined_score": 0.2619047619047619,
+            "mitigation_score": 0.4909090909090909,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.4909090909090909,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1496",
@@ -11249,10 +11466,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.023809523809523808,
+        "actionability_score": {
+            "combined_score": 0.023809523809523808,
+            "detection_score": 0.05
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0.00029615,
-        "detection_actionability": 0.05
+        "prevalence_score": 0.00029615
     },
     {
         "tid": "T1497",
@@ -11316,10 +11535,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.009523809523809523,
+        "actionability_score": {
+            "combined_score": 0.009523809523809523,
+            "detection_score": 0.02
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.3330587,
-        "detection_actionability": 0.02
+        "prevalence_score": 0.3330587
     },
     {
         "tid": "T1498",
@@ -11411,11 +11632,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.12380952380952381,
+        "actionability_score": {
+            "combined_score": 0.12380952380952381,
+            "mitigation_score": 0.16363636363636364,
+            "detection_score": 0.08
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.16363636363636364,
-        "detection_actionability": 0.08
+        "prevalence_score": 0
     },
     {
         "tid": "T1499",
@@ -11542,11 +11765,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.12857142857142856,
+        "actionability_score": {
+            "combined_score": 0.12857142857142856,
+            "mitigation_score": 0.21818181818181817,
+            "detection_score": 0.03
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.21818181818181817,
-        "detection_actionability": 0.03
+        "prevalence_score": 0
     },
     {
         "tid": "T1505",
@@ -11761,11 +11986,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.3523809523809524,
+        "actionability_score": {
+            "combined_score": 0.3523809523809524,
+            "mitigation_score": 0.5818181818181818,
+            "detection_score": 0.1
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00992082,
-        "mitigation_actionability": 0.5818181818181818,
-        "detection_actionability": 0.1
+        "prevalence_score": 0.00992082
     },
     {
         "tid": "T1518",
@@ -11819,10 +12046,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.023809523809523808,
+        "actionability_score": {
+            "combined_score": 0.023809523809523808,
+            "detection_score": 0.05
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.0388719,
-        "detection_actionability": 0.05
+        "prevalence_score": 0.0388719
     },
     {
         "tid": "T1525",
@@ -11904,11 +12133,13 @@
         "file_coverage": false,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.24285714285714288,
+        "actionability_score": {
+            "combined_score": 0.24285714285714288,
+            "mitigation_score": 0.45454545454545453,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00012692,
-        "mitigation_actionability": 0.45454545454545453,
-        "detection_actionability": 0.01
+        "prevalence_score": 0.00012692
     },
     {
         "tid": "T1526",
@@ -11947,10 +12178,12 @@
         "file_coverage": false,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.047619047619047616,
+        "actionability_score": {
+            "combined_score": 0.047619047619047616,
+            "detection_score": 0.1
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.1
+        "prevalence_score": 0
     },
     {
         "tid": "T1528",
@@ -12046,11 +12279,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.3666666666666667,
+        "actionability_score": {
+            "combined_score": 0.3666666666666667,
+            "mitigation_score": 0.5818181818181818,
+            "detection_score": 0.13
+        },
         "choke_point_score": 0.25,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.5818181818181818,
-        "detection_actionability": 0.13
+        "prevalence_score": 0
     },
     {
         "tid": "T1529",
@@ -12088,10 +12323,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.04285714285714285,
+        "actionability_score": {
+            "combined_score": 0.04285714285714285,
+            "detection_score": 0.09
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "detection_actionability": 0.09
+        "prevalence_score": 0
     },
     {
         "tid": "T1530",
@@ -12216,11 +12453,13 @@
         "file_coverage": false,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.5476190476190477,
+        "actionability_score": {
+            "combined_score": 0.5476190476190477,
+            "mitigation_score": 0.9454545454545454,
+            "detection_score": 0.11
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.9454545454545454,
-        "detection_actionability": 0.11
+        "prevalence_score": 0
     },
     {
         "tid": "T1531",
@@ -12258,10 +12497,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.07619047619047618,
+        "actionability_score": {
+            "combined_score": 0.07619047619047618,
+            "detection_score": 0.16
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "detection_actionability": 0.16
+        "prevalence_score": 0
     },
     {
         "tid": "T1534",
@@ -12302,6 +12543,7 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
+        "actionability_score": {},
         "choke_point_score": 0.30000000000000004,
         "prevalence_score": 0
     },
@@ -12350,11 +12592,13 @@
         "file_coverage": false,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.0761904761904762,
+        "actionability_score": {
+            "combined_score": 0.0761904761904762,
+            "mitigation_score": 0.07272727272727272,
+            "detection_score": 0.08
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.07272727272727272,
-        "detection_actionability": 0.08
+        "prevalence_score": 0
     },
     {
         "tid": "T1537",
@@ -12441,11 +12685,13 @@
         "file_coverage": false,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.33333333333333326,
+        "actionability_score": {
+            "combined_score": 0.33333333333333326,
+            "mitigation_score": 0.5272727272727272,
+            "detection_score": 0.12
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.5272727272727272,
-        "detection_actionability": 0.12
+        "prevalence_score": 0
     },
     {
         "tid": "T1538",
@@ -12505,10 +12751,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.12380952380952381,
+        "actionability_score": {
+            "combined_score": 0.12380952380952381,
+            "mitigation_score": 0.23636363636363636
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.23636363636363636
+        "prevalence_score": 0
     },
     {
         "tid": "T1539",
@@ -12587,11 +12835,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.19523809523809524,
+        "actionability_score": {
+            "combined_score": 0.19523809523809524,
+            "mitigation_score": 0.32727272727272727,
+            "detection_score": 0.05
+        },
         "choke_point_score": 0.25,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.32727272727272727,
-        "detection_actionability": 0.05
+        "prevalence_score": 0
     },
     {
         "tid": "T1542",
@@ -12816,11 +13066,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.319047619047619,
+        "actionability_score": {
+            "combined_score": 0.319047619047619,
+            "mitigation_score": 0.6,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00067691,
-        "mitigation_actionability": 0.6,
-        "detection_actionability": 0.01
+        "prevalence_score": 0.00067691
     },
     {
         "tid": "T1543",
@@ -13009,11 +13261,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.5666666666666667,
+        "actionability_score": {
+            "combined_score": 0.5666666666666667,
+            "mitigation_score": 0.6,
+            "detection_score": 0.53
+        },
         "choke_point_score": 0.2,
-        "prevalence_score": 1,
-        "mitigation_actionability": 0.6,
-        "detection_actionability": 0.53
+        "prevalence_score": 1
     },
     {
         "tid": "T1546",
@@ -13319,11 +13573,13 @@
         "file_coverage": true,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.22380952380952382,
+        "actionability_score": {
+            "combined_score": 0.22380952380952382,
+            "mitigation_score": 0.07272727272727272,
+            "detection_score": 0.39
+        },
         "choke_point_score": 0.2,
-        "prevalence_score": 0.24164573,
-        "mitigation_actionability": 0.07272727272727272,
-        "detection_actionability": 0.39
+        "prevalence_score": 0.24164573
     },
     {
         "tid": "T1547",
@@ -13633,11 +13889,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.22857142857142856,
+        "actionability_score": {
+            "combined_score": 0.22857142857142856,
+            "mitigation_score": 0.01818181818181818,
+            "detection_score": 0.46
+        },
         "choke_point_score": 0.44999999999999996,
-        "prevalence_score": 0.31083108,
-        "mitigation_actionability": 0.01818181818181818,
-        "detection_actionability": 0.46
+        "prevalence_score": 0.31083108
     },
     {
         "tid": "T1548",
@@ -13842,11 +14100,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.33333333333333337,
+        "actionability_score": {
+            "combined_score": 0.33333333333333337,
+            "mitigation_score": 0.5818181818181818,
+            "detection_score": 0.06
+        },
         "choke_point_score": 0.35,
-        "prevalence_score": 0.62304979,
-        "mitigation_actionability": 0.5818181818181818,
-        "detection_actionability": 0.06
+        "prevalence_score": 0.62304979
     },
     {
         "tid": "T1550",
@@ -14026,11 +14286,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.1619047619047619,
+        "actionability_score": {
+            "combined_score": 0.1619047619047619,
+            "mitigation_score": 0.23636363636363636,
+            "detection_score": 0.08
+        },
         "choke_point_score": 0.15000000000000002,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.23636363636363636,
-        "detection_actionability": 0.08
+        "prevalence_score": 0
     },
     {
         "tid": "T1552",
@@ -14384,11 +14646,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.6095238095238096,
+        "actionability_score": {
+            "combined_score": 0.6095238095238096,
+            "mitigation_score": 1,
+            "detection_score": 0.18
+        },
         "choke_point_score": 0.35,
-        "prevalence_score": 0.10949453,
-        "mitigation_actionability": 1,
-        "detection_actionability": 0.18
+        "prevalence_score": 0.10949453
     },
     {
         "tid": "T1553",
@@ -14596,11 +14860,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.24285714285714288,
+        "actionability_score": {
+            "combined_score": 0.24285714285714288,
+            "mitigation_score": 0.45454545454545453,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.03940008,
-        "mitigation_actionability": 0.45454545454545453,
-        "detection_actionability": 0.01
+        "prevalence_score": 0.03940008
     },
     {
         "tid": "T1554",
@@ -14659,11 +14925,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.18571428571428572,
+        "actionability_score": {
+            "combined_score": 0.18571428571428572,
+            "mitigation_score": 0.2,
+            "detection_score": 0.17
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.2,
-        "detection_actionability": 0.17
+        "prevalence_score": 0
     },
     {
         "tid": "T1555",
@@ -14797,11 +15065,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.06190476190476191,
+        "actionability_score": {
+            "combined_score": 0.06190476190476191,
+            "mitigation_score": 0.07272727272727272,
+            "detection_score": 0.05
+        },
         "choke_point_score": 0.25,
-        "prevalence_score": 0.20047604,
-        "mitigation_actionability": 0.07272727272727272,
-        "detection_actionability": 0.05
+        "prevalence_score": 0.20047604
     },
     {
         "tid": "T1556",
@@ -14995,10 +15265,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.29523809523809524,
+        "actionability_score": {
+            "combined_score": 0.29523809523809524,
+            "mitigation_score": 0.5636363636363636
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.5636363636363636
+        "prevalence_score": 0
     },
     {
         "tid": "T1557",
@@ -15207,11 +15479,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.46190476190476193,
+        "actionability_score": {
+            "combined_score": 0.46190476190476193,
+            "mitigation_score": 0.8181818181818182,
+            "detection_score": 0.07
+        },
         "choke_point_score": 0.3,
-        "prevalence_score": 0.01029676,
-        "mitigation_actionability": 0.8181818181818182,
-        "detection_actionability": 0.07
+        "prevalence_score": 0.01029676
     },
     {
         "tid": "T1558",
@@ -15411,11 +15685,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.3,
+        "actionability_score": {
+            "combined_score": 0.3,
+            "mitigation_score": 0.5636363636363636,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.25,
-        "prevalence_score": 0.00491824,
-        "mitigation_actionability": 0.5636363636363636,
-        "detection_actionability": 0.01
+        "prevalence_score": 0.00491824
     },
     {
         "tid": "T1559",
@@ -15566,11 +15842,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.2761904761904762,
+        "actionability_score": {
+            "combined_score": 0.2761904761904762,
+            "mitigation_score": 0.4727272727272727,
+            "detection_score": 0.06
+        },
         "choke_point_score": 0.3,
-        "prevalence_score": 0.01561121,
-        "mitigation_actionability": 0.4727272727272727,
-        "detection_actionability": 0.06
+        "prevalence_score": 0.01561121
     },
     {
         "tid": "T1560",
@@ -15661,11 +15939,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.20476190476190476,
+        "actionability_score": {
+            "combined_score": 0.20476190476190476,
+            "mitigation_score": 0.2,
+            "detection_score": 0.21
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.37974036,
-        "mitigation_actionability": 0.2,
-        "detection_actionability": 0.21
+        "prevalence_score": 0.37974036
     },
     {
         "tid": "T1561",
@@ -15760,11 +16040,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.14761904761904762,
+        "actionability_score": {
+            "combined_score": 0.14761904761904762,
+            "mitigation_score": 0.2727272727272727,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0.03180408,
-        "mitigation_actionability": 0.2727272727272727,
-        "detection_actionability": 0.01
+        "prevalence_score": 0.03180408
     },
     {
         "tid": "T1562",
@@ -16068,11 +16350,13 @@
         "file_coverage": true,
         "cloud_coverage": true,
         "hardware_coverage": true,
-        "actionability_score": 0.7047619047619047,
+        "actionability_score": {
+            "combined_score": 0.7047619047619047,
+            "mitigation_score": 0.43636363636363634,
+            "detection_score": 1
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 1,
-        "mitigation_actionability": 0.43636363636363634,
-        "detection_actionability": 1
+        "prevalence_score": 1
     },
     {
         "tid": "T1563",
@@ -16261,10 +16545,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.3523809523809524,
+        "actionability_score": {
+            "combined_score": 0.3523809523809524,
+            "mitigation_score": 0.6727272727272727
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00021153,
-        "mitigation_actionability": 0.6727272727272727
+        "prevalence_score": 0.00021153
     },
     {
         "tid": "T1564",
@@ -16441,10 +16727,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": true,
-        "actionability_score": 0.07142857142857142,
+        "actionability_score": {
+            "combined_score": 0.07142857142857142,
+            "detection_score": 0.15
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.69861754,
-        "detection_actionability": 0.15
+        "prevalence_score": 0.69861754
     },
     {
         "tid": "T1565",
@@ -16619,11 +16907,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.4285714285714286,
+        "actionability_score": {
+            "combined_score": 0.4285714285714286,
+            "mitigation_score": 0.7636363636363637,
+            "detection_score": 0.06
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0.0006346,
-        "mitigation_actionability": 0.7636363636363637,
-        "detection_actionability": 0.06
+        "prevalence_score": 0.0006346
     },
     {
         "tid": "T1566",
@@ -16813,11 +17103,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.46190476190476193,
+        "actionability_score": {
+            "combined_score": 0.46190476190476193,
+            "mitigation_score": 0.38181818181818183,
+            "detection_score": 0.55
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.02842361,
-        "mitigation_actionability": 0.38181818181818183,
-        "detection_actionability": 0.55
+        "prevalence_score": 0.02842361
     },
     {
         "tid": "T1567",
@@ -16922,11 +17214,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.20476190476190478,
+        "actionability_score": {
+            "combined_score": 0.20476190476190478,
+            "mitigation_score": 0.36363636363636365,
+            "detection_score": 0.03
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.36363636363636365,
-        "detection_actionability": 0.03
+        "prevalence_score": 0
     },
     {
         "tid": "T1568",
@@ -17028,10 +17322,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.10476190476190478,
+        "actionability_score": {
+            "combined_score": 0.10476190476190478,
+            "mitigation_score": 0.2
+        },
         "choke_point_score": 0.15000000000000002,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.2
+        "prevalence_score": 0
     },
     {
         "tid": "T1569",
@@ -17161,11 +17457,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.20476190476190478,
+        "actionability_score": {
+            "combined_score": 0.20476190476190478,
+            "mitigation_score": 0.38181818181818183,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.2,
-        "prevalence_score": 0.66633245,
-        "mitigation_actionability": 0.38181818181818183,
-        "detection_actionability": 0.01
+        "prevalence_score": 0.66633245
     },
     {
         "tid": "T1570",
@@ -17244,11 +17542,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.21904761904761905,
+        "actionability_score": {
+            "combined_score": 0.21904761904761905,
+            "mitigation_score": 0.38181818181818183,
+            "detection_score": 0.04
+        },
         "choke_point_score": 0.5,
-        "prevalence_score": 0.00012692,
-        "mitigation_actionability": 0.38181818181818183,
-        "detection_actionability": 0.04
+        "prevalence_score": 0.00012692
     },
     {
         "tid": "T1571",
@@ -17315,11 +17615,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.22857142857142856,
+        "actionability_score": {
+            "combined_score": 0.22857142857142856,
+            "mitigation_score": 0.2545454545454545,
+            "detection_score": 0.2
+        },
         "choke_point_score": 0.25,
-        "prevalence_score": 0.07951844,
-        "mitigation_actionability": 0.2545454545454545,
-        "detection_actionability": 0.2
+        "prevalence_score": 0.07951844
     },
     {
         "tid": "T1572",
@@ -17390,11 +17692,13 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.20476190476190476,
+        "actionability_score": {
+            "combined_score": 0.20476190476190476,
+            "mitigation_score": 0.32727272727272727,
+            "detection_score": 0.07
+        },
         "choke_point_score": 0.2,
-        "prevalence_score": 0.00071922,
-        "mitigation_actionability": 0.32727272727272727,
-        "detection_actionability": 0.07
+        "prevalence_score": 0.00071922
     },
     {
         "tid": "T1573",
@@ -17495,10 +17799,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.12380952380952381,
+        "actionability_score": {
+            "combined_score": 0.12380952380952381,
+            "mitigation_score": 0.23636363636363636
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0.00046016,
-        "mitigation_actionability": 0.23636363636363636
+        "prevalence_score": 0.00046016
     },
     {
         "tid": "T1574",
@@ -17897,11 +18203,13 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.47619047619047616,
+        "actionability_score": {
+            "combined_score": 0.47619047619047616,
+            "mitigation_score": 0.6545454545454545,
+            "detection_score": 0.28
+        },
         "choke_point_score": 0.35,
-        "prevalence_score": 1,
-        "mitigation_actionability": 0.6545454545454545,
-        "detection_actionability": 0.28
+        "prevalence_score": 1
     },
     {
         "tid": "T1578",
@@ -18051,10 +18359,12 @@
         "file_coverage": false,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.18095238095238098,
+        "actionability_score": {
+            "combined_score": 0.18095238095238098,
+            "mitigation_score": 0.34545454545454546
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.34545454545454546
+        "prevalence_score": 0
     },
     {
         "tid": "T1580",
@@ -18116,10 +18426,12 @@
         "file_coverage": false,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.11428571428571428,
+        "actionability_score": {
+            "combined_score": 0.11428571428571428,
+            "mitigation_score": 0.21818181818181817
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.21818181818181817
+        "prevalence_score": 0
     },
     {
         "tid": "T1583",
@@ -18255,6 +18567,7 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
+        "actionability_score": {},
         "choke_point_score": 0.05,
         "prevalence_score": 0
     },
@@ -18392,6 +18705,7 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
+        "actionability_score": {},
         "choke_point_score": 0.05,
         "prevalence_score": 0.00401915
     },
@@ -18466,6 +18780,7 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
+        "actionability_score": {},
         "choke_point_score": 0.05,
         "prevalence_score": 0
     },
@@ -18540,6 +18855,7 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
+        "actionability_score": {},
         "choke_point_score": 0.05,
         "prevalence_score": 0
     },
@@ -18645,10 +18961,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.047619047619047616,
+        "actionability_score": {
+            "combined_score": 0.047619047619047616,
+            "detection_score": 0.1
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "detection_actionability": 0.1
+        "prevalence_score": 0
     },
     {
         "tid": "T1588",
@@ -18783,10 +19101,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.0047619047619047615,
+        "actionability_score": {
+            "combined_score": 0.0047619047619047615,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1589",
@@ -18871,10 +19191,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.0047619047619047615,
+        "actionability_score": {
+            "combined_score": 0.0047619047619047615,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1590",
@@ -19007,10 +19329,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.01904761904761905,
+        "actionability_score": {
+            "combined_score": 0.01904761904761905,
+            "mitigation_score": 0.03636363636363636
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.03636363636363636
+        "prevalence_score": 0
     },
     {
         "tid": "T1591",
@@ -19110,6 +19434,7 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
+        "actionability_score": {},
         "choke_point_score": 0.05,
         "prevalence_score": 0
     },
@@ -19213,10 +19538,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.0047619047619047615,
+        "actionability_score": {
+            "combined_score": 0.0047619047619047615,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1593",
@@ -19286,6 +19613,7 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
+        "actionability_score": {},
         "choke_point_score": 0.05,
         "prevalence_score": 0
     },
@@ -19328,10 +19656,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.0047619047619047615,
+        "actionability_score": {
+            "combined_score": 0.0047619047619047615,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1595",
@@ -19407,10 +19737,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.01904761904761905,
+        "actionability_score": {
+            "combined_score": 0.01904761904761905,
+            "mitigation_score": 0.03636363636363636
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.03636363636363636
+        "prevalence_score": 0
     },
     {
         "tid": "T1596",
@@ -19525,6 +19857,7 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
+        "actionability_score": {},
         "choke_point_score": 0.05,
         "prevalence_score": 0
     },
@@ -19596,6 +19929,7 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
+        "actionability_score": {},
         "choke_point_score": 0.05,
         "prevalence_score": 0
     },
@@ -19720,10 +20054,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.13333333333333333,
+        "actionability_score": {
+            "combined_score": 0.13333333333333333,
+            "mitigation_score": 0.2545454545454545
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.2545454545454545
+        "prevalence_score": 0
     },
     {
         "tid": "T1599",
@@ -19863,10 +20199,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.3047619047619048,
+        "actionability_score": {
+            "combined_score": 0.3047619047619048,
+            "mitigation_score": 0.5818181818181818
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.5818181818181818
+        "prevalence_score": 0
     },
     {
         "tid": "T1600",
@@ -19917,6 +20255,7 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
+        "actionability_score": {},
         "choke_point_score": 0.05,
         "prevalence_score": 0
     },
@@ -20107,10 +20446,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.36190476190476195,
+        "actionability_score": {
+            "combined_score": 0.36190476190476195,
+            "mitigation_score": 0.6909090909090909
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.6909090909090909
+        "prevalence_score": 0
     },
     {
         "tid": "T1602",
@@ -20316,10 +20657,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.380952380952381,
+        "actionability_score": {
+            "combined_score": 0.380952380952381,
+            "mitigation_score": 0.7272727272727273
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.7272727272727273
+        "prevalence_score": 0
     },
     {
         "tid": "T1606",
@@ -20460,10 +20803,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.1523809523809524,
+        "actionability_score": {
+            "combined_score": 0.1523809523809524,
+            "mitigation_score": 0.2909090909090909
+        },
         "choke_point_score": 0.15000000000000002,
-        "prevalence_score": 0,
-        "mitigation_actionability": 0.2909090909090909
+        "prevalence_score": 0
     },
     {
         "tid": "T1608",
@@ -20580,10 +20925,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.0047619047619047615,
+        "actionability_score": {
+            "combined_score": 0.0047619047619047615,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.05,
-        "prevalence_score": 0,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1609",
@@ -20646,10 +20993,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.0047619047619047615,
+        "actionability_score": {
+            "combined_score": 0.0047619047619047615,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1610",
@@ -20717,10 +21066,12 @@
         "file_coverage": true,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.028571428571428567,
+        "actionability_score": {
+            "combined_score": 0.028571428571428567,
+            "detection_score": 0.06
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.06
+        "prevalence_score": 0
     },
     {
         "tid": "T1611",
@@ -20798,10 +21149,12 @@
         "file_coverage": false,
         "cloud_coverage": true,
         "hardware_coverage": true,
-        "actionability_score": 0.028571428571428567,
+        "actionability_score": {
+            "combined_score": 0.028571428571428567,
+            "detection_score": 0.06
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.06
+        "prevalence_score": 0
     },
     {
         "tid": "T1612",
@@ -20918,10 +21271,12 @@
         "file_coverage": false,
         "cloud_coverage": true,
         "hardware_coverage": false,
-        "actionability_score": 0.009523809523809523,
+        "actionability_score": {
+            "combined_score": 0.009523809523809523,
+            "detection_score": 0.02
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.02
+        "prevalence_score": 0
     },
     {
         "tid": "T1614",
@@ -20970,10 +21325,12 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.0047619047619047615,
+        "actionability_score": {
+            "combined_score": 0.0047619047619047615,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     },
     {
         "tid": "T1615",
@@ -21011,10 +21368,12 @@
         "file_coverage": true,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.019047619047619046,
+        "actionability_score": {
+            "combined_score": 0.019047619047619046,
+            "detection_score": 0.04
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.04
+        "prevalence_score": 0
     },
     {
         "tid": "T1619",
@@ -21064,6 +21423,7 @@
         "file_coverage": false,
         "cloud_coverage": true,
         "hardware_coverage": false,
+        "actionability_score": {},
         "choke_point_score": 0.1,
         "prevalence_score": 0
     },
@@ -21103,9 +21463,11 @@
         "file_coverage": false,
         "cloud_coverage": false,
         "hardware_coverage": false,
-        "actionability_score": 0.0047619047619047615,
+        "actionability_score": {
+            "combined_score": 0.0047619047619047615,
+            "detection_score": 0.01
+        },
         "choke_point_score": 0.1,
-        "prevalence_score": 0,
-        "detection_actionability": 0.01
+        "prevalence_score": 0
     }
 ]

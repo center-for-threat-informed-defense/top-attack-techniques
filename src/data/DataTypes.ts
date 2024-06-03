@@ -29,11 +29,13 @@ export interface Technique {
   file_score: number;
   cloud_score: number;
   hardware_score: number;
-  actionability_score: number;
+  actionability_score: {
+    combined_score: number;
+    mitigation_score: number;
+    detection_score: number;
+  };
   choke_point_score: number;
   prevalence_score: number;
-  mitigation_actionability: number;
-  detection_actionability: number;
 }
 export interface Subtechnique {
   tid: string;
@@ -65,9 +67,11 @@ export interface ExportedTechnique {
   hardware_score: number;
   subtechniques: Array<Subtechnique>;
   mitigations: Array<Mitigation>;
-  actionability_score: number;
+  actionability_score: {
+    combined_score: number;
+    mitigation_score: number;
+    detection_score: number;
+  };
   choke_point_score: number;
   prevalence_score: number;
-  mitigation_actionability: number;
-  detection_actionability: number;
 }
