@@ -24,8 +24,9 @@
               </span>
             </h2>
           </div>
-          <div>
-            <MethodologyDetails :activeItemId="activeItemId" :methodologyList="methodologyList" />
+          <div v-for="(item, i) of methodologyList" :key="i">
+            <MethodologyDetails :activeItemId="i" :methodologyList="methodologyList"
+              :class="{ hidden: activeItemId !== i }" />
           </div>
         </div>
       </div>
@@ -73,7 +74,6 @@ export default defineComponent({
 
 img {
   object-fit: contain;
-  /* @apply xl:w-1/3 lg:w-1/2 w-full */
 }
 
 .link-section h2 {
