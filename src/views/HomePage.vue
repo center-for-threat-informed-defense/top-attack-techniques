@@ -60,7 +60,7 @@
         </div>
       </div>
     </section>
-    <section class="h-96 w-full py-10">
+    <section class="w-full py-10">
       <div class="w-5/6 mx-auto py-10">
         <h2 class="text-center uppercase font-bold text-5xl">Ransomware Top 10 Techniques</h2>
       </div>
