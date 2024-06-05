@@ -148,3 +148,13 @@ h1, h2, h3, h4, h5, h6 {
 .p-menubar-root-list {
     @apply w-60 -ml-40
 }
+.p-splitbutton.p-component {
+    @apply w-full bg-ctid-navy hover:bg-ctid-dark-navy text-white rounded-none p-4 my-4 ;
+}
+.p-splitbutton .p-button-label {
+    @apply uppercase font-bold text-lg hover:text-ctid-light-purple;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.p-splitbutton .p-button-icon {
+    @apply hover:text-ctid-light-purple
+}

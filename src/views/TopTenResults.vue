@@ -9,7 +9,7 @@
         <div class="lg:grid hidden grid-cols-3 gap-4 w-5/6 mx-auto calculator-box auto-rows-fr">
             <div class="col-span-1 calculator-list">
                 <TopTenSidebar :ranked-list="rankedList" :activeItemId="activeItemId" />
-                <button class="btn-primary mt-4" @click="download()">Download List</button>
+                <DownloadListButton :ranked-list="rankedList" />
             </div>
             <div class="col-span-2 h-full">
                 <div class="calculator-details">
@@ -30,7 +30,7 @@
         </div>
         <div class="w-5/6 mx-auto lg:hidden block">
             <TopTenAccordion :ranked-list="rankedList" :activeItemId="activeItemId" />
-            <button class="btn-primary mt-10" @click="download()">Download List</button>
+            <DownloadListButton :ranked-list="rankedList" />
         </div>
     </div>
 </template>
@@ -42,11 +42,11 @@ import TopTenSidebar from "../components/TopTenSidebar.vue"
 import TopTenDetails from "../components/TopTenDetails.vue"
 import TopTenAccordion from "../components/TopTenAccordion.vue"
 import SystemScoreSection from "../components/SystemScoreSection.vue"
-import downloadjs from "downloadjs";
-import type { ExportedTechnique, Technique } from "@/data/DataTypes";
+import type { Technique } from "@/data/DataTypes";
+import DownloadListButton from "../components/DownloadListButton.vue";
 
 export default defineComponent({
-    components: { TopTenSidebar, TopTenDetails, TopTenAccordion, SystemScoreSection },
+    components: { TopTenSidebar, TopTenDetails, TopTenAccordion, SystemScoreSection, DownloadListButton },
     data() {
         return {
             calculatorStore: useCalculatorStore(),
@@ -71,34 +71,6 @@ export default defineComponent({
             if (index < this.activeItemId) {
                 this.setActiveIndex(this.activeItemId - 1)
             }
-        },
-        download() {
-            const parsedList = [] as Array<ExportedTechnique>;
-
-            this.rankedList.slice(0, 10).forEach((technique, i) => {
-                const t = {
-                    rank: i + 1,
-                    tid: technique.tid,
-                    name: technique.name,
-                    description: technique.description,
-                    url: technique.url,
-                    detection: technique.detection,
-                    score: technique.adjusted_score,
-                    network_score: technique.network_score,
-                    process_score: technique.process_score,
-                    file_score: technique.file_score,
-                    cloud_score: technique.cloud_score,
-                    hardware_score: technique.hardware_score,
-                    mitigations: technique.mitigations,
-                    subtechniques: technique.subtechniques,
-                    actionability_score: technique.actionability_score,
-                    choke_point_score: technique.choke_point_score,
-                    prevalence_score: technique.prevalence_score,
-                }
-                parsedList.push(t);
-            })
-
-            downloadjs(JSON.stringify(parsedList, null, 4), "TopTenTechniques.json", JSON)
         },
         setRankedList() {
             let filteredList = structuredClone(toRaw(this.calculatorStore.techniques));
