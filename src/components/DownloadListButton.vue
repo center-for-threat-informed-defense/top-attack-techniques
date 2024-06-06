@@ -10,6 +10,7 @@ import ArrowRight from "@/assets/arrow-right.svg";
 import { type Technique, type ExportedTechnique } from "@/data/DataTypes";
 import SplitButton from "primevue/splitbutton";
 import downloadjs from "downloadjs";
+import { useCalculatorStore } from "@/stores/calculator.store";
 
 export default defineComponent({
     components: {
@@ -23,6 +24,7 @@ export default defineComponent({
     },
     data() {
         return {
+            calculatorStore: useCalculatorStore(),
             ArrowRight,
             items: [
                 {
@@ -69,7 +71,7 @@ export default defineComponent({
             downloadjs(JSON.stringify(parsedList, null, 4), "TopTenTechniques.json", JSON)
         },
         downloadAsNavigatorLayer() {
-            const gradient = ["#ffe766", "#ffaf66"]
+            const gradient = ["#FFDDBD", "#ffaf66"]
             const layer = {
                 "name": "Top 10 ATT&CK Techniques",
                 "versions": {
@@ -89,21 +91,33 @@ export default defineComponent({
                 "gradient": {
                     "colors": gradient,
                     "minValue": 0,
-                    "maxValue": 1
+                    "maxValue": 3
                 },
             }
-            for (const technique of this.rankedList.slice(0, 10)) {
+            this.rankedList.forEach((technique, i) => {
+                let description = ` Rank: ${i + 1}`;
+                for (const monitoringType of Object.keys(this.calculatorStore.systemScore)) {
+                    if (technique[`${monitoringType}_score`]) {
+                        description += `\n ${monitoringType.charAt(0).toUpperCase() + monitoringType.slice(1)} Score: ${parseFloat(technique[`${monitoringType}_score`]).toFixed(2)}`
+                    }
+                }
+                description += `\n Actionability Score: ${technique.actionability_score?.toFixed(2)}\n Choke Point Score: ${technique.choke_point_score?.toFixed(2)}\n Prevalence Score: ${technique.prevalence_score?.toFixed(2)}`
+
                 const t = {
                     "techniqueID": technique.tid,
                     "score": technique.adjusted_score,
-                    "comment": "",
+                    "comment": description,
                     "metadata": [],
                 }
+                if (i > 9) {
+                    t.color = "#FFFFFF"
+                }
                 layer.techniques.push(t)
-            }
-            layer.gradient.minValue = Math.min(...layer.techniques.map(o => o.score));
-            layer.gradient.maxValue = Math.max(...layer.techniques.map(o => o.score));
-            downloadjs(JSON.stringify(layer, null, 4), "TopTenTechniquesNavigatorLayer.json", JSON)
+            })
+
+            layer.gradient.minValue = layer.techniques[9].score
+            layer.gradient.maxValue = layer.techniques[0].score
+            downloadjs(JSON.stringify(layer, null, 4), "TopTechniquesNavigatorLayer.json", JSON)
         }
     },
 });
