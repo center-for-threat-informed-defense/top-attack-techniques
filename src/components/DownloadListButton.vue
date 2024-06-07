@@ -1,16 +1,13 @@
 <template>
-    <div>
-        <SplitButton label="Download" @click="downloadAsJson" :model="items" />
-    </div>
+    <SplitButton label="Download" @click="downloadAsJson" :model="items" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ArrowRight from "@/assets/arrow-right.svg";
 import { type Technique, type ExportedTechnique } from "@/data/DataTypes";
 import SplitButton from "primevue/splitbutton";
 import downloadjs from "downloadjs";
-import { useCalculatorStore } from "@/stores/calculator.store";
+import { useCalculatorStore, type CalculatorStore } from "@/stores/calculator.store";
 
 export default defineComponent({
     components: {
@@ -25,7 +22,6 @@ export default defineComponent({
     data() {
         return {
             calculatorStore: useCalculatorStore(),
-            ArrowRight,
             items: [
                 {
                     label: 'Download as JSON',
@@ -87,6 +83,7 @@ export default defineComponent({
                     score: number;
                     comment: string;
                     metadata: never[];
+                    color: string;
                 }>,
                 "gradient": {
                     "colors": gradient,
@@ -94,20 +91,29 @@ export default defineComponent({
                     "maxValue": 3
                 },
             }
+            type SystemScoreKeys = (keyof CalculatorStore["systemScoreObj"])[];
             this.rankedList.forEach((technique, i) => {
                 let description = ` Rank: ${i + 1}`;
-                for (const monitoringType of Object.keys(this.calculatorStore.systemScore)) {
+                for (const monitoringType of Object.keys(this.calculatorStore.systemScore) as SystemScoreKeys) {
+                    // add each score value to navigator comments:
                     if (technique[`${monitoringType}_score`]) {
-                        description += `\n ${monitoringType.charAt(0).toUpperCase() + monitoringType.slice(1)} Score: ${parseFloat(technique[`${monitoringType}_score`]).toFixed(2)}`
+                        const monitorType = monitoringType.charAt(0).toUpperCase() + monitoringType.slice(1);
+                        const monitorTypeScore = technique[`${monitoringType}_score`].toFixed(2);
+                        description += `\n${monitorType} Score: ${monitorTypeScore}`;
                     }
                 }
-                description += `\n Actionability Score: ${technique.actionability_score?.toFixed(2)}\n Choke Point Score: ${technique.choke_point_score?.toFixed(2)}\n Prevalence Score: ${technique.prevalence_score?.toFixed(2)}`
+                const actionability = `Actionability Score: ${technique.actionability_score?.toFixed(2)}`
+                const chokePoint = `Choke Point Score: ${technique.choke_point_score?.toFixed(2)}`
+                const prevalence = `Prevalence Score: ${technique.prevalence_score?.toFixed(2)}`
+
+                description += `\n ${actionability}\n ${chokePoint}\n ${prevalence}`
 
                 const t = {
                     "techniqueID": technique.tid,
                     "score": technique.adjusted_score,
                     "comment": description,
                     "metadata": [],
+                    "color": ""
                 }
                 if (i > 9) {
                     t.color = "#FFFFFF"

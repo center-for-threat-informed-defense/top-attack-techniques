@@ -37,7 +37,7 @@
 
 <script lang="ts">
 import { defineComponent, toRaw } from "vue";
-import { useCalculatorStore } from "../stores/calculator.store";
+import { useCalculatorStore, type CalculatorStore } from "../stores/calculator.store";
 import TopTenSidebar from "../components/TopTenSidebar.vue"
 import TopTenDetails from "../components/TopTenDetails.vue"
 import TopTenAccordion from "../components/TopTenAccordion.vue"
@@ -120,7 +120,8 @@ export default defineComponent({
             return false;
         },
         applyScores(filteredList: Array<Technique>) {
-            for (const monitoringType of Object.keys(this.scores)) {
+            type SystemScoreKeys = (keyof CalculatorStore["systemScoreObj"])[];
+            for (const monitoringType of Object.keys(this.scores) as SystemScoreKeys) {
                 const adjustment = this.scores[monitoringType].value;
                 filteredList = filteredList.map((technique) => {
                     if (technique[`${monitoringType}_coverage`]) {
