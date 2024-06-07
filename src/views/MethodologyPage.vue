@@ -24,11 +24,9 @@
               </span>
             </h2>
           </div>
-          <div v-for="(item, i) of methodologyList" :key="i" :class="{ hidden: activeItemId !== i }">
-            <div class="container-body text-left">
-              <p>{{ methodologyList[i].description }}</p>
-              <component :is="methodologyList[i].section" />
-            </div>
+          <div class="container-body text-left">
+            <p>{{ methodologyList[activeItemId].description }}</p>
+            <component :is="methodologyList[activeItemId].section" />
           </div>
         </div>
       </div>

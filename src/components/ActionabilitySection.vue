@@ -125,7 +125,7 @@
         (i.e. they are both in the main "linear domain") then we can write this as:
     </p>
     <div>$$ {{ formula5 }} $$</div>
-    <p>If we want each mitigation to be worth two detections, then we should set the $ wm $ and $ wd $
+    <p>If we want each mitigation to be worth two detections, then we should set the $ w_{m} $ and $ w_{d} $
         so that the following relation is satisfied (if the ratio is changed, then you would change the 2
         here to whatever the new ratio is): ${{ formula6 }}$. The derivatives of A
         are: </p>
@@ -140,8 +140,7 @@
     <p>Then, to ensure actionability ranges from zero to one, we just need to normalize the weights so that they
         add up to one (i.e. we want $ w'_{d} + w'_{m} = 1 $.) We can do this by dividing each un-normalized
         weight by the sum of all weights: ${{ formula12 }}$ and ${{ formula13 }}$ where $w'_{m}$ and $w'_{d}$
-        are
-        the values of $w_{m}$ and $w_{d}$ before normalizing.
+        are the values of $w_{m}$ and $w_{d}$ before normalizing.
     </p>
 
     <h4>What if we have more than two attributes?</h4>
@@ -201,7 +200,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-
+declare const MathJax: { typeset: () => void }
 export default defineComponent({
     data() {
         return {
@@ -229,6 +228,9 @@ export default defineComponent({
             formula18: '\\begin{equation*}\\mathrm{w_{x} := \\frac{w\\mathrm{_{x}}}{upper\\mathrm{_{x}} -lower\\mathrm{_{x}}}}\\end{equation*}',
         };
     },
+    mounted() {
+        MathJax.typeset()
+    }
 });
 </script>
 

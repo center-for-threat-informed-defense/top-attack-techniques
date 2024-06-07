@@ -93,6 +93,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+declare const MathJax: { typeset: () => void }
 
 export default defineComponent({
     data() {
@@ -101,6 +102,9 @@ export default defineComponent({
             prevalence2: "\\begin{equation*}\\mathrm{w( t_{now} -t_{i}) =w( \\Delta t)} = \\begin{cases}\\mathrm{w_{min}} & \\mathrm{ \\Delta t > full + decline} \\\\ \\mathrm{w_{min}\\frac{\\Delta t - full}{decline}- \\frac{\\Delta t - full - decline}{decline}}& \\mathrm{ full \\leq \\Delta t \\leq full + decline} \\\\ 1 & \\mathrm{ \\Delta t < full } \\end{cases}\\end{equation*}",
         };
     },
+    mounted() {
+        MathJax.typeset()
+    }
 });
 </script>
 

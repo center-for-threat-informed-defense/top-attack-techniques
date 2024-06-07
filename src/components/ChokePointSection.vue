@@ -126,7 +126,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-
+declare const MathJax: { typeset: () => void }
 export default defineComponent({
     data() {
         return {
@@ -142,6 +142,9 @@ export default defineComponent({
             chokePoint9: '\\begin{equation*}\\mathrm{ \\frac{w\\mathrm{_{b}}}{upper\\mathrm{_{b}} -lower\\mathrm{_{b}}} =ratio\\left(  \\frac{before}{after}\\right)\\cdot \\frac{w\\mathrm{_{a}}}{upper\\mathrm{_{a}} -lower\\mathrm{_{a}}} }\\end{equation*}',
         };
     },
+    mounted() {
+        MathJax.typeset()
+    }
 });
 </script>
 
