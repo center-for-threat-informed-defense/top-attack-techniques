@@ -24,30 +24,35 @@
               </span>
             </h2>
           </div>
-          <div v-for="(item, i) of methodologyList" :key="i">
-            <MethodologyDetails :activeItemId="i" :methodologyList="methodologyList"
-              :class="{ hidden: activeItemId !== i }" />
+          <div v-for="(item, i) of methodologyList" :key="i" :class="{ hidden: activeItemId !== i }">
+            <div class="container-body text-left">
+              <p>{{ methodologyList[i].description }}</p>
+              <component :is="methodologyList[i].section" />
+            </div>
           </div>
         </div>
       </div>
     </div>
+
   </section>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import MethodologySidebar from "../components/MethodologySidebar.vue"
-import MethodologyDetails from "../components/MethodologyDetails.vue"
+import ActionabilitySection from "../components/ActionabilitySection.vue"
+import ChokePointSection from "../components/ChokePointSection.vue"
+import PrevalenceSection from "../components/PrevalenceSection.vue"
 
 export default defineComponent({
-  components: { MethodologySidebar, MethodologyDetails },
+  components: { MethodologySidebar, ActionabilitySection, ChokePointSection, PrevalenceSection },
   data() {
     return {
       activeItemId: 0,
       methodologyList: [
-        { name: "Actionability", description: "The opportunity for a defender to detect or mitigate against each ATT&CK technique based on publicly available analytics and security controls" },
-        { name: "Choke Point", description: "A specific technique where many other techniques converge or diverge, and eliminating that specific technique would cause disruption to an adversary" },
-        { name: "Prevalence", description: "The frequency of which an attacker uses a specific ATT&CK technique over a period of time" },
+        { name: "Actionability", description: "The opportunity for a defender to detect or mitigate against each ATT&CK technique based on publicly available analytics and security controls", section: "ActionabilitySection" },
+        { name: "Choke Point", description: "A specific technique where many other techniques converge or diverge, and eliminating that specific technique would cause disruption to an adversary", section: "ChokePointSection" },
+        { name: "Prevalence", description: "The frequency of which an attacker uses a specific ATT&CK technique over a period of time", section: "PrevalenceSection" },
       ]
     };
   },
@@ -68,19 +73,7 @@ export default defineComponent({
   @apply font-bold
 }
 
-.container-body p {
-  @apply mb-2 text-sm
-}
-
 img {
   object-fit: contain;
-}
-
-.link-section h2 {
-  @apply font-bold text-left mt-4
-}
-
-.btn-primary {
-  @apply my-2
 }
 </style>
