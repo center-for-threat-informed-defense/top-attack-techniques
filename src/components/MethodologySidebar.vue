@@ -13,19 +13,11 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useCalculatorStore } from "../stores/calculator.store";
 export default defineComponent({
     props: {
         methodologyList: Array,
         activeItemId: Number,
     },
-    data() {
-        return {
-            calculatorStore: useCalculatorStore(),
-        };
-    },
-    methods: {
-    }
 });
 </script>
 
