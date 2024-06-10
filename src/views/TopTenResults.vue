@@ -94,8 +94,6 @@ export default defineComponent({
                     actionability_score: technique.actionability_score,
                     choke_point_score: technique.choke_point_score,
                     prevalence_score: technique.prevalence_score,
-                    mitigation_actionability: technique.mitigation_actionability,
-                    detection_actionability: technique.detection_actionability
                 }
                 parsedList.push(t);
             })
