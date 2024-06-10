@@ -26,7 +26,7 @@ const DESTINATION_FILE = "src/data/Techniques.json";
           ? r.getCell(11).value.toString().split(", ")
           : [],
         is_subtechnique: Boolean(r.getCell(12).value),
-        supertechnique: r.getCell(13).value,
+        supertechnique: r.getCell(13).value.trim() ? r.getCell(13).value : null,
         subtechniques: [],
         mitigations: [],
       };
@@ -65,15 +65,18 @@ const DESTINATION_FILE = "src/data/Techniques.json";
       r.getCell(1).value.charAt(0) === "M"
     ) {
       const mitigation = mitigations.find((m) => m.mid === r.getCell(1).value);
-      if (r.getCell(5).value.includes(".")) {
+      if (r.getCell(6).value.includes(".")) {
         const subtechnique = subtechniques.find(
-          (t) => t.tid === r.getCell(5).value
+          (t) => t.tid === r.getCell(6).value
         );
-
-        subtechnique.mitigations.push(mitigation);
+        if (subtechnique) {
+          subtechnique.mitigations.push(mitigation);
+        }
       } else {
-        const technique = techniques.find((t) => t.tid === r.getCell(5).value);
-        technique.mitigations.push(mitigation);
+        const technique = techniques.find((t) => t.tid === r.getCell(6).value);
+        if (technique) {
+          technique.mitigations.push(mitigation);
+        }
       }
     }
   });
