@@ -3,7 +3,7 @@
         <div class=" xl:w-1/2 xl:pr-10">
             <h1>
                 <router-link to="/">
-                    <span class="text-ctid-light-purple">Top</span> ATT&amp;CK Techniques
+                    <img v-bind:src="Logo" class="h-6" alt="Top Attack Techniques" />
                 </router-link>
             </h1>
             <p class="my-4">The <a href="https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/"
@@ -12,7 +12,8 @@
                 to advance the state of the art and the state of the practice in threat-informed defense globally.
             </p>
             <div class="md:flex">
-                <img src="../assets/logo-horizontal-white.png" class="h-6 my-auto" />
+                <img src="../assets/ctid-logo-horizontal-white.png" class="h-6 my-auto"
+                    alt="Center for Threat Informed Defense" />
                 <div class="social-links">
                     <a href="mailto:ctid@mitre-engenuity.org?subject=Top%20ATT&amp;CK%20Techniques" class="email"><i
                             class="pi pi-envelope"></i></a>
@@ -32,7 +33,7 @@
                 <div v-for="(item, i) of externalProjects" :key="item.label" class="flex">
                     <a :href="item.route" target="blank"
                         class="hover:underline hover:text-ctid-light-purple md:mx-0 mx-2 my-auto">{{
-                    item.label }}</a>
+                        item.label }}</a>
                     <div v-if="i !== externalProjects.length - 1"
                         class="md:block hidden mx-4 2xl:mx-8 w-[3px] h-full bg-ctid-light-purple"></div>
                 </div>
@@ -43,10 +44,12 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Logo from "@/assets/logo-line-white.svg";
 
 export default defineComponent({
     data() {
         return {
+            Logo,
             externalProjects: [
                 { label: "Attack Flow", route: "https://center-for-threat-informed-defense.github.io/attack-flow/" },
                 { label: "M3TID", route: "https://center-for-threat-informed-defense.github.io/m3tid/" },

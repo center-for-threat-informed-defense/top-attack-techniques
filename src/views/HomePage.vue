@@ -3,14 +3,13 @@
     <div class="hero">
       <div class="w-5/6 h-full mx-auto my-auto">
         <div class="title">
-          <h1 class="">
-            <span class="text-ctid-light-purple">Top</span> ATT&amp;CK Techniques
-          </h1>
-          <div class="lg:w-6 lg:h-36 w-full h-1 bg-ctid-light-purple my-4"></div>
+          <img v-bind:src="LogoVertical" class="h-60 lg:block hidden" alt="Top Attack Techniques" />
+          <img v-bind:src="LogoHorizontal" class="h-20 lg:hidden block" alt="Top Attack Techniques" />
+          <div class="lg:w-6 lg:h-auto w-full h-1 bg-ctid-light-purple my-4 lg:mx-4"></div>
           <p class="my-auto">
             Top ATT&amp;CK Techniques provides defenders with a systematic approach
             to prioritizing ATT&amp;CK techniques. Our open methodology considers
-            technique prevalence, common attack choke points, and actionability
+            technique prevalence, common ATT&amp;CK choke points, and actionability
             to enable defenders to focus on the ATT&amp;CK techniques that are most
             relevant to their organization.
           </p>
@@ -23,10 +22,10 @@
             description="The Top Ransomware Technique List provides a starting point for defending against ransomware attacks and demonstrates how the Top ATT&amp;CK Techniques methodology can be tailored to different use cases."
             :imgSrc="ListSvg" link="top-10-lists" />
           <section-item title="Methodology"
-            description="Use the criteria to score your system and click generate in order to see your personalized list of techniques. Our calculator will show you a customized list of the vulnerabilities you have and what you need to prioritize for your system."
+            description="We calculate the Actionability, Choke Point, and Prevalence scores for each technique which are then weighted and combined to form the total technique score. Learn the exact formulas used to calculate the score for each technique."
             :imgSrc="BookSvg" link="methodology" />
           <section-item title="Help"
-            description="The Top Ransomware Technique List provides a starting point for defending against ransomware attacks and demonstrates how the Top ATT&amp;CK Techniques methodology can be tailored to different use cases."
+            description="Read the FAQ to answer any questions you might have about this site. Get step-by-step instructions about how to use the Top ATT&amp;CK Techniques Calculator. You'll also find helpful links that allow you to submit issues and learn more about CTID projects."
             :imgSrc="HelpSvg" link="help" />
         </div>
       </div>
@@ -76,6 +75,8 @@ import CalculatorSvg from "@/assets/calculator.svg";
 import ListSvg from "@/assets/list.svg";
 import BookSvg from "@/assets/book.svg";
 import HelpSvg from "@/assets/help.svg";
+import LogoVertical from "@/assets/logo-vertical-white.svg";
+import LogoHorizontal from "@/assets/logo-horizontal-white.svg";
 
 export default defineComponent({
   components: { SectionItem },
@@ -85,6 +86,7 @@ export default defineComponent({
       ListSvg,
       BookSvg,
       HelpSvg,
+      LogoVertical, LogoHorizontal
     };
   },
 });
