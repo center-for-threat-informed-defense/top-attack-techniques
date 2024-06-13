@@ -15,15 +15,22 @@
                 <img src="../assets/ctid-logo-horizontal-white.png" class="h-6 my-auto"
                     alt="Center for Threat Informed Defense" />
                 <div class="social-links">
-                    <a href="mailto:ctid@mitre-engenuity.org?subject=Top%20ATT&amp;CK%20Techniques" class="email"><i
-                            class="pi pi-envelope"></i></a>
+                    <a href="mailto:ctid@mitre-engenuity.org?subject=Top%20ATT&amp;CK%20Techniques"
+                        aria-label="email ctid" class="email">
+                        <i class="pi pi-envelope"></i>
+                    </a>
                     <a href="https://www.linkedin.com/showcase/center-for-threat-informed-defense/" target="blank"
-                        class="linkedin"><i class="pi pi-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@mitreengenuity" target="blank" class="youtube">
+                        aria-label="ctid on linkedin" class="linkedin">
+                        <i class="pi pi-linkedin"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@mitreengenuity" target="blank" class="youtube"
+                        aria-label="mitre engenuity youtube">
                         <i class="pi pi-youtube"></i>
                     </a>
                     <a href="https://github.com/center-for-threat-informed-defense/mappings-explorer" target="blank"
-                        class="github"><i class="pi pi-github"></i></a>
+                        class="github" aria-label="ctid github">
+                        <i class="pi pi-github"></i>
+                    </a>
                 </div>
             </div>
         </div>

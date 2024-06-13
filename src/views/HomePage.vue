@@ -3,7 +3,7 @@
     <div class="hero">
       <div class="w-5/6 h-full mx-auto my-auto">
         <div class="title">
-          <img v-bind:src="LogoVertical" class="h-60 lg:block hidden" alt="Top Attack Techniques" />
+          <img v-bind:src="LogoVertical" class="h-60 lg:block hidden my-auto" alt="Top Attack Techniques" />
           <img v-bind:src="LogoHorizontal" class="h-20 lg:hidden block" alt="Top Attack Techniques" />
           <div class="lg:w-6 lg:h-auto w-full h-1 bg-ctid-light-purple my-4 lg:mx-4"></div>
           <p class="my-auto">
@@ -92,4 +92,12 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.hero {
+  @apply bg-ctid-navy min-h-[100vh] -mt-20 lg:pt-2 xl:pb-10 pt-20 pb-20 text-white;
+}
+
+.hero .title {
+  @apply 2xl:w-1/2 xl:w-2/3 mx-auto lg:mt-60 mt-20 lg:flex gap-6
+}
+</style>

@@ -24,7 +24,9 @@
                 </div>
             </div>
         </div>
-        <button @click="generateResults" class="btn-primary w-1/3">Generate</button>
+        <div class="lg:w-2/3 mx-auto">
+            <button @click="generateResults" class="btn-primary">Generate</button>
+        </div>
     </section>
 </template>
 
