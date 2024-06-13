@@ -4,8 +4,10 @@
             class="lg:grid hidden grid-cols-3 gap-4 w-5/6 mx-auto calculator-box auto-rows-fr">
 
             <div class="col-span-1 calculator-list">
-                <TopTenSidebar :ranked-list="rankedList" :activeItemId="activeItemId" :allowDelete="allowDelete" />
-                <button class="btn-primary mt-4" @click="download()">Download List</button>
+                <TopTenSidebar :ranked-list="rankedList" :activeItemId="activeItemId" :allowDelete="allowDelete"
+                    @set-active-index="(i) => activeItemId = i"
+                    @delete-technique="(i) => $emit('deleteTechnique', i)" />
+                <DownloadListButton :ranked-list="rankedList" />
             </div>
             <div class="col-span-2 h-full">
                 <div class="calculator-details">
@@ -26,7 +28,7 @@
         </div>
         <div v-if="rankedList.length > 1" class="w-5/6 mx-auto lg:hidden block">
             <TopTenAccordion :ranked-list="rankedList" :activeItemId="activeItemId" :allowDelete="allowDelete" />
-            <button class="btn-primary mt-10" @click="download()">Download List</button>
+            <DownloadListButton :ranked-list="rankedList" />
         </div>
         <div v-if="rankedList.length <= 1" class="mx-auto italic w-max">
             No techniques found for the given criteria.
@@ -42,9 +44,10 @@ import TopTenDetails from "../components/TopTenDetails.vue"
 import TopTenAccordion from "../components/TopTenAccordion.vue"
 import downloadjs from "downloadjs";
 import { type Technique } from "../data/DataTypes"
+import DownloadListButton from "./DownloadListButton.vue";
 
 export default defineComponent({
-    components: { TopTenSidebar, TopTenDetails, TopTenAccordion },
+    components: { TopTenSidebar, TopTenDetails, TopTenAccordion, DownloadListButton },
     data() {
         return {
             calculatorStore: useCalculatorStore(),
@@ -72,9 +75,6 @@ export default defineComponent({
     methods: {
         setActiveIndex(index: number) {
             this.activeItemId = index
-        },
-        deleteTechnique(index: number) {
-            this.$parent.deleteTechnique(index)
         },
         download() {
             downloadjs(JSON.stringify(this.rankedList.slice(0, 10)), "TopTenTechniques.json", JSON)

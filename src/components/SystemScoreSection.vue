@@ -13,11 +13,9 @@
                 <span class="highlight mr-1">{{ getScoreText(monitoringType) }}</span>
                 <span>{{ monitoringType }} Monitoring</span>
             </div>
-            <div v-for="filter, i of Object.keys(calculatorStore.activeFilters)" :key="filter"
-                class="inline mr-2 w-max">
+            <div v-for="filter of Object.keys(calculatorStore.activeFilters)" :key="filter" class="inline mr-2 w-max">
                 {{ filter }}:
                 <span class="highlight">{{ getFilterText(filter) }}</span>
-
             </div>
         </div>
         <div class="lg:inline hidden cursor-pointer" @click="editSelections()"

@@ -18,6 +18,7 @@
     "primeicons": "^7.0.0",
     "primevue": "^3.49.1",
     "vue": "^3.2.37",
+    "vue-mathjax-next": "^0.0.6",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {

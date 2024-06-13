@@ -160,3 +160,13 @@ h1, h2, h3, h4, h5, h6 {
 .p-tabview-nav {
     @apply w-5/6 mx-auto border-b-2 border-solid
 }
+.p-splitbutton.p-component {
+    @apply w-full bg-ctid-navy text-white rounded-none my-4 ;
+}
+.p-splitbutton .p-splitbutton-defaultbutton {
+    @apply uppercase font-bold text-lg hover:text-ctid-light-purple hover:bg-ctid-dark-navy p-4;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.p-splitbutton .p-button-icon-only.p-splitbutton-menubutton {
+    @apply hover:text-ctid-light-purple hover:bg-ctid-dark-navy px-2
+}
