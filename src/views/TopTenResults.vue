@@ -8,7 +8,8 @@
         </div>
         <div class="lg:grid hidden grid-cols-3 gap-4 w-5/6 mx-auto calculator-box auto-rows-fr">
             <div class="col-span-1 calculator-list">
-                <TopTenSidebar :ranked-list="rankedList" :activeItemId="activeItemId" />
+                <TopTenSidebar :ranked-list="rankedList" :activeItemId="activeItemId"
+                    @set-active-index="(i) => activeItemId = i" @delete-technique="(i) => deleteTechnique(i)" />
                 <button class="btn-primary mt-4" @click="download()">Download List</button>
             </div>
             <div class="col-span-2 h-full">
@@ -63,13 +64,10 @@ export default defineComponent({
         },
     },
     methods: {
-        setActiveIndex(index: number) {
-            this.activeItemId = index
-        },
         deleteTechnique(index: number) {
-            this.rankedList.splice(index, 1)
+            this.calculatorStore.removeTechnique(index)
             if (index < this.activeItemId) {
-                this.setActiveIndex(this.activeItemId - 1)
+                this.activeItemId = this.activeItemId - 1
             }
         },
         download() {
