@@ -24,11 +24,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 .btn-primary-light {
-    @apply bg-ctid-light-purple hover:bg-ctid-navy hover:text-white my-4 py-4 uppercase font-bold text-lg;
+    @apply bg-ctid-light-purple hover:bg-ctid-primary-purple hover:text-white my-4 py-4 uppercase font-bold text-lg;
     font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 .btn-primary {
     @apply bg-ctid-navy hover:bg-ctid-dark-navy  text-white w-full p-4 text-center my-4 py-4 uppercase font-bold text-lg;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+
 }
 
 #description a {

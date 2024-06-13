@@ -5,16 +5,16 @@
                 :header="calculatorStore.filterProperties[group].label">
                 <div class="checkbox-group">
                     <Checkbox :model-value="isSelected(group)" :disabled="isSelected(group)" :binary="true"
-                        :input-id="`select_all_${group}`" @change="select(group)">
+                        aria-label="Select all" :input-id="`select_all_${group}`" @change="select(group)">
                     </Checkbox>
                     <label for="`select_all_${group}`" class="my-auto">All {{ group.toUpperCase() }} Controls</label>
                 </div>
                 <div v-for="option in calculatorStore.filterProperties[group].options" :key="option.id"
                     class="checkbox-group">
                     <Checkbox :model-value="isSelected(group, option.name)" @change="select(group, option.name)"
-                        :binary="true" class="my-auto">
+                        :binary="true" :aria-labelledby="option.id" class="my-auto">
                     </Checkbox>
-                    <label :for="option.name" class="my-auto">{{ option.name }}</label>
+                    <label :id="option.id" :for="option.name" class="my-auto">{{ option.name }}</label>
                 </div>
             </AccordionTab>
         </Accordion>
