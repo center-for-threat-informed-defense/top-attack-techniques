@@ -102,7 +102,7 @@ export default defineComponent({
                         description += `\n${monitorType} Score: ${monitorTypeScore}`;
                     }
                 }
-                const actionability = `Actionability Score: ${technique.actionability_score?.toFixed(2)}`
+                const actionability = `Actionability Score: ${technique.actionability_score?.combined_score?.toFixed(2)}`
                 const chokePoint = `Choke Point Score: ${technique.choke_point_score?.toFixed(2)}`
                 const prevalence = `Prevalence Score: ${technique.prevalence_score?.toFixed(2)}`
 
