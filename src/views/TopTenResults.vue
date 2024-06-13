@@ -73,7 +73,7 @@ export default defineComponent({
         download() {
             const parsedList = [] as Array<ExportedTechnique>;
 
-            this.rankedList.slice(0, 10).forEach((technique, i) => {
+            this.rankedList.slice(0, 10).forEach((technique: Technique, i: number) => {
                 const t = {
                     rank: i + 1,
                     tid: technique.tid,
