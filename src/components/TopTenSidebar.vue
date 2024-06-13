@@ -12,7 +12,6 @@
                     <i class="pi pi-trash"></i>
                 </button>
             </li>
-
         </ul>
     </div>
 </template>
@@ -29,7 +28,8 @@ export default defineComponent({
         activeItemId: {
             type: Number,
             default: 0,
-        }
+        },
+        allowDelete: Boolean
     },
 });
 </script>

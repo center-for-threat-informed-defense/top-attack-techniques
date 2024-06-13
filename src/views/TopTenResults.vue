@@ -6,48 +6,18 @@
                 <SystemScoreSection />
             </div>
         </div>
-        <div class="lg:grid hidden grid-cols-3 gap-4 w-5/6 mx-auto calculator-box auto-rows-fr">
-            <div class="col-span-1 calculator-list">
-                <TopTenSidebar :ranked-list="rankedList" :activeItemId="activeItemId"
-                    @set-active-index="(i) => activeItemId = i" @delete-technique="(i) => deleteTechnique(i)" />
-                <DownloadListButton :ranked-list="rankedList" />
-            </div>
-            <div class="col-span-2 h-full">
-                <div class="calculator-details">
-                    <div class="container-header">
-                        <h2>
-                            <span class=" text-ctid-light-purple">
-                                {{ rankedList[activeItemId].tid }}
-                            </span>
-                            {{ rankedList[activeItemId].name }}
-                        </h2>
-                    </div>
-                    <div>
-                        <TopTenDetails :technique="rankedList[activeItemId]" />
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="w-5/6 mx-auto lg:hidden block">
-            <TopTenAccordion :ranked-list="rankedList" :activeItemId="activeItemId" />
-            <DownloadListButton :ranked-list="rankedList" />
-        </div>
+        <top-ten-wrapper :ranked-list="rankedList" :allowDelete="true" @delete-technique="(i) => deleteTechnique(i)" />
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, toRaw } from "vue";
-import { useCalculatorStore, type CalculatorStore } from "../stores/calculator.store";
-import TopTenSidebar from "../components/TopTenSidebar.vue"
-import TopTenDetails from "../components/TopTenDetails.vue"
-import TopTenAccordion from "../components/TopTenAccordion.vue"
-import SystemScoreSection from "../components/SystemScoreSection.vue"
+import TopTenWrapper from "../components/TopTenWrapper.vue";
 import type { Technique } from "@/data/DataTypes";
-import DownloadListButton from "../components/DownloadListButton.vue";
-
+import { useCalculatorStore, type CalculatorStore } from "../stores/calculator.store";
+import SystemScoreSection from "../components/SystemScoreSection.vue"
 export default defineComponent({
-    components: { TopTenSidebar, TopTenDetails, TopTenAccordion, SystemScoreSection, DownloadListButton },
+    components: { SystemScoreSection, TopTenWrapper },
     data() {
         return {
             calculatorStore: useCalculatorStore(),
@@ -65,10 +35,7 @@ export default defineComponent({
     },
     methods: {
         deleteTechnique(index: number) {
-            this.calculatorStore.removeTechnique(index)
-            if (index < this.activeItemId) {
-                this.activeItemId = this.activeItemId - 1
-            }
+            this.rankedList.splice(index, 1)
         },
         setRankedList() {
             let filteredList = structuredClone(toRaw(this.calculatorStore.techniques));

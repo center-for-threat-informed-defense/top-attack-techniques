@@ -18,16 +18,16 @@
         <div class="mx-auto my-16 grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
           <section-item title="Calculator"
             description="Use the criteria to score your system and click generate in order to see your personalized list of techniques. Our calculator will show you a customized list of the vulnerabilities you have and what you need to prioritize for your system."
-            :imgSrc="CalculatorSvg" link="calculator" />
+            :imgSrc="CalculatorSvg" link="calculator" linkText="Go To Calculator" />
           <section-item title="Top 10 lists"
             description="The Top Ransomware Technique List provides a starting point for defending against ransomware attacks and demonstrates how the Top ATT&amp;CK Techniques methodology can be tailored to different use cases."
-            :imgSrc="ListSvg" link="top-10-lists" />
+            :imgSrc="ListSvg" link="top-10-lists" linkText="View Top 10 Lists" />
           <section-item title="Methodology"
             description="Use the criteria to score your system and click generate in order to see your personalized list of techniques. Our calculator will show you a customized list of the vulnerabilities you have and what you need to prioritize for your system."
-            :imgSrc="BookSvg" link="methodology" />
+            :imgSrc="BookSvg" link="methodology" linkText="Read About It" />
           <section-item title="Help"
             description="The Top Ransomware Technique List provides a starting point for defending against ransomware attacks and demonstrates how the Top ATT&amp;CK Techniques methodology can be tailored to different use cases."
-            :imgSrc="HelpSvg" link="help" />
+            :imgSrc="HelpSvg" link="help" linkText="Learn More" />
         </div>
       </div>
     </div>
@@ -60,11 +60,11 @@
         </div>
       </div>
     </section>
-    <section class="h-96 w-full py-20">
-      <h2 class="text-center text-5xl font-medium">
-        Ransomware Top 10 Techniques
-      </h2>
-      <p class="text-center">content coming soon...</p>
+    <section class="w-full py-10">
+      <div class="w-5/6 mx-auto py-10">
+        <h2 class="text-center uppercase font-bold text-5xl">Ransomware Top 10 Techniques</h2>
+      </div>
+      <top-ten-wrapper :rankedList="rankedList" :allowDelete="false" />
     </section>
   </div>
 </template>
@@ -76,16 +76,26 @@ import CalculatorSvg from "@/assets/calculator.svg";
 import ListSvg from "@/assets/list.svg";
 import BookSvg from "@/assets/book.svg";
 import HelpSvg from "@/assets/help.svg";
+import { useCalculatorStore } from "@/stores/calculator.store";
+import TopTenWrapper from "@/components/TopTenWrapper.vue";
 
 export default defineComponent({
-  components: { SectionItem },
+  components: { SectionItem, TopTenWrapper },
   data() {
     return {
+      calculatorStore: useCalculatorStore(),
       CalculatorSvg,
       ListSvg,
       BookSvg,
       HelpSvg,
     };
+  },
+  computed: {
+    rankedList() {
+      // fetch static ransomware list from calculator store
+      // edit items in that list by changing the ID list in the store
+      return this.calculatorStore.getTopTenList(this.calculatorStore.topTenLists[0].techniques)
+    }
   },
 });
 </script>
