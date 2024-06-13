@@ -7,19 +7,20 @@
         </button>
     </div>
     <div class="system-score-row">
-        <div v-for="monitoringType of Object.keys(this.calculatorStore.systemScore)" :key="monitoringType"
-            class="w-max inline-block mr-2">
-            <span class="highlight">{{ getScoreText(monitoringType) }}</span>
-            {{ monitoringType }} Monitoring<span class="comma">,</span><span class="pipe">|</span>
+        <div class="filters-scores inline">
+            <div v-for="monitoringType of Object.keys(calculatorStore.systemScore)" :key="monitoringType"
+                class="inline mr-2 w-max">
+                <span class="highlight mr-1">{{ getScoreText(monitoringType) }}</span>
+                <span>{{ monitoringType }} Monitoring</span>
+            </div>
+            <div v-for="filter, i of Object.keys(calculatorStore.activeFilters)" :key="filter"
+                class="inline mr-2 w-max">
+                {{ filter }}:
+                <span class="highlight">{{ getFilterText(filter) }}</span>
+
+            </div>
         </div>
-        <div v-for="filter, i of Object.keys(this.calculatorStore.activeFilters)" :key="filter"
-            class="inline-block mr-2 w-max">
-            {{ filter }}:
-            <span class="highlight">{{ getFilterText(filter) }}</span>
-            <span v-if="i !== Object.keys(this.calculatorStore.activeFilters).length - 1" class="comma">,</span>
-            <span v-if="i !== Object.keys(this.calculatorStore.activeFilters).length - 1" class="pipe">|</span>
-        </div>
-        <div class="lg:inline-block hidden cursor-pointer" @click="editSelections()"
+        <div class="lg:inline hidden cursor-pointer" @click="editSelections()"
             v-tooltip.top="'Edit your filters and components to fine tune your top ten techniques'">
             <i class="pi pi-cog mr-2 mt-auto"></i>
             <span class="my-auto xl:inline xl:w-0 lg:hidden ">Edit Selection</span>
@@ -41,11 +42,11 @@ export default defineComponent({
         };
     },
     methods: {
-        getScoreText(key) {
+        getScoreText(key: string) {
             if (this.calculatorStore.systemScore[key].label === "None") { return "No" }
             return this.calculatorStore.systemScore[key].label
         },
-        getFilterText(key) {
+        getFilterText(key: string) {
             if (this.calculatorStore.activeFiltersObj[key].size < 1) {
                 return `All ${key} Controls`
             }
@@ -71,11 +72,7 @@ export default defineComponent({
     @apply text-ctid-primary-purple
 }
 
-.pipe {
-    @apply lg:inline hidden text-ctid-light-gray ml-2
-}
-
-.comma {
-    @apply lg:hidden inline ml-[1px]
+.filters-scores div {
+    @apply lg:after:content-["|"] lg:after:text-ctid-light-gray lg:after:ml-2 after:content-[","] ml-[1px] last:after:content-[unset]
 }
 </style>

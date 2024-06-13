@@ -8,9 +8,9 @@
   </section>
   <div class="my-8">
     <TabView>
-      <TabPanel v-for="(list, index) in topTenLists" :key="list.id" :header="list.name">
+      <TabPanel v-for="(list, index) in topTenList" :key="list.id" :header="list.name">
         <div class="w-5/6 mx-auto">
-          <h2 class=" text-center uppercase font-bold text-4xl mb-6 pt-8">{{ topTenLists[index].name }} Top 10 List
+          <h2 class=" text-center uppercase font-bold text-4xl mb-6 pt-8">{{ topTenList[index].name }} Top 10 List
           </h2>
         </div>
         <top-ten-wrapper :rankedList="rankedList[index]" :allowDelete="false" />
@@ -32,44 +32,15 @@ export default defineComponent({
   data() {
     return {
       calculatorStore: useCalculatorStore(),
-      active: 0,
-      topTenLists: [
-        {
-          id: "ransomware",
-          name: "Ransomware",
-          description: "This is the Ransomware list",
-          techniques: [
-            "T1486",
-            "T1490",
-            "T1027",
-            "T1059",
-            "T1036",
-            "T1112",
-            "T1047",
-            "T1562.001",
-            "T1204",
-            "T1059.001",
-          ]
-        },
-        // {
-        //   id: "sector",
-        //   name: "Sector",
-        //   description: "This is the Sector list",
-        //   techniques: []
-        // },
-        // {
-        //   id: "black_cat",
-        //   name: "BlackCat",
-        //   description: "This is the BlackCat list",
-        //   techniques: []
-        // },
-      ]
     };
   },
   computed: {
+    topTenList() {
+      return this.calculatorStore.topTenLists
+    },
     rankedList() {
       const listsObj = [] as Array<Array<Technique>>
-      for (const list of this.topTenLists) {
+      for (const list of this.calculatorStore.topTenLists) {
         listsObj.push(this.calculatorStore.getTopTenList(list.techniques))
       }
       return listsObj

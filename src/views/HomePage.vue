@@ -64,7 +64,7 @@
       <div class="w-5/6 mx-auto py-10">
         <h2 class="text-center uppercase font-bold text-5xl">Ransomware Top 10 Techniques</h2>
       </div>
-      <top-ten-wrapper :rankedList="this.rankedList" :allowDelete="false" />
+      <top-ten-wrapper :rankedList="rankedList" :allowDelete="false" />
     </section>
   </div>
 </template>
@@ -88,21 +88,15 @@ export default defineComponent({
       ListSvg,
       BookSvg,
       HelpSvg,
-      activeItemId: 0,
     };
   },
   computed: {
     rankedList() {
       // fetch static ransomware list from calculator store
       // edit items in that list by changing the ID list in the store
-      return this.calculatorStore.ransomwareList()
+      return this.calculatorStore.getTopTenList(this.calculatorStore.topTenLists[0].techniques)
     }
   },
-  methods: {
-    setActiveIndex(index: number) {
-      this.activeItemId = index
-    },
-  }
 });
 </script>
 

@@ -8,6 +8,6 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["vite/client"]
+    "types": ["vite/client", "@types/downloadjs"]
   }
 }

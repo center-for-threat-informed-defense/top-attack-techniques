@@ -11,8 +11,8 @@
     "update": "node ./scripts/update_techniques.js"
   },
   "dependencies": {
-    "exceljs": "^4.4.0",
     "downloadjs": "^1.4.7",
+    "exceljs": "^4.4.0",
     "marked": "^12.0.1",
     "pinia": "^2.0.29",
     "primeicons": "^7.0.0",
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
     "@tsconfig/node18": "^18.2.4",
+    "@types/downloadjs": "^1.4.6",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vitejs/plugin-vue": "^4.0.0",

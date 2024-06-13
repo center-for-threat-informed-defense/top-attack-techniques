@@ -41,6 +41,37 @@ export const useCalculatorStore = defineStore("calculator", {
       cloud: { label: "None", value: 1 },
       hardware: { label: "None", value: 1 },
     },
+    topTenListInfo: [
+      {
+        id: "ransomware",
+        name: "Ransomware",
+        description: "This is the Ransomware list",
+        techniques: [
+          "T1486",
+          "T1490",
+          "T1027",
+          "T1059",
+          "T1036",
+          "T1112",
+          "T1047",
+          "T1562.001",
+          "T1204",
+          "T1059.001",
+        ],
+      },
+      // {
+      //   id: "sector",
+      //   name: "Sector",
+      //   description: "This is the Sector list",
+      //   techniques: []
+      // },
+      // {
+      //   id: "black_cat",
+      //   name: "BlackCat",
+      //   description: "This is the BlackCat list",
+      //   techniques: []
+      // },
+    ],
   }),
   getters: {
     activeFilters(state) {
@@ -57,6 +88,9 @@ export const useCalculatorStore = defineStore("calculator", {
     },
     allCISOptions(state) {
       return state.filterPropertiesObj.cis.options.map((i) => i.name);
+    },
+    topTenLists(state) {
+      return state.topTenListInfo;
     },
   },
 
@@ -154,22 +188,6 @@ export const useCalculatorStore = defineStore("calculator", {
         }
       }
       return ransomwareTop;
-    },
-    ransomwareList(): Array<Technique> {
-      // return static ransomware list as determined by spreadsheet
-      const ids = [
-        "T1486",
-        "T1490",
-        "T1027",
-        "T1059",
-        "T1036",
-        "T1112",
-        "T1047",
-        "T1562.001",
-        "T1204",
-        "T1059.001",
-      ];
-      return this.getTopTenList(ids);
     },
   },
 });
