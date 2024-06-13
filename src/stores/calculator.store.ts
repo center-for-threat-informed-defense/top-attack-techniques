@@ -61,10 +61,10 @@ export const useCalculatorStore = defineStore("calculator", {
   },
   actions: {
     updateActiveFilters(filterValues: {
-      nist: [];
-      cis: [];
-      detection: [];
-      os: [];
+      nist: Set<string>;
+      cis: Set<string>;
+      detection: Set<string>;
+      os: Set<string>;
     }) {
       this.activeFiltersObj = filterValues;
     },
@@ -145,3 +145,5 @@ export const useCalculatorStore = defineStore("calculator", {
     },
   },
 });
+// Define Calculator Store Type
+export type CalculatorStore = ReturnType<typeof useCalculatorStore>;

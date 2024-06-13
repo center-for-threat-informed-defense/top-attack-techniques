@@ -19,7 +19,6 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useCalculatorStore } from "../stores/calculator.store";
 import { type Technique } from "@/data/DataTypes";
 export default defineComponent({
     props: {
@@ -32,13 +31,6 @@ export default defineComponent({
             default: 0,
         }
     },
-    data() {
-        return {
-            calculatorStore: useCalculatorStore(),
-        };
-    },
-    methods: {
-    }
 });
 </script>
 

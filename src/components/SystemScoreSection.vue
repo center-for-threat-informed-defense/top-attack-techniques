@@ -7,12 +7,12 @@
         </button>
     </div>
     <div class="system-score-row">
-        <div v-for="monitoringType of Object.keys(this.calculatorStore.systemScore)" :key="monitoringType"
+        <div v-for="monitoringType of Object.keys(calculatorStore.systemScore)" :key="monitoringType"
             class="w-max inline-block mr-4">
             <span class="highlight">{{ getScoreText(monitoringType) }}</span>
             {{ monitoringType }} Monitoring
         </div>
-        <div v-for="filter of Object.keys(this.calculatorStore.activeFilters)" :key="filter" class="inline-block">
+        <div v-for="filter of Object.keys(calculatorStore.activeFilters)" :key="filter" class="inline-block">
             <span class="mr-4 w-max inline-block">
                 {{ filter }}:
                 <span class="highlight">{{ getFilterText(filter) }}</span>
@@ -40,11 +40,11 @@ export default defineComponent({
         };
     },
     methods: {
-        getScoreText(key) {
+        getScoreText(key: string) {
             if (this.calculatorStore.systemScore[key].label === "None") { return "No" }
             return this.calculatorStore.systemScore[key].label
         },
-        getFilterText(key) {
+        getFilterText(key: string) {
             if (this.calculatorStore.activeFiltersObj[key].size < 1) {
                 return `All ${key} Controls`
             }
