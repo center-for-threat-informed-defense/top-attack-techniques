@@ -61,4 +61,13 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+/* Navigation */
+.navbar {
+  @apply fixed bg-ctid-navy text-white pt-1 w-full top-0 z-50
+}
+
+.navbar h1 {
+  @apply my-auto font-medium text-xl uppercase w-max
+}
+</style>

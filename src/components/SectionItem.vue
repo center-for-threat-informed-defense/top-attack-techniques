@@ -9,7 +9,7 @@
     <p>{{ description }}</p>
     <router-link :to="link" routerLinkActive="router-link-active"
       class="flex border-b-2 border-ctid-light-purple uppercase w-max mt-6">
-      <p class="link font-semibold">Learn More</p>
+      <p class="link font-semibold">{{ linkText }}</p>
       <img :src="ArrowRight" class="h-6 ml-8" />
     </router-link>
   </div>
@@ -25,6 +25,10 @@ export default defineComponent({
     description: String,
     imgSrc: String,
     link: String,
+    linkText: {
+      type: String,
+      default: "Learn More"
+    }
   },
   data() {
     return {

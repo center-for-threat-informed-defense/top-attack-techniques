@@ -1,26 +1,23 @@
 <template>
     <div>
         <ul>
-
             <li v-for="(technique, i) of rankedList?.slice(0, 10)" :key="i" class="list-item"
                 :class="{ 'active': activeItemId === i }">
-                <div class="w-full" @click="this.$parent.setActiveIndex(i)">
+                <div class="w-full" @click="$emit('setActiveIndex', i)">
                     {{ i + 1 }}.
                     <span class="ml-3 mr-1 highlight">{{ technique.tid }}</span>
                     {{ technique.name }}
                 </div>
-                <button @click="this.$parent.deleteTechnique(i)">
+                <button @click="$emit('deleteTechnique', i)">
                     <i class="pi pi-trash"></i>
                 </button>
             </li>
-
         </ul>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useCalculatorStore } from "../stores/calculator.store";
 import { type Technique } from "@/data/DataTypes";
 export default defineComponent({
     props: {
@@ -31,15 +28,9 @@ export default defineComponent({
         activeItemId: {
             type: Number,
             default: 0,
-        }
+        },
+        allowDelete: Boolean
     },
-    data() {
-        return {
-            calculatorStore: useCalculatorStore(),
-        };
-    },
-    methods: {
-    }
 });
 </script>
 
