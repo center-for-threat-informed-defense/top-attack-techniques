@@ -36,13 +36,8 @@ h1, h2, h3, h4, h5, h6 {
 #description a {
     @apply text-ctid-blue hover:underline
 }
-
-/* Navigation */
-.navbar {
-    @apply fixed bg-ctid-navy text-white pt-1 w-full top-0 z-50
-}
-.navbar h1 {
-    @apply my-auto font-medium text-xl uppercase w-max
+#description p {
+    @apply mb-2;
 }
 
 /* Calculator */
@@ -130,12 +125,39 @@ h1, h2, h3, h4, h5, h6 {
 .p-tooltip-text {
     @apply bg-ctid-light-purple/80 text-ctid-black
 }
-.p-tabmenu-ink-bar {
-    @apply  bg-ctid-light-purple;
+.p-tabmenu-ink-bar, .p-tabview-ink-bar {
+    @apply  bg-ctid-light-purple ;
+}
+.p-tabview-ink-bar {
+    @apply bg-ctid-primary-purple -mb-[1px]
 }
 .p-highlight .p-menuitem-text {
     @apply text-ctid-light-purple
 }
 .p-menubar-root-list {
     @apply w-60 -ml-40
+}
+
+.p-tabview-nav-content .p-tabview-header {
+    @apply uppercase mx-1 my-1 font-bold text-xl;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.p-tabview-nav-content.p-tabview-nav {
+    @apply gap-2 w-max cursor-pointer;
+}
+.p-tabview-nav-content .p-tabview a {
+    @apply px-4 py-1 text-xl;
+}
+.p-tabview-nav {
+    @apply w-5/6 mx-auto border-b-2 border-solid
+}
+.p-splitbutton.p-component {
+    @apply w-full bg-ctid-navy text-white rounded-none my-4 ;
+}
+.p-splitbutton .p-splitbutton-defaultbutton {
+    @apply uppercase font-bold text-lg hover:text-ctid-light-purple hover:bg-ctid-dark-navy p-4;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.p-splitbutton .p-button-icon-only.p-splitbutton-menubutton {
+    @apply hover:text-ctid-light-purple hover:bg-ctid-dark-navy px-2
 }

@@ -14,7 +14,7 @@
           </div>
           <div class="container-body">
             <h3>Which ATT&amp;CK Version is the calculator using?</h3>
-            <p>The calculator was built using ATT&amp;CK Version 10.1</p>
+            <p>The calculator was built using ATT&amp;CK Version 14.0</p>
             <h3>Can the user import their own data?</h3>
             <p>The user cannot input their own data into the calculator. However, if you go to our Github you will find
               our excel document that you can manipulate for local use.</p>

@@ -41,7 +41,7 @@ Users can create a top 10 technique list tailored to their
 organization. The user inputs include filters for the operating system, security
 controls, detection analytics, and modifiers for process and network monitoring
 coverage. The calculator displays the top 10 techniques and provides the option
-to export every technique in v10 of ATT&CK in JSON format.
+to export every technique in v14 of ATT&CK in JSON format.
 
 <img width="412" alt="image" src="https://user-images.githubusercontent.com/1420025/167134857-00f5aa70-1f32-4a31-8698-cdc4f97c8796.png">
 
