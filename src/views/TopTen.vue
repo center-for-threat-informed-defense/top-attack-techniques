@@ -2,7 +2,8 @@
   <section class="w-5/6 mx-auto pt-20 text-center">
     <div class="pt-20">
       <h1 class="uppercase font-bold text-5xl">Top 10 Lists</h1>
-      <p class="pt-4">Explore the most prevalent techniques for different categories, determined by our ATT&CK analysts
+      <p class="pt-4">Browse top 10 lists compiled by our ATT&CK experts and tailored to specific threats such as
+        ransomware.
       </p>
     </div>
   </section>

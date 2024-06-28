@@ -2,11 +2,10 @@
   <section class="w-5/6 mx-auto py-20 text-center">
     <div class="pt-20">
       <h1 class="uppercase font-bold text-5xl">Methodology</h1>
-      <p class="pt-4 lg:w-3/4 mx-auto">A prioritized list of MITRE ATT&amp;CK techniques should be actionable and driven
-        by threat intelligence. The Center’s methodology is composed of three different components - Actionability,
-        Choke
-        Point, and Prevalence. Algorithms for each component were created to determine a technique’s weight within a
-        specific component, and then each component weight is combined to give an overall weight. </p>
+      <p class="pt-4 lg:w-3/4 mx-auto">Our top 10 lists of MITRE ATT&amp;CK techniques are designed to be actionable and
+        driven
+        by threat intelligence. The Center’s methodology is composed of three different components: Actionability,
+        Choke Point, and Prevalence.</p>
     </div>
     <div class="container-row">
       <div class="lg:w-1/4">

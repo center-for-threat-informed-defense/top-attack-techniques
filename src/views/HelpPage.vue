@@ -2,9 +2,9 @@
   <section class="w-5/6 mx-auto py-20 text-center">
     <div class="pt-20">
       <h1 class="uppercase font-bold text-5xl">How to Use the Calculator</h1>
-      <p class="pt-4 lg:w-3/4 mx-auto">Top ATT&amp;CK Techniques is your resource. Tell us about the challenges you face
-        as a defender and let us offer some suggestions you may not have thought about. A Top ATT&amp;CK Techniques
-        Specialist will address your query and respond promptly.</p>
+      <p class="pt-4 lg:w-3/4 mx-auto">Instructions for using Top ATT&CK Techniques. If you run into any issues with the
+        calculator or this website, use the links below to send us feedback.
+      </p>
     </div>
     <div class="container-row">
       <div class="lg:w-1/4">

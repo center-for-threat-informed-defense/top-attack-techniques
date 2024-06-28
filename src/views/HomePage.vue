@@ -16,16 +16,16 @@
         </div>
         <div class="mx-auto my-16 grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
           <section-item title="Calculator"
-            description="Use the criteria to score your system and click generate in order to see your personalized list of techniques. Our calculator will show you a customized list of the vulnerabilities you have and what you need to prioritize for your system."
+            description="Use the calculator to generate a prioritized top 10 list of techniques. You can tailor your top 10 list to your system characteristics and security controls."
             :imgSrc="CalculatorSvg" link="calculator" linkText="Go To Calculator" />
           <section-item title="Top 10 lists"
-            description="The Top Ransomware Technique List provides a starting point for defending against ransomware attacks and demonstrates how the Top ATT&amp;CK Techniques methodology can be tailored to different use cases."
+            description="Browse top 10 lists created by our ATT&CK experts. These lists are tailored to threat area such as ransomware and are based on detailed analysis."
             :imgSrc="ListSvg" link="top-10-lists" linkText="View Top 10 Lists" />
           <section-item title="Methodology"
-            description="We calculate the Actionability, Choke Point, and Prevalence scores for each technique which are then weighted and combined to form the total technique score. Learn the exact formulas used to calculate the score for each technique."
+            description="We calculate the Actionability, Choke Point, and Prevalence scores for each technique which are then weighted and combined to form the total technique score."
             :imgSrc="BookSvg" link="methodology" linkText="Read About It" />
           <section-item title="Help"
-            description="Read the FAQ to answer any questions you might have about this site. Get step-by-step instructions about how to use the Top ATT&amp;CK Techniques Calculator. You'll also find helpful links that allow you to submit issues and learn more about CTID projects."
+            description="Read the FAQ to answer any questions you might have about this site. Get step-by-step instructions about how to use the Top ATT&amp;CK Techniques Calculator."
             :imgSrc="HelpSvg" link="help" linkText="Learn More" />
         </div>
       </div>
