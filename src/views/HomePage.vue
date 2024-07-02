@@ -3,10 +3,10 @@
     <div class="hero">
       <div class="w-5/6 h-full mx-auto my-auto">
         <div class="title">
-          <img v-bind:src="LogoVertical" class="h-60 lg:block hidden my-auto" alt="Top Attack Techniques" />
+          <img v-bind:src="LogoVertical" class="xl:h-60 h-52 lg:block hidden my-auto" alt="Top Attack Techniques" />
           <img v-bind:src="LogoHorizontal" class="h-20 lg:hidden block" alt="Top Attack Techniques" />
-          <div class="lg:w-6 lg:h-auto w-full h-1 bg-ctid-light-purple my-4 lg:mx-4"></div>
-          <p class="my-auto">
+          <div class="lg:w-4 lg:h-auto w-full h-1 bg-ctid-light-purple my-4 lg:my-0 lg:mx-4"></div>
+          <p class="my-auto text-sm lg:text-base ">
             Top ATT&amp;CK Techniques provides defenders with a systematic approach
             to prioritizing ATT&amp;CK techniques. Our open methodology considers
             technique prevalence, common ATT&amp;CK choke points, and actionability
@@ -14,7 +14,7 @@
             relevant to their organization.
           </p>
         </div>
-        <div class="mx-auto my-16 grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
+        <div class="mx-auto mt-10 grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8">
           <section-item title="Calculator"
             description="Use the calculator to generate a prioritized top 10 list of techniques. You can tailor your top 10 list to your system characteristics and security controls."
             :imgSrc="CalculatorSvg" link="calculator" linkText="Go To Calculator" />
@@ -34,8 +34,8 @@
       <h2 class="text-center uppercase text-5xl font-medium">
         Want to Learn More?
       </h2>
-      <div class="md:flex my-10 lg:w-2/3 w-5/6 mx-auto lg:gap-40 md: gap-10">
-        <div class="md:w-1/2">
+      <div class="md:flex my-10 lg:w-2/3 w-5/6 mx-auto lg:gap-40 md:gap-10">
+        <div class="md:w-1/2 md:mb-0 mb-6">
           <p>
             The methodology page outlines the rationale behind the ATT&amp;CK
             technique scores and ranking. A technique’s score is calculated by
@@ -46,7 +46,7 @@
             <button class="btn-primary-light w-full">Read the Methodology</button>
           </router-link>
         </div>
-        <div class="md:w-1/2">
+        <div class="md:w-1/2 md:mt-0 mt-6">
           <p>
             The help page contains the answers to common questions and issues
             that may pop up for users of Top ATT&amp;CK Techniques. It also has a
@@ -104,10 +104,10 @@ export default defineComponent({
 
 <style scoped>
 .hero {
-  @apply bg-ctid-navy min-h-[100vh] -mt-20 lg:pt-2 xl:pb-10 pt-20 pb-20 text-white;
+  @apply bg-ctid-navy min-h-[100vh] -mt-20 pt-20 xl:pb-10 pb-20 text-white flex align-middle;
 }
 
 .hero .title {
-  @apply 2xl:w-1/2 xl:w-2/3 mx-auto lg:mt-60 mt-20 lg:flex gap-6
+  @apply 2xl:w-1/2 xl:w-2/3 mx-auto lg:flex gap-6 h-min my-auto lg:mt-0 mt-20
 }
 </style>

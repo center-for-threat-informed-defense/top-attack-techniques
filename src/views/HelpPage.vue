@@ -136,7 +136,7 @@ export default defineComponent({
 
 .container-body,
 .container-header {
-  @apply py-4 px-6
+  @apply py-3 px-6
 }
 
 .container-body h3 {
@@ -149,7 +149,6 @@ export default defineComponent({
 
 img {
   object-fit: contain;
-  /* @apply xl:w-1/3 lg:w-1/2 w-full */
 }
 
 .link-section h2 {
@@ -157,6 +156,6 @@ img {
 }
 
 .btn-primary {
-  @apply my-2
+  @apply my-2 py-3
 }
 </style>

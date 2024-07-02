@@ -63,7 +63,7 @@ export default defineComponent({
 
 .container-body,
 .container-header {
-  @apply py-4 px-6
+  @apply py-3 px-6
 }
 
 .container-body h3 {

@@ -1,14 +1,14 @@
 <template>
   <div class="mx-4">
     <router-link :to="link" routerLinkActive="router-link-active" class="py-2 -ml-2 flex">
-      <img v-bind:src="imgSrc" class="h-11" alt="" />
-      <h2 class="text-2xl uppercase font-medium my-auto ml-2 mr-auto">
+      <img v-bind:src="imgSrc" class="md:h-11 h-8" alt="" />
+      <h2 class="md:text-2xl text-xl uppercase font-medium my-auto ml-2 mr-auto">
         {{ title }}
       </h2>
     </router-link>
-    <p>{{ description }}</p>
+    <p class="text-sm md:text-[15px]">{{ description }}</p>
     <router-link :to="link" routerLinkActive="router-link-active"
-      class="flex border-b-2 border-ctid-light-purple uppercase w-max mt-6">
+      class="flex border-b-2 border-ctid-light-purple uppercase w-max md:mt-6 mt-3">
       <p class="link font-semibold">{{ linkText }}</p>
       <img :src="ArrowRight" class="h-6 ml-8" />
     </router-link>
@@ -24,7 +24,10 @@ export default defineComponent({
     title: String,
     description: String,
     imgSrc: String,
-    link: String,
+    link: {
+      type: String,
+      default: "/"
+    },
     linkText: {
       type: String,
       default: "Learn More"
@@ -40,4 +43,9 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.link {
+  @apply hover:text-ctid-light-purple md:text-lg;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+</style>
