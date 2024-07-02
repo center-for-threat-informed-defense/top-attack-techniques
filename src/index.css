@@ -29,11 +29,13 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-#description a {
+.description a {
     @apply text-ctid-blue hover:underline
 }
-#description p {
+.description p {
     @apply mb-2;
+    font-size: 15px;
+
 }
 
 /* Calculator */

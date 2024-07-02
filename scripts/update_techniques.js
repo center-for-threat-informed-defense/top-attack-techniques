@@ -18,8 +18,9 @@ const DESTINATION_FILE = "src/data/Techniques.json";
         tid: r.getCell(1).value,
         name: r.getCell(2).value,
         description: r.getCell(3).value,
-        url: r.getCell(4).hyperlink,
-        tactics: r.getCell(8).value.toString().split(", "),
+        url: r.getCell(4).hyperlink
+          ? r.getCell(4).hyperlink
+          : r.getCell(4).value,
         detection: r.getCell(9).value,
         platforms: r.getCell(10).value.toString().split(", "),
         data_sources: r.getCell(11).value
@@ -47,9 +48,9 @@ const DESTINATION_FILE = "src/data/Techniques.json";
     if (r.number > 1) {
       const m = {
         mid: r.getCell(1).value,
-        name: r.getCell(2).value,
-        description: r.getCell(3).value,
-        url: r.getCell(4).hyperlink,
+        name: r.getCell(3).value,
+        description: r.getCell(4).value,
+        url: r.getCell(5).hyperlink,
       };
       mitigations.push(m);
     }
