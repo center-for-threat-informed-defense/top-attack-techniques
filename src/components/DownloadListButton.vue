@@ -73,7 +73,7 @@ export default defineComponent({
                 "versions": {
                     "navigator": "4.8.0",
                     "layer": "4.5",
-                    "attack": 10.1,
+                    "attack": this.calculatorStore.attackVersion,
                 },
                 "sorting": 3,
                 "description": "Top ATT&CK Techniques heatmap overview of ATT&CK",

@@ -8,7 +8,7 @@
                     <span class="ml-3 mr-1 highlight">{{ technique.tid }}</span>
                     {{ technique.name }}
                 </div>
-                <button @click="$emit('deleteTechnique', i)">
+                <button v-if="allowDelete" @click="$emit('deleteTechnique', i)" aria-label="delete technique">
                     <i class="pi pi-trash"></i>
                 </button>
             </li>

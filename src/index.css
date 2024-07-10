@@ -19,36 +19,25 @@ h1, h2, h3, h4, h5, h6 {
     @apply uppercase;
     font-family: "Fira Sans Extra Condensed", sans-serif;
 }
-.link {
-    @apply hover:text-ctid-light-purple text-lg;
-    font-family: "Fira Sans Extra Condensed", sans-serif;
-}
 .btn-primary-light {
-    @apply bg-ctid-light-purple hover:bg-ctid-navy hover:text-white my-4 py-4 uppercase font-bold text-lg;
+    @apply bg-ctid-light-purple hover:bg-ctid-primary-purple hover:text-white my-4 py-4 uppercase font-bold text-lg;
     font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 .btn-primary {
     @apply bg-ctid-navy hover:bg-ctid-dark-navy  text-white w-full p-4 text-center my-4 py-4 uppercase font-bold text-lg;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+
 }
 
-#description a {
+.description a {
     @apply text-ctid-blue hover:underline
 }
-#description p {
+.description p {
     @apply mb-2;
+    font-size: 15px;
+
 }
 
-/* Homepage */
-
-.hero {
-    @apply bg-ctid-navy min-h-[100vh] -mt-20 lg:pt-2 xl:pb-10 pt-20 pb-20 text-white;
-}
-.hero .title {
-    @apply  2xl:w-3/5 xl:w-2/3 mx-auto lg:mt-60 mt-20 lg:flex gap-6
-}
-.hero .title h1 {
-    @apply uppercase text-6xl font-semibold lg:my-auto
-}
 /* Calculator */
 .calculator-details {
     @apply border-ctid-black border-[1px]
@@ -57,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply border-[1px] h-full border-ctid-black text-left lg:my-0 my-2
 }
 .container-header {
-    @apply py-4 px-6
+    @apply py-3 px-6
 }
 .container-header {
     @apply bg-ctid-navy text-white font-medium uppercase text-lg
@@ -164,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply w-full bg-ctid-navy text-white rounded-none my-4 ;
 }
 .p-splitbutton .p-splitbutton-defaultbutton {
-    @apply uppercase font-bold text-lg hover:text-ctid-light-purple hover:bg-ctid-dark-navy p-4;
+    @apply uppercase font-semibold text-lg hover:text-ctid-light-purple hover:bg-ctid-dark-navy p-4;
     font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 .p-splitbutton .p-button-icon-only.p-splitbutton-menubutton {

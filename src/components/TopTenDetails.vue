@@ -1,11 +1,11 @@
 <template>
     <div class="container-body">
         <h3>Description</h3>
-        <div id="description" v-html="description"></div>
-        <div v-if="this.technique.subtechniques.length > 0" class="subtechniques">
+        <div class="description" v-html="getMarkdown(technique.description)"></div>
+        <div v-if="technique.subtechniques.length > 0" class="subtechniques">
             <h3 class="mt-4">Subtechniques</h3>
             <Accordion class="mt-2">
-                <AccordionTab v-for="subtechnique in this.technique.subtechniques" :key="subtechnique.tid">
+                <AccordionTab v-for="subtechnique in technique.subtechniques" :key="subtechnique.tid">
                     <template #header>
                         <h4>
                             <span class="highlight">
@@ -15,49 +15,44 @@
                         </h4>
                     </template>
                     <h4>Subtechnique Description</h4>
-                    <div id="description" v-html="getDescription(subtechnique)"></div>
+                    <div class="description" v-html="getMarkdown(subtechnique.description)"></div>
                     <div v-if="subtechnique.mitigations.length > 0">
                         <h4 class="mt-4">Mitigations</h4>
                         <ul class="mitigations">
                             <li v-for="mitigation of subtechnique.mitigations" :key="mitigation.mid">
                                 <h5>{{ mitigation.mid }} - {{ mitigation.name }}</h5>
-                                <p>{{ mitigation.description }}</p>
+                                <div class="description" v-html="getMarkdown(mitigation.description)"></div>
                             </li>
                         </ul>
                     </div>
                     <div v-if="subtechnique.detection">
                         <h4 class="mt-4">Detections</h4>
-                        <p>
-                            {{ subtechnique.detection }}
-                        </p>
+                        <div class="description" v-html="getMarkdown(subtechnique.detection)"></div>
                     </div>
-
                 </AccordionTab>
             </Accordion>
         </div>
-        <div v-if="this.technique.mitigations.length > 0">
+        <div v-if="technique.mitigations.length > 0">
             <h3 class="mt-4">Mitigations</h3>
             <ul class="mitigations">
-                <li v-for="mitigation of this.technique.mitigations" :key="mitigation.mid">
+                <li v-for="mitigation of technique.mitigations" :key="mitigation.mid">
                     <h4>
                         {{ mitigation.mid }} - {{ mitigation.name }}
                     </h4>
-                    <p>{{ mitigation.description }}</p>
+                    <div class="description" v-html="getMarkdown(mitigation.description)"></div>
                 </li>
             </ul>
         </div>
-        <div v-if="this.technique.detection">
+        <div v-if="technique.detection">
             <h3 class="mt-4">Detections</h3>
-            <p>
-                {{ this.technique.detection }}
-            </p>
+            <div class="description" v-html="getMarkdown(technique.detection)"></div>
         </div>
-        <div v-if="this.technique.url">
+        <div v-if="technique.url">
             <h3 class="mt-4">References</h3>
             <ul>
                 <li>
-                    <a class=" text-ctid-blue hover:underline" target="_blank" :href="this.technique.url">
-                        {{ this.technique.url }}
+                    <a class=" text-ctid-blue hover:underline" target="_blank" :href="technique.url">
+                        {{ technique.url }}
                     </a>
                 </li>
             </ul>
@@ -76,18 +71,13 @@ export default defineComponent({
     props: {
         technique: {}
     },
-    data() {
-        return {};
-    },
-    computed: {
-        description() {
-            const text = this.technique.description.replaceAll("<a ", '<a target="_blank" ')
-            return marked(text)
-        }
-    },
     methods: {
-        getDescription(technique) {
-            return marked(technique.description)
+        getMarkdown(text: string) {
+            if (!text) {
+                return ""
+            }
+            const t = marked(text)
+            return t.replaceAll("<a ", '<a target="_blank" ')
         }
     }
 });

@@ -4,6 +4,7 @@ import type { Technique } from "@/data/DataTypes";
 
 export const useCalculatorStore = defineStore("calculator", {
   state: () => ({
+    currentAttackVersion: "14.1",
     techniques: json as Array<Technique>,
     activeFiltersObj: {
       nist: new Set<string>(),
@@ -74,6 +75,9 @@ export const useCalculatorStore = defineStore("calculator", {
     ],
   }),
   getters: {
+    attackVersion(state) {
+      return state.currentAttackVersion;
+    },
     activeFilters(state) {
       return state.activeFiltersObj;
     },

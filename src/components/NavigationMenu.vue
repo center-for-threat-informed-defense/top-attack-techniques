@@ -2,9 +2,7 @@
   <nav class="navbar">
     <div class="flex mx-8">
       <router-link to="/" class="mr-auto my-auto w-max">
-        <h1>
-          <span class="text-ctid-light-purple">Top</span> ATT&amp;CK Techniques
-        </h1>
+        <img v-bind:src="Logo" class="h-5" alt="Top Attack Techniques" />
       </router-link>
       <div class="lg:inline-block hidden card">
         <TabMenu :model="items" :active-index="getActiveIndex()">
@@ -36,11 +34,13 @@
 import { defineComponent } from "vue";
 import TabMenu from "primevue/tabmenu";
 import MenuBar from "primevue/menubar";
+import Logo from "@/assets/logo-line-white.svg";
 
 export default defineComponent({
   components: { TabMenu, MenuBar },
   data() {
     return {
+      Logo,
       items: [
         { label: "Home", route: "/" },
         { label: "Calculator", route: "/calculator" },
