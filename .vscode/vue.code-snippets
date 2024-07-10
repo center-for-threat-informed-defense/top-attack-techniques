@@ -1,0 +1,17 @@
+{
+    "Vue 3 SFC with Scoped CSS": {
+        "prefix": "sfc",
+        "body": [
+            "<script setup></script>",
+            "",
+            "<template>",
+            "  <div>$0</div>",
+            "</template>",
+            "",
+            "<style scoped></style>",
+            ""
+        ],
+        "description": "Base for a Vue 3 SFC with scoped css style block",
+        "scope": "vue"
+    },
+}

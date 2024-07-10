@@ -1,0 +1,22 @@
+<svg
+    id="arrow_forward"
+    xmlns="http://www.w3.org/2000/svg"
+    width="34.488"
+    height="34.488"
+    viewBox="0 0 34.488 34.488"
+    class="my-auto"
+    >
+    <path
+        id="Path_175"
+        data-name="Path 175"
+        d="M0,0H34.488V34.488H0Z"
+        fill="none"
+    />
+    <path
+        id="Path_176"
+        data-name="Path 176"
+        d="M15.5,4,13.47,6.026l8.019,8.033H4v2.874H21.488L13.47,24.966,15.5,26.992l11.5-11.5Z"
+        transform="translate(1.748 1.748)"
+        fill="#fff"
+    />
+</svg>

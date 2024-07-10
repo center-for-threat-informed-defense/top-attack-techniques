@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+body {
+    margin: 0;
+}
+#page-body {
+    @apply pt-20 bg-white text-ctid-black min-h-screen
+}
+
+#app {
+    @apply top-0 m-0;
+    font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply uppercase;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.btn-primary-light {
+    @apply bg-ctid-light-purple hover:bg-ctid-primary-purple hover:text-white my-4 py-4 uppercase font-bold text-lg;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.btn-primary {
+    @apply bg-ctid-navy hover:bg-ctid-dark-navy  text-white w-full p-4 text-center my-4 py-4 uppercase font-bold text-lg;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+
+}
+
+.description a {
+    @apply text-ctid-blue hover:underline
+}
+.description p {
+    @apply mb-2;
+    font-size: 15px;
+
+}
+
+/* Calculator */
+.calculator-details {
+    @apply border-ctid-black border-[1px]
+}
+.container {
+    @apply border-[1px] h-full border-ctid-black text-left lg:my-0 my-2
+}
+.container-header {
+    @apply py-3 px-6
+}
+.container-header {
+    @apply bg-ctid-navy text-white font-medium uppercase text-lg
+}
+.container h2 {
+    @apply uppercase text-xl w-full
+}
+.container-row {
+    @apply lg:flex gap-4 my-8
+}
+.checkbox-group {
+    @apply w-full my-4 flex gap-4
+}
+
+/* Primevue Overrides */
+.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.p-tabmenu .p-menuitem-link {
+    @apply bg-ctid-navy uppercase text-white hover:text-ctid-light-purple;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.p-menubar .p-menuitem-link, .p-menubar {
+    @apply uppercase font-medium ;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.p-menuitem-text {
+    @apply my-2
+}
+.p-accordion-tab {
+    @apply rounded-none shadow-none border-[1px] border-ctid-black -mt-[1px]
+}
+.p-accordion-header {
+    @apply uppercase
+}
+.p-accordion-tab .p-highlight, .p-highlight .p-accordion-header-link {
+    @apply bg-ctid-navy text-white
+}
+.p-accordion-header-link {
+    @apply p-4
+}
+.p-accordion-tab h2, .p-accordion-tab h4 {
+    @apply uppercase font-semibold
+}
+.p-accordion-tab h2 .highlight, .p-accordion-tab h4 .highlight {
+    @apply mx-1
+}
+.p-accordion-tab-active h2 .highlight, .subtechniques .p-accordion-tab-active h4 .highlight {
+    @apply text-ctid-light-purple
+}
+.p-accordion {
+    @apply border-collapse
+}
+.p-accordion-tab {
+    @apply rounded-none shadow-none border-[1px] border-ctid-black
+}
+.p-accordion-header-text {
+    @apply uppercase font-semibold text-lg;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.p-checkbox-box {
+    @apply border-[1px] border-ctid-black rounded-none
+}
+.p-checkbox.p-highlight, .p-highlight .p-checkbox-box {
+    @apply bg-ctid-navy
+}
+.p-selectbutton .p-button.p-component {
+    @apply uppercase border-[1px] border-ctid-black rounded-none mx-1
+}
+.p-selectbutton .p-highlight.p-button.p-component {
+    @apply bg-ctid-navy text-white
+}
+.p-tooltip-text {
+    @apply bg-ctid-light-purple/80 text-ctid-black
+}
+.p-tabmenu-ink-bar, .p-tabview-ink-bar {
+    @apply  bg-ctid-light-purple ;
+}
+.p-tabview-ink-bar {
+    @apply bg-ctid-primary-purple -mb-[1px]
+}
+.p-highlight .p-menuitem-text {
+    @apply text-ctid-light-purple
+}
+.p-menubar-root-list {
+    @apply w-60 -ml-40
+}
+
+.p-tabview-nav-content .p-tabview-header {
+    @apply uppercase mx-1 my-1 font-bold text-xl;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.p-tabview-nav-content.p-tabview-nav {
+    @apply gap-2 w-max cursor-pointer;
+}
+.p-tabview-nav-content .p-tabview a {
+    @apply px-4 py-1 text-xl;
+}
+.p-tabview-nav {
+    @apply w-5/6 mx-auto border-b-2 border-solid
+}
+.p-splitbutton.p-component {
+    @apply w-full bg-ctid-navy text-white rounded-none my-4 ;
+}
+.p-splitbutton .p-splitbutton-defaultbutton {
+    @apply uppercase font-semibold text-lg hover:text-ctid-light-purple hover:bg-ctid-dark-navy p-4;
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+}
+.p-splitbutton .p-button-icon-only.p-splitbutton-menubutton {
+    @apply hover:text-ctid-light-purple hover:bg-ctid-dark-navy px-2
+}
