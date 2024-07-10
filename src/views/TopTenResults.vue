@@ -46,7 +46,7 @@ export default defineComponent({
             );
             this.rankedList = filteredList
         },
-        applyFilters(filteredList: Array<Technique>) {
+        applyFilters(filteredList: Array<Technique>): Array<Technique> {
             const newFilterList = []
             // if there are no filters selected, then return full list of techniques
             if (this.filters.nist.size === 0 && this.filters.cis.size === 0 && this.filters.detection.size === 0 && this.filters.os.size === 0) {
@@ -84,19 +84,18 @@ export default defineComponent({
             }
             return false;
         },
-        applyScores(filteredList: Array<Technique>) {
+        applyScores(filteredList: Array<Technique>): Array<Technique> {
             type SystemScoreKeys = (keyof CalculatorStore["systemScoreObj"])[];
-            for (const monitoringType of Object.keys(this.scores) as SystemScoreKeys) {
-                const adjustment = this.scores[monitoringType].value;
-                filteredList = filteredList.map((technique) => {
+            filteredList = filteredList.map((technique) => {
+                let score_adjustment = 1
+                for (const monitoringType of Object.keys(this.scores) as SystemScoreKeys) {
                     if (technique[`${monitoringType}_coverage`]) {
-                        const score_adjustment = ((1 / Object.keys(this.scores).length) * adjustment)
-                        technique.adjusted_score += score_adjustment;
-                        technique[`${monitoringType}_score`] = score_adjustment;
+                        score_adjustment += 1 / 5 * this.scores[monitoringType].value;
                     }
-                    return technique
-                })
-            }
+                }
+                technique.adjusted_score = technique.cumulative_score * score_adjustment
+                return technique;
+            })
             return filteredList
         }
     },
