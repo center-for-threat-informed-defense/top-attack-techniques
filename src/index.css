@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply bg-ctid-navy
 }
 .p-selectbutton .p-button.p-component {
-    @apply uppercase border-[1px] border-ctid-black rounded-none mx-1
+    @apply uppercase border-[1px] border-ctid-black rounded-none mx-[-1px] sm:mx-1 md:mx-[-1px] lg:mx-1
 }
 .p-selectbutton .p-highlight.p-button.p-component {
     @apply bg-ctid-navy text-white

@@ -30,8 +30,8 @@
                             aria-label="mitre engenuity youtube">
                             <i class="pi pi-youtube"></i>
                         </a>
-                        <a href="https://github.com/center-for-threat-informed-defense/mappings-explorer" target="blank"
-                            class="github" aria-label="ctid github">
+                        <a href="https://github.com/center-for-threat-informed-defense/" target="blank" class="github"
+                            aria-label="ctid github">
                             <i class="pi pi-github"></i>
                         </a>
                     </div>
