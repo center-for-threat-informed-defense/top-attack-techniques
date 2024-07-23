@@ -53,29 +53,41 @@ export default defineComponent({
                 return filteredList;
             }
             for (const technique of filteredList) {
-                if (this.addTechniqueToList(technique)) {
+                if (this.checkForNist(technique) && this.checkForCis(technique) && this.checkForDetection(technique) && this.checkForOs(technique)) {
                     newFilterList.push(technique)
                 }
             }
             return newFilterList
         },
-        addTechniqueToList(technique: Technique): boolean {
+        checkForCis(technique: Technique): boolean {
+            if (this.filters.cis.size === 0) { return true }
             for (const property of this.filters.cis) {
-                if (technique.cis_controls && technique.cis_controls.find(c => c === property)) {
+                if (technique.cis_controls && technique.cis_controls.find(n => n === property)) {
                     return true;
                 }
             }
-
+            return false;
+        },
+        checkForNist(technique: Technique): boolean {
+            if (this.filters.nist.size === 0) { return true }
             for (const property of this.filters.nist) {
                 if (technique.nist_controls && technique.nist_controls.find(n => n === property)) {
                     return true;
                 }
             }
+            return false;
+        },
+        checkForOs(technique: Technique): boolean {
+            if (this.filters.os.size === 0) { return true }
             for (const property of this.filters.os) {
                 if (technique.platforms && technique.platforms.find(n => n === property)) {
                     return true;
                 }
             }
+            return false;
+        },
+        checkForDetection(technique: Technique): boolean {
+            if (this.filters.detection.size === 0) { return true }
             for (const filterProp of this.filters.detection) {
                 const key = this.calculatorStore.filterProperties.detection.options.find(i => i.name === filterProp)
                 if (technique[key.id]) {
