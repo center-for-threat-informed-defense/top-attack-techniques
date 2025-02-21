@@ -25,32 +25,31 @@ jobs:
     env:
       BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
     steps:
+      # Configure Environment
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        id: "setup-node"
+        with:
+          node-version: "19"
+          cache: "npm"
+          cache-dependency-path: "./package-lock.json"
+      - name: Install dependencies
+        run: npm ci
 
-    # Configure Environment
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      id: "setup-node"
-      with:
-        node-version: '19'
-        cache: 'npm'
-        cache-dependency-path: './package-lock.json'
-    - name: Install dependencies
-      run: npm ci
+      # Lint
+      - name: Lint
+        run: npm run lint
 
-    # Lint
-    - name: Lint
-      run: npm run lint
-
-    # Build and Upload Artifact
-    - name: Type Check
-      run: npm run type-check
-    - name: Build
-      run: npm run build-only -- --base /
-    - name: Upload artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: tat_website
-        path: ./dist/
+      # Build and Upload Artifact
+      - name: Type Check
+        run: npm run type-check
+      - name: Build
+        run: npm run build-only -- --base /
+      - name: Upload artifact
+        uses: actions/upload-artifact@v
+        with:
+          name: tat_website
+          path: ./dist/
 
   github_pages:
     # This job only runs when committing or merging to main branch.
@@ -62,17 +61,17 @@ jobs:
       url: $\{\{ steps.deployment.outputs.page_url \}\}
 
     steps:
-    - name: Setup Pages
-      uses: actions/configure-pages@v2
-    - name: Download Web Site
-      uses: actions/download-artifact@v3
-      with:
-        name: tat_website
-        path: tat_website
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
-      with:
-        path: ./tat_website
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v1
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Download Web Site
+        uses: actions/download-artifact@v4
+        with:
+          name: tat_website
+          path: tat_website
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./tat_website
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
