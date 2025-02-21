@@ -6,11 +6,11 @@ attack choke points, and actionability to enable defenders to focus on the ATT&C
 techniques that are most relevant to their organization.
 
 **Table of Contents:**
+
 - [Getting Started](#getting-started)
 - [Getting Involved](#getting-involved)
 - [Questions and Feedback](#questions-and-feedback)
 - [Notice](#notice)
-
 
 ## Getting Started
 
@@ -41,7 +41,7 @@ advance threat-informed defense:
 Please submit [issues on
 GitHub](https://github.com/center-for-threat-informed-defense/top-attack-techniques/issues)
 for any technical questions or requests. You may also contact
-[ctid@mitre-engenuity.org](mailto:ctid@mitre-engenuity.org?subject=Question%20about%20top-attack-techniques)
+[ctid@mitre.org](mailto:ctid@mitre.org?subject=Question%20about%20top-attack-techniques)
 directly for more general inquiries about the Center for Threat-Informed Defense.
 
 We welcome your contributions to help advance Top ATT&CK Tehcniques in the form
@@ -53,7 +53,7 @@ before making a pull request.
 
 ## Notice
 
-© 2022, 2024 MITRE Engenuity. Approved for public release. Document number(s) CT0047.
+© 2022, 2024 MITRE. Approved for public release. Document number(s) CT0047.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
 file except in compliance with the License. You may obtain a copy of the License at
@@ -67,4 +67,3 @@ permissions and limitations under the License.
 
 This project makes use of ATT&CK®: [ATT&CK Terms of
 Use](https://attack.mitre.org/resources/terms-of-use/)
-
