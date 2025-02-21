@@ -31,7 +31,7 @@ export default defineComponent({
 }
 
 .list-item.active .highlight {
-    @apply text-ctid-light-purple
+    @apply text-ctid-light-blue
 }
 
 .highlight {

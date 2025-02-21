@@ -13,7 +13,7 @@
                 <div class="calculator-details">
                     <div class="container-header">
                         <h2>
-                            <span class=" text-ctid-light-purple">
+                            <span class=" text-ctid-light-blue">
                                 {{ rankedList[activeItemId].tid }}
                             </span>
                             {{ rankedList[activeItemId].name }}

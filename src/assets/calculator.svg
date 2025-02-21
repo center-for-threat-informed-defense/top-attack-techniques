@@ -1,8 +1,8 @@
-<svg id="calculate" xmlns="http://www.w3.org/2000/svg" width="45.85" height="45.85" viewBox="0 0 45.85 45.85">
+<svg id="calculate" xmlns="http://www.w3.org/2000/svg" width="62.541" height="62.541" viewBox="0 0 62.541 62.541">
   <g id="Group_479" data-name="Group 479">
-    <rect id="Rectangle_85" data-name="Rectangle 85" width="45.85" height="45.85" fill="none"/>
+    <rect id="Rectangle_85" data-name="Rectangle 85" width="62.541" height="62.541" fill="none"/>
   </g>
-  <g id="Group_480" data-name="Group 480" transform="translate(5.696 5.696)">
-    <path id="Path_169" data-name="Path 169" d="M33.381,3H6.8A3.809,3.809,0,0,0,3,6.8V33.381a3.809,3.809,0,0,0,3.8,3.8H33.381a3.809,3.809,0,0,0,3.8-3.8V6.8A3.809,3.809,0,0,0,33.381,3ZM22.045,10.709,24.058,8.7l2.677,2.677L29.412,8.7l2.013,2.013-2.677,2.677,2.677,2.677-2.013,2.013-2.677-2.658L24.058,18.1l-2.013-2.013,2.677-2.677ZM9.171,11.962h9.494V14.81H9.171ZM19.14,27.684h-3.8v3.8H12.494v-3.8H8.7V24.836h3.8v-3.8h2.848v3.8h3.8Zm12.342,2.373H21.988V27.209h9.494Zm0-4.747H21.988V22.463h9.494Z" transform="translate(-3 -3)" fill="#bca9dd"/>
+  <g id="Group_480" data-name="Group 480" transform="translate(7.77 7.77)">
+    <path id="Path_169" data-name="Path 169" d="M44.44,3H8.18A5.2,5.2,0,0,0,3,8.18V44.44a5.2,5.2,0,0,0,5.18,5.18H44.44a5.2,5.2,0,0,0,5.18-5.18V8.18A5.2,5.2,0,0,0,44.44,3ZM28.978,13.515l2.745-2.745,3.652,3.652,3.652-3.652,2.745,2.745L38.12,17.167l3.652,3.652-2.745,2.745-3.652-3.626-3.652,3.652-2.745-2.745,3.652-3.652Zm-17.56,1.709h12.95V19.11H11.418Zm13.6,21.445h-5.18v5.18H15.95V36.67H10.77V32.785h5.18v-5.18h3.885v5.18h5.18ZM41.85,39.908H28.9V36.023H41.85Zm0-6.475H28.9V29.548H41.85Z" transform="translate(-3 -3)" fill="#87deff"/>
   </g>
 </svg>

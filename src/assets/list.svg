@@ -1,8 +1,8 @@
-<svg id="calculate" xmlns="http://www.w3.org/2000/svg" width="45.85" height="45.85" viewBox="0 0 45.85 45.85">
+<svg id="calculate" xmlns="http://www.w3.org/2000/svg" width="62.541" height="62.541" viewBox="0 0 62.541 62.541">
   <g id="Group_479" data-name="Group 479">
-    <rect id="Rectangle_85" data-name="Rectangle 85" width="45.85" height="45.85" fill="none"/>
+    <rect id="Rectangle_85" data-name="Rectangle 85" width="62.541" height="62.541" fill="none"/>
   </g>
-  <g id="Group_529" data-name="Group 529" transform="translate(-1245.185 -512.805)">
-    <path id="Exclusion_1" data-name="Exclusion 1" d="M29.221,33.462H5a5.006,5.006,0,0,1-5-5V5A5.006,5.006,0,0,1,5,0H29.221a5.006,5.006,0,0,1,5,5v23.46A5.006,5.006,0,0,1,29.221,33.462ZM12.535,20.136V24.8H26.688V20.136Zm-5.443,0V24.8h4.354V20.136ZM12.535,14.3v4.669H26.688V14.3Zm-5.443,0v4.669h4.354V14.3Zm5.443-5.837v4.669H26.688V8.463Zm-5.443,0v4.669h4.354V8.463Z" transform="translate(1251 518.999)" fill="#bca9dd"/>
+  <g id="Group_529" data-name="Group 529" transform="translate(7.931 8.45)">
+    <path id="Exclusion_1" data-name="Exclusion 1" d="M41.679,45.642H5a5.006,5.006,0,0,1-5-5V5A5.006,5.006,0,0,1,5,0H41.679a5.005,5.005,0,0,1,5,5V40.641A5.006,5.006,0,0,1,41.679,45.642ZM17.1,27.464v6.368H36.4V27.464Zm-7.425,0v6.368h5.94V27.464ZM17.1,19.5v6.368H36.4V19.5Zm-7.425,0v6.368h5.94V19.5ZM17.1,11.542v6.369H36.4V11.542Zm-7.425,0v6.369h5.94V11.542Z" transform="translate(0 0)" fill="#87deff"/>
   </g>
 </svg>
