@@ -27,7 +27,7 @@
               Submit an Issue<i class="pi pi-external-link ml-8"></i></button></a>
           <h2>Want to learn more about this project?</h2>
           <button @click="$router.push({ path: '/methodology' })" class="btn-primary">Methodology Page</button>
-          <a href="https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/" target="_blank">
+          <a href="https://ctid.mitre.org/" target="_blank">
             <button class="btn-primary">CTID Website <i class="pi pi-external-link ml-8"></i></button>
           </a>
         </div>

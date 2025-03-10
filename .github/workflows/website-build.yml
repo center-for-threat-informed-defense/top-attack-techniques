@@ -27,7 +27,7 @@ jobs:
     steps:
       # Configure Environment
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         id: "setup-node"
         with:
           node-version: "19"
@@ -69,9 +69,9 @@ jobs:
           name: tat_website
           path: tat_website
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./tat_website
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4

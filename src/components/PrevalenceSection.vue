@@ -5,7 +5,7 @@
         With this knowledge, defenders can tailor their detection tools to look for those techniques that have
         the highest frequency and are the most current.</p>
     <p>The prevalence methodology is populated with data from the <a
-            href="https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/our-work/sightings-ecosystem/"
+            href="https://ctid.mitre.org/projects/sightings-ecosystem/"
             target="_blank">Sightings Ecosystem</a>. Each Sighting represents one or more ATT&CK techniques used
         by an adversary on (or to target) victim infrastructure.</p>
     <p>There are a few limitations with our data that are important to understand. First, our data is limited to

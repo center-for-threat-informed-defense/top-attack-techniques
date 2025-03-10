@@ -22,8 +22,8 @@
         techniques branch out and co-occurrences can be identified. The attack graph can implement user’s
         implemented controls to better define what pathways are more likely to be explored by an attacker. As
         this project matures, the Center will look to incorporate <a
-            href="https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/our-work/attack-flow/"
-            target="_blank">ATT&CK Flow</a> data into this methodology. </p>
+            href="https://ctid.mitre.org/projects/attack-flow/"
+            target="_blank">Attack Flow</a> data into this methodology. </p>
     <h5>Limitations:</h5>
     <p>The method we used to find choke points is highly subjective. Our analysis was done by manually examining
         each technique, searching for references in CTI, and identifying before and after techniques. </p>
