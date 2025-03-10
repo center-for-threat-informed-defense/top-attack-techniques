@@ -42,7 +42,7 @@ export default defineComponent({
         downloadAsJson() {
             const parsedList = [] as Array<ExportedTechnique>;
 
-            this.rankedList.slice(0, 10).forEach((technique, i) => {
+            this.rankedList.forEach((technique, i) => {
                 const t = {
                     rank: i + 1,
                     tid: technique.tid,
@@ -67,7 +67,7 @@ export default defineComponent({
             downloadjs(JSON.stringify(parsedList, null, 4), "TopTenTechniques.json", JSON)
         },
         downloadAsNavigatorLayer() {
-            const gradient = ["#FFDDBD", "#ffaf66"]
+            const gradient = ["#FFFFFF", "#6241C5"]
             const layer = {
                 "name": "Top 10 ATT&CK Techniques",
                 "versions": {
@@ -83,7 +83,6 @@ export default defineComponent({
                     score: number;
                     comment: string;
                     metadata: never[];
-                    color: string;
                 }>,
                 "gradient": {
                     "colors": gradient,
@@ -113,15 +112,10 @@ export default defineComponent({
                     "score": technique.adjusted_score,
                     "comment": description,
                     "metadata": [],
-                    "color": ""
-                }
-                if (i > 9) {
-                    t.color = "#FFFFFF"
                 }
                 layer.techniques.push(t)
             })
 
-            layer.gradient.minValue = layer.techniques[9].score
             layer.gradient.maxValue = layer.techniques[0].score
             downloadjs(JSON.stringify(layer, null, 4), "TopTechniquesNavigatorLayer.json", JSON)
         }
