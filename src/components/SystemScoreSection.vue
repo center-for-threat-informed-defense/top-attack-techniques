@@ -67,7 +67,7 @@ export default defineComponent({
 }
 
 .system-score-row .highlight {
-    @apply text-ctid-primary-purple
+    @apply text-ctid-blue
 }
 
 .filters-scores div {

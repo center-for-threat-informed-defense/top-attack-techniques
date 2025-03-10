@@ -46,7 +46,7 @@ export default defineComponent({
 }
 
 .calculator-list .list-item.active .highlight {
-    @apply text-ctid-light-purple
+    @apply text-ctid-light-blue
 }
 
 .list-item i {

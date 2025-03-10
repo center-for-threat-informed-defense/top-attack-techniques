@@ -8,9 +8,9 @@
                     </router-link>
                 </h1>
                 <p class="my-4">
-                    The <a href="https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/"
-                        target="_blank" class="underline hover:text-ctid-light-purple">Center for Threat-Informed
-                        Defense</a> is a non-profit, privately funded research and development organization. Our
+                    The <a href="https://ctid.mitre.org/?utm_source=top-att-ck-techniques" target="_blank"
+                        class="underline hover:text-ctid-light-blue">Center for Threat-Informed Defense</a> is a
+                    non-profit, privately funded research and development organization. Our
                     mission is to advance the state of the art and the state of the practice in threat-informed defense
                     globally.
                 </p>
@@ -18,20 +18,20 @@
                     <img src="../assets/ctid-logo-horizontal-white.png" class="h-6 my-auto"
                         alt="Center for Threat Informed Defense" />
                     <div class="social-links">
-                        <a href="mailto:ctid@mitre-engenuity.org?subject=Top%20ATT&amp;CK%20Techniques"
-                            aria-label="email ctid" class="email">
+                        <a href="mailto:ctid@mitre.org?subject=Top%20ATT&amp;CK%20Techniques"
+                            aria-label="center for threat-informed defense email" class="email">
                             <i class="pi pi-envelope"></i>
                         </a>
                         <a href="https://www.linkedin.com/showcase/center-for-threat-informed-defense/" target="blank"
-                            aria-label="ctid on linkedin" class="linkedin">
+                            aria-label="center for threat-informed defense on linkedin" class="linkedin">
                             <i class="pi pi-linkedin"></i>
                         </a>
-                        <a href="https://www.youtube.com/@mitreengenuity" target="blank" class="youtube"
-                            aria-label="mitre engenuity youtube">
+                        <a href="https://www.youtube.com/playlist?list=PLALq3Th79NnpUkRy8TUYVBKvysCp9xwNh"
+                            target="blank" class="youtube" aria-label="center for threat-informed defense youtube">
                             <i class="pi pi-youtube"></i>
                         </a>
                         <a href="https://github.com/center-for-threat-informed-defense/" target="blank" class="github"
-                            aria-label="ctid github">
+                            aria-label="center for threat-informed defense github">
                             <i class="pi pi-github"></i>
                         </a>
                     </div>
@@ -41,11 +41,11 @@
                 <h2 class="mt-8">Related Projects</h2>
                 <div class="internal-links">
                     <div v-for="(item, i) of externalProjects" :key="item.label" class="flex">
-                        <a :href="item.route" target="blank"
-                            class="hover:underline hover:text-ctid-light-purple md:mx-0 mx-2 my-auto">{{
-                            item.label }}</a>
+                        <a :href="item.route + '/?utm_source=top-att-ck-techniques'" target="blank"
+                            class="hover:underline hover:text-ctid-light-blue md:mx-0 mx-2 my-auto">{{
+                                item.label }}</a>
                         <div v-if="i !== externalProjects.length - 1"
-                            class="md:block hidden mx-4 2xl:mx-8 w-[3px] h-full bg-ctid-light-purple"></div>
+                            class="md:block hidden mx-4 2xl:mx-8 w-[3px] h-full bg-ctid-light-blue"></div>
                     </div>
                 </div>
             </div>
@@ -91,12 +91,12 @@ h2 {
 }
 
 .internal-links div::before {
-    @apply text-ctid-light-purple mr-2 block md:hidden text-lg;
+    @apply text-ctid-light-blue mr-2 block md:hidden text-lg;
     content: "-";
 }
 
 .social-links a {
-    @apply bg-ctid-light-purple hover:bg-white text-ctid-navy rounded-full flex h-8 w-8 my-auto text-center;
+    @apply bg-ctid-light-blue hover:bg-white text-ctid-navy rounded-full flex h-8 w-8 my-auto text-center;
 }
 
 .social-links i {

@@ -5,7 +5,7 @@
         <div class="title">
           <img v-bind:src="LogoVertical" class="xl:h-60 h-52 lg:block hidden my-auto" alt="Top Attack Techniques" />
           <img v-bind:src="LogoHorizontal" class="h-20 lg:hidden block" alt="Top Attack Techniques" />
-          <div class="lg:w-4 lg:h-auto w-full h-1 bg-ctid-light-purple my-4 lg:my-0 lg:mx-4"></div>
+          <div class="lg:w-4 lg:h-auto w-full h-1 bg-ctid-light-blue my-4 lg:my-0 lg:mx-4"></div>
           <p class="my-auto text-sm lg:text-base ">
             Top ATT&amp;CK Techniques provides defenders with a systematic approach
             to prioritizing ATT&amp;CK techniques. Our open methodology considers

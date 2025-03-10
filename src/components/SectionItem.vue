@@ -8,7 +8,7 @@
     </router-link>
     <p class="text-sm md:text-[15px]">{{ description }}</p>
     <router-link :to="link" routerLinkActive="router-link-active"
-      class="flex border-b-2 border-ctid-light-purple uppercase w-max md:mt-6 mt-3">
+      class="flex border-b-2 border-ctid-light-blue uppercase w-max md:mt-6 mt-3">
       <p class="link font-semibold">{{ linkText }}</p>
       <img :src="ArrowRight" class="h-6 ml-8" />
     </router-link>
@@ -45,7 +45,7 @@ export default defineComponent({
 
 <style scoped>
 .link {
-  @apply hover:text-ctid-light-purple md:text-lg;
+  @apply hover:text-ctid-light-blue md:text-lg;
   font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 </style>
