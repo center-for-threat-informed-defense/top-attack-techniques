@@ -48,6 +48,7 @@
                             class="md:block hidden mx-4 2xl:mx-8 w-[3px] h-full bg-ctid-light-blue"></div>
                     </div>
                 </div>
+                <p class="my-4 public-release">© 2022 MITRE. Approved for public release. Document number(s) CT0124.</p>
             </div>
         </div>
     </div>
@@ -79,6 +80,10 @@ h1 {
 
 h2 {
     @apply text-xl font-semibold
+}
+
+.public-release {
+    @apply text-sm
 }
 
 .social-links {
