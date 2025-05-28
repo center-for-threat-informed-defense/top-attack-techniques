@@ -17,12 +17,12 @@ techniques that are most relevant to their organization.
 The website hosts all of the resources for this project. The website is linked below
 along with some shortcuts to important pages on the website.
 
-| Resource                                                                             | Description                                                                |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| [Web Site](https://top-attack-techniques.mitre-engenuity.org/)                       | The website hosts the calculator, methodology, and ransomware top 10 list. |
-| [Ransomware Top 10](https://top-attack-techniques.mitre-engenuity.org/#top-10-lists) | A curated top 10 list created by our expert ATT&CK analysts.               |
-| [Calculator](https://top-attack-techniques.mitre-engenuity.org/#calculator)          | An interactive calculator for producing your own, customized top 10 lists. |
-| [Methodology](https://top-attack-techniques.mitre-engenuity.org/#methodology)        | An overview of the algorithms and analysis that power the calculator.      |
+| Resource                                                                                                      | Description                                                                |
+| ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [Web Site](https://center-for-threat-informed-defense.github.io/top-attack-techniques/)                       | The website hosts the calculator, methodology, and ransomware top 10 list. |
+| [Ransomware Top 10](https://center-for-threat-informed-defense.github.io/top-attack-techniques/#top-10-lists) | A curated top 10 list created by our expert ATT&CK analysts.               |
+| [Calculator](https://center-for-threat-informed-defense.github.io/top-attack-techniques/#calculator)          | An interactive calculator for producing your own, customized top 10 lists. |
+| [Methodology](https://center-for-threat-informed-defense.github.io/top-attack-techniques/#methodology)        | An overview of the algorithms and analysis that power the calculator.      |
 
 ## Getting Involved
 

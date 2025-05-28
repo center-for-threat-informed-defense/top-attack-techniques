@@ -44,7 +44,7 @@ jobs:
       - name: Type Check
         run: npm run type-check
       - name: Build
-        run: npm run build-only -- --base /
+        run: npm run build-only -- --base /top-attack-techniques/
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
@@ -58,7 +58,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: $\{\{ steps.deployment.outputs.page_url \}\}
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Setup Pages
