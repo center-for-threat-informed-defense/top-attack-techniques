@@ -67,7 +67,7 @@ jobs:
           node-version: "19"
       - run: npm install -g staticrypt
       - name: Download Web Site
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: tat_website
           path: tat_website
