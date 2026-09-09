@@ -30,7 +30,7 @@
             </div>
             <div class="container-body">
                 <p class="mb-2">
-                    Upload a JSON or Excel file containing technique prevalence data to factor in the frequency of specific ATT&CK techniques in the calculation.
+                    Optionally upload a JSON or Excel (.xlsx) file with technique prevalence data to incorporate the frequency of specific ATT&CK techniques into the calculation.
                 </p>
                 <p class="mb-4">
                     Until a file is uploaded, prevalence is not included in the ranking.
@@ -53,10 +53,16 @@
                     Choose File
                 </label>
                 <input id="prevalence-data-upload" class="sr-only" type="file" accept=".json,.xlsx,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" @change="selectPrevalenceFile" />
-                <p v-if="selectedPrevalenceFileName" class="mt-3">
+                <p v-if="selectedPrevalenceFileName" class="mt-3 flex items-center">
                     Selected file: {{ selectedPrevalenceFileName }}
-                    <button type="button" class="ml-2 text-ctid-blue hover:underline" aria-label="Remove uploaded prevalence file" @click="clearPrevalenceFile">
-                        ×
+                    <button
+                        type="button"
+                        class="ml-2 text-ctid-blue hover:underline"
+                        aria-label="Remove uploaded prevalence file"
+                        title="Remove uploaded prevalence file"
+                        @click="clearPrevalenceFile"
+                    >
+                        <i class="pi pi-times flex items-center text-sm"></i>
                     </button>
                 </p>
                 <p v-if="uploadError" class="mt-3 text-red-700" role="alert">
