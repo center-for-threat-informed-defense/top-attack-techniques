@@ -55,6 +55,9 @@
                 <input id="prevalence-data-upload" class="sr-only" type="file" accept=".json,.xlsx,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" @change="selectPrevalenceFile" />
                 <p v-if="selectedPrevalenceFileName" class="mt-3">
                     Selected file: {{ selectedPrevalenceFileName }}
+                    <button type="button" class="ml-2 text-ctid-blue hover:underline" aria-label="Remove uploaded prevalence file" @click="clearPrevalenceFile">
+                        ×
+                    </button>
                 </p>
                 <p v-if="uploadError" class="mt-3 text-red-700" role="alert">
                     {{ uploadError }}
@@ -128,6 +131,15 @@ export default defineComponent({
             }
 
             throw new Error("Upload a JSON or .xlsx prevalence file.");
+        },
+        clearPrevalenceFile() {
+            this.calculatorStore.clearUploadedPrevalence();
+            this.uploadError = "";
+
+            const input = document.getElementById("prevalence-data-upload") as HTMLInputElement | null;
+            if (input) {
+                input.value = "";
+            }
         },
         generateResults() {
             this.$refs.calcFilterSection.saveNewFilterValues()
