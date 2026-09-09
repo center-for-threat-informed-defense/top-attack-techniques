@@ -1,11 +1,14 @@
 import { defineStore } from "pinia";
 import json from "../data/Techniques.json";
 import type { Technique } from "@/data/DataTypes";
+import type { UploadedPrevalence } from "@/domain/importPrevalenceWorkbook";
 
 export const useCalculatorStore = defineStore("calculator", {
   state: () => ({
     currentAttackVersion: "14.1",
     techniques: json as Array<Technique>,
+    uploadedPrevalence: [] as Array<UploadedPrevalence>,
+    uploadedPrevalenceFileName: null as string | null,
     activeFiltersObj: {
       nist: new Set<string>(),
       cis: new Set<string>(),
@@ -96,6 +99,9 @@ export const useCalculatorStore = defineStore("calculator", {
     topTenLists(state) {
       return state.topTenListInfo;
     },
+    prevalenceProfile(state) {
+      return state.uploadedPrevalence;
+    },
   },
 
   actions: {
@@ -115,6 +121,13 @@ export const useCalculatorStore = defineStore("calculator", {
       hardware: { label: string; value: number };
     }) {
       this.systemScoreObj = scores;
+    },
+    updateUploadedPrevalence(
+      prevalence: Array<UploadedPrevalence>,
+      fileName: string,
+    ) {
+      this.uploadedPrevalence = prevalence;
+      this.uploadedPrevalenceFileName = fileName;
     },
     removeTechnique(index: number) {
       this.techniques.splice(index, 1);

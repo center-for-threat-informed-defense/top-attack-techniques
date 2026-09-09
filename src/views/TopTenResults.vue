@@ -16,6 +16,7 @@ import TopTenWrapper from "../components/TopTenWrapper.vue";
 import type { Technique } from "@/data/DataTypes";
 import { useCalculatorStore, type CalculatorStore } from "../stores/calculator.store";
 import SystemScoreSection from "../components/SystemScoreSection.vue"
+import { deriveTechniquesWithPrevalence } from "@/domain/deriveTechniquesWithPrevalence";
 export default defineComponent({
     components: { SystemScoreSection, TopTenWrapper },
     data() {
@@ -39,6 +40,10 @@ export default defineComponent({
         },
         setRankedList() {
             let filteredList = structuredClone(toRaw(this.calculatorStore.techniques));
+            filteredList = deriveTechniquesWithPrevalence(
+                filteredList,
+                this.calculatorStore.prevalenceProfile,
+            )
             filteredList = this.applyScores(filteredList)
             filteredList = this.applyFilters(filteredList)
             filteredList.sort(

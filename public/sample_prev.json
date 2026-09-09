@@ -1,0 +1,438 @@
+[
+  {
+    "Technique": "T1001",
+    "Prevalence": 0.011577
+  },
+  {
+    "Technique": "T1003",
+    "Prevalence": 0.326998
+  },
+  {
+    "Technique": "T1005",
+    "Prevalence": 0.002668
+  },
+  {
+    "Technique": "T1012",
+    "Prevalence": 0.129078
+  },
+  {
+    "Technique": "T1014",
+    "Prevalence": 0.000874
+  },
+  {
+    "Technique": "T1016",
+    "Prevalence": 0.024515
+  },
+  {
+    "Technique": "T1018",
+    "Prevalence": 0.01949
+  },
+  {
+    "Technique": "T1020",
+    "Prevalence": 0.000212
+  },
+  {
+    "Technique": "T1021",
+    "Prevalence": 0.666052
+  },
+  {
+    "Technique": "T1027",
+    "Prevalence": 0.772886
+  },
+  {
+    "Technique": "T1033",
+    "Prevalence": 0.000465
+  },
+  {
+    "Technique": "T1036",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1037",
+    "Prevalence": 0.007066
+  },
+  {
+    "Technique": "T1040",
+    "Prevalence": 0.021899
+  },
+  {
+    "Technique": "T1041",
+    "Prevalence": 0.000722
+  },
+  {
+    "Technique": "T1046",
+    "Prevalence": 0.015708
+  },
+  {
+    "Technique": "T1047",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1048",
+    "Prevalence": 0.001829
+  },
+  {
+    "Technique": "T1053",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1055",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1056",
+    "Prevalence": 0.257826
+  },
+  {
+    "Technique": "T1057",
+    "Prevalence": 0.117773
+  },
+  {
+    "Technique": "T1059",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1068",
+    "Prevalence": 0.00222
+  },
+  {
+    "Technique": "T1069",
+    "Prevalence": 0.022145
+  },
+  {
+    "Technique": "T1070",
+    "Prevalence": 0.596056
+  },
+  {
+    "Technique": "T1071",
+    "Prevalence": 0.104915
+  },
+  {
+    "Technique": "T1072",
+    "Prevalence": 0.00165
+  },
+  {
+    "Technique": "T1074",
+    "Prevalence": 0.105489
+  },
+  {
+    "Technique": "T1078",
+    "Prevalence": 0.007723
+  },
+  {
+    "Technique": "T1080",
+    "Prevalence": 0.000282
+  },
+  {
+    "Technique": "T1082",
+    "Prevalence": 0.447342
+  },
+  {
+    "Technique": "T1083",
+    "Prevalence": 0.058465
+  },
+  {
+    "Technique": "T1087",
+    "Prevalence": 0.104429
+  },
+  {
+    "Technique": "T1090",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1091",
+    "Prevalence": 0.191704
+  },
+  {
+    "Technique": "T1095",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1098",
+    "Prevalence": 0.007497
+  },
+  {
+    "Technique": "T1102",
+    "Prevalence": 0.035029
+  },
+  {
+    "Technique": "T1104",
+    "Prevalence": 0.000127
+  },
+  {
+    "Technique": "T1105",
+    "Prevalence": 0.695786
+  },
+  {
+    "Technique": "T1106",
+    "Prevalence": 0.24088
+  },
+  {
+    "Technique": "T1110",
+    "Prevalence": 0.004521
+  },
+  {
+    "Technique": "T1112",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1113",
+    "Prevalence": 0.06137
+  },
+  {
+    "Technique": "T1119",
+    "Prevalence": 0.006021
+  },
+  {
+    "Technique": "T1120",
+    "Prevalence": 0.003979
+  },
+  {
+    "Technique": "T1127",
+    "Prevalence": 0.036197
+  },
+  {
+    "Technique": "T1129",
+    "Prevalence": 0.000296
+  },
+  {
+    "Technique": "T1132",
+    "Prevalence": 0.024805
+  },
+  {
+    "Technique": "T1134",
+    "Prevalence": 0.002709
+  },
+  {
+    "Technique": "T1135",
+    "Prevalence": 0.002651
+  },
+  {
+    "Technique": "T1136",
+    "Prevalence": 0.000296
+  },
+  {
+    "Technique": "T1137",
+    "Prevalence": 0.00457
+  },
+  {
+    "Technique": "T1140",
+    "Prevalence": 0.363077
+  },
+  {
+    "Technique": "T1176",
+    "Prevalence": 0.00055
+  },
+  {
+    "Technique": "T1185",
+    "Prevalence": 0.004019
+  },
+  {
+    "Technique": "T1189",
+    "Prevalence": 0.000635
+  },
+  {
+    "Technique": "T1190",
+    "Prevalence": 0.002242
+  },
+  {
+    "Technique": "T1195",
+    "Prevalence": 0.004019
+  },
+  {
+    "Technique": "T1197",
+    "Prevalence": 0.04993
+  },
+  {
+    "Technique": "T1200",
+    "Prevalence": 0.005716
+  },
+  {
+    "Technique": "T1201",
+    "Prevalence": 0.001119
+  },
+  {
+    "Technique": "T1202",
+    "Prevalence": 0.018151
+  },
+  {
+    "Technique": "T1203",
+    "Prevalence": 0.007069
+  },
+  {
+    "Technique": "T1204",
+    "Prevalence": 0.549907
+  },
+  {
+    "Technique": "T1211",
+    "Prevalence": 0.027457
+  },
+  {
+    "Technique": "T1216",
+    "Prevalence": 0.006042
+  },
+  {
+    "Technique": "T1218",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1219",
+    "Prevalence": 0.004693
+  },
+  {
+    "Technique": "T1220",
+    "Prevalence": 0.021471
+  },
+  {
+    "Technique": "T1222",
+    "Prevalence": 0.000969
+  },
+  {
+    "Technique": "T1482",
+    "Prevalence": 0.088709
+  },
+  {
+    "Technique": "T1485",
+    "Prevalence": 4.23e-05
+  },
+  {
+    "Technique": "T1486",
+    "Prevalence": 0.013689
+  },
+  {
+    "Technique": "T1489",
+    "Prevalence": 0.195332
+  },
+  {
+    "Technique": "T1490",
+    "Prevalence": 0.051799
+  },
+  {
+    "Technique": "T1496",
+    "Prevalence": 0.000296
+  },
+  {
+    "Technique": "T1497",
+    "Prevalence": 0.333059
+  },
+  {
+    "Technique": "T1505",
+    "Prevalence": 0.009921
+  },
+  {
+    "Technique": "T1518",
+    "Prevalence": 0.038872
+  },
+  {
+    "Technique": "T1525",
+    "Prevalence": 0.000127
+  },
+  {
+    "Technique": "T1542",
+    "Prevalence": 0.000677
+  },
+  {
+    "Technique": "T1543",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1546",
+    "Prevalence": 0.241646
+  },
+  {
+    "Technique": "T1547",
+    "Prevalence": 0.310831
+  },
+  {
+    "Technique": "T1548",
+    "Prevalence": 0.62305
+  },
+  {
+    "Technique": "T1552",
+    "Prevalence": 0.109495
+  },
+  {
+    "Technique": "T1553",
+    "Prevalence": 0.0394
+  },
+  {
+    "Technique": "T1555",
+    "Prevalence": 0.200476
+  },
+  {
+    "Technique": "T1557",
+    "Prevalence": 0.010297
+  },
+  {
+    "Technique": "T1557.003",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1558",
+    "Prevalence": 0.004918
+  },
+  {
+    "Technique": "T1559",
+    "Prevalence": 0.015611
+  },
+  {
+    "Technique": "T1559.003",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1560",
+    "Prevalence": 0.37974
+  },
+  {
+    "Technique": "T1561",
+    "Prevalence": 0.031804
+  },
+  {
+    "Technique": "T1562",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1563",
+    "Prevalence": 0.000212
+  },
+  {
+    "Technique": "T1564",
+    "Prevalence": 0.698618
+  },
+  {
+    "Technique": "T1564.010",
+    "Prevalence": 1.0
+  },
+  {
+    "Technique": "T1565",
+    "Prevalence": 0.000635
+  },
+  {
+    "Technique": "T1566",
+    "Prevalence": 0.028424
+  },
+  {
+    "Technique": "T1569",
+    "Prevalence": 0.666332
+  },
+  {
+    "Technique": "T1570",
+    "Prevalence": 0.000127
+  },
+  {
+    "Technique": "T1571",
+    "Prevalence": 0.079518
+  },
+  {
+    "Technique": "T1572",
+    "Prevalence": 0.000719
+  },
+  {
+    "Technique": "T1573",
+    "Prevalence": 0.00046
+  },
+  {
+    "Technique": "T1584",
+    "Prevalence": 0.004019
+  }
+]
