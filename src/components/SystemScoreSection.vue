@@ -7,7 +7,11 @@
         </button>
     </div>
     <div class="system-score-row">
-        <div class="filters-scores inline">
+            <div class="filters-scores inline">
+            <div class="inline mr-2 w-max">
+                Prevalence:
+                <span class="highlight">{{ calculatorStore.uploadedPrevalenceFileName ?? "Not included" }}</span>
+            </div>
             <div v-for="monitoringType of Object.keys(calculatorStore.systemScore)" :key="monitoringType"
                 class="inline mr-2 w-max">
                 <span class="highlight mr-1">{{ getScoreText(monitoringType) }}</span>

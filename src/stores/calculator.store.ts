@@ -129,6 +129,10 @@ export const useCalculatorStore = defineStore("calculator", {
       this.uploadedPrevalence = prevalence;
       this.uploadedPrevalenceFileName = fileName;
     },
+    clearUploadedPrevalence() {
+      this.uploadedPrevalence = [];
+      this.uploadedPrevalenceFileName = null;
+    },
     removeTechnique(index: number) {
       this.techniques.splice(index, 1);
     },
