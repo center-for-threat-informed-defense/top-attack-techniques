@@ -61,22 +61,26 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, type PropType } from "vue";
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
 import { marked } from 'marked';
+import type { Technique } from "@/data/DataTypes";
 
 export default defineComponent({
     components: { Accordion, AccordionTab },
     props: {
-        technique: {}
+        technique: {
+            required: true,
+            type: Object as PropType<Technique>
+        }
     },
     methods: {
         getMarkdown(text: string) {
             if (!text) {
                 return ""
             }
-            const t = marked(text)
+            const t = marked(text) as string;
             return t.replaceAll("<a ", '<a target="_blank" ')
         }
     }

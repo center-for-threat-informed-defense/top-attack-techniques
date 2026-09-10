@@ -4,6 +4,7 @@
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
+    "lib": ["ES2021", "DOM", "DOM.Iterable"],
     "paths": {
       "@/*": ["./src/*"]
     },

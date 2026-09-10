@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import json from "../data/Techniques.json";
-import type { Technique } from "@/data/DataTypes";
+import type { DetectionProperty, Technique } from "@/data/DataTypes";
 import type { UploadedPrevalence } from "@/domain/importPrevalenceWorkbook";
 
 export const useCalculatorStore = defineStore("calculator", {
@@ -31,7 +31,7 @@ export const useCalculatorStore = defineStore("calculator", {
           { id: "has_es_siem", name: "Elastic Search SIEM", value: false },
           { id: "has_sigma", name: "Sigma", value: false },
           { id: "has_splunk", name: "Splunk", value: false },
-        ],
+        ] as Array<{ id: DetectionProperty, name: string, value: boolean}>,
       },
       os: {
         label: "Operating Systems",

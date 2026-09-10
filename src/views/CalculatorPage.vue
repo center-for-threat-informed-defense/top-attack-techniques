@@ -148,8 +148,6 @@ export default defineComponent({
             }
         },
         generateResults() {
-            this.$refs.calcFilterSection.saveNewFilterValues()
-            this.$refs.calcSystemSection.saveNewScores()
             router.push({ path: '/calculator/results' })
         },
         getPrevalenceSampleUrl(file_name: string) {

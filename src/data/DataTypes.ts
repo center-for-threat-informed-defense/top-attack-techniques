@@ -66,3 +66,35 @@ export interface TechniqueCoverage {
   cloud_coverage: boolean;
   hardware_coverage: boolean;
 }
+
+export type DetectionProperty =
+  | "has_car"
+  | "has_es_siem"
+  | "has_sigma"
+  | "has_splunk";
+
+export type FilterKey = 
+    | "nist"
+    | "cis"
+    | "detection"
+    | "os";
+
+interface SystemScoreLabelValue {
+    label: string,
+    value: number
+}
+export interface SystemScore {
+    network: SystemScoreLabelValue,
+    process: SystemScoreLabelValue,
+    file: SystemScoreLabelValue,
+    cloud: SystemScoreLabelValue,
+    hardware: SystemScoreLabelValue
+}
+
+export type SystemScoreKey = keyof SystemScore
+
+export interface Methodology {
+    name: "Actionability" | "Choke Point" | "Prevalence",
+    description: string,
+    section: string
+}

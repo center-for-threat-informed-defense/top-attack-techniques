@@ -23,7 +23,7 @@ export default defineComponent({
         return {
             calculatorStore: useCalculatorStore(),
             activeItemId: 0,
-            rankedList: Array<Technique>
+            rankedList: [] as Array<Technique>
         };
     },
     computed: {
@@ -95,7 +95,7 @@ export default defineComponent({
             if (this.filters.detection.size === 0) { return true }
             for (const filterProp of this.filters.detection) {
                 const key = this.calculatorStore.filterProperties.detection.options.find(i => i.name === filterProp)
-                if (technique[key.id]) {
+                if (key && technique[key.id]) {
                     return true;
                 }
             }
