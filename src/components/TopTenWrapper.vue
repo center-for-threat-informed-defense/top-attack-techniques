@@ -77,7 +77,7 @@ export default defineComponent({
             this.activeItemId = index
         },
         download() {
-            downloadjs(JSON.stringify(this.rankedList.slice(0, 10)), "TopTenTechniques.json", JSON)
+            downloadjs(JSON.stringify(this.rankedList.slice(0, 10)), "TopTenTechniques.json", "application/json")
         },
     },
 });

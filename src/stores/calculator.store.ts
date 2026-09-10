@@ -1,11 +1,14 @@
 import { defineStore } from "pinia";
 import json from "../data/Techniques.json";
-import type { Technique } from "@/data/DataTypes";
+import type { DetectionProperty, Technique } from "@/data/DataTypes";
+import type { UploadedPrevalence } from "@/domain/importPrevalenceWorkbook";
 
 export const useCalculatorStore = defineStore("calculator", {
   state: () => ({
     currentAttackVersion: "14.1",
     techniques: json as Array<Technique>,
+    uploadedPrevalence: [] as Array<UploadedPrevalence>,
+    uploadedPrevalenceFileName: null as string | null,
     activeFiltersObj: {
       nist: new Set<string>(),
       cis: new Set<string>(),
@@ -28,7 +31,7 @@ export const useCalculatorStore = defineStore("calculator", {
           { id: "has_es_siem", name: "Elastic Search SIEM", value: false },
           { id: "has_sigma", name: "Sigma", value: false },
           { id: "has_splunk", name: "Splunk", value: false },
-        ],
+        ] as Array<{ id: DetectionProperty, name: string, value: boolean}>,
       },
       os: {
         label: "Operating Systems",
@@ -96,6 +99,9 @@ export const useCalculatorStore = defineStore("calculator", {
     topTenLists(state) {
       return state.topTenListInfo;
     },
+    prevalenceProfile(state) {
+      return state.uploadedPrevalence;
+    },
   },
 
   actions: {
@@ -115,6 +121,17 @@ export const useCalculatorStore = defineStore("calculator", {
       hardware: { label: string; value: number };
     }) {
       this.systemScoreObj = scores;
+    },
+    updateUploadedPrevalence(
+      prevalence: Array<UploadedPrevalence>,
+      fileName: string,
+    ) {
+      this.uploadedPrevalence = prevalence;
+      this.uploadedPrevalenceFileName = fileName;
+    },
+    clearUploadedPrevalence() {
+      this.uploadedPrevalence = [];
+      this.uploadedPrevalenceFileName = null;
     },
     removeTechnique(index: number) {
       this.techniques.splice(index, 1);

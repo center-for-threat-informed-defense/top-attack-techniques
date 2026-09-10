@@ -1,7 +1,7 @@
 <template>
     <div>
         <Accordion>
-            <AccordionTab v-for="group in Object.keys(calculatorStore.filterProperties)" :key="group"
+            <AccordionTab v-for="group in Object.keys(calculatorStore.filterProperties) as Array<FilterKey>" :key="group"
                 :header="calculatorStore.filterProperties[group].label">
                 <div class="checkbox-group">
                     <Checkbox :model-value="isSelected(group)" :disabled="isSelected(group)" :binary="true"
@@ -28,6 +28,7 @@ import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
 import Checkbox from "primevue/checkbox";
 import { useCalculatorStore } from "../stores/calculator.store";
+import type { FilterKey } from "@/data/DataTypes";
 
 export default defineComponent({
     components: { Accordion, AccordionTab, Checkbox },
@@ -42,17 +43,14 @@ export default defineComponent({
         },
     },
     methods: {
-        saveNewFilterValues() {
-            this.calculatorStore.updateActiveFilters(this.filters)
-        },
-        isSelected(group: string, option?: string): boolean {
+        isSelected(group: FilterKey, option?: string): boolean {
             if (!option) {
                 return this.filters[group].size === 0
             } else {
                 return this.filters[group].has(option);
             }
         },
-        select(group: string, option?: string) {
+        select(group: FilterKey, option?: string) {
             if (group && !option) {
                 this.filters[group].clear()
             }
