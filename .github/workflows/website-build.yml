@@ -40,6 +40,10 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      # Test
+      - name: Test
+        run: npm run test
+
       # Build and Upload Artifact
       - name: Type Check
         run: npm run type-check
