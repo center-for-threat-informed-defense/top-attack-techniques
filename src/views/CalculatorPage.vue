@@ -35,12 +35,25 @@
                 <p class="mb-4">
                     Until a file is uploaded, prevalence is not included in the ranking.
                 </p>
+                <p>
+                    <span class="mr-1 font-bold">Templates:</span> 
+                    <template v-for="(f, index) in templatePrevalenceFileNames" :key="f">
+                        <a
+                            class="text-ctid-blue hover:underline"
+                            :href="getFileUrl(f)"
+                            :download="f"
+                        >
+                            {{ f }}
+                        </a>
+                        <span v-if="index < samplePrevalenceFileNames.length - 1">, </span>
+                    </template>
+                </p>
                 <p class="mb-4">
-                    <span class="mr-1 font-bold">Examples:</span> 
+                    <span class="mr-1 font-bold">Global/Sample Prevalence Data:</span> 
                     <template v-for="(f, index) in samplePrevalenceFileNames" :key="f">
                         <a
                             class="text-ctid-blue hover:underline"
-                            :href="getPrevalenceSampleUrl(f)"
+                            :href="getFileUrl(f)"
                             :download="f"
                         >
                             {{ f }}
@@ -91,7 +104,10 @@ export default defineComponent({
             calculatorStore: useCalculatorStore(),
             uploadError: "",
             samplePrevalenceFileNames: [
-                'sample_prev.json', 'sample_prev.xlsx'
+                'sample_prevalence.json', 'sample_prevalence.xlsx'
+            ],
+            templatePrevalenceFileNames: [
+                'template_prevalence.json', 'template_prevalence.xlsx'
             ]
         };
     },
@@ -150,7 +166,7 @@ export default defineComponent({
         generateResults() {
             router.push({ path: '/calculator/results' })
         },
-        getPrevalenceSampleUrl(file_name: string) {
+        getFileUrl(file_name: string) {
             return `${import.meta.env.BASE_URL}${file_name}`;
         }
     }
