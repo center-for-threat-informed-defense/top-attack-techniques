@@ -7,6 +7,8 @@ export const useCalculatorStore = defineStore("calculator", {
   state: () => ({
     currentAttackVersion: "14.1",
     techniques: json as Array<Technique>,
+    globalPrevalence: [] as UploadedPrevalence[],
+    useGlobalPrevalence: false,
     uploadedPrevalence: [] as Array<UploadedPrevalence>,
     uploadedPrevalenceFileName: null as string | null,
     activeFiltersObj: {
@@ -100,7 +102,14 @@ export const useCalculatorStore = defineStore("calculator", {
       return state.topTenListInfo;
     },
     prevalenceProfile(state) {
-      return state.uploadedPrevalence;
+        if (state.useGlobalPrevalence) {
+            if (state.globalPrevalence.length == 0) {
+                console.warn('Global prevalence is not loaded. Returning an empty array.');
+            }
+
+            return state.globalPrevalence;
+        }
+        return state.uploadedPrevalence;
     },
   },
 
@@ -210,7 +219,24 @@ export const useCalculatorStore = defineStore("calculator", {
       }
       return ransomwareTop;
     },
-  },
+    async loadGlobalPrevalence() {
+        const response = await fetch(
+            `${import.meta.env.BASE_URL}sample_prevalence.json`,
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not load the default prevalence profile.");
+        }
+
+        const data: unknown = await response.json();
+
+        if (!Array.isArray(data)) {
+            throw new Error("Default prevalence profile has an invalid format.");
+        }
+
+        this.globalPrevalence = data as UploadedPrevalence[];
+        }
+    },
 });
 // Define Calculator Store Type
 export type CalculatorStore = ReturnType<typeof useCalculatorStore>;

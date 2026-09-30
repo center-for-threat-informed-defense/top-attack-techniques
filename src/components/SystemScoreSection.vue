@@ -10,7 +10,9 @@
             <div class="filters-scores inline">
             <div class="inline mr-2 w-max">
                 Prevalence:
-                <span class="highlight">{{ calculatorStore.uploadedPrevalenceFileName ?? "Not included" }}</span>
+                <span class="highlight">
+                    {{ prevalenceLabel }}
+                </span>
             </div>
             <div v-for="monitoringType of Object.keys(calculatorStore.systemScore) as SystemScoreKey[]" :key="monitoringType"
                 class="inline mr-2 w-max">
@@ -43,6 +45,15 @@ export default defineComponent({
             calculatorStore: useCalculatorStore(),
             activeItemId: 1,
         };
+    },
+    computed: {
+        prevalenceLabel() {
+            if (this.calculatorStore.useGlobalPrevalence) {
+                return "Global default";
+            }
+
+            return this.calculatorStore.uploadedPrevalenceFileName ?? "Not included"
+        }
     },
     methods: {
         getScoreText(key: SystemScoreKey) {

@@ -26,61 +26,97 @@
         </div>
         <div class="lg:w-2/3 mx-auto container">
             <div class="container-header">
-                <h2>Upload prevalence data</h2>
+                <h2>Prevalence Data</h2>
             </div>
             <div class="container-body">
-                <p class="mb-2">
-                    Optionally upload a JSON or Excel (.xlsx) file with technique prevalence data to incorporate the frequency of specific ATT&CK techniques into the calculation.
+
+                <p class="mb-5">
+                    Opt in to allow the prevalence of specific ATT&CK techniques to affect the ranking.
+                    Either use default global prevalence data or upload your own JSON or Excel (.xlsx)
+                    prevalence profile.
                 </p>
-                <p class="mb-4">
-                    Until a file is uploaded, prevalence is not included in the ranking.
-                </p>
-                <p>
-                    <span class="mr-1 font-bold">Templates:</span> 
-                    <template v-for="(f, index) in templatePrevalenceFileNames" :key="f">
-                        <a
-                            class="text-ctid-blue hover:underline"
-                            :href="getFileUrl(f)"
-                            :download="f"
+                <div class="flex">
+                    <div class="flex-1 p-3 flex justify-center items-center">
+                        <div class="flex items-center gap-2">
+                            <Checkbox
+                                v-model="calculatorStore.useGlobalPrevalence"
+                                @change="onChangeUseGlobalPrevalence"
+                                input-id="use-global-prevalence-checkbox"
+                                binary
+                            ></Checkbox>
+                            <label
+                                for="use-global-prevalence-checkbox"
+                            >
+                                Use Global Prevalence
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center font bold">
+                        <div class="dividing-line"></div>
+                        OR
+                        <div class="dividing-line"></div>
+                    </div>
+                    <div id="file-upload-option-container" class="p-3" style="flex: 2" :data-using-global-prevalence="calculatorStore.useGlobalPrevalence">
+                        
+                        <p>
+                            <span class="mr-1 font-bold">Templates:</span> 
+                            <template v-for="(f, index) in templatePrevalenceFileNames" :key="f">
+                                <a
+                                    class="text-ctid-blue hover:underline"
+                                    :href="getFileUrl(f)"
+                                    :download="f"
+                                >
+                                    {{ f }}
+                                </a>
+                                <span v-if="index < samplePrevalenceFileNames.length - 1">, </span>
+                            </template>
+                        </p>
+                        <p class="mb-4">
+                            <span class="mr-1 font-bold">Global/Sample Prevalence Data:</span> 
+                            <template v-for="(f, index) in samplePrevalenceFileNames" :key="f">
+                                <a
+                                    class="text-ctid-blue hover:underline"
+                                    :href="getFileUrl(f)"
+                                    :download="f"
+                                >
+                                    {{ f }}
+                                </a>
+                                <span v-if="index < samplePrevalenceFileNames.length - 1">, </span>
+                            </template>
+                            
+                        </p>
+                        <label
+                            for="prevalence-data-upload"
+                            class="btn-primary cursor-pointer inline-block"
                         >
-                            {{ f }}
-                        </a>
-                        <span v-if="index < samplePrevalenceFileNames.length - 1">, </span>
-                    </template>
-                </p>
-                <p class="mb-4">
-                    <span class="mr-1 font-bold">Global/Sample Prevalence Data:</span> 
-                    <template v-for="(f, index) in samplePrevalenceFileNames" :key="f">
-                        <a
-                            class="text-ctid-blue hover:underline"
-                            :href="getFileUrl(f)"
-                            :download="f"
-                        >
-                            {{ f }}
-                        </a>
-                        <span v-if="index < samplePrevalenceFileNames.length - 1">, </span>
-                    </template>
-                    
-                </p>
-                <label for="prevalence-data-upload" class="btn-primary cursor-pointer inline-block">
-                    Choose File
-                </label>
-                <input id="prevalence-data-upload" class="sr-only" type="file" accept=".json,.xlsx,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" @change="selectPrevalenceFile" />
-                <p v-if="selectedPrevalenceFileName" class="mt-3 flex items-center">
-                    Selected file: {{ selectedPrevalenceFileName }}
-                    <button
-                        type="button"
-                        class="ml-2 text-ctid-blue hover:underline"
-                        aria-label="Remove uploaded prevalence file"
-                        title="Remove uploaded prevalence file"
-                        @click="clearPrevalenceFile"
-                    >
-                        <i class="pi pi-times flex items-center text-sm"></i>
-                    </button>
-                </p>
-                <p v-if="uploadError" class="mt-3 text-red-700" role="alert">
-                    {{ uploadError }}
-                </p>
+                            Choose File
+                        </label>
+                        <input
+                            id="prevalence-data-upload"
+                            class="sr-only"
+                            type="file"
+                            accept=".json,.xlsx,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                            @change="selectPrevalenceFile"
+                            :disabled="calculatorStore.useGlobalPrevalence"
+                        />
+                        <p v-if="selectedPrevalenceFileName" class="mt-3 flex items-center">
+                            Selected file: {{ selectedPrevalenceFileName }}
+                            <button
+                                type="button"
+                                class="ml-2 text-ctid-blue hover:underline"
+                                aria-label="Remove uploaded prevalence file"
+                                title="Remove uploaded prevalence file"
+                                @click="clearPrevalenceFile"
+                            >
+                                <i class="pi pi-times flex items-center text-sm"></i>
+                            </button>
+                        </p>
+                        <p v-if="uploadError" class="mt-3 text-red-700" role="alert">
+                            {{ uploadError }}
+                        </p>
+                    </div>
+                </div>
+                
             </div>
         </div>
         <div class="lg:w-2/3 mx-auto">
@@ -90,15 +126,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import { useCalculatorStore } from "../stores/calculator.store";
 import CalculatorFilters from "@/components/CalculatorFilters.vue";
 import CalculatorSystem from "@/components/CalculatorSystem.vue";
 import type { UploadedPrevalence } from "@/domain/importPrevalenceWorkbook";
 import { router } from "../router";
+import Checkbox from "primevue/checkbox";
 
 export default defineComponent({
-    components: { CalculatorFilters, CalculatorSystem },
+    components: { CalculatorFilters, CalculatorSystem, Checkbox },
     data() {
         return {
             calculatorStore: useCalculatorStore(),
@@ -168,6 +205,14 @@ export default defineComponent({
         },
         getFileUrl(file_name: string) {
             return `${import.meta.env.BASE_URL}${file_name}`;
+        },
+        async onChangeUseGlobalPrevalence() {
+            if (
+                this.calculatorStore.useGlobalPrevalence &&
+                this.calculatorStore.globalPrevalence.length === 0
+            ) {
+                await this.calculatorStore.loadGlobalPrevalence();
+            }
         }
     }
 });
@@ -177,5 +222,21 @@ export default defineComponent({
 .container-body,
 .container-header {
     @apply py-4 px-6
+}
+
+label[for="prevalence-data-upload"]:has(
+  + #prevalence-data-upload:disabled
+) {
+  @apply opacity-50 pointer-events-none;
+}
+
+#file-upload-option-container[data-using-global-prevalence="true"] {
+    @apply opacity-50 pointer-events-none;
+}
+
+.dividing-line {
+    background-color: lightgrey;
+    width: 1px;
+    flex: 1;
 }
 </style>
