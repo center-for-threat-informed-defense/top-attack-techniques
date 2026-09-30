@@ -40,6 +40,7 @@ import MethodologySidebar from "../components/MethodologySidebar.vue"
 import ActionabilitySection from "../components/ActionabilitySection.vue"
 import ChokePointSection from "../components/ChokePointSection.vue"
 import PrevalenceSection from "../components/PrevalenceSection.vue"
+import type { Methodology } from "@/data/DataTypes.js";
 
 export default defineComponent({
   components: { MethodologySidebar, ActionabilitySection, ChokePointSection, PrevalenceSection },
@@ -50,7 +51,7 @@ export default defineComponent({
         { name: "Actionability", description: "The opportunity for a defender to detect or mitigate against each ATT&CK technique based on publicly available analytics and security controls", section: "ActionabilitySection" },
         { name: "Choke Point", description: "A specific technique where many other techniques converge or diverge, and eliminating that specific technique would cause disruption to an adversary", section: "ChokePointSection" },
         { name: "Prevalence", description: "The frequency of which an attacker uses a specific ATT&CK technique over a period of time", section: "PrevalenceSection" },
-      ]
+      ] as Array<Methodology>
     };
   },
 });
