@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div v-for="monitoringType of Object.keys(this.calculatorStore.systemScore)" :key="monitoringType"
+        <div v-for="monitoringType of monitoringTypes" :key="monitoringType"
             class=" 2xl:flex lg:block md:flex my-4">
             <h3 class="uppercase font-semibold text-xl my-auto">{{ monitoringType }} Monitoring Components</h3>
-            <select-button v-model="this.systemScores[monitoringType]" :options="this.options" optionLabel="label"
+            <select-button v-model="systemScores[monitoringType]" :options="options" optionLabel="label"
                 dataKey="value" class="my-auto ml-auto"></select-button>
         </div>
     </div>
@@ -13,6 +13,7 @@
 import { defineComponent } from "vue";
 import { useCalculatorStore } from "../stores/calculator.store";
 import SelectButton from "primevue/selectbutton";
+import type { SystemScoreKey } from "@/data/DataTypes";
 
 export default defineComponent({
     components: { SelectButton },
@@ -29,15 +30,15 @@ export default defineComponent({
         };
     },
     computed: {
+        monitoringTypes(): SystemScoreKey[] {
+            return Object.keys(
+                this.calculatorStore.systemScore,
+            ) as SystemScoreKey[];
+        },
         systemScores() {
             return this.calculatorStore.systemScore
         },
     },
-    methods: {
-        saveNewScores() {
-            this.calculatorStore.updateSystemScores(this.systemScores)
-        },
-    }
 });
 </script>
 

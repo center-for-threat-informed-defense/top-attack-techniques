@@ -30,7 +30,7 @@ jobs:
       - uses: actions/setup-node@v4
         id: "setup-node"
         with:
-          node-version: "19"
+          node-version: "24"
           cache: "npm"
           cache-dependency-path: "./package-lock.json"
       - name: Install dependencies
@@ -39,6 +39,10 @@ jobs:
       # Lint
       - name: Lint
         run: npm run lint
+
+      # Test
+      - name: Test
+        run: npm run test
 
       # Build and Upload Artifact
       - name: Type Check

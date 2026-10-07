@@ -7,13 +7,19 @@
         </button>
     </div>
     <div class="system-score-row">
-        <div class="filters-scores inline">
-            <div v-for="monitoringType of Object.keys(calculatorStore.systemScore)" :key="monitoringType"
+            <div class="filters-scores inline">
+            <div class="inline mr-2 w-max">
+                Prevalence:
+                <span class="highlight">
+                    {{ prevalenceLabel }}
+                </span>
+            </div>
+            <div v-for="monitoringType of Object.keys(calculatorStore.systemScore) as SystemScoreKey[]" :key="monitoringType"
                 class="inline mr-2 w-max">
                 <span class="highlight mr-1">{{ getScoreText(monitoringType) }}</span>
                 <span>{{ monitoringType }} Monitoring</span>
             </div>
-            <div v-for="filter of Object.keys(calculatorStore.activeFilters)" :key="filter" class="inline mr-2 w-max">
+            <div v-for="filter of Object.keys(calculatorStore.activeFilters) as Array<FilterKey>" :key="filter" class="inline mr-2 w-max">
                 {{ filter }}:
                 <span class="highlight">{{ getFilterText(filter) }}</span>
             </div>
@@ -31,6 +37,7 @@ import { defineComponent } from "vue";
 import { useCalculatorStore } from "../stores/calculator.store";
 import { router } from "../router";
 import Tooltip from 'primevue/tooltip';
+import type { FilterKey, SystemScoreKey } from "@/data/DataTypes";
 
 export default defineComponent({
     data() {
@@ -39,12 +46,21 @@ export default defineComponent({
             activeItemId: 1,
         };
     },
+    computed: {
+        prevalenceLabel() {
+            if (this.calculatorStore.useGlobalPrevalence) {
+                return "Global default";
+            }
+
+            return this.calculatorStore.uploadedPrevalenceFileName ?? "Not included"
+        }
+    },
     methods: {
-        getScoreText(key: string) {
+        getScoreText(key: SystemScoreKey) {
             if (this.calculatorStore.systemScore[key].label === "None") { return "No" }
             return this.calculatorStore.systemScore[key].label
         },
-        getFilterText(key: string) {
+        getFilterText(key: FilterKey) {
             if (this.calculatorStore.activeFiltersObj[key].size < 1) {
                 return `All ${key} Controls`
             }

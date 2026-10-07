@@ -16,13 +16,14 @@ import TopTenWrapper from "../components/TopTenWrapper.vue";
 import type { Technique } from "@/data/DataTypes";
 import { useCalculatorStore, type CalculatorStore } from "../stores/calculator.store";
 import SystemScoreSection from "../components/SystemScoreSection.vue"
+import { deriveTechniquesWithPrevalence } from "@/domain/deriveTechniquesWithPrevalence";
 export default defineComponent({
     components: { SystemScoreSection, TopTenWrapper },
     data() {
         return {
             calculatorStore: useCalculatorStore(),
             activeItemId: 0,
-            rankedList: Array<Technique>
+            rankedList: [] as Array<Technique>
         };
     },
     computed: {
@@ -39,6 +40,10 @@ export default defineComponent({
         },
         setRankedList() {
             let filteredList = structuredClone(toRaw(this.calculatorStore.techniques));
+            filteredList = deriveTechniquesWithPrevalence(
+                filteredList,
+                this.calculatorStore.prevalenceProfile,
+            )
             filteredList = this.applyScores(filteredList)
             filteredList = this.applyFilters(filteredList)
             filteredList.sort(
@@ -90,7 +95,7 @@ export default defineComponent({
             if (this.filters.detection.size === 0) { return true }
             for (const filterProp of this.filters.detection) {
                 const key = this.calculatorStore.filterProperties.detection.options.find(i => i.name === filterProp)
-                if (technique[key.id]) {
+                if (key && technique[key.id]) {
                     return true;
                 }
             }

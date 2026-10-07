@@ -1,11 +1,16 @@
 import { defineStore } from "pinia";
 import json from "../data/Techniques.json";
-import type { Technique } from "@/data/DataTypes";
+import type { DetectionProperty, Technique } from "@/data/DataTypes";
+import type { UploadedPrevalence } from "@/domain/importPrevalenceWorkbook";
 
 export const useCalculatorStore = defineStore("calculator", {
   state: () => ({
     currentAttackVersion: "14.1",
     techniques: json as Array<Technique>,
+    globalPrevalence: [] as UploadedPrevalence[],
+    useGlobalPrevalence: false,
+    uploadedPrevalence: [] as Array<UploadedPrevalence>,
+    uploadedPrevalenceFileName: null as string | null,
     activeFiltersObj: {
       nist: new Set<string>(),
       cis: new Set<string>(),
@@ -28,7 +33,7 @@ export const useCalculatorStore = defineStore("calculator", {
           { id: "has_es_siem", name: "Elastic Search SIEM", value: false },
           { id: "has_sigma", name: "Sigma", value: false },
           { id: "has_splunk", name: "Splunk", value: false },
-        ],
+        ] as Array<{ id: DetectionProperty, name: string, value: boolean}>,
       },
       os: {
         label: "Operating Systems",
@@ -96,6 +101,16 @@ export const useCalculatorStore = defineStore("calculator", {
     topTenLists(state) {
       return state.topTenListInfo;
     },
+    prevalenceProfile(state) {
+        if (state.useGlobalPrevalence) {
+            if (state.globalPrevalence.length == 0) {
+                console.warn('Global prevalence is not loaded. Returning an empty array.');
+            }
+
+            return state.globalPrevalence;
+        }
+        return state.uploadedPrevalence;
+    },
   },
 
   actions: {
@@ -115,6 +130,17 @@ export const useCalculatorStore = defineStore("calculator", {
       hardware: { label: string; value: number };
     }) {
       this.systemScoreObj = scores;
+    },
+    updateUploadedPrevalence(
+      prevalence: Array<UploadedPrevalence>,
+      fileName: string,
+    ) {
+      this.uploadedPrevalence = prevalence;
+      this.uploadedPrevalenceFileName = fileName;
+    },
+    clearUploadedPrevalence() {
+      this.uploadedPrevalence = [];
+      this.uploadedPrevalenceFileName = null;
     },
     removeTechnique(index: number) {
       this.techniques.splice(index, 1);
@@ -193,7 +219,24 @@ export const useCalculatorStore = defineStore("calculator", {
       }
       return ransomwareTop;
     },
-  },
+    async loadGlobalPrevalence() {
+        const response = await fetch(
+            `${import.meta.env.BASE_URL}sample_prevalence.json`,
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not load the default prevalence profile.");
+        }
+
+        const data: unknown = await response.json();
+
+        if (!Array.isArray(data)) {
+            throw new Error("Default prevalence profile has an invalid format.");
+        }
+
+        this.globalPrevalence = data as UploadedPrevalence[];
+        }
+    },
 });
 // Define Calculator Store Type
 export type CalculatorStore = ReturnType<typeof useCalculatorStore>;

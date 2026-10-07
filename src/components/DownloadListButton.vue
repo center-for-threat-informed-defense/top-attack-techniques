@@ -64,7 +64,7 @@ export default defineComponent({
                 }
                 parsedList.push(t);
             })
-            downloadjs(JSON.stringify(parsedList, null, 4), "TopTenTechniques.json", JSON)
+            downloadjs(JSON.stringify(parsedList, null, 4), "TopTenTechniques.json", "application/json")
         },
         downloadAsNavigatorLayer() {
             const gradient = ["#FFFFFF", "#6241C5"]
@@ -117,7 +117,7 @@ export default defineComponent({
             })
 
             layer.gradient.maxValue = layer.techniques[0].score
-            downloadjs(JSON.stringify(layer, null, 4), "TopTechniquesNavigatorLayer.json", JSON)
+            downloadjs(JSON.stringify(layer, null, 4), "TopTechniquesNavigatorLayer.json", "application/json")
         }
     },
 });
