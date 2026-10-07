@@ -89,7 +89,7 @@
                             for="prevalence-data-upload"
                             class="btn-primary cursor-pointer inline-block"
                         >
-                            Choose File
+                            Upload Prevalence Data
                         </label>
                         <input
                             id="prevalence-data-upload"
