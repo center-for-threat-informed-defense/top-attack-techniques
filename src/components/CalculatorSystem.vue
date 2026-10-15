@@ -19,7 +19,7 @@
                 <select-button v-model="systemScores[monitoringType as MonitoringType]" :options="options" optionLabel="label"
                     dataKey="value" class="my-auto ml-auto"></select-button>
             </div>
-            <p v-if="openComponents.has(monitoringType)" class="ml-2 text-sm mt-1 hidden 2xl:block">
+            <p v-if="openComponents.has(monitoringType)" class="ml-1 text-sm mt-1 hidden 2xl:block">
                 {{ monitorDescriptions[monitoringType as MonitoringType] }}
             </p>
         </template>
