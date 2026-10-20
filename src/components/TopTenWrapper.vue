@@ -1,6 +1,6 @@
 <template>
     <div id="calculator" class="pb-20">
-        <div v-if="rankedList.length > 1"
+        <div v-if="rankedList.length > 0"
             class="lg:grid hidden grid-cols-3 gap-4 w-5/6 mx-auto calculator-box auto-rows-fr">
 
             <div class="col-span-1 calculator-list">
@@ -26,11 +26,11 @@
             </div>
 
         </div>
-        <div v-if="rankedList.length > 1" class="w-5/6 mx-auto lg:hidden block">
+        <div v-if="rankedList.length > 0" class="w-5/6 mx-auto lg:hidden block">
             <TopTenAccordion :ranked-list="rankedList" :activeItemId="activeItemId" :allowDelete="allowDelete" />
             <DownloadListButton :ranked-list="rankedList" />
         </div>
-        <div v-if="rankedList.length <= 1" class="mx-auto italic w-max">
+        <div v-if="rankedList.length <= 0" class="mx-auto italic w-max">
             No techniques found for the given criteria.
         </div>
     </div>
