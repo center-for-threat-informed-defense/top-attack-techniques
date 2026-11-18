@@ -5,12 +5,6 @@
             <InputText v-model="searchQueries[group]" type="search" class="w-full mb-3"
                 :placeholder="`Search ${calculatorStore.filterProperties[group].label}`"
                 :aria-label="`Search ${calculatorStore.filterProperties[group].label}`" />
-            <div class="checkbox-group">
-                <Checkbox :model-value="filters[group].size === 0" :disabled="filters[group].size === 0"
-                    binary :input-id="`select_all_${group}`" @update:model-value="selectAll(group)">
-                </Checkbox>
-                <label :for="`select_all_${group}`" class="my-auto">All {{ group.toUpperCase() }} Controls</label>
-            </div>
             <Tree :value="filteredTreeNodes[group]" selection-mode="checkbox" :selection-keys="treeSelectionKeys[group]"
                 :aria-label="calculatorStore.filterProperties[group].label"
                 @update:selection-keys="onSelectionChange(group, $event)" />
@@ -22,7 +16,6 @@
 import { computed, reactive } from "vue";
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
-import Checkbox from "primevue/checkbox";
 import Tree from "primevue/tree";
 import InputText from "primevue/inputtext";
 import type { TreeNode } from "primevue/treenode";
@@ -48,7 +41,13 @@ const filterGroups = computed(() => Object.keys(calculatorStore.filterProperties
 const treeNodes = computed(() => {
     const trees = {} as Record<FilterGroup, TreeNode[]>;
     for (const group of filterGroups.value) {
-        const nodes: TreeNode[] = [];
+        const nodes: TreeNode[] = [{
+            key: `${group}:all`,
+            label: `All ${group.toUpperCase()} Controls`,
+            leaf: true,
+            data: { type: "all" },
+            styleClass: filters.value[group].size === 0 ? "filter-all-selected" : undefined,
+        }];
         const parents = new Map<string, TreeNode>();
         const getGroup = groupingMethods[group];
 
@@ -57,7 +56,7 @@ const treeNodes = computed(() => {
                 key: `${group}:option:${option.id}`,
                 label: option.name,
                 leaf: true,
-                data: { option: option.name },
+                data: { type: "option", option: option.name },
             };
             if (!getGroup) {
                 nodes.push(leaf);
@@ -86,7 +85,7 @@ const filteredTreeNodes = computed(() => {
         const query = searchQueries[group]?.trim().toLocaleLowerCase() ?? "";
         const filterNodes = (nodes: TreeNode[]): TreeNode[] => {
             return nodes.flatMap((node) => {
-                if (!query || node.label?.toLocaleLowerCase().includes(query)) {
+                if (node.data?.type === "all" || !query || node.label?.toLocaleLowerCase().includes(query)) {
                     return [node];
                 }
                 const children = filterNodes(node.children ?? []);
@@ -105,6 +104,12 @@ const treeSelectionKeys = computed(() => {
     for (const group of filterGroups.value) {
         const keys: SelectionKeys = {};
         const visit = (node: TreeNode): void => {
+            if (node.data?.type === "all") {
+                if (filters.value[group].size === 0) {
+                    keys[node.key!] = { checked: true, partialChecked: false };
+                }
+                return;
+            }
             if (node.leaf) {
                 if (filters.value[group].has(node.data.option)) {
                     keys[node.key!] = { checked: true, partialChecked: false };
@@ -129,14 +134,16 @@ const treeSelectionKeys = computed(() => {
     return selections;
 });
 
-function selectAll(group: FilterGroup): void {
-    filters.value[group].clear();
-}
-
 function onSelectionChange(group: FilterGroup, keys: SelectionKeys): void {
     const selected = new Set<string>();
+    // A newly checked All node takes precedence over existing selections.
+    // When All was already checked, allow newly checked specific options instead.
+    if (keys[`${group}:all`]?.checked && filters.value[group].size > 0) {
+        calculatorStore.updateActiveFilters({ ...filters.value, [group]: selected });
+        return;
+    }
     function visit(node: TreeNode): void {
-        if (node.leaf && keys[node.key!]?.checked) {
+        if (node.leaf && node.data?.type === "option" && keys[node.key!]?.checked) {
             selected.add(node.data.option);
         }
         node.children?.forEach(visit);
@@ -145,3 +152,9 @@ function onSelectionChange(group: FilterGroup, keys: SelectionKeys): void {
     calculatorStore.updateActiveFilters({ ...filters.value, [group]: selected });
 }
 </script>
+
+<style scoped>
+:deep(.filter-all-selected .p-checkbox) {
+    opacity: 0.38;
+}
+</style>
