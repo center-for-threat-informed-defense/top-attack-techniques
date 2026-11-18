@@ -2,12 +2,22 @@
     <Accordion>
         <AccordionTab v-for="group in filterGroups" :key="group"
             :header="calculatorStore.filterProperties[group].label">
-            <InputText v-model="searchQueries[group]" type="search" class="w-full mb-3"
-                :placeholder="`Search ${calculatorStore.filterProperties[group].label}`"
-                :aria-label="`Search ${calculatorStore.filterProperties[group].label}`" />
+            <div class="relative mb-3">
+                <i class="pi pi-search absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"
+                    aria-hidden="true" />
+                <InputText v-model="searchQueries[group]" type="search"
+                    class="w-full border border-solid border-ctid-navy rounded-none p-2 pl-10"
+                    :placeholder="`Search ${calculatorStore.filterProperties[group].label}`"
+                    :aria-label="`Search ${calculatorStore.filterProperties[group].label}`" />
+            </div>
             <Tree :value="filteredTreeNodes[group]" selection-mode="checkbox" :selection-keys="treeSelectionKeys[group]"
                 :aria-label="calculatorStore.filterProperties[group].label"
-                @update:selection-keys="onSelectionChange(group, $event)" />
+                :pt="{ toggler: { style: { order: 1, marginLeft: '0.5rem', marginRight: '0' } } }"
+                @update:selection-keys="onSelectionChange(group, $event)">
+                <template #togglericon="{ expanded }">
+                    <i :class="['pi', expanded ? 'pi-minus' : 'pi-plus']" aria-hidden="true" />
+                </template>
+            </Tree>
         </AccordionTab>
     </Accordion>
 </template>
@@ -156,5 +166,14 @@ function onSelectionChange(group: FilterGroup, keys: SelectionKeys): void {
 <style scoped>
 :deep(.filter-all-selected .p-checkbox) {
     opacity: 0.38;
+}
+
+:deep(.p-tree) {
+    padding-left: 0;
+    padding-top: 0;
+}
+
+:deep(.p-tree .p-treenode-children) {
+    padding-left: 2rem;
 }
 </style>
