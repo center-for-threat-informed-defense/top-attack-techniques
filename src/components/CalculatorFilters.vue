@@ -2,13 +2,16 @@
     <Accordion>
         <AccordionTab v-for="group in filterGroups" :key="group"
             :header="calculatorStore.filterProperties[group].label">
+            <InputText v-model="searchQueries[group]" type="search" class="w-full mb-3"
+                :placeholder="`Search ${calculatorStore.filterProperties[group].label}`"
+                :aria-label="`Search ${calculatorStore.filterProperties[group].label}`" />
             <div class="checkbox-group">
                 <Checkbox :model-value="filters[group].size === 0" :disabled="filters[group].size === 0"
                     binary :input-id="`select_all_${group}`" @update:model-value="selectAll(group)">
                 </Checkbox>
                 <label :for="`select_all_${group}`" class="my-auto">All {{ group.toUpperCase() }} Controls</label>
             </div>
-            <Tree :value="treeNodes[group]" selection-mode="checkbox" :selection-keys="treeSelectionKeys[group]"
+            <Tree :value="filteredTreeNodes[group]" selection-mode="checkbox" :selection-keys="treeSelectionKeys[group]"
                 :aria-label="calculatorStore.filterProperties[group].label"
                 @update:selection-keys="onSelectionChange(group, $event)" />
         </AccordionTab>
@@ -16,11 +19,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, reactive } from "vue";
 import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
 import Checkbox from "primevue/checkbox";
 import Tree from "primevue/tree";
+import InputText from "primevue/inputtext";
 import type { TreeNode } from "primevue/treenode";
 import { useCalculatorStore } from "../stores/calculator.store";
 
@@ -35,6 +39,8 @@ const groupingMethods: Partial<Record<FilterGroup, (option: string) => string>> 
 };
 
 calculatorStore.setFilters();
+
+const searchQueries = reactive<Partial<Record<FilterGroup, string>>>({});
 
 const filters = computed(() => calculatorStore.activeFilters);
 const filterGroups = computed(() => Object.keys(calculatorStore.filterProperties) as FilterGroup[]);
@@ -68,6 +74,26 @@ const treeNodes = computed(() => {
             parent.children!.push(leaf);
         }
         trees[group] = nodes;
+    }
+    return trees;
+});
+
+// Lenient filtering keeps every descendant when a parent label matches.
+// Filter copies so searching never changes the full option tree or selections.
+const filteredTreeNodes = computed(() => {
+    const trees = {} as Record<FilterGroup, TreeNode[]>;
+    for (const group of filterGroups.value) {
+        const query = searchQueries[group]?.trim().toLocaleLowerCase() ?? "";
+        const filterNodes = (nodes: TreeNode[]): TreeNode[] => {
+            return nodes.flatMap((node) => {
+                if (!query || node.label?.toLocaleLowerCase().includes(query)) {
+                    return [node];
+                }
+                const children = filterNodes(node.children ?? []);
+                return children.length ? [{ ...node, children }] : [];
+            });
+        };
+        trees[group] = filterNodes(treeNodes.value[group]);
     }
     return trees;
 });
