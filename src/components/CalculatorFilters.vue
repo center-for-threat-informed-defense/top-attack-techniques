@@ -35,10 +35,63 @@ const calculatorStore = useCalculatorStore();
 type FilterGroup = keyof typeof calculatorStore.activeFilters;
 type SelectionKeys = Record<string, { checked: boolean; partialChecked: boolean }>;
 
+// NIST SP 800-53 Rev. 5, Table 1: Control Families.
+// https://nvlpubs.nist.gov/nistpubs/specialpublications/NIST.SP.800-53r5.pdf
+const nistControlFamilies: Record<string, string> = {
+    AC: "Access Control",
+    AT: "Awareness and Training",
+    AU: "Audit and Accountability",
+    CA: "Assessment, Authorization, and Monitoring",
+    CM: "Configuration Management",
+    CP: "Contingency Planning",
+    IA: "Identification and Authentication",
+    IR: "Incident Response",
+    MA: "Maintenance",
+    MP: "Media Protection",
+    PE: "Physical and Environmental Protection",
+    PL: "Planning",
+    PM: "Program Management",
+    PS: "Personnel Security",
+    PT: "PII Processing and Transparency",
+    RA: "Risk Assessment",
+    SA: "System and Services Acquisition",
+    SC: "System and Communications Protection",
+    SI: "System and Information Integrity",
+    SR: "Supply Chain Risk Management",
+};
+
+// https://www.cisecurity.org/controls/cis-controls-list
+const cisControlNames: Record<string, string> = {
+    "1": "Inventory and Control of Enterprise Assets",
+    "2": "Inventory and Control of Software Assets",
+    "3": "Data Protection",
+    "4": "Secure Configuration of Enterprise Assets and Software",
+    "5": "Account Management",
+    "6": "Access Control Management",
+    "7": "Continuous Vulnerability Management",
+    "8": "Audit Log Management",
+    "9": "Email and Web Browser Protections",
+    "10": "Malware Defenses",
+    "11": "Data Recovery",
+    "12": "Network Infrastructure Management",
+    "13": "Network Monitoring and Defense",
+    "14": "Security Awareness and Skills Training",
+    "15": "Service Provider Management",
+    "16": "Application Software Security",
+    "17": "Incident Response Management",
+    "18": "Penetration Testing",
+};
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const groupingMethods: Partial<Record<FilterGroup, (option: string) => string>> = {
-    nist: (option) => option.slice(0, 2),
-    cis: (option) => option.split(".")[0],
+    nist: (option) => {
+        const family = option.slice(0, 2);
+        return nistControlFamilies[family] ? `${family} - ${nistControlFamilies[family]}` : family;
+    },
+    cis: (option) => {
+        const control = option.split(".")[0];
+        return cisControlNames[control] ? `${control} - ${cisControlNames[control]}` : control;
+    },
 };
 
 calculatorStore.setFilters();
