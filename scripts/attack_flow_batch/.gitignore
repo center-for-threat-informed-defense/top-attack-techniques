@@ -1,0 +1,12 @@
+# Local input data and extracted report manifest
+data/
+
+# Generated Attack Flows and job records
+output/
+
+# Temporary files
+*.tmp
+
+# Local credentials, if any
+.env
+.env.*
