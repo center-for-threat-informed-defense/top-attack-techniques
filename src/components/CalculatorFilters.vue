@@ -30,10 +30,17 @@ import Tree from "primevue/tree";
 import InputText from "primevue/inputtext";
 import type { TreeNode } from "primevue/treenode";
 import { useCalculatorStore } from "../stores/calculator.store";
+import nistControlMetadata from "../data/nist_control_metadata.json";
+import cisControlMetadata from "../data/cis_control_metadata.json";
 
 const calculatorStore = useCalculatorStore();
 type FilterGroup = keyof typeof calculatorStore.activeFilters;
 type SelectionKeys = Record<string, { checked: boolean; partialChecked: boolean }>;
+
+const controlMetadata: Partial<Record<FilterGroup, Record<string, { name: string }>>> = {
+    nist: nistControlMetadata,
+    cis: cisControlMetadata,
+};
 
 // NIST SP 800-53 Rev. 5, Table 1: Control Families.
 // https://nvlpubs.nist.gov/nistpubs/specialpublications/NIST.SP.800-53r5.pdf
@@ -115,9 +122,10 @@ const treeNodes = computed(() => {
         const getGroup = groupingMethods[group];
 
         for (const option of calculatorStore.filterProperties[group].options) {
+            const name = controlMetadata[group]?.[option.id]?.name;
             const leaf: TreeNode = {
                 key: `${group}:option:${option.id}`,
-                label: option.name,
+                label: name ? `${option.name} - ${name}` : option.name,
                 leaf: true,
                 data: { type: "option", option: option.name },
             };
