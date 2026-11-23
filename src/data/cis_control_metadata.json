@@ -1,0 +1,317 @@
+{
+  "1.1": {
+    "name": "Establish and Maintain Detailed Enterprise Asset Inventory"
+  },
+  "1.2": {
+    "name": "Address Unauthorized Assets"
+  },
+  "1.4": {
+    "name": "Use Dynamic Host Configuration Protocol (DHCP) Logging to Update Enterprise Asset Inventory"
+  },
+  "2.1": {
+    "name": "Establish and Maintain a Software Inventory"
+  },
+  "2.2": {
+    "name": "Ensure Authorized Software is Currently Supported"
+  },
+  "2.3": {
+    "name": "Address Unauthorized Software"
+  },
+  "2.4": {
+    "name": "Utilize Automated Software Inventory Tools"
+  },
+  "2.5": {
+    "name": "Allowlist Authorized Software"
+  },
+  "2.6": {
+    "name": "Allowlist Authorized Libraries"
+  },
+  "2.7": {
+    "name": "Allowlist Authorized Scripts"
+  },
+  "3.1": {
+    "name": "Establish and Maintain a Data Management Process"
+  },
+  "3.2": {
+    "name": "Establish and Maintain a Data Inventory"
+  },
+  "3.3": {
+    "name": "Configure Data Access Control Lists"
+  },
+  "3.4": {
+    "name": "Enforce Data Retention"
+  },
+  "3.6": {
+    "name": "Encrypt Data on End-User Devices"
+  },
+  "3.10": {
+    "name": "Encrypt Sensitive Data in Transit"
+  },
+  "3.11": {
+    "name": "Encrypt Sensitive Data At Rest"
+  },
+  "3.12": {
+    "name": "Segment Data Processing and Storage Based on Sensitivity"
+  },
+  "4.1": {
+    "name": "Establish and Maintain a Secure Configuration Process"
+  },
+  "4.2": {
+    "name": "Establish and Maintain a Secure Configuration Process for Network Infrastructure"
+  },
+  "4.4": {
+    "name": "Implement and Manage a Firewall on Servers"
+  },
+  "4.5": {
+    "name": "Implement and Manage a Firewall on End-User Devices"
+  },
+  "4.6": {
+    "name": "Securely Manage Enterprise Assets and Software"
+  },
+  "4.7": {
+    "name": "Manage Default Accounts on Enterprise Assets and Software"
+  },
+  "4.8": {
+    "name": "Uninstall or Disable Unnecessary Services on Enterprise Assets and Software"
+  },
+  "4.9": {
+    "name": "Configure Trusted DNS Servers on Enterprise Assets"
+  },
+  "4.10": {
+    "name": "Enforce Automatic Device Lockout on Portable End-User Devices"
+  },
+  "5.1": {
+    "name": "Establish and Maintain an Inventory of Accounts"
+  },
+  "5.2": {
+    "name": "Use Unique Passwords"
+  },
+  "5.3": {
+    "name": "Disable Dormant Accounts"
+  },
+  "5.4": {
+    "name": "Restrict Administrator Privileges to Dedicated Administrator Accounts"
+  },
+  "5.5": {
+    "name": "Establish and Maintain an Inventory of Service Accounts"
+  },
+  "6.1": {
+    "name": "Establish an Access Granting Process"
+  },
+  "6.2": {
+    "name": "Establish an Access Revoking Process"
+  },
+  "6.3": {
+    "name": "Require MFA for Externally-Exposed Applications"
+  },
+  "6.4": {
+    "name": "Require MFA for Remote Network Access"
+  },
+  "6.5": {
+    "name": "Require MFA for Administrative Access"
+  },
+  "6.8": {
+    "name": "Centralize Access Control"
+  },
+  "7.1": {
+    "name": "Establish and Maintain a Vulnerability Management Process"
+  },
+  "7.2": {
+    "name": "Establish and Maintain a Remediation Process"
+  },
+  "7.3": {
+    "name": "Perform Automated Operating System Patch Management"
+  },
+  "7.4": {
+    "name": "Perform Automated Application Patch Management"
+  },
+  "7.5": {
+    "name": "Perform Automated Vulnerability Scans of Internal Enterprise Assets"
+  },
+  "7.6": {
+    "name": "Perform Automated Vulnerability Scans of Externally-Exposed Enterprise Assets"
+  },
+  "7.7": {
+    "name": "Remediate Detected Vulnerabilities"
+  },
+  "8.1": {
+    "name": "Establish and Maintain an Audit Log Management Process"
+  },
+  "8.2": {
+    "name": "Collect Audit Logs"
+  },
+  "8.3": {
+    "name": "Ensure Adequate Audit Log Storage"
+  },
+  "8.5": {
+    "name": "Collect Detailed Audit Logs"
+  },
+  "8.9": {
+    "name": "Centralize Audit Logs"
+  },
+  "8.10": {
+    "name": "Retain Audit Logs"
+  },
+  "8.11": {
+    "name": "Conduct Audit Log Reviews"
+  },
+  "9.1": {
+    "name": "Ensure Use of Only Fully Supported Browsers and Email Clients"
+  },
+  "9.2": {
+    "name": "Use DNS Filtering Services"
+  },
+  "9.3": {
+    "name": "Maintain and Enforce Network-Based URL Filters"
+  },
+  "9.4": {
+    "name": "Restrict Unnecessary or Unauthorized Browser and Email Client Extensions"
+  },
+  "9.6": {
+    "name": "Block Unnecessary File Types"
+  },
+  "9.7": {
+    "name": "Deploy and Maintain Email Server Anti-Malware Protections"
+  },
+  "10.1": {
+    "name": "Deploy and Maintain Anti-Malware Software"
+  },
+  "10.2": {
+    "name": "Configure Automatic Anti-Malware Signature Updates"
+  },
+  "10.3": {
+    "name": "Disable Autorun and Autoplay for Removable Media"
+  },
+  "10.5": {
+    "name": "Enable Anti-Exploitation Features"
+  },
+  "10.7": {
+    "name": "Use Behavior-Based Anti-Malware Software"
+  },
+  "11.1": {
+    "name": "Establish and Maintain a Data Recovery Process"
+  },
+  "11.2": {
+    "name": "Perform Automated Backups"
+  },
+  "11.3": {
+    "name": "Protect Recovery Data"
+  },
+  "11.4": {
+    "name": "Establish and Maintain an Isolated Instance of Recovery Data"
+  },
+  "11.5": {
+    "name": "Test Data Recovery"
+  },
+  "12.1": {
+    "name": "Ensure Network Infrastructure is Up-to-Date"
+  },
+  "12.2": {
+    "name": "Establish and Maintain a Secure Network Architecture"
+  },
+  "12.5": {
+    "name": "Centralize Network Authentication, Authorization, and Auditing (AAA)"
+  },
+  "12.6": {
+    "name": "Use of Secure Network Management and Communication Protocols"
+  },
+  "12.7": {
+    "name": "Ensure Remote Devices Utilize a VPN and are Connecting to an Enterprise’s AAA Infrastructure"
+  },
+  "12.8": {
+    "name": "Establish and Maintain Dedicated Computing Resources for All Administrative Work"
+  },
+  "13.2": {
+    "name": "Deploy a Host-Based Intrusion Detection Solution"
+  },
+  "13.3": {
+    "name": "Deploy a Network Intrusion Detection Solution"
+  },
+  "13.4": {
+    "name": "Perform Traffic Filtering Between Network Segments"
+  },
+  "13.5": {
+    "name": "Manage Access Control for Remote Assets"
+  },
+  "13.7": {
+    "name": "Deploy a Host-Based Intrusion Prevention Solution"
+  },
+  "13.8": {
+    "name": "Deploy a Network Intrusion Prevention Solutions"
+  },
+  "13.9": {
+    "name": "Deploy Port-Level Access Control"
+  },
+  "13.10": {
+    "name": "Perform Application Layer Filtering"
+  },
+  "14.1": {
+    "name": "Establish and Maintain a Security Awareness Program"
+  },
+  "14.2": {
+    "name": "Train Workforce Members to Recognize Social Engineering Attacks"
+  },
+  "14.3": {
+    "name": "Train Workforce Members on Authentication Best Practices"
+  },
+  "14.4": {
+    "name": "Train Workforce on Data Handling Best Practices"
+  },
+  "14.5": {
+    "name": "Train Workforce Members on Causes of Unintentional Data Exposure"
+  },
+  "14.6": {
+    "name": "Train Workforce Members on Recognizing and Reporting Security Incidents"
+  },
+  "14.9": {
+    "name": "Conduct Role-Specific Security Awareness and Skills Training"
+  },
+  "15.7": {
+    "name": "Securely Decommission Service Providers"
+  },
+  "16.1": {
+    "name": "Establish and Maintain a Secure Application Development Process"
+  },
+  "16.2": {
+    "name": "Establish and Maintain a Process to Accept and Address Software Vulnerabilities"
+  },
+  "16.3": {
+    "name": "Perform Root Cause Analysis on Security Vulnerabilities"
+  },
+  "16.4": {
+    "name": "Establish and Manage an Inventory of Third-Party Software Components"
+  },
+  "16.5": {
+    "name": "Use Up-to-Date and Trusted Third-Party Software Components"
+  },
+  "16.8": {
+    "name": "Separate Production and Non-Production Systems"
+  },
+  "16.9": {
+    "name": "Train Developers in Application Security Concepts and Secure Coding"
+  },
+  "16.10": {
+    "name": "Apply Secure Design Principles in Application Architectures"
+  },
+  "16.11": {
+    "name": "Leverage Vetted Modules or Services for Application Security Components"
+  },
+  "16.12": {
+    "name": "Implement Code-Level Security Checks"
+  },
+  "16.13": {
+    "name": "Conduct Application Penetration Testing"
+  },
+  "18.1": {
+    "name": "Establish and Maintain a Penetration Testing Program"
+  },
+  "18.2": {
+    "name": "Perform Periodic External Penetration Tests"
+  },
+  "18.3": {
+    "name": "Remediate Penetration Test Findings"
+  },
+  "18.5": {
+    "name": "Perform Periodic Internal Penetration Tests"
+  }
+}

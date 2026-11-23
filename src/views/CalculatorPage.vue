@@ -12,7 +12,7 @@
                     <h2>Filters</h2>
                 </div>
                 <div class="container-body">
-                    <calculator-filters ref="calcFilterSection" />
+                    <calculator-filters />
                 </div>
             </div>
             <div class="lg:w-3/5 container">
@@ -51,7 +51,6 @@ export default defineComponent({
     },
     methods: {
         generateResults() {
-            this.$refs.calcFilterSection.saveNewFilterValues()
             this.$refs.calcSystemSection.saveNewScores()
             router.push({ path: '/calculator/results' })
         }

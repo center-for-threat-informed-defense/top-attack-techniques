@@ -1,0 +1,329 @@
+{
+  "AC-2": {
+    "name": "Account Management"
+  },
+  "AC-3": {
+    "name": "Access Enforcement"
+  },
+  "AC-4": {
+    "name": "Information Flow Enforcement"
+  },
+  "AC-5": {
+    "name": "Separation of Duties"
+  },
+  "AC-6": {
+    "name": "Least Privilege"
+  },
+  "AC-7": {
+    "name": "Unsuccessful Logon Attempts"
+  },
+  "AC-8": {
+    "name": "System Use Notification"
+  },
+  "AC-10": {
+    "name": "Concurrent Session Control"
+  },
+  "AC-11": {
+    "name": "Device Lock"
+  },
+  "AC-12": {
+    "name": "Session Termination"
+  },
+  "AC-14": {
+    "name": "Permitted Actions Without Identification or Authentication"
+  },
+  "AC-16": {
+    "name": "Security and Privacy Attributes"
+  },
+  "AC-17": {
+    "name": "Remote Access"
+  },
+  "AC-18": {
+    "name": "Wireless Access"
+  },
+  "AC-19": {
+    "name": "Access Control for Mobile Devices"
+  },
+  "AC-20": {
+    "name": "Use of External Systems"
+  },
+  "AC-21": {
+    "name": "Information Sharing"
+  },
+  "AC-23": {
+    "name": "Data Mining Protection"
+  },
+  "CA-2": {
+    "name": "Control Assessments"
+  },
+  "CA-3": {
+    "name": "Information Exchange"
+  },
+  "CA-7": {
+    "name": "Continuous Monitoring"
+  },
+  "CA-8": {
+    "name": "Penetration Testing"
+  },
+  "CM-2": {
+    "name": "Baseline Configuration"
+  },
+  "CM-3": {
+    "name": "Configuration Change Control"
+  },
+  "CM-5": {
+    "name": "Access Restrictions for Change"
+  },
+  "CM-6": {
+    "name": "Configuration Settings"
+  },
+  "CM-7": {
+    "name": "Least Functionality"
+  },
+  "CM-8": {
+    "name": "System Component Inventory"
+  },
+  "CM-10": {
+    "name": "Software Usage Restrictions"
+  },
+  "CM-11": {
+    "name": "User-installed Software"
+  },
+  "CM-12": {
+    "name": "Information Location"
+  },
+  "CP-2": {
+    "name": "Contingency Plan"
+  },
+  "CP-6": {
+    "name": "Alternate Storage Site"
+  },
+  "CP-7": {
+    "name": "Alternate Processing Site"
+  },
+  "CP-9": {
+    "name": "System Backup"
+  },
+  "CP-10": {
+    "name": "System Recovery and Reconstitution"
+  },
+  "IA-2": {
+    "name": "Identification and Authentication (Organizational Users)"
+  },
+  "IA-3": {
+    "name": "Device Identification and Authentication"
+  },
+  "IA-4": {
+    "name": "Identifier Management"
+  },
+  "IA-5": {
+    "name": "Authenticator Management"
+  },
+  "IA-6": {
+    "name": "Authentication Feedback"
+  },
+  "IA-7": {
+    "name": "Cryptographic Module Authentication"
+  },
+  "IA-8": {
+    "name": "Identification and Authentication (Non-organizational Users)"
+  },
+  "IA-9": {
+    "name": "Service Identification and Authentication"
+  },
+  "IA-11": {
+    "name": "Re-authentication"
+  },
+  "IA-12": {
+    "name": "Identity Proofing"
+  },
+  "IR-5": {
+    "name": "Incident Monitoring"
+  },
+  "MA-5": {
+    "name": "Maintenance Personnel"
+  },
+  "MP-7": {
+    "name": "Media Use"
+  },
+  "RA-5": {
+    "name": "Vulnerability Monitoring and Scanning"
+  },
+  "RA-9": {
+    "name": "Criticality Analysis"
+  },
+  "RA-10": {
+    "name": "Threat Hunting"
+  },
+  "SA-3": {
+    "name": "System Development Life Cycle"
+  },
+  "SA-4": {
+    "name": "Acquisition Process"
+  },
+  "SA-8": {
+    "name": "Security and Privacy Engineering Principles"
+  },
+  "SA-9": {
+    "name": "External System Services"
+  },
+  "SA-10": {
+    "name": "Developer Configuration Management"
+  },
+  "SA-11": {
+    "name": "Developer Testing and Evaluation"
+  },
+  "SA-15": {
+    "name": "Development Process, Standards, and Tools"
+  },
+  "SA-16": {
+    "name": "Developer-provided Training"
+  },
+  "SA-17": {
+    "name": "Developer Security and Privacy Architecture and Design"
+  },
+  "SA-22": {
+    "name": "Unsupported System Components"
+  },
+  "SC-2": {
+    "name": "Separation of System and User Functionality"
+  },
+  "SC-3": {
+    "name": "Security Function Isolation"
+  },
+  "SC-4": {
+    "name": "Information in Shared System Resources"
+  },
+  "SC-6": {
+    "name": "Resource Availability"
+  },
+  "SC-7": {
+    "name": "Boundary Protection"
+  },
+  "SC-8": {
+    "name": "Transmission Confidentiality and Integrity"
+  },
+  "SC-10": {
+    "name": "Network Disconnect"
+  },
+  "SC-12": {
+    "name": "Cryptographic Key Establishment and Management"
+  },
+  "SC-13": {
+    "name": "Cryptographic Protection"
+  },
+  "SC-16": {
+    "name": "Transmission of Security and Privacy Attributes"
+  },
+  "SC-17": {
+    "name": "Public Key Infrastructure Certificates"
+  },
+  "SC-18": {
+    "name": "Mobile Code"
+  },
+  "SC-20": {
+    "name": "Secure Name/Address Resolution Service (Authoritative Source)"
+  },
+  "SC-21": {
+    "name": "Secure Name/Address Resolution Service (Recursive or Caching Resolver)"
+  },
+  "SC-22": {
+    "name": "Architecture and Provisioning for Name/Address Resolution Service"
+  },
+  "SC-23": {
+    "name": "Session Authenticity"
+  },
+  "SC-26": {
+    "name": "Decoys"
+  },
+  "SC-28": {
+    "name": "Protection of Information at Rest"
+  },
+  "SC-29": {
+    "name": "Heterogeneity"
+  },
+  "SC-30": {
+    "name": "Concealment and Misdirection"
+  },
+  "SC-31": {
+    "name": "Covert Channel Analysis"
+  },
+  "SC-34": {
+    "name": "Non-modifiable Executable Programs"
+  },
+  "SC-35": {
+    "name": "External Malicious Code Identification"
+  },
+  "SC-36": {
+    "name": "Distributed Processing and Storage"
+  },
+  "SC-37": {
+    "name": "Out-of-band Channels"
+  },
+  "SC-38": {
+    "name": "Operations Security"
+  },
+  "SC-39": {
+    "name": "Process Isolation"
+  },
+  "SC-41": {
+    "name": "Port and I/O Device Access"
+  },
+  "SC-43": {
+    "name": "Usage Restrictions"
+  },
+  "SC-44": {
+    "name": "Detonation Chambers"
+  },
+  "SC-46": {
+    "name": "Cross Domain Policy Enforcement"
+  },
+  "SI-2": {
+    "name": "Flaw Remediation"
+  },
+  "SI-3": {
+    "name": "Malicious Code Protection"
+  },
+  "SI-4": {
+    "name": "System Monitoring"
+  },
+  "SI-5": {
+    "name": "Security Alerts, Advisories, and Directives"
+  },
+  "SI-7": {
+    "name": "Software, Firmware, and Information Integrity"
+  },
+  "SI-8": {
+    "name": "Spam Protection"
+  },
+  "SI-10": {
+    "name": "Information Input Validation"
+  },
+  "SI-12": {
+    "name": "Information Management and Retention"
+  },
+  "SI-14": {
+    "name": "Non-persistence"
+  },
+  "SI-15": {
+    "name": "Information Output Filtering"
+  },
+  "SI-16": {
+    "name": "Memory Protection"
+  },
+  "SI-23": {
+    "name": "Information Fragmentation"
+  },
+  "SR-4": {
+    "name": "Provenance"
+  },
+  "SR-5": {
+    "name": "Acquisition Strategies, Tools, and Methods"
+  },
+  "SR-6": {
+    "name": "Supplier Assessments and Reviews"
+  },
+  "SR-11": {
+    "name": "Component Authenticity"
+  }
+}

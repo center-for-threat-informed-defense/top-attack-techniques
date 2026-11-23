@@ -1,5 +1,6 @@
 const ExcelJS = require("exceljs");
-const fs = require("fs");
+const fs = require("node:fs/promises");
+const { updateControlMetadata } = require("./update_control_metadata");
 const SOURCE_FILE = "src/data/Calculator.xlsx";
 const DESTINATION_FILE = "src/data/Techniques.json";
 
@@ -141,11 +142,17 @@ const DESTINATION_FILE = "src/data/Techniques.json";
   console.log("Parsed scores from Methodology page");
   // export technique list to JSON
   const str = JSON.stringify(techniques, null, 4);
-  fs.writeFile(DESTINATION_FILE, str, (error) => {
-    if (error) {
-      console.error(error);
-      throw error;
-    }
-  });
+  await fs.writeFile(DESTINATION_FILE, str);
   console.log("Export technique data to Techniques.json");
-})();
+
+  const nistControlCodes = new Set(
+    techniques.flatMap((technique) => technique.nist_controls ?? [])
+  );
+  const cisControlCodes = new Set(
+    techniques.flatMap((technique) => technique.cis_controls ?? [])
+  );
+  await updateControlMetadata(nistControlCodes, cisControlCodes);
+})().catch((error) => {
+  console.error(`Unable to update techniques: ${error.message}`);
+  process.exitCode = 1;
+});

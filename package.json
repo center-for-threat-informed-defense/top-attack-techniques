@@ -8,7 +8,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "update": "node ./scripts/update_techniques.js"
+    "update": "node ./scripts/update_techniques.js",
+    "test": "node --test"
   },
   "dependencies": {
     "downloadjs": "^1.4.7",
@@ -17,6 +18,7 @@
     "pinia": "^2.0.29",
     "primeicons": "^7.0.0",
     "primevue": "^3.49.1",
+    "saxes": "^5.0.1",
     "vue": "^3.2.37",
     "vue-mathjax-next": "^0.0.6",
     "vue-router": "^4.1.6"
