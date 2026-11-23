@@ -234,6 +234,10 @@ function onSelectionChange(group: FilterGroup, keys: SelectionKeys): void {
     padding-top: 0;
 }
 
+:deep(.p-tree .p-treenode) {
+    padding: 0;
+}
+
 :deep(.p-tree .p-treenode-children) {
     padding-left: 2rem;
 }
